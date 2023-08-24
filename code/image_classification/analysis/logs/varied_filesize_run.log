@@ -1,0 +1,996 @@
+With data limit 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+vtune: Peak bandwidth measurement started.
+vtune: Peak bandwidth measurement finished.
+vtune: Warning: To enable hardware event-based sampling, VTune Profiler has disabled the NMI watchdog timer. The watchdog timer will be re-enabled after collection completes.
+vtune: Collection started. To stop the collection, either press CTRL-C or enter from another console window: vtune -r /mydata/vtune_logs/pytorch_vtune_logs/vtune_vary_image_file_size_100Kfiles_v3/filesize1MB_b128_gpu4 -command stop.
+=> creating model 'resnet18'
+Epoch: [0][ 1/64]	Time 119.331 (119.331)	Data 111.321 (111.321)	Loss 7.2013e+00 (7.2013e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+Epoch: [0][11/64]	Time  0.047 (30.126)	Data  0.000 (29.356)	Loss 0.0000e+00 (6.5466e-01)	Acc@1 100.00 ( 90.91)	Acc@5 100.00 ( 90.91)
+Epoch: [0][21/64]	Time 102.955 (31.152)	Data 102.911 (30.728)	Loss 0.0000e+00 (3.4292e-01)	Acc@1 100.00 ( 95.24)	Acc@5 100.00 ( 95.24)
+Epoch: [0][31/64]	Time  0.044 (28.351)	Data  0.000 (28.049)	Loss 0.0000e+00 (2.3230e-01)	Acc@1 100.00 ( 96.77)	Acc@5 100.00 ( 96.77)
+Epoch: [0][41/64]	Time 102.441 (29.220)	Data 102.390 (28.980)	Loss 0.0000e+00 (1.7564e-01)	Acc@1 100.00 ( 97.56)	Acc@5 100.00 ( 97.56)
+Epoch: [0][51/64]	Time  0.048 (27.891)	Data  0.000 (27.689)	Loss 0.0000e+00 (1.4120e-01)	Acc@1 100.00 ( 98.04)	Acc@5 100.00 ( 98.04)
+Epoch: [0][61/64]	Time 100.195 (28.546)	Data 100.147 (28.370)	Loss 0.0000e+00 (1.1805e-01)	Acc@1 100.00 ( 98.36)	Acc@5 100.00 ( 98.36)
+vtune: Collection stopped.
+vtune: Using result path `/mydata/vtune_logs/pytorch_vtune_logs/vtune_vary_image_file_size_100Kfiles_v3/filesize1MB_b128_gpu4'
+
+vtune: Executing actions  0 %                                                  
+vtune: Warning: The result contains a lot of raw data. Finalization may take a long time to complete.
+
+vtune: Executing actions  0 % Finalizing results                               
+vtune: Executing actions  0 % Finalizing the result                            
+vtune: Executing actions  0 % Clearing the database                            
+vtune: Executing actions  7 % Clearing the database                            
+vtune: Executing actions  7 % Loading raw data to the database                 
+vtune: Executing actions  7 % Loading 'systemcollector-103664-c4130-node.v100ub
+vtune: Executing actions 12 % Loading 'systemcollector-103664-c4130-node.v100ub
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Loading 'sep7f4ea288f700.20230527T125939.691759.t
+vtune: Executing actions 12 % Updating precomputed scalar metrics              
+vtune: Executing actions 14 % Updating precomputed scalar metrics              
+vtune: Executing actions 14 % Processing profile metrics and debug information 
+vtune: Executing actions 19 % Processing profile metrics and debug information 
+vtune: Executing actions 19 % Setting data model parameters                    
+vtune: Executing actions 19 % Resolving module symbols                         
+vtune: Executing actions 19 % Resolving information for `_struct.cpython-310-x8
+vtune: Executing actions 19 % Resolving information for `ld-2.31.so'           
+vtune: Executing actions 19 % Resolving information for `_imaging.cpython-310-x
+vtune: Executing actions 19 % Resolving information for `sunrpc'               
+vtune: Executing actions 19 % Resolving information for `libc10_cuda.so'       
+vtune: Executing actions 19 % Resolving information for `libc10.so'            
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libc10.so'.
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libc10_cuda.so'.
+
+vtune: Executing actions 19 % Resolving information for `libmkl_gnu_thread.so.2
+vtune: Executing actions 19 % Resolving information for `math.cpython-310-x86_6
+vtune: Executing actions 19 % Resolving information for `libgomp.so.1.0.0'     
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/libmkl_gnu_thread.so.2'.
+
+vtune: Executing actions 20 % Resolving information for `libgomp.so.1.0.0'     
+vtune: Executing actions 20 % Resolving information for `kvm'                  
+vtune: Executing actions 20 % Resolving information for `libcudart.so.11.8.89' 
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/libcudart.so.11.8.89'.
+
+vtune: Executing actions 20 % Resolving information for `nfsv3'                
+vtune: Executing actions 20 % Resolving information for `libcudnn_ops_infer.so.
+vtune: Warning: Cannot locate file `sep5.ko'.
+
+vtune: Executing actions 20 % Resolving information for `sep5'                 
+vtune: Executing actions 20 % Resolving information for `libcublas.so.11.11.3.6
+vtune: Executing actions 20 % Resolving information for `libmkl_vml_avx2.so.2' 
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libcudnn_ops_infer.so.8'.
+
+vtune: Executing actions 20 % Resolving information for `libcudnn_ops_train.so.
+vtune: Executing actions 20 % Resolving information for `libjpeg.so.9.5.0'     
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/libcublas.so.11.11.3.6'.
+
+vtune: Executing actions 20 % Resolving information for `_multiarray_umath.cpyt
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libcudnn_ops_train.so.8'.
+
+vtune: Executing actions 20 % Resolving information for `libcuda.so.520.61.05' 
+vtune: Warning: Cannot locate file `nvidia_uvm.ko'.
+
+vtune: Executing actions 20 % Resolving information for `nvidia_uvm'           
+vtune: Executing actions 20 % Resolving information for `_multiprocessing.cpyth
+vtune: Warning: Cannot locate debugging information for file `/usr/lib/x86_64-linux-gnu/libcuda.so.520.61.05'.
+
+vtune: Executing actions 21 % Resolving information for `_multiprocessing.cpyth
+vtune: Executing actions 21 % Resolving information for dangling locations     
+vtune: Executing actions 21 % Resolving information for `[vdso]'               
+vtune: Executing actions 21 % Resolving information for `libmkl_intel_lp64.so.2
+vtune: Executing actions 21 % Resolving information for `libtorch_cpu.so'      
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/libmkl_intel_lp64.so.2'.
+
+vtune: Executing actions 21 % Resolving information for `libnvrtc.so.11.8.89'  
+vtune: Executing actions 21 % Resolving information for `igb'                  
+vtune: Warning: Cannot locate debugging information for file `/usr/local/cuda-11.8/targets/x86_64-linux/lib/libnvrtc.so.11.8.89'.
+
+vtune: Executing actions 21 % Resolving information for `libstdc++.so.6.0.29'  
+vtune: Executing actions 21 % Resolving information for `python3.10'           
+vtune: Executing actions 21 % Resolving information for `libcublasLt.so.11.11.3
+vtune: Executing actions 21 % Resolving information for `libcudnn_cnn_train.so.
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so'.
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libcudnn_cnn_train.so.8'.
+
+vtune: Executing actions 21 % Resolving information for `vmlinux'              
+vtune: Warning: Cannot locate file `/etc/ld.so.cache'.
+`/etc/ld.so.cache' has an unsupported or invalid file format. Contact Intel Technical Support.
+
+vtune: Executing actions 21 % Resolving information for `ld.so.cache'          
+vtune: Executing actions 21 % Resolving information for `ixgbe'                
+vtune: Executing actions 21 % Resolving information for `libcudnn.so.8'        
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libcudnn.so.8'.
+
+vtune: Executing actions 21 % Resolving information for `array.cpython-310-x86_
+vtune: Executing actions 21 % Resolving information for `libcudnn_cnn_infer.so.
+vtune: Executing actions 22 % Resolving information for `libcudnn_cnn_infer.so.
+vtune: Executing actions 22 % Resolving information for `libpthread-2.31.so'   
+vtune: Executing actions 22 % Resolving information for `libtorch_python.so'   
+vtune: Warning: Cannot locate file `nvidia.ko'.
+
+vtune: Executing actions 22 % Resolving information for `nvidia'               
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libtorch_python.so'.
+
+vtune: Executing actions 22 % Resolving information for `nfs'                  
+vtune: Executing actions 22 % Resolving information for `libtorch_cuda.so'     
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/libcublasLt.so.11.11.3.6'.
+
+vtune: Executing actions 22 % Resolving information for `libc-2.31.so'         
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libcudnn_cnn_infer.so.8'.
+
+vtune: Executing actions 23 % Resolving information for `libc-2.31.so'         
+vtune: Executing actions 23 % Resolving bottom user stack information          
+vtune: Executing actions 23 % Resolving thread name information                
+vtune: Executing actions 24 % Resolving thread name information                
+vtune: Executing actions 24 % Resolving call target names for dynamic code     
+vtune: Executing actions 25 % Resolving call target names for dynamic code     
+vtune: Executing actions 25 % Resolving interrupt name information             
+vtune: Executing actions 26 % Resolving interrupt name information             
+vtune: Executing actions 26 % Processing profile metrics and debug information 
+vtune: Executing actions 27 % Processing profile metrics and debug information 
+vtune: Executing actions 28 % Processing profile metrics and debug information 
+vtune: Executing actions 29 % Processing profile metrics and debug information 
+vtune: Executing actions 30 % Processing profile metrics and debug information 
+vtune: Executing actions 31 % Processing profile metrics and debug information 
+vtune: Executing actions 31 % Preparing output tree                            
+vtune: Executing actions 31 % Parsing columns in input tree                    
+vtune: Executing actions 32 % Parsing columns in input tree                    
+vtune: Executing actions 32 % Creating top-level columns                       
+vtune: Executing actions 32 % Creating top-level rows                          
+vtune: Executing actions 33 % Creating top-level rows                          
+vtune: Executing actions 33 % Preparing output tree                            
+vtune: Executing actions 33 % Parsing columns in input tree                    
+vtune: Executing actions 33 % Creating top-level columns                       
+vtune: Executing actions 34 % Creating top-level columns                       
+vtune: Executing actions 34 % Creating top-level rows                          
+vtune: Executing actions 35 % Creating top-level rows                          
+vtune: Executing actions 35 % Preparing output tree                            
+vtune: Executing actions 35 % Parsing columns in input tree                    
+vtune: Executing actions 35 % Creating top-level columns                       
+vtune: Executing actions 36 % Creating top-level columns                       
+vtune: Executing actions 36 % Creating top-level rows                          
+vtune: Executing actions 37 % Creating top-level rows                          
+vtune: Executing actions 37 % Preparing output tree                            
+vtune: Executing actions 37 % Parsing columns in input tree                    
+vtune: Executing actions 37 % Creating top-level columns                       
+vtune: Executing actions 38 % Creating top-level columns                       
+vtune: Executing actions 38 % Creating top-level rows                          
+vtune: Executing actions 39 % Creating top-level rows                          
+vtune: Executing actions 39 % Preparing output tree                            
+vtune: Executing actions 39 % Parsing columns in input tree                    
+vtune: Executing actions 39 % Creating top-level columns                       
+vtune: Executing actions 39 % Creating top-level rows                          
+vtune: Executing actions 40 % Creating top-level rows                          
+vtune: Executing actions 40 % Preparing output tree                            
+vtune: Executing actions 40 % Parsing columns in input tree                    
+vtune: Executing actions 40 % Creating top-level columns                       
+vtune: Executing actions 41 % Creating top-level columns                       
+vtune: Executing actions 41 % Creating top-level rows                          
+vtune: Executing actions 42 % Creating top-level rows                          
+vtune: Executing actions 42 % Preparing output tree                            
+vtune: Executing actions 42 % Parsing columns in input tree                    
+vtune: Executing actions 42 % Creating top-level columns                       
+vtune: Executing actions 43 % Creating top-level columns                       
+vtune: Executing actions 43 % Creating top-level rows                          
+vtune: Executing actions 44 % Creating top-level rows                          
+vtune: Executing actions 44 % Preparing output tree                            
+vtune: Executing actions 44 % Parsing columns in input tree                    
+vtune: Executing actions 44 % Creating top-level columns                       
+vtune: Executing actions 45 % Creating top-level columns                       
+vtune: Executing actions 45 % Creating top-level rows                          
+vtune: Executing actions 46 % Creating top-level rows                          
+vtune: Executing actions 46 % Preparing output tree                            
+vtune: Executing actions 46 % Parsing columns in input tree                    
+vtune: Executing actions 46 % Creating top-level columns                       
+vtune: Executing actions 46 % Creating top-level rows                          
+vtune: Executing actions 47 % Creating top-level rows                          
+vtune: Executing actions 47 % Preparing output tree                            
+vtune: Executing actions 47 % Parsing columns in input tree                    
+vtune: Executing actions 48 % Parsing columns in input tree                    
+vtune: Executing actions 48 % Creating top-level columns                       
+vtune: Executing actions 48 % Creating top-level rows                          
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Setting data model parameters                    
+vtune: Executing actions 49 % Precomputing frequently used data                
+vtune: Executing actions 49 % Precomputing frequently used data                
+vtune: Executing actions 49 % Updating precomputed scalar metrics              
+vtune: Executing actions 49 % Discarding redundant overtime data               
+vtune: Executing actions 49 % Saving the result                                
+vtune: Executing actions 50 % Saving the result                                
+vtune: Executing actions 50 % Generating a report                              
+vtune: Executing actions 50 % Setting data model parameters                    
+vtune: Executing actions 75 % Setting data model parameters                    
+vtune: Executing actions 75 % Generating a report                              Elapsed Time: 1760.456s
+    CPU Time: 6920.659s
+    Memory Bound: 14.0% of Pipeline Slots
+        L1 Bound: 2.8% of Clockticks
+        L2 Bound: 0.7% of Clockticks
+        L3 Bound: 0.5% of Clockticks
+        DRAM Bound: 4.5% of Clockticks
+            DRAM Bandwidth Bound: 0.0% of Elapsed Time
+        Store Bound: 15.2% of Clockticks
+        NUMA: % of Remote Accesses: 0.6%
+        QPI Bandwidth Bound: 0.0% of Elapsed Time
+    Loads: 15,502,650,065,550
+    Stores: 7,049,551,480,200
+    LLC Miss Count: 10,463,232,375
+        Local DRAM Access Count: 10,350,724,500
+        Remote DRAM Access Count: 37,502,625
+        Remote Cache Access Count: 22,501,575
+    Average Latency (cycles): 7
+    Total Thread Count: 449
+    Paused Time: 0s
+
+Bandwidth Utilization
+Bandwidth Domain                  Platform Maximum  Observed Maximum  Average  % of Elapsed Time with High BW Utilization(%)
+--------------------------------  ----------------  ----------------  -------  ---------------------------------------------
+DRAM, GB/sec                      122                         36.400    6.915                                           0.0%
+DRAM Single-Package, GB/sec       61                          24.500    4.821                                           0.0%
+QPI Outgoing Single-Link, GB/sec  16                           6.900    0.013                                           0.0%
+QPI Outgoing, GB/sec              68                          16.000    0.053                                           0.0%
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/anaconda3/envs/torch2/bin/python "/proj/prismgt-PG0/rbachkaniwala3/code/pytorch_main.py" "/mydata/synthetic_data_1MBeach_100Kfiles_symlink/" "-b" "128" "-j" "4" "--epochs" "1" "--val-loop" "0" 
+    User Name: root
+    Operating System: 5.4.0-139-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 2.6 GB 
+    Collection start time: 17:59:40 27/05/2023 UTC
+    Collection stop time: 18:29:00 27/05/2023 UTC
+    Collector Type: Event-based sampling driver
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        Max DRAM Single-Package Bandwidth: 61.000 GB/s
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+
+vtune: Executing actions 100 % Generating a report                             
+vtune: Executing actions 100 % done                                            
+vtune: Peak bandwidth measurement started.
+vtune: Peak bandwidth measurement finished.
+vtune: Warning: To enable hardware event-based sampling, VTune Profiler has disabled the NMI watchdog timer. The watchdog timer will be re-enabled after collection completes.
+vtune: Collection started. To stop the collection, either press CTRL-C or enter from another console window: vtune -r /mydata/vtune_logs/pytorch_vtune_logs/vtune_vary_image_file_size_100Kfiles_v3/filesize10MB_b128_gpu4 -command stop.
+=> creating model 'resnet18'
+Epoch: [0][ 1/64]	Time 1017.976 (1017.976)	Data 1010.192 (1010.192)	Loss 7.3103e+00 (7.3103e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+Epoch: [0][11/64]	Time  2.525 (277.652)	Data  2.487 (276.904)	Loss 0.0000e+00 (6.6457e-01)	Acc@1 100.00 ( 90.91)	Acc@5 100.00 ( 90.91)
+Epoch: [0][21/64]	Time 996.804 (288.854)	Data 996.762 (288.442)	Loss 0.0000e+00 (3.4811e-01)	Acc@1 100.00 ( 95.24)	Acc@5 100.00 ( 95.24)
+Epoch: [0][31/64]	Time  0.053 (261.061)	Data  0.000 (260.766)	Loss 0.0000e+00 (2.3581e-01)	Acc@1 100.00 ( 96.77)	Acc@5 100.00 ( 96.77)
+Epoch: [0][41/64]	Time 999.409 (270.852)	Data 999.363 (270.619)	Loss 0.0000e+00 (1.7830e-01)	Acc@1 100.00 ( 97.56)	Acc@5 100.00 ( 97.56)
+Epoch: [0][51/64]	Time  0.045 (257.305)	Data  0.000 (257.108)	Loss 0.0000e+00 (1.4334e-01)	Acc@1 100.00 ( 98.04)	Acc@5 100.00 ( 98.04)
+Epoch: [0][61/64]	Time 1007.126 (264.690)	Data 1007.083 (264.518)	Loss 0.0000e+00 (1.1984e-01)	Acc@1 100.00 ( 98.36)	Acc@5 100.00 ( 98.36)
+vtune: Collection stopped.
+vtune: Using result path `/mydata/vtune_logs/pytorch_vtune_logs/vtune_vary_image_file_size_100Kfiles_v3/filesize10MB_b128_gpu4'
+
+vtune: Executing actions  0 %                                                  
+vtune: Warning: The result contains a lot of raw data. Finalization may take a long time to complete.
+
+vtune: Executing actions  0 % Finalizing results                               
+vtune: Executing actions  0 % Finalizing the result                            
+vtune: Executing actions  0 % Clearing the database                            
+vtune: Executing actions  7 % Clearing the database                            
+vtune: Executing actions  7 % Loading raw data to the database                 
+vtune: Executing actions  7 % Loading 'systemcollector-104442-c4130-node.v100ub
+vtune: Executing actions 12 % Loading 'systemcollector-104442-c4130-node.v100ub
+vtune: Executing actions 12 % Loading 'sep7fb0e2091700.20230527T133144.686288.t
+vtune: Executing actions 12 % Loading 'sep7fb0e2091700.20230527T133144.686288.t
+vtune: Executing actions 12 % Updating precomputed scalar metrics              
+vtune: Executing actions 14 % Updating precomputed scalar metrics              
+vtune: Executing actions 14 % Processing profile metrics and debug information 
+vtune: Executing actions 19 % Processing profile metrics and debug information 
+vtune: Executing actions 19 % Setting data model parameters                    
+vtune: Executing actions 19 % Resolving module symbols                         
+vtune: Executing actions 19 % Resolving information for dangling locations     
+vtune: Executing actions 19 % Resolving information for `sunrpc'               
+vtune: Executing actions 19 % Resolving information for `math.cpython-310-x86_6
+vtune: Executing actions 19 % Resolving information for `libgomp.so.1.0.0'     
+vtune: Warning: Cannot locate file `/etc/ld.so.cache'.
+`/etc/ld.so.cache' has an unsupported or invalid file format. Contact Intel Technical Support.
+
+vtune: Executing actions 19 % Resolving information for `ld.so.cache'          
+vtune: Executing actions 19 % Resolving information for `libstdc++.so.6.0.29'  
+vtune: Executing actions 19 % Resolving information for `libtorch_python.so'   
+vtune: Executing actions 19 % Resolving information for `libmkl_intel_lp64.so.2
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libtorch_python.so'.
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/libmkl_intel_lp64.so.2'.
+
+vtune: Executing actions 19 % Resolving information for `libcuda.so.520.61.05' 
+vtune: Executing actions 20 % Resolving information for `libcuda.so.520.61.05' 
+vtune: Warning: Cannot locate debugging information for file `/usr/lib/x86_64-linux-gnu/libcuda.so.520.61.05'.
+
+vtune: Executing actions 20 % Resolving information for `libcudnn_ops_infer.so.
+vtune: Warning: Cannot locate file `nvidia.ko'.
+
+vtune: Executing actions 20 % Resolving information for `nvidia'               
+vtune: Executing actions 20 % Resolving information for `libcudnn_cnn_train.so.
+vtune: Executing actions 20 % Resolving information for `nfs'                  
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libcudnn_ops_infer.so.8'.
+
+vtune: Executing actions 20 % Resolving information for `ld-2.31.so'           
+vtune: Executing actions 20 % Resolving information for `python3.10'           
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libcudnn_cnn_train.so.8'.
+
+vtune: Executing actions 20 % Resolving information for `libc10.so'            
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libc10.so'.
+
+vtune: Executing actions 20 % Resolving information for `_multiarray_umath.cpyt
+vtune: Executing actions 20 % Resolving information for `kvm'                  
+vtune: Executing actions 20 % Resolving information for `libcublas.so.11.11.3.6
+vtune: Executing actions 20 % Resolving information for `[vdso]'               
+vtune: Executing actions 20 % Resolving information for `libc-2.31.so'         
+vtune: Executing actions 21 % Resolving information for `libc-2.31.so'         
+vtune: Executing actions 21 % Resolving information for `libtorch_cpu.so'      
+vtune: Executing actions 21 % Resolving information for `libcudnn_ops_train.so.
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/libcublas.so.11.11.3.6'.
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libcudnn_ops_train.so.8'.
+vtune: Warning: Cannot locate file `nvidia_uvm.ko'.
+
+vtune: Executing actions 21 % Resolving information for `nvidia_uvm'           
+vtune: Executing actions 21 % Resolving information for `igb'                  
+vtune: Executing actions 21 % Resolving information for `_imaging.cpython-310-x
+vtune: Executing actions 21 % Resolving information for `libcudnn.so.8'        
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libcudnn.so.8'.
+
+vtune: Executing actions 21 % Resolving information for `array.cpython-310-x86_
+vtune: Executing actions 21 % Resolving information for `libcudart.so.11.8.89' 
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/libcudart.so.11.8.89'.
+
+vtune: Executing actions 21 % Resolving information for `libpthread-2.31.so'   
+vtune: Executing actions 21 % Resolving information for `mtrand.cpython-310-x86
+vtune: Executing actions 21 % Resolving information for `select.cpython-310-x86
+vtune: Executing actions 21 % Resolving information for `libjpeg.so.9.5.0'     
+vtune: Executing actions 21 % Resolving information for `libcudnn_cnn_infer.so.
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so'.
+
+vtune: Executing actions 22 % Resolving information for `libcudnn_cnn_infer.so.
+vtune: Executing actions 22 % Resolving information for `libc10_cuda.so'       
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libc10_cuda.so'.
+
+vtune: Executing actions 22 % Resolving information for `nfsv3'                
+vtune: Executing actions 22 % Resolving information for `vmlinux'              
+vtune: Warning: Cannot locate file `sep5.ko'.
+
+vtune: Executing actions 22 % Resolving information for `sep5'                 
+vtune: Executing actions 22 % Resolving information for `libmkl_vml_avx2.so.2' 
+vtune: Executing actions 22 % Resolving information for `libtorch_cuda.so'     
+vtune: Executing actions 22 % Resolving information for `libcublasLt.so.11.11.3
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libcudnn_cnn_infer.so.8'.
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/libcublasLt.so.11.11.3.6'.
+
+vtune: Executing actions 23 % Resolving information for `libcublasLt.so.11.11.3
+vtune: Executing actions 23 % Resolving bottom user stack information          
+vtune: Executing actions 23 % Resolving thread name information                
+vtune: Executing actions 24 % Resolving thread name information                
+vtune: Executing actions 24 % Resolving call target names for dynamic code     
+vtune: Executing actions 25 % Resolving call target names for dynamic code     
+vtune: Executing actions 25 % Resolving interrupt name information             
+vtune: Executing actions 26 % Resolving interrupt name information             
+vtune: Executing actions 26 % Processing profile metrics and debug information 
+vtune: Executing actions 27 % Processing profile metrics and debug information 
+vtune: Executing actions 28 % Processing profile metrics and debug information 
+vtune: Executing actions 29 % Processing profile metrics and debug information 
+vtune: Executing actions 30 % Processing profile metrics and debug information 
+vtune: Executing actions 31 % Processing profile metrics and debug information 
+vtune: Executing actions 31 % Preparing output tree                            
+vtune: Executing actions 31 % Parsing columns in input tree                    
+vtune: Executing actions 32 % Parsing columns in input tree                    
+vtune: Executing actions 32 % Creating top-level columns                       
+vtune: Executing actions 32 % Creating top-level rows                          
+vtune: Executing actions 33 % Creating top-level rows                          
+vtune: Executing actions 33 % Preparing output tree                            
+vtune: Executing actions 33 % Parsing columns in input tree                    
+vtune: Executing actions 33 % Creating top-level columns                       
+vtune: Executing actions 34 % Creating top-level columns                       
+vtune: Executing actions 34 % Creating top-level rows                          
+vtune: Executing actions 35 % Creating top-level rows                          
+vtune: Executing actions 35 % Preparing output tree                            
+vtune: Executing actions 35 % Parsing columns in input tree                    
+vtune: Executing actions 35 % Creating top-level columns                       
+vtune: Executing actions 36 % Creating top-level columns                       
+vtune: Executing actions 36 % Creating top-level rows                          
+vtune: Executing actions 37 % Creating top-level rows                          
+vtune: Executing actions 37 % Preparing output tree                            
+vtune: Executing actions 37 % Parsing columns in input tree                    
+vtune: Executing actions 37 % Creating top-level columns                       
+vtune: Executing actions 38 % Creating top-level columns                       
+vtune: Executing actions 38 % Creating top-level rows                          
+vtune: Executing actions 39 % Creating top-level rows                          
+vtune: Executing actions 39 % Preparing output tree                            
+vtune: Executing actions 39 % Parsing columns in input tree                    
+vtune: Executing actions 39 % Creating top-level columns                       
+vtune: Executing actions 39 % Creating top-level rows                          
+vtune: Executing actions 40 % Creating top-level rows                          
+vtune: Executing actions 40 % Preparing output tree                            
+vtune: Executing actions 40 % Parsing columns in input tree                    
+vtune: Executing actions 40 % Creating top-level columns                       
+vtune: Executing actions 41 % Creating top-level columns                       
+vtune: Executing actions 41 % Creating top-level rows                          
+vtune: Executing actions 42 % Creating top-level rows                          
+vtune: Executing actions 42 % Preparing output tree                            
+vtune: Executing actions 42 % Parsing columns in input tree                    
+vtune: Executing actions 42 % Creating top-level columns                       
+vtune: Executing actions 43 % Creating top-level columns                       
+vtune: Executing actions 43 % Creating top-level rows                          
+vtune: Executing actions 44 % Creating top-level rows                          
+vtune: Executing actions 44 % Preparing output tree                            
+vtune: Executing actions 44 % Parsing columns in input tree                    
+vtune: Executing actions 44 % Creating top-level columns                       
+vtune: Executing actions 45 % Creating top-level columns                       
+vtune: Executing actions 45 % Creating top-level rows                          
+vtune: Executing actions 46 % Creating top-level rows                          
+vtune: Executing actions 46 % Preparing output tree                            
+vtune: Executing actions 46 % Parsing columns in input tree                    
+vtune: Executing actions 46 % Creating top-level columns                       
+vtune: Executing actions 46 % Creating top-level rows                          
+vtune: Executing actions 47 % Creating top-level rows                          
+vtune: Executing actions 47 % Preparing output tree                            
+vtune: Executing actions 47 % Parsing columns in input tree                    
+vtune: Executing actions 48 % Parsing columns in input tree                    
+vtune: Executing actions 48 % Creating top-level columns                       
+vtune: Executing actions 48 % Creating top-level rows                          
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Setting data model parameters                    
+vtune: Executing actions 49 % Precomputing frequently used data                
+vtune: Executing actions 49 % Precomputing frequently used data                
+vtune: Executing actions 49 % Updating precomputed scalar metrics              
+vtune: Executing actions 49 % Discarding redundant overtime data               
+vtune: Executing actions 49 % Saving the result                                
+vtune: Executing actions 50 % Saving the result                                
+vtune: Executing actions 50 % Generating a report                              
+vtune: Executing actions 50 % Setting data model parameters                    
+vtune: Executing actions 75 % Setting data model parameters                    
+vtune: Executing actions 75 % Generating a report                              Elapsed Time: 16156.478s
+    CPU Time: 43923.999s
+    Memory Bound: 14.6% of Pipeline Slots
+        L1 Bound: 2.7% of Clockticks
+        L2 Bound: 0.4% of Clockticks
+        L3 Bound: 0.4% of Clockticks
+        DRAM Bound: 3.5% of Clockticks
+            DRAM Bandwidth Bound: 0.0% of Elapsed Time
+        Store Bound: 17.9% of Clockticks
+        NUMA: % of Remote Accesses: 0.5%
+        QPI Bandwidth Bound: 0.0% of Elapsed Time
+    Loads: 94,171,760,068,050
+    Stores: 46,720,049,059,425
+    LLC Miss Count: 54,063,784,200
+        Local DRAM Access Count: 53,381,236,425
+        Remote DRAM Access Count: 345,024,150
+        Remote Cache Access Count: 457,532,025
+    Average Latency (cycles): 7
+    Total Thread Count: 435
+    Paused Time: 0s
+
+Bandwidth Utilization
+Bandwidth Domain                  Platform Maximum  Observed Maximum  Average  % of Elapsed Time with High BW Utilization(%)
+--------------------------------  ----------------  ----------------  -------  ---------------------------------------------
+DRAM, GB/sec                      122                         33.300    5.869                                           0.0%
+DRAM Single-Package, GB/sec       61                          23.300    4.644                                           0.0%
+QPI Outgoing Single-Link, GB/sec  16                           3.500    0.001                                           0.0%
+QPI Outgoing, GB/sec              68                           8.000    0.003                                           0.0%
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/anaconda3/envs/torch2/bin/python "/proj/prismgt-PG0/rbachkaniwala3/code/pytorch_main.py" "/mydata/synthetic_data_10MBeach_100Kfiles_symlink/" "-b" "128" "-j" "4" "--epochs" "1" "--val-loop" "0" 
+    User Name: root
+    Operating System: 5.4.0-139-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 13.9 GB 
+    Collection start time: 18:31:45 27/05/2023 UTC
+    Collection stop time: 23:01:01 27/05/2023 UTC
+    Collector Type: Event-based sampling driver
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        Max DRAM Single-Package Bandwidth: 61.000 GB/s
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+
+vtune: Executing actions 100 % Generating a report                             
+vtune: Executing actions 100 % done                                            
+vtune: Peak bandwidth measurement started.
+vtune: Peak bandwidth measurement finished.
+vtune: Warning: To enable hardware event-based sampling, VTune Profiler has disabled the NMI watchdog timer. The watchdog timer will be re-enabled after collection completes.
+vtune: Collection started. To stop the collection, either press CTRL-C or enter from another console window: vtune -r /mydata/vtune_logs/pytorch_vtune_logs/vtune_vary_image_file_size_100Kfiles_v3/filesize100MB_b128_gpu4 -command stop.
+=> creating model 'resnet18'
+Epoch: [0][ 1/64]	Time 1485.362 (1485.362)	Data 1477.637 (1477.637)	Loss 6.9583e+00 (6.9583e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+Epoch: [0][11/64]	Time  0.050 (398.745)	Data  0.000 (397.999)	Loss 0.0000e+00 (6.3258e-01)	Acc@1 100.00 ( 90.91)	Acc@5 100.00 ( 90.91)
+Epoch: [0][21/64]	Time 1459.507 (416.274)	Data 1459.460 (415.861)	Loss 0.0000e+00 (3.3135e-01)	Acc@1 100.00 ( 95.24)	Acc@5 100.00 ( 95.24)
+Epoch: [0][31/64]	Time  0.054 (375.775)	Data  0.000 (375.480)	Loss 0.0000e+00 (2.2446e-01)	Acc@1 100.00 ( 96.77)	Acc@5 100.00 ( 96.77)
+Epoch: [0][41/64]	Time 1425.152 (390.018)	Data 1425.107 (389.784)	Loss 0.0000e+00 (1.6972e-01)	Acc@1 100.00 ( 97.56)	Acc@5 100.00 ( 97.56)
+Epoch: [0][51/64]	Time 23.582 (371.075)	Data 23.534 (370.878)	Loss 0.0000e+00 (1.3644e-01)	Acc@1 100.00 ( 98.04)	Acc@5 100.00 ( 98.04)
+Epoch: [0][61/64]	Time 1413.140 (381.170)	Data 1413.099 (380.998)	Loss 0.0000e+00 (1.1407e-01)	Acc@1 100.00 ( 98.36)	Acc@5 100.00 ( 98.36)
+vtune: Collection stopped.
+vtune: Using result path `/mydata/vtune_logs/pytorch_vtune_logs/vtune_vary_image_file_size_100Kfiles_v3/filesize100MB_b128_gpu4'
+
+vtune: Executing actions  0 %                                                  
+vtune: Warning: The result contains a lot of raw data. Finalization may take a long time to complete.
+
+vtune: Executing actions  0 % Finalizing results                               
+vtune: Executing actions  0 % Finalizing the result                            
+vtune: Executing actions  0 % Clearing the database                            
+vtune: Executing actions  7 % Clearing the database                            
+vtune: Executing actions  7 % Loading raw data to the database                 
+vtune: Executing actions  7 % Loading 'systemcollector-107366-c4130-node.v100ub
+vtune: Executing actions 12 % Loading 'systemcollector-107366-c4130-node.v100ub
+vtune: Executing actions 12 % Loading 'sep7f36c6b8f700.20230527T180721.321740.t
+vtune: Executing actions 12 % Loading 'sep7f36c6b8f700.20230527T180721.321740.t
+vtune: Executing actions 12 % Updating precomputed scalar metrics              
+vtune: Executing actions 14 % Updating precomputed scalar metrics              
+vtune: Executing actions 14 % Processing profile metrics and debug information 
+vtune: Executing actions 19 % Processing profile metrics and debug information 
+vtune: Executing actions 19 % Setting data model parameters                    
+vtune: Executing actions 19 % Resolving module symbols                         
+vtune: Executing actions 19 % Resolving information for dangling locations     
+vtune: Executing actions 19 % Resolving information for `[vdso]'               
+vtune: Executing actions 19 % Resolving information for `_struct.cpython-310-x8
+vtune: Executing actions 19 % Resolving information for `igb'                  
+vtune: Executing actions 19 % Resolving information for `sunrpc'               
+vtune: Executing actions 19 % Resolving information for `_multiarray_umath.cpyt
+vtune: Executing actions 19 % Resolving information for `libc10.so'            
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libc10.so'.
+
+vtune: Executing actions 19 % Resolving information for `mrp'                  
+vtune: Executing actions 19 % Resolving information for `libmkl_intel_lp64.so.2
+vtune: Executing actions 20 % Resolving information for `libmkl_intel_lp64.so.2
+vtune: Executing actions 20 % Resolving information for `sch_fq_codel'         
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/libmkl_intel_lp64.so.2'.
+
+vtune: Executing actions 20 % Resolving information for `libstdc++.so.6.0.29'  
+vtune: Executing actions 20 % Resolving information for `array.cpython-310-x86_
+vtune: Executing actions 20 % Resolving information for `libjpeg.so.9.5.0'     
+vtune: Executing actions 20 % Resolving information for `libpthread-2.31.so'   
+vtune: Executing actions 20 % Resolving information for `garp'                 
+vtune: Executing actions 20 % Resolving information for `libcudnn_ops_infer.so.
+vtune: Executing actions 20 % Resolving information for `libm-2.31.so'         
+vtune: Executing actions 20 % Resolving information for `libmkl_vml_avx2.so.2' 
+vtune: Executing actions 20 % Resolving information for `kvm'                  
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libcudnn_ops_infer.so.8'.
+
+vtune: Executing actions 21 % Resolving information for `kvm'                  
+vtune: Executing actions 21 % Resolving information for `libcudnn_cnn_train.so.
+vtune: Warning: Cannot locate file `nvidia_uvm.ko'.
+
+vtune: Executing actions 21 % Resolving information for `nvidia_uvm'           
+vtune: Executing actions 21 % Resolving information for `_imaging.cpython-310-x
+vtune: Executing actions 21 % Resolving information for `libcudart.so.11.8.89' 
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/libcudart.so.11.8.89'.
+
+vtune: Executing actions 21 % Resolving information for `ld-2.31.so'           
+vtune: Executing actions 21 % Resolving information for `libc10_cuda.so'       
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libc10_cuda.so'.
+
+vtune: Executing actions 21 % Resolving information for `ixgbe'                
+vtune: Executing actions 21 % Resolving information for `libtorch_cpu.so'      
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libcudnn_cnn_train.so.8'.
+
+vtune: Executing actions 21 % Resolving information for `libcudnn_ops_train.so.
+vtune: Executing actions 21 % Resolving information for `libcuda.so.520.61.05' 
+vtune: Warning: Cannot locate debugging information for file `/usr/lib/x86_64-linux-gnu/libcuda.so.520.61.05'.
+
+vtune: Executing actions 21 % Resolving information for `libtorch_python.so'   
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libtorch_python.so'.
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libcudnn_ops_train.so.8'.
+vtune: Warning: Cannot locate file `nvidia.ko'.
+
+vtune: Executing actions 21 % Resolving information for `nvidia'               
+vtune: Executing actions 22 % Resolving information for `nvidia'               
+vtune: Executing actions 22 % Resolving information for `nfs'                  
+vtune: Warning: Cannot locate file `sep5.ko'.
+
+vtune: Executing actions 22 % Resolving information for `sep5'                 
+vtune: Executing actions 22 % Resolving information for `python3.10'           
+vtune: Executing actions 22 % Resolving information for `libc-2.31.so'         
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so'.
+
+vtune: Executing actions 22 % Resolving information for `libcudnn_cnn_infer.so.
+vtune: Executing actions 22 % Resolving information for `vmlinux'              
+vtune: Executing actions 22 % Resolving information for `libcublasLt.so.11.11.3
+vtune: Executing actions 22 % Resolving information for `libtorch_cuda.so'     
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/lib/libcudnn_cnn_infer.so.8'.
+vtune: Warning: Cannot locate debugging information for file `/proj/prismgt-PG0/anaconda3/envs/torch2/lib/libcublasLt.so.11.11.3.6'.
+
+vtune: Executing actions 23 % Resolving information for `libtorch_cuda.so'     
+vtune: Executing actions 23 % Resolving bottom user stack information          
+vtune: Executing actions 23 % Resolving thread name information                
+vtune: Executing actions 24 % Resolving thread name information                
+vtune: Executing actions 24 % Resolving call target names for dynamic code     
+vtune: Executing actions 25 % Resolving call target names for dynamic code     
+vtune: Executing actions 25 % Resolving interrupt name information             
+vtune: Executing actions 26 % Resolving interrupt name information             
+vtune: Executing actions 26 % Processing profile metrics and debug information 
+vtune: Executing actions 27 % Processing profile metrics and debug information 
+vtune: Executing actions 28 % Processing profile metrics and debug information 
+vtune: Executing actions 29 % Processing profile metrics and debug information 
+vtune: Executing actions 30 % Processing profile metrics and debug information 
+vtune: Executing actions 31 % Processing profile metrics and debug information 
+vtune: Executing actions 31 % Preparing output tree                            
+vtune: Executing actions 31 % Parsing columns in input tree                    
+vtune: Executing actions 32 % Parsing columns in input tree                    
+vtune: Executing actions 32 % Creating top-level columns                       
+vtune: Executing actions 32 % Creating top-level rows                          
+vtune: Executing actions 33 % Creating top-level rows                          
+vtune: Executing actions 33 % Preparing output tree                            
+vtune: Executing actions 33 % Parsing columns in input tree                    
+vtune: Executing actions 33 % Creating top-level columns                       
+vtune: Executing actions 34 % Creating top-level columns                       
+vtune: Executing actions 34 % Creating top-level rows                          
+vtune: Executing actions 35 % Creating top-level rows                          
+vtune: Executing actions 35 % Preparing output tree                            
+vtune: Executing actions 35 % Parsing columns in input tree                    
+vtune: Executing actions 35 % Creating top-level columns                       
+vtune: Executing actions 36 % Creating top-level columns                       
+vtune: Executing actions 36 % Creating top-level rows                          
+vtune: Executing actions 37 % Creating top-level rows                          
+vtune: Executing actions 37 % Preparing output tree                            
+vtune: Executing actions 37 % Parsing columns in input tree                    
+vtune: Executing actions 37 % Creating top-level columns                       
+vtune: Executing actions 38 % Creating top-level columns                       
+vtune: Executing actions 38 % Creating top-level rows                          
+vtune: Executing actions 39 % Creating top-level rows                          
+vtune: Executing actions 39 % Preparing output tree                            
+vtune: Executing actions 39 % Parsing columns in input tree                    
+vtune: Executing actions 39 % Creating top-level columns                       
+vtune: Executing actions 39 % Creating top-level rows                          
+vtune: Executing actions 40 % Creating top-level rows                          
+vtune: Executing actions 40 % Preparing output tree                            
+vtune: Executing actions 40 % Parsing columns in input tree                    
+vtune: Executing actions 40 % Creating top-level columns                       
+vtune: Executing actions 41 % Creating top-level columns                       
+vtune: Executing actions 41 % Creating top-level rows                          
+vtune: Executing actions 42 % Creating top-level rows                          
+vtune: Executing actions 42 % Preparing output tree                            
+vtune: Executing actions 42 % Parsing columns in input tree                    
+vtune: Executing actions 42 % Creating top-level columns                       
+vtune: Executing actions 43 % Creating top-level columns                       
+vtune: Executing actions 43 % Creating top-level rows                          
+vtune: Executing actions 44 % Creating top-level rows                          
+vtune: Executing actions 44 % Preparing output tree                            
+vtune: Executing actions 44 % Parsing columns in input tree                    
+vtune: Executing actions 44 % Creating top-level columns                       
+vtune: Executing actions 45 % Creating top-level columns                       
+vtune: Executing actions 45 % Creating top-level rows                          
+vtune: Executing actions 46 % Creating top-level rows                          
+vtune: Executing actions 46 % Preparing output tree                            
+vtune: Executing actions 46 % Parsing columns in input tree                    
+vtune: Executing actions 46 % Creating top-level columns                       
+vtune: Executing actions 46 % Creating top-level rows                          
+vtune: Executing actions 47 % Creating top-level rows                          
+vtune: Executing actions 47 % Preparing output tree                            
+vtune: Executing actions 47 % Parsing columns in input tree                    
+vtune: Executing actions 48 % Parsing columns in input tree                    
+vtune: Executing actions 48 % Creating top-level columns                       
+vtune: Executing actions 48 % Creating top-level rows                          
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Preparing output tree                            
+vtune: Executing actions 49 % Parsing columns in input tree                    
+vtune: Executing actions 49 % Creating top-level columns                       
+vtune: Executing actions 49 % Creating top-level rows                          
+vtune: Executing actions 49 % Setting data model parameters                    
+vtune: Executing actions 49 % Precomputing frequently used data                
+vtune: Executing actions 49 % Precomputing frequently used data                
+vtune: Executing actions 49 % Updating precomputed scalar metrics              
+vtune: Executing actions 49 % Discarding redundant overtime data               
+vtune: Executing actions 49 % Saving the result                                
+vtune: Executing actions 50 % Saving the result                                
+vtune: Executing actions 50 % Generating a report                              
+vtune: Executing actions 50 % Setting data model parameters                    
+vtune: Executing actions 75 % Setting data model parameters                    
+vtune: Executing actions 75 % Generating a report                              Elapsed Time: 23288.989s
+    CPU Time: 61687.512s
+    Memory Bound: 10.5% of Pipeline Slots
+        L1 Bound: 5.0% of Clockticks
+        L2 Bound: 0.5% of Clockticks
+        L3 Bound: 0.4% of Clockticks
+        DRAM Bound: 3.2% of Clockticks
+            DRAM Bandwidth Bound: 0.0% of Elapsed Time
+        Store Bound: 11.1% of Clockticks
+        NUMA: % of Remote Accesses: 1.0%
+        QPI Bandwidth Bound: 0.0% of Elapsed Time
+    Loads: 116,617,113,408,450
+    Stores: 53,016,615,450,750
+    LLC Miss Count: 63,109,417,350
+        Local DRAM Access Count: 60,694,248,300
+        Remote DRAM Access Count: 2,070,144,900
+        Remote Cache Access Count: 375,026,250
+    Average Latency (cycles): 7
+    Total Thread Count: 438
+    Paused Time: 0s
+
+Bandwidth Utilization
+Bandwidth Domain                  Platform Maximum  Observed Maximum  Average  % of Elapsed Time with High BW Utilization(%)
+--------------------------------  ----------------  ----------------  -------  ---------------------------------------------
+DRAM, GB/sec                      122                         37.900    5.344                                           0.0%
+DRAM Single-Package, GB/sec       61                          23.800    3.356                                           0.0%
+QPI Outgoing Single-Link, GB/sec  16                           3.900    0.001                                           0.0%
+QPI Outgoing, GB/sec              68                           9.000    0.005                                           0.0%
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/anaconda3/envs/torch2/bin/python "/proj/prismgt-PG0/rbachkaniwala3/code/pytorch_main.py" "/mydata/synthetic_data_100MBeach_100Kfiles_symlink/" "-b" "128" "-j" "4" "--epochs" "1" "--val-loop" "0" 
+    User Name: root
+    Operating System: 5.4.0-139-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 19.0 GB 
+    Collection start time: 23:07:21 27/05/2023 UTC
+    Collection stop time: 05:35:30 28/05/2023 UTC
+    Collector Type: Event-based sampling driver
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        Max DRAM Single-Package Bandwidth: 61.000 GB/s
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+
+vtune: Executing actions 100 % Generating a report                             
+vtune: Executing actions 100 % done                                            
