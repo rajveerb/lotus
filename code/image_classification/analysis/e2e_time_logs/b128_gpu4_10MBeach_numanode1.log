@@ -1,0 +1,3157 @@
+Transform RandomResizedCrop: 341018162 ns
+Transform RandomHorizontalFlip: 524109 ns
+Transform ToTensor: 946218 ns
+Transform Normalize: 428788 ns
+Single image loader time: 7675468458 ns
+Single image transform time: 497613905 ns
+Transform RandomResizedCrop: 538379372 ns
+Transform RandomHorizontalFlip: 444193 ns
+Transform ToTensor: 997299 ns
+Transform Normalize: 453000 ns
+Transform RandomResizedCrop: 538315555 ns
+Transform RandomHorizontalFlip: 292770 ns
+Transform ToTensor: 822378 ns
+Transform Normalize: 372430 ns
+Transform RandomResizedCrop: 538235416 ns
+Transform RandomHorizontalFlip: 290258 ns
+Transform ToTensor: 809950 ns
+Transform Normalize: 365484 ns
+Single image loader time: 7676426796 ns
+Single image transform time: 737841553 ns
+Single image loader time: 7678008529 ns
+Single image transform time: 737984061 ns
+Single image loader time: 7678369548 ns
+Single image transform time: 737471230 ns
+Transform RandomResizedCrop: 239941929 ns
+Transform RandomHorizontalFlip: 205768 ns
+Transform ToTensor: 525575 ns
+Transform Normalize: 290208 ns
+Single image loader time: 7651662983 ns
+Single image transform time: 408209654 ns
+Transform RandomResizedCrop: 292246144 ns
+Transform RandomHorizontalFlip: 127310 ns
+Transform ToTensor: 499317 ns
+Transform Normalize: 297519 ns
+Transform RandomResizedCrop: 301224350 ns
+Transform RandomHorizontalFlip: 176236 ns
+Transform ToTensor: 506654 ns
+Transform Normalize: 272636 ns
+Transform RandomResizedCrop: 350693431 ns
+Transform RandomHorizontalFlip: 137004 ns
+Transform ToTensor: 519408 ns
+Transform Normalize: 296717 ns
+Single image loader time: 8799372713 ns
+Single image transform time: 510389992 ns
+Single image loader time: 8798725446 ns
+Single image transform time: 519467221 ns
+Single image loader time: 8797296333 ns
+Single image transform time: 562201915 ns
+Transform RandomResizedCrop: 225916771 ns
+Transform RandomHorizontalFlip: 201980 ns
+Transform ToTensor: 527077 ns
+Transform Normalize: 241885 ns
+Single image loader time: 7958743816 ns
+Single image transform time: 396625645 ns
+Transform RandomResizedCrop: 350266070 ns
+Transform RandomHorizontalFlip: 123733 ns
+Transform ToTensor: 494948 ns
+Transform Normalize: 273879 ns
+Transform RandomResizedCrop: 354146714 ns
+Transform RandomHorizontalFlip: 212095 ns
+Transform ToTensor: 502786 ns
+Transform Normalize: 261186 ns
+Transform RandomResizedCrop: 407814497 ns
+Transform RandomHorizontalFlip: 62702 ns
+Transform ToTensor: 423112 ns
+Transform Normalize: 211769 ns
+Single image loader time: 8001836624 ns
+Single image transform time: 557090379 ns
+Single image loader time: 8006451321 ns
+Single image transform time: 624500775 ns
+Single image loader time: 8015995327 ns
+Single image transform time: 575865188 ns
+Transform RandomResizedCrop: 441082237 ns
+Transform RandomHorizontalFlip: 203164 ns
+Transform ToTensor: 496942 ns
+Transform Normalize: 280673 ns
+Single image loader time: 8036006990 ns
+Single image transform time: 611790227 ns
+Transform RandomResizedCrop: 220893435 ns
+Transform RandomHorizontalFlip: 216308 ns
+Transform ToTensor: 493777 ns
+Transform Normalize: 297246 ns
+Single image loader time: 8051842757 ns
+Single image transform time: 391133864 ns
+Transform RandomResizedCrop: 423778024 ns
+Transform RandomHorizontalFlip: 139881 ns
+Transform ToTensor: 530610 ns
+Transform Normalize: 294506 ns
+Transform RandomResizedCrop: 528086743 ns
+Transform RandomHorizontalFlip: 197043 ns
+Transform ToTensor: 473206 ns
+Transform Normalize: 288895 ns
+Single image loader time: 8099872121 ns
+Single image transform time: 604038038 ns
+Single image loader time: 8103424572 ns
+Single image transform time: 702777712 ns
+Transform RandomResizedCrop: 332644149 ns
+Transform RandomHorizontalFlip: 118611 ns
+Transform ToTensor: 526274 ns
+Transform Normalize: 233145 ns
+Single image loader time: 8063424619 ns
+Single image transform time: 507579053 ns
+Transform RandomResizedCrop: 529489225 ns
+Transform RandomHorizontalFlip: 214438 ns
+Transform ToTensor: 482304 ns
+Transform Normalize: 279215 ns
+Single image loader time: 8044601699 ns
+Single image transform time: 717945274 ns
+Transform RandomResizedCrop: 526133621 ns
+Transform RandomHorizontalFlip: 136846 ns
+Transform ToTensor: 519976 ns
+Transform Normalize: 267461 ns
+Transform RandomResizedCrop: 523997551 ns
+Transform RandomHorizontalFlip: 123945 ns
+Transform ToTensor: 499483 ns
+Transform Normalize: 286720 ns
+Single image loader time: 8094832962 ns
+Single image transform time: 717996614 ns
+Single image loader time: 8112760463 ns
+Single image transform time: 705864776 ns
+Transform RandomResizedCrop: 371767286 ns
+Transform RandomHorizontalFlip: 129043 ns
+Transform ToTensor: 506655 ns
+Transform Normalize: 293439 ns
+Single image loader time: 8106892946 ns
+Single image transform time: 547232271 ns
+Transform RandomResizedCrop: 528953912 ns
+Transform RandomHorizontalFlip: 223761 ns
+Transform ToTensor: 483724 ns
+Transform Normalize: 289462 ns
+Single image loader time: 8060694768 ns
+Single image transform time: 723802518 ns
+Transform RandomResizedCrop: 526377348 ns
+Transform RandomHorizontalFlip: 213616 ns
+Transform ToTensor: 483565 ns
+Transform Normalize: 296477 ns
+Transform RandomResizedCrop: 454238269 ns
+Transform RandomHorizontalFlip: 125679 ns
+Transform ToTensor: 493311 ns
+Transform Normalize: 275801 ns
+Single image loader time: 8107384381 ns
+Single image transform time: 750836663 ns
+Single image loader time: 8140573636 ns
+Single image transform time: 650487967 ns
+Transform RandomResizedCrop: 265790384 ns
+Transform RandomHorizontalFlip: 125192 ns
+Transform ToTensor: 497309 ns
+Transform Normalize: 234392 ns
+Single image loader time: 8080515860 ns
+Single image transform time: 444381422 ns
+Transform RandomResizedCrop: 528909821 ns
+Transform RandomHorizontalFlip: 89092 ns
+Transform ToTensor: 513473 ns
+Transform Normalize: 282051 ns
+Single image loader time: 7996865235 ns
+Single image transform time: 733156018 ns
+Transform RandomResizedCrop: 528520636 ns
+Transform RandomHorizontalFlip: 211552 ns
+Transform ToTensor: 499016 ns
+Transform Normalize: 255449 ns
+Transform RandomResizedCrop: 527635962 ns
+Transform RandomHorizontalFlip: 196174 ns
+Transform ToTensor: 470373 ns
+Transform Normalize: 232297 ns
+Single image loader time: 8057849776 ns
+Single image transform time: 733503895 ns
+Single image loader time: 8072575722 ns
+Single image transform time: 727210025 ns
+Transform RandomResizedCrop: 264270814 ns
+Transform RandomHorizontalFlip: 119083 ns
+Transform ToTensor: 517023 ns
+Transform Normalize: 276416 ns
+Single image loader time: 8100006037 ns
+Single image transform time: 440615189 ns
+Transform RandomResizedCrop: 335240493 ns
+Transform RandomHorizontalFlip: 126720 ns
+Transform ToTensor: 528122 ns
+Transform Normalize: 296764 ns
+Single image loader time: 7980188405 ns
+Single image transform time: 538165369 ns
+Transform RandomResizedCrop: 236849673 ns
+Transform RandomHorizontalFlip: 209083 ns
+Transform ToTensor: 475311 ns
+Transform Normalize: 297612 ns
+Single image loader time: 8059260109 ns
+Single image transform time: 423862518 ns
+Transform RandomResizedCrop: 524223832 ns
+Transform RandomHorizontalFlip: 127546 ns
+Transform ToTensor: 509219 ns
+Transform Normalize: 275236 ns
+Single image loader time: 8074753730 ns
+Single image transform time: 707475801 ns
+Transform RandomResizedCrop: 239289055 ns
+Transform RandomHorizontalFlip: 195003 ns
+Transform ToTensor: 470168 ns
+Transform Normalize: 251512 ns
+Single image loader time: 8152130990 ns
+Single image transform time: 418324868 ns
+Transform RandomResizedCrop: 441948407 ns
+Transform RandomHorizontalFlip: 127325 ns
+Transform ToTensor: 526777 ns
+Transform Normalize: 284817 ns
+Single image loader time: 8060148035 ns
+Single image transform time: 646661252 ns
+Transform RandomResizedCrop: 464769584 ns
+Transform RandomHorizontalFlip: 227694 ns
+Transform ToTensor: 511519 ns
+Transform Normalize: 283558 ns
+Single image loader time: 8081730221 ns
+Single image transform time: 648032806 ns
+Transform RandomResizedCrop: 253819771 ns
+Transform RandomHorizontalFlip: 195655 ns
+Transform ToTensor: 476564 ns
+Transform Normalize: 235033 ns
+Single image loader time: 8155513473 ns
+Single image transform time: 444682121 ns
+Transform RandomResizedCrop: 354543569 ns
+Transform RandomHorizontalFlip: 120824 ns
+Transform ToTensor: 500667 ns
+Transform Normalize: 278521 ns
+Single image loader time: 8198583438 ns
+Single image transform time: 532837627 ns
+Transform RandomResizedCrop: 529280954 ns
+Transform RandomHorizontalFlip: 89526 ns
+Transform ToTensor: 517788 ns
+Transform Normalize: 286478 ns
+Single image loader time: 8069196035 ns
+Single image transform time: 730795957 ns
+Transform RandomResizedCrop: 313499473 ns
+Transform RandomHorizontalFlip: 138594 ns
+Transform ToTensor: 554316 ns
+Transform Normalize: 307271 ns
+Single image loader time: 8081785674 ns
+Single image transform time: 516885822 ns
+Transform RandomResizedCrop: 337152671 ns
+Transform RandomHorizontalFlip: 126325 ns
+Transform ToTensor: 502026 ns
+Transform Normalize: 276386 ns
+Single image loader time: 8128516514 ns
+Single image transform time: 519712063 ns
+Transform RandomResizedCrop: 523872952 ns
+Transform RandomHorizontalFlip: 189586 ns
+Transform ToTensor: 470464 ns
+Transform Normalize: 290323 ns
+Single image loader time: 8163858289 ns
+Single image transform time: 704817465 ns
+Transform RandomResizedCrop: 238585657 ns
+Transform RandomHorizontalFlip: 209848 ns
+Transform ToTensor: 482713 ns
+Transform Normalize: 297556 ns
+Single image loader time: 8039664765 ns
+Single image transform time: 444159269 ns
+Transform RandomResizedCrop: 379784261 ns
+Transform RandomHorizontalFlip: 226001 ns
+Transform ToTensor: 517539 ns
+Transform Normalize: 280079 ns
+Single image loader time: 8057920070 ns
+Single image transform time: 570085383 ns
+Transform RandomResizedCrop: 524568309 ns
+Transform RandomHorizontalFlip: 127802 ns
+Transform ToTensor: 500241 ns
+Transform Normalize: 276257 ns
+Single image loader time: 8111412589 ns
+Single image transform time: 711933933 ns
+Transform RandomResizedCrop: 524197096 ns
+Transform RandomHorizontalFlip: 200041 ns
+Transform ToTensor: 474319 ns
+Transform Normalize: 277703 ns
+Single image loader time: 8159220389 ns
+Single image transform time: 710499597 ns
+Transform RandomResizedCrop: 528927553 ns
+Transform RandomHorizontalFlip: 211927 ns
+Transform ToTensor: 497184 ns
+Transform Normalize: 242136 ns
+Single image loader time: 8089971414 ns
+Single image transform time: 735278292 ns
+Transform RandomResizedCrop: 526785604 ns
+Transform RandomHorizontalFlip: 213513 ns
+Transform ToTensor: 500001 ns
+Transform Normalize: 301934 ns
+Single image loader time: 8097943665 ns
+Single image transform time: 717957311 ns
+Transform RandomResizedCrop: 464363273 ns
+Transform RandomHorizontalFlip: 127445 ns
+Transform ToTensor: 511099 ns
+Transform Normalize: 274742 ns
+Single image loader time: 8201947477 ns
+Single image transform time: 655628958 ns
+Transform RandomResizedCrop: 524507853 ns
+Transform RandomHorizontalFlip: 126740 ns
+Transform ToTensor: 508488 ns
+Transform Normalize: 237007 ns
+Single image loader time: 8165257361 ns
+Single image transform time: 710537619 ns
+Transform RandomResizedCrop: 342677648 ns
+Transform RandomHorizontalFlip: 124158 ns
+Transform ToTensor: 533142 ns
+Transform Normalize: 232826 ns
+Single image loader time: 8102284547 ns
+Single image transform time: 552412831 ns
+Transform RandomResizedCrop: 527124991 ns
+Transform RandomHorizontalFlip: 222583 ns
+Transform ToTensor: 510221 ns
+Transform Normalize: 306446 ns
+Single image loader time: 8100321313 ns
+Single image transform time: 725768738 ns
+Transform RandomResizedCrop: 524417506 ns
+Transform RandomHorizontalFlip: 192055 ns
+Transform ToTensor: 484551 ns
+Transform Normalize: 285801 ns
+Single image loader time: 8208141503 ns
+Single image transform time: 720474266 ns
+Transform RandomResizedCrop: 245327370 ns
+Transform RandomHorizontalFlip: 209184 ns
+Transform ToTensor: 473516 ns
+Transform Normalize: 287043 ns
+Single image loader time: 8133077737 ns
+Single image transform time: 432500330 ns
+Transform RandomResizedCrop: 529011515 ns
+Transform RandomHorizontalFlip: 128271 ns
+Transform ToTensor: 523480 ns
+Transform Normalize: 280297 ns
+Single image loader time: 8092721687 ns
+Single image transform time: 739807519 ns
+Transform RandomResizedCrop: 263754083 ns
+Transform RandomHorizontalFlip: 215611 ns
+Transform ToTensor: 495181 ns
+Transform Normalize: 299421 ns
+Single image loader time: 8077299224 ns
+Single image transform time: 458273544 ns
+Transform RandomResizedCrop: 524590447 ns
+Transform RandomHorizontalFlip: 194092 ns
+Transform ToTensor: 480188 ns
+Transform Normalize: 277192 ns
+Single image loader time: 8207457057 ns
+Single image transform time: 728345640 ns
+Transform RandomResizedCrop: 453136946 ns
+Transform RandomHorizontalFlip: 192230 ns
+Transform ToTensor: 483208 ns
+Transform Normalize: 275281 ns
+Single image loader time: 8206302083 ns
+Single image transform time: 638315384 ns
+Transform RandomResizedCrop: 528990211 ns
+Transform RandomHorizontalFlip: 130773 ns
+Transform ToTensor: 528338 ns
+Transform Normalize: 234941 ns
+Transform RandomResizedCrop: 314859257 ns
+Transform RandomHorizontalFlip: 223253 ns
+Transform ToTensor: 501928 ns
+Transform Normalize: 298435 ns
+Single image loader time: 8154639787 ns
+Single image transform time: 751564544 ns
+Single image loader time: 8142308224 ns
+Single image transform time: 526954116 ns
+Transform RandomResizedCrop: 524527134 ns
+Transform RandomHorizontalFlip: 197974 ns
+Transform ToTensor: 470469 ns
+Transform Normalize: 278400 ns
+Single image loader time: 8292566479 ns
+Single image transform time: 721877905 ns
+Transform RandomResizedCrop: 438863754 ns
+Transform RandomHorizontalFlip: 120380 ns
+Transform ToTensor: 518900 ns
+Transform Normalize: 277825 ns
+Single image loader time: 8235858943 ns
+Single image transform time: 624510251 ns
+Transform RandomResizedCrop: 265407179 ns
+Transform RandomHorizontalFlip: 140404 ns
+Transform ToTensor: 538395 ns
+Transform Normalize: 302597 ns
+Transform RandomResizedCrop: 527589707 ns
+Transform RandomHorizontalFlip: 198881 ns
+Transform ToTensor: 468221 ns
+Transform Normalize: 284406 ns
+Single image loader time: 8169084334 ns
+Single image transform time: 463404089 ns
+Single image loader time: 8175649533 ns
+Single image transform time: 724654823 ns
+Transform RandomResizedCrop: 524113094 ns
+Transform RandomHorizontalFlip: 195065 ns
+Transform ToTensor: 469722 ns
+Transform Normalize: 232412 ns
+Single image loader time: 8327481983 ns
+Single image transform time: 725911508 ns
+Transform RandomResizedCrop: 524987012 ns
+Transform RandomHorizontalFlip: 205606 ns
+Transform ToTensor: 477073 ns
+Transform Normalize: 253723 ns
+Single image loader time: 8226668694 ns
+Single image transform time: 709281835 ns
+Transform RandomResizedCrop: 247469444 ns
+Transform RandomHorizontalFlip: 116217 ns
+Transform ToTensor: 492935 ns
+Transform Normalize: 278027 ns
+Transform RandomResizedCrop: 526452121 ns
+Transform RandomHorizontalFlip: 212770 ns
+Transform ToTensor: 491586 ns
+Transform Normalize: 255204 ns
+Single image loader time: 8194804457 ns
+Single image transform time: 460555686 ns
+Single image loader time: 8194181942 ns
+Single image transform time: 738452507 ns
+Transform RandomResizedCrop: 524242552 ns
+Transform RandomHorizontalFlip: 192628 ns
+Transform ToTensor: 467954 ns
+Transform Normalize: 296345 ns
+Single image loader time: 8329915720 ns
+Single image transform time: 725810303 ns
+Transform RandomResizedCrop: 376841546 ns
+Transform RandomHorizontalFlip: 206548 ns
+Transform ToTensor: 478523 ns
+Transform Normalize: 280865 ns
+Single image loader time: 8213999147 ns
+Single image transform time: 560385651 ns
+Transform RandomResizedCrop: 378683794 ns
+Transform RandomHorizontalFlip: 139365 ns
+Transform ToTensor: 514239 ns
+Transform Normalize: 297707 ns
+Transform RandomResizedCrop: 526854978 ns
+Transform RandomHorizontalFlip: 197787 ns
+Transform ToTensor: 467542 ns
+Transform Normalize: 273052 ns
+Single image loader time: 8208308407 ns
+Single image transform time: 605614339 ns
+Single image loader time: 8210360947 ns
+Single image transform time: 751789056 ns
+Transform RandomResizedCrop: 524333145 ns
+Transform RandomHorizontalFlip: 200111 ns
+Transform ToTensor: 490124 ns
+Transform Normalize: 283454 ns
+Single image loader time: 8296171865 ns
+Single image transform time: 717841445 ns
+Transform RandomResizedCrop: 255631310 ns
+Transform RandomHorizontalFlip: 128975 ns
+Transform ToTensor: 528189 ns
+Transform Normalize: 234998 ns
+Single image loader time: 8245130535 ns
+Single image transform time: 430759019 ns
+Transform RandomResizedCrop: 496515973 ns
+Transform RandomHorizontalFlip: 137763 ns
+Transform ToTensor: 526922 ns
+Transform Normalize: 296529 ns
+Transform RandomResizedCrop: 516101876 ns
+Transform RandomHorizontalFlip: 194869 ns
+Transform ToTensor: 460661 ns
+Transform Normalize: 273651 ns
+Single image loader time: 8267652267 ns
+Single image transform time: 704875376 ns
+Single image loader time: 8264230454 ns
+Single image transform time: 720578529 ns
+Transform RandomResizedCrop: 523948848 ns
+Transform RandomHorizontalFlip: 124783 ns
+Transform ToTensor: 490648 ns
+Transform Normalize: 234728 ns
+Single image loader time: 8340500101 ns
+Single image transform time: 715102905 ns
+Transform RandomResizedCrop: 347317034 ns
+Transform RandomHorizontalFlip: 121797 ns
+Transform ToTensor: 494451 ns
+Transform Normalize: 234310 ns
+Single image loader time: 8282018257 ns
+Single image transform time: 539128538 ns
+Transform RandomResizedCrop: 296307173 ns
+Transform RandomHorizontalFlip: 211576 ns
+Transform ToTensor: 487727 ns
+Transform Normalize: 299081 ns
+Single image loader time: 8238199925 ns
+Single image transform time: 480370469 ns
+Transform RandomResizedCrop: 524333418 ns
+Transform RandomHorizontalFlip: 198201 ns
+Transform ToTensor: 469961 ns
+Transform Normalize: 276219 ns
+Single image loader time: 8246310559 ns
+Single image transform time: 703415841 ns
+Transform RandomResizedCrop: 523812466 ns
+Transform RandomHorizontalFlip: 128322 ns
+Transform ToTensor: 491196 ns
+Transform Normalize: 278450 ns
+Single image loader time: 8303707714 ns
+Single image transform time: 716666419 ns
+Transform RandomResizedCrop: 230911438 ns
+Transform RandomHorizontalFlip: 187134 ns
+Transform ToTensor: 464232 ns
+Transform Normalize: 280050 ns
+Single image loader time: 8320912413 ns
+Single image transform time: 407685676 ns
+Transform RandomResizedCrop: 303832031 ns
+Transform RandomHorizontalFlip: 216303 ns
+Transform ToTensor: 497928 ns
+Transform Normalize: 293900 ns
+Single image loader time: 8263590915 ns
+Single image transform time: 531462608 ns
+Transform RandomResizedCrop: 524194730 ns
+Transform RandomHorizontalFlip: 126482 ns
+Transform ToTensor: 508017 ns
+Transform Normalize: 239603 ns
+Single image loader time: 8304748776 ns
+Single image transform time: 703384481 ns
+Transform RandomResizedCrop: 288882786 ns
+Transform RandomHorizontalFlip: 120660 ns
+Transform ToTensor: 502939 ns
+Transform Normalize: 234693 ns
+Single image loader time: 8345774756 ns
+Single image transform time: 484553895 ns
+Transform RandomResizedCrop: 339510957 ns
+Transform RandomHorizontalFlip: 189172 ns
+Transform ToTensor: 472888 ns
+Transform Normalize: 275480 ns
+Single image loader time: 8378848898 ns
+Single image transform time: 519580281 ns
+Transform RandomResizedCrop: 525983073 ns
+Transform RandomHorizontalFlip: 140561 ns
+Transform ToTensor: 526908 ns
+Transform Normalize: 300257 ns
+Single image loader time: 8342053844 ns
+Single image transform time: 724237028 ns
+Transform RandomResizedCrop: 214941495 ns
+Transform RandomHorizontalFlip: 123198 ns
+Transform ToTensor: 494769 ns
+Transform Normalize: 276322 ns
+Single image loader time: 8416715868 ns
+Single image transform time: 396216346 ns
+Transform RandomResizedCrop: 297465622 ns
+Transform RandomHorizontalFlip: 199124 ns
+Transform ToTensor: 476284 ns
+Transform Normalize: 275167 ns
+Single image loader time: 8444688016 ns
+Single image transform time: 494402870 ns
+Transform RandomResizedCrop: 524412347 ns
+Transform RandomHorizontalFlip: 198704 ns
+Transform ToTensor: 472280 ns
+Transform Normalize: 275655 ns
+Single image loader time: 8395984637 ns
+Single image transform time: 705632522 ns
+Transform RandomResizedCrop: 426538857 ns
+Transform RandomHorizontalFlip: 134407 ns
+Transform ToTensor: 518080 ns
+Transform Normalize: 295190 ns
+Single image loader time: 8308670744 ns
+Single image transform time: 621052482 ns
+Transform RandomResizedCrop: 523802018 ns
+Transform RandomHorizontalFlip: 127553 ns
+Transform ToTensor: 505957 ns
+Transform Normalize: 234473 ns
+Single image loader time: 8345963231 ns
+Single image transform time: 707231641 ns
+Transform RandomResizedCrop: 524112989 ns
+Transform RandomHorizontalFlip: 127860 ns
+Transform ToTensor: 495005 ns
+Transform Normalize: 286648 ns
+Single image loader time: 8395999532 ns
+Single image transform time: 720960530 ns
+Transform RandomResizedCrop: 524017181 ns
+Transform RandomHorizontalFlip: 194853 ns
+Transform ToTensor: 475965 ns
+Transform Normalize: 273767 ns
+Single image loader time: 8330027857 ns
+Single image transform time: 732866464 ns
+Transform RandomResizedCrop: 441339902 ns
+Transform RandomHorizontalFlip: 231045 ns
+Transform ToTensor: 524772 ns
+Transform Normalize: 310040 ns
+Single image loader time: 8287705464 ns
+Single image transform time: 644175845 ns
+Transform RandomResizedCrop: 416447043 ns
+Transform RandomHorizontalFlip: 121494 ns
+Transform ToTensor: 500447 ns
+Transform Normalize: 276023 ns
+Single image loader time: 8343250822 ns
+Single image transform time: 598370462 ns
+Transform RandomResizedCrop: 318271495 ns
+Transform RandomHorizontalFlip: 194646 ns
+Transform ToTensor: 474155 ns
+Transform Normalize: 276849 ns
+Single image loader time: 8378731907 ns
+Single image transform time: 513857352 ns
+Transform RandomResizedCrop: 260875963 ns
+Transform RandomHorizontalFlip: 120790 ns
+Transform ToTensor: 500620 ns
+Transform Normalize: 286768 ns
+Single image loader time: 8313574834 ns
+Single image transform time: 441416872 ns
+Transform RandomResizedCrop: 526729470 ns
+Transform RandomHorizontalFlip: 144601 ns
+Transform ToTensor: 569325 ns
+Transform Normalize: 260732 ns
+Single image loader time: 8251628842 ns
+Single image transform time: 724668678 ns
+Transform RandomResizedCrop: 523938779 ns
+Transform RandomHorizontalFlip: 124063 ns
+Transform ToTensor: 510523 ns
+Transform Normalize: 275784 ns
+Single image loader time: 8299980324 ns
+Single image transform time: 704467885 ns
+Transform RandomResizedCrop: 401441950 ns
+Transform RandomHorizontalFlip: 120625 ns
+Transform ToTensor: 489273 ns
+Transform Normalize: 245083 ns
+Single image loader time: 8356188960 ns
+Single image transform time: 597371590 ns
+Transform RandomResizedCrop: 523984853 ns
+Transform RandomHorizontalFlip: 123378 ns
+Transform ToTensor: 492091 ns
+Transform Normalize: 300317 ns
+Single image loader time: 8339782527 ns
+Single image transform time: 707094040 ns
+Transform RandomResizedCrop: 267729523 ns
+Transform RandomHorizontalFlip: 138804 ns
+Transform ToTensor: 543715 ns
+Transform Normalize: 301171 ns
+Single image loader time: 8258406318 ns
+Single image transform time: 468750085 ns
+Transform RandomResizedCrop: 317800795 ns
+Transform RandomHorizontalFlip: 190910 ns
+Transform ToTensor: 465666 ns
+Transform Normalize: 274128 ns
+Single image loader time: 8334014965 ns
+Single image transform time: 505791340 ns
+Transform RandomResizedCrop: 238642545 ns
+Transform RandomHorizontalFlip: 201760 ns
+Transform ToTensor: 491977 ns
+Transform Normalize: 274183 ns
+Single image loader time: 8357305411 ns
+Single image transform time: 435401610 ns
+Transform RandomResizedCrop: 525011115 ns
+Transform RandomHorizontalFlip: 133114 ns
+Transform ToTensor: 512782 ns
+Transform Normalize: 239005 ns
+Single image loader time: 8309793048 ns
+Single image transform time: 711054972 ns
+Transform RandomResizedCrop: 235694685 ns
+Transform RandomHorizontalFlip: 138996 ns
+Transform ToTensor: 550973 ns
+Transform Normalize: 268105 ns
+Single image loader time: 8267919826 ns
+Single image transform time: 438242525 ns
+Transform RandomResizedCrop: 344551335 ns
+Transform RandomHorizontalFlip: 191177 ns
+Transform ToTensor: 470773 ns
+Transform Normalize: 278042 ns
+Single image loader time: 8336957392 ns
+Single image transform time: 541419916 ns
+Transform RandomResizedCrop: 524258086 ns
+Transform RandomHorizontalFlip: 125973 ns
+Transform ToTensor: 499412 ns
+Transform Normalize: 291743 ns
+Single image loader time: 8371166205 ns
+Single image transform time: 721989135 ns
+Transform RandomResizedCrop: 526294625 ns
+Transform RandomHorizontalFlip: 122068 ns
+Transform ToTensor: 511822 ns
+Transform Normalize: 235559 ns
+Single image loader time: 8301693019 ns
+Single image transform time: 712460472 ns
+Transform RandomResizedCrop: 526615612 ns
+Transform RandomHorizontalFlip: 213832 ns
+Transform ToTensor: 509340 ns
+Transform Normalize: 305726 ns
+Single image loader time: 8286673194 ns
+Single image transform time: 726084072 ns
+Transform RandomResizedCrop: 524367898 ns
+Transform RandomHorizontalFlip: 196901 ns
+Transform ToTensor: 466499 ns
+Transform Normalize: 286855 ns
+Single image loader time: 8384888609 ns
+Single image transform time: 717744831 ns
+Transform RandomResizedCrop: 524208308 ns
+Transform RandomHorizontalFlip: 128713 ns
+Transform ToTensor: 496454 ns
+Transform Normalize: 234922 ns
+Single image loader time: 8408625540 ns
+Single image transform time: 721643773 ns
+Transform RandomResizedCrop: 493951908 ns
+Transform RandomHorizontalFlip: 123847 ns
+Transform ToTensor: 523005 ns
+Transform Normalize: 244868 ns
+Single image loader time: 8305196438 ns
+Single image transform time: 680913336 ns
+Transform RandomResizedCrop: 271249764 ns
+Transform RandomHorizontalFlip: 212547 ns
+Transform ToTensor: 493038 ns
+Transform Normalize: 253791 ns
+Single image loader time: 8295513994 ns
+Single image transform time: 471902846 ns
+Transform RandomResizedCrop: 524277417 ns
+Transform RandomHorizontalFlip: 191576 ns
+Transform ToTensor: 461372 ns
+Transform Normalize: 233004 ns
+Single image loader time: 8410514180 ns
+Single image transform time: 723877018 ns
+Transform RandomResizedCrop: 524139515 ns
+Transform RandomHorizontalFlip: 199934 ns
+Transform ToTensor: 480890 ns
+Transform Normalize: 274991 ns
+Single image loader time: 8424291010 ns
+Single image transform time: 735918775 ns
+Transform RandomResizedCrop: 357580323 ns
+Transform RandomHorizontalFlip: 196270 ns
+Transform ToTensor: 483113 ns
+Transform Normalize: 278923 ns
+Single image loader time: 8317068472 ns
+Single image transform time: 544945537 ns
+Transform RandomResizedCrop: 266606551 ns
+Transform RandomHorizontalFlip: 215202 ns
+Transform ToTensor: 492647 ns
+Transform Normalize: 299051 ns
+Single image loader time: 8307565593 ns
+Single image transform time: 467429036 ns
+Transform RandomResizedCrop: 524390463 ns
+Transform RandomHorizontalFlip: 201487 ns
+Transform ToTensor: 466970 ns
+Transform Normalize: 292535 ns
+Single image loader time: 8429314274 ns
+Single image transform time: 727058269 ns
+Transform RandomResizedCrop: 280551910 ns
+Transform RandomHorizontalFlip: 125156 ns
+Transform ToTensor: 494236 ns
+Transform Normalize: 232578 ns
+Single image loader time: 8415670688 ns
+Single image transform time: 476498442 ns
+Transform RandomResizedCrop: 526815932 ns
+Transform RandomHorizontalFlip: 134024 ns
+Transform ToTensor: 525699 ns
+Transform Normalize: 236875 ns
+Single image loader time: 8318112431 ns
+Single image transform time: 714465692 ns
+Transform RandomResizedCrop: 296902932 ns
+Transform RandomHorizontalFlip: 218976 ns
+Transform ToTensor: 506060 ns
+Transform Normalize: 265191 ns
+Single image loader time: 8321916727 ns
+Single image transform time: 492788752 ns
+Transform RandomResizedCrop: 487153186 ns
+Transform RandomHorizontalFlip: 127107 ns
+Transform ToTensor: 496856 ns
+Transform Normalize: 279748 ns
+Single image loader time: 8429814174 ns
+Single image transform time: 692789652 ns
+Transform RandomResizedCrop: 248278478 ns
+Transform RandomHorizontalFlip: 123550 ns
+Transform ToTensor: 501883 ns
+Transform Normalize: 275562 ns
+Single image loader time: 8446703615 ns
+Single image transform time: 446440193 ns
+Transform RandomResizedCrop: 526753732 ns
+Transform RandomHorizontalFlip: 131848 ns
+Transform ToTensor: 513116 ns
+Transform Normalize: 277439 ns
+Single image loader time: 8368757166 ns
+Single image transform time: 712551586 ns
+Transform RandomResizedCrop: 524712182 ns
+Transform RandomHorizontalFlip: 139913 ns
+Transform ToTensor: 543486 ns
+Transform Normalize: 300289 ns
+Single image loader time: 8404682425 ns
+Single image transform time: 714914864 ns
+Transform RandomResizedCrop: 524206021 ns
+Transform RandomHorizontalFlip: 126927 ns
+Transform ToTensor: 513880 ns
+Transform Normalize: 280398 ns
+Single image loader time: 8470081248 ns
+Single image transform time: 731083193 ns
+Transform RandomResizedCrop: 231365345 ns
+Transform RandomHorizontalFlip: 122306 ns
+Transform ToTensor: 499836 ns
+Transform Normalize: 251723 ns
+Single image loader time: 8490320360 ns
+Single image transform time: 431591066 ns
+Transform RandomResizedCrop: 306003882 ns
+Transform RandomHorizontalFlip: 119336 ns
+Transform ToTensor: 518966 ns
+Transform Normalize: 293819 ns
+Single image loader time: 8317513216 ns
+Single image transform time: 492035831 ns
+Transform RandomResizedCrop: 407102657 ns
+Transform RandomHorizontalFlip: 214352 ns
+Transform ToTensor: 493203 ns
+Transform Normalize: 256157 ns
+Single image loader time: 8384648949 ns
+Single image transform time: 601385017 ns
+Transform RandomResizedCrop: 524797764 ns
+Transform RandomHorizontalFlip: 205641 ns
+Transform ToTensor: 473966 ns
+Transform Normalize: 234917 ns
+Single image loader time: 8379609009 ns
+Single image transform time: 730113574 ns
+Transform RandomResizedCrop: 524124698 ns
+Transform RandomHorizontalFlip: 196028 ns
+Transform ToTensor: 479394 ns
+Transform Normalize: 274972 ns
+Single image loader time: 8430505999 ns
+Single image transform time: 722721045 ns
+Transform RandomResizedCrop: 282242995 ns
+Transform RandomHorizontalFlip: 120880 ns
+Transform ToTensor: 529959 ns
+Transform Normalize: 280279 ns
+Single image loader time: 8355569784 ns
+Single image transform time: 469550353 ns
+Transform RandomResizedCrop: 525027115 ns
+Transform RandomHorizontalFlip: 214667 ns
+Transform ToTensor: 484824 ns
+Transform Normalize: 295851 ns
+Single image loader time: 8439359737 ns
+Single image transform time: 722701825 ns
+Transform RandomResizedCrop: 440536605 ns
+Transform RandomHorizontalFlip: 199360 ns
+Transform ToTensor: 477249 ns
+Transform Normalize: 274716 ns
+Single image loader time: 8384754768 ns
+Single image transform time: 647005143 ns
+Transform RandomResizedCrop: 214523739 ns
+Transform RandomHorizontalFlip: 125051 ns
+Transform ToTensor: 473663 ns
+Transform Normalize: 234272 ns
+Single image loader time: 8466430963 ns
+Single image transform time: 413993923 ns
+Transform RandomResizedCrop: 263072333 ns
+Transform RandomHorizontalFlip: 207506 ns
+Transform ToTensor: 477946 ns
+Transform Normalize: 235363 ns
+Single image loader time: 8365036140 ns
+Single image transform time: 448780561 ns
+Transform RandomResizedCrop: 287690510 ns
+Transform RandomHorizontalFlip: 136354 ns
+Transform ToTensor: 511393 ns
+Transform Normalize: 256163 ns
+Single image loader time: 8438792881 ns
+Single image transform time: 520488310 ns
+Transform RandomResizedCrop: 525384303 ns
+Transform RandomHorizontalFlip: 204727 ns
+Transform ToTensor: 476008 ns
+Transform Normalize: 273619 ns
+Single image loader time: 8383272562 ns
+Single image transform time: 771282146 ns
+Transform RandomResizedCrop: 524037190 ns
+Transform RandomHorizontalFlip: 122602 ns
+Transform ToTensor: 492250 ns
+Transform Normalize: 275324 ns
+Single image loader time: 8457830359 ns
+Single image transform time: 720253386 ns
+Transform RandomResizedCrop: 429755432 ns
+Transform RandomHorizontalFlip: 199968 ns
+Transform ToTensor: 491078 ns
+Transform Normalize: 246584 ns
+Single image loader time: 8438201610 ns
+Single image transform time: 617206290 ns
+Transform RandomResizedCrop: 310739588 ns
+Transform RandomHorizontalFlip: 209283 ns
+Transform ToTensor: 490589 ns
+Transform Normalize: 306443 ns
+Single image loader time: 8500148410 ns
+Single image transform time: 505237396 ns
+Transform RandomResizedCrop: 382131995 ns
+Transform RandomHorizontalFlip: 202177 ns
+Transform ToTensor: 491745 ns
+Transform Normalize: 287875 ns
+Single image loader time: 8403691665 ns
+Single image transform time: 624466791 ns
+Transform RandomResizedCrop: 524531159 ns
+Transform RandomHorizontalFlip: 200303 ns
+Transform ToTensor: 475719 ns
+Transform Normalize: 239203 ns
+Single image loader time: 8501062363 ns
+Single image transform time: 722068740 ns
+Transform RandomResizedCrop: 288718068 ns
+Transform RandomHorizontalFlip: 119736 ns
+Transform ToTensor: 535842 ns
+Transform Normalize: 282891 ns
+Single image loader time: 8423714171 ns
+Single image transform time: 476172143 ns
+Transform RandomResizedCrop: 337348379 ns
+Transform RandomHorizontalFlip: 139189 ns
+Transform ToTensor: 522005 ns
+Transform Normalize: 301779 ns
+Single image loader time: 8477180809 ns
+Single image transform time: 532659041 ns
+Transform RandomResizedCrop: 524198748 ns
+Transform RandomHorizontalFlip: 125000 ns
+Transform ToTensor: 520430 ns
+Transform Normalize: 279984 ns
+Single image loader time: 8392777408 ns
+Single image transform time: 724639491 ns
+Transform RandomResizedCrop: 280752594 ns
+Transform RandomHorizontalFlip: 195631 ns
+Transform ToTensor: 473462 ns
+Transform Normalize: 294625 ns
+Single image loader time: 8477269138 ns
+Single image transform time: 479035113 ns
+Transform RandomResizedCrop: 259336942 ns
+Transform RandomHorizontalFlip: 115470 ns
+Transform ToTensor: 509104 ns
+Transform Normalize: 272964 ns
+Single image loader time: 8452778955 ns
+Single image transform time: 444782057 ns
+Transform RandomResizedCrop: 524114534 ns
+Transform RandomHorizontalFlip: 210078 ns
+Transform ToTensor: 486529 ns
+Transform Normalize: 257301 ns
+Single image loader time: 8502533067 ns
+Single image transform time: 718035280 ns
+Transform RandomResizedCrop: 321237606 ns
+Transform RandomHorizontalFlip: 190922 ns
+Transform ToTensor: 476742 ns
+Transform Normalize: 272697 ns
+Single image loader time: 8428164622 ns
+Single image transform time: 521484315 ns
+Transform RandomResizedCrop: 523985058 ns
+Transform RandomHorizontalFlip: 124263 ns
+Transform ToTensor: 490328 ns
+Transform Normalize: 231409 ns
+Single image loader time: 8507531465 ns
+Single image transform time: 722115886 ns
+Transform RandomResizedCrop: 468716477 ns
+Transform RandomHorizontalFlip: 126087 ns
+Transform ToTensor: 504380 ns
+Transform Normalize: 279290 ns
+Single image loader time: 8484878355 ns
+Single image transform time: 652644868 ns
+Transform RandomResizedCrop: 524274968 ns
+Transform RandomHorizontalFlip: 218205 ns
+Transform ToTensor: 493647 ns
+Transform Normalize: 299316 ns
+Single image loader time: 8497133521 ns
+Single image transform time: 721352572 ns
+Transform RandomResizedCrop: 524272405 ns
+Transform RandomHorizontalFlip: 124978 ns
+Transform ToTensor: 515343 ns
+Transform Normalize: 279690 ns
+Single image loader time: 8453137144 ns
+Single image transform time: 727798429 ns
+Transform RandomResizedCrop: 524188558 ns
+Transform RandomHorizontalFlip: 125219 ns
+Transform ToTensor: 497081 ns
+Transform Normalize: 273980 ns
+Single image loader time: 8510636058 ns
+Single image transform time: 723391272 ns
+Transform RandomResizedCrop: 420427062 ns
+Transform RandomHorizontalFlip: 179936 ns
+Transform ToTensor: 470232 ns
+Transform Normalize: 276451 ns
+Single image loader time: 8492219555 ns
+Single image transform time: 604178261 ns
+Transform RandomResizedCrop: 263543892 ns
+Transform RandomHorizontalFlip: 141519 ns
+Transform ToTensor: 547111 ns
+Transform Normalize: 296474 ns
+Single image loader time: 8458922501 ns
+Single image transform time: 454560748 ns
+Transform RandomResizedCrop: 524210510 ns
+Transform RandomHorizontalFlip: 120442 ns
+Transform ToTensor: 518891 ns
+Transform Normalize: 248091 ns
+Single image loader time: 8441722442 ns
+Single image transform time: 724241798 ns
+Transform RandomResizedCrop: 296757681 ns
+Transform RandomHorizontalFlip: 123967 ns
+Transform ToTensor: 495831 ns
+Transform Normalize: 232017 ns
+Single image loader time: 8508896584 ns
+Single image transform time: 495893806 ns
+Transform RandomResizedCrop: 371413160 ns
+Transform RandomHorizontalFlip: 192238 ns
+Transform ToTensor: 471249 ns
+Transform Normalize: 276999 ns
+Single image loader time: 8503118578 ns
+Single image transform time: 555967527 ns
+Transform RandomResizedCrop: 256139865 ns
+Transform RandomHorizontalFlip: 217290 ns
+Transform ToTensor: 489057 ns
+Transform Normalize: 308134 ns
+Single image loader time: 8509039570 ns
+Single image transform time: 447902904 ns
+Transform RandomResizedCrop: 241050911 ns
+Transform RandomHorizontalFlip: 119686 ns
+Transform ToTensor: 510588 ns
+Transform Normalize: 277520 ns
+Single image loader time: 8438177368 ns
+Single image transform time: 437296664 ns
+Transform RandomResizedCrop: 252987555 ns
+Transform RandomHorizontalFlip: 204433 ns
+Transform ToTensor: 482087 ns
+Transform Normalize: 281138 ns
+Single image loader time: 8477853426 ns
+Single image transform time: 451288496 ns
+Transform RandomResizedCrop: 266123577 ns
+Transform RandomHorizontalFlip: 186324 ns
+Transform ToTensor: 474810 ns
+Transform Normalize: 276058 ns
+Single image loader time: 8436854707 ns
+Single image transform time: 450138187 ns
+Transform RandomResizedCrop: 524105480 ns
+Transform RandomHorizontalFlip: 209336 ns
+Transform ToTensor: 488262 ns
+Transform Normalize: 254807 ns
+Single image loader time: 8456864673 ns
+Single image transform time: 717591160 ns
+Transform RandomResizedCrop: 312371407 ns
+Transform RandomHorizontalFlip: 117940 ns
+Transform ToTensor: 504873 ns
+Transform Normalize: 279374 ns
+Single image loader time: 8448233704 ns
+Single image transform time: 512128571 ns
+Transform RandomResizedCrop: 524087254 ns
+Transform RandomHorizontalFlip: 130600 ns
+Transform ToTensor: 490536 ns
+Transform Normalize: 289555 ns
+Single image loader time: 8484243025 ns
+Single image transform time: 723104686 ns
+Transform RandomResizedCrop: 524109700 ns
+Transform RandomHorizontalFlip: 125238 ns
+Transform ToTensor: 493557 ns
+Transform Normalize: 243043 ns
+Single image loader time: 8479956931 ns
+Single image transform time: 708023413 ns
+Transform RandomResizedCrop: 284833874 ns
+Transform RandomHorizontalFlip: 140813 ns
+Transform ToTensor: 530688 ns
+Transform Normalize: 301895 ns
+Single image loader time: 8490101837 ns
+Single image transform time: 477245988 ns
+Transform RandomResizedCrop: 523938134 ns
+Transform RandomHorizontalFlip: 199054 ns
+Transform ToTensor: 471717 ns
+Transform Normalize: 274316 ns
+Single image loader time: 8466986186 ns
+Single image transform time: 722422749 ns
+Transform RandomResizedCrop: 316829884 ns
+Transform RandomHorizontalFlip: 122798 ns
+Transform ToTensor: 487423 ns
+Transform Normalize: 272708 ns
+Single image loader time: 8503547982 ns
+Single image transform time: 515133721 ns
+Transform RandomResizedCrop: 338771187 ns
+Transform RandomHorizontalFlip: 119148 ns
+Transform ToTensor: 504287 ns
+Transform Normalize: 273529 ns
+Single image loader time: 8478982302 ns
+Single image transform time: 523024999 ns
+Transform RandomResizedCrop: 300664218 ns
+Transform RandomHorizontalFlip: 216683 ns
+Transform ToTensor: 488512 ns
+Transform Normalize: 253643 ns
+Single image loader time: 8484853407 ns
+Single image transform time: 492265454 ns
+Transform RandomResizedCrop: 259465832 ns
+Transform RandomHorizontalFlip: 120329 ns
+Transform ToTensor: 500633 ns
+Transform Normalize: 285882 ns
+Single image loader time: 8458747110 ns
+Single image transform time: 453524765 ns
+Transform RandomResizedCrop: 411979345 ns
+Transform RandomHorizontalFlip: 193841 ns
+Transform ToTensor: 481923 ns
+Transform Normalize: 233015 ns
+Single image loader time: 8485635108 ns
+Single image transform time: 607395563 ns
+Transform RandomResizedCrop: 277650890 ns
+Transform RandomHorizontalFlip: 188258 ns
+Transform ToTensor: 470397 ns
+Transform Normalize: 278607 ns
+Single image loader time: 8464651555 ns
+Single image transform time: 462134786 ns
+Transform RandomResizedCrop: 524065260 ns
+Transform RandomHorizontalFlip: 210548 ns
+Transform ToTensor: 484194 ns
+Transform Normalize: 255747 ns
+Single image loader time: 8472509820 ns
+Single image transform time: 718172282 ns
+Transform RandomResizedCrop: 524107175 ns
+Transform RandomHorizontalFlip: 195139 ns
+Transform ToTensor: 461375 ns
+Transform Normalize: 240932 ns
+Single image loader time: 8488412593 ns
+Single image transform time: 723920587 ns
+Transform RandomResizedCrop: 524166765 ns
+Transform RandomHorizontalFlip: 125808 ns
+Transform ToTensor: 501529 ns
+Transform Normalize: 276711 ns
+Single image loader time: 8512981749 ns
+Single image transform time: 722163908 ns
+Transform RandomResizedCrop: 434032212 ns
+Transform RandomHorizontalFlip: 188787 ns
+Transform ToTensor: 477025 ns
+Transform Normalize: 278179 ns
+Single image loader time: 8513109165 ns
+Single image transform time: 619862752 ns
+Transform RandomResizedCrop: 524352951 ns
+Transform RandomHorizontalFlip: 137232 ns
+Transform ToTensor: 526386 ns
+Transform Normalize: 317883 ns
+Single image loader time: 8501133097 ns
+Single image transform time: 717076390 ns
+Transform RandomResizedCrop: 301175553 ns
+Transform RandomHorizontalFlip: 196538 ns
+Transform ToTensor: 483517 ns
+Transform Normalize: 276707 ns
+Single image loader time: 8491764465 ns
+Single image transform time: 496430519 ns
+Transform RandomResizedCrop: 361850495 ns
+Transform RandomHorizontalFlip: 199588 ns
+Transform ToTensor: 475216 ns
+Transform Normalize: 276092 ns
+Single image loader time: 8496913499 ns
+Single image transform time: 556463119 ns
+Transform RandomResizedCrop: 440209655 ns
+Transform RandomHorizontalFlip: 200818 ns
+Transform ToTensor: 471515 ns
+Transform Normalize: 233879 ns
+Single image loader time: 8483674548 ns
+Single image transform time: 626416638 ns
+Transform RandomResizedCrop: 524347221 ns
+Transform RandomHorizontalFlip: 138655 ns
+Transform ToTensor: 534798 ns
+Transform Normalize: 307239 ns
+Single image loader time: 8477803499 ns
+Single image transform time: 719467671 ns
+Transform RandomResizedCrop: 524137846 ns
+Transform RandomHorizontalFlip: 193184 ns
+Transform ToTensor: 468980 ns
+Transform Normalize: 243511 ns
+Single image loader time: 8520550702 ns
+Single image transform time: 724364042 ns
+Transform RandomResizedCrop: 281277966 ns
+Transform RandomHorizontalFlip: 126470 ns
+Transform ToTensor: 498504 ns
+Transform Normalize: 292864 ns
+Single image loader time: 8526422910 ns
+Single image transform time: 478011940 ns
+Transform RandomResizedCrop: 303816582 ns
+Transform RandomHorizontalFlip: 119369 ns
+Transform ToTensor: 502928 ns
+Transform Normalize: 273240 ns
+Single image loader time: 8505744615 ns
+Single image transform time: 488370870 ns
+Transform RandomResizedCrop: 524055072 ns
+Transform RandomHorizontalFlip: 217690 ns
+Transform ToTensor: 496978 ns
+Transform Normalize: 256438 ns
+Single image loader time: 8446711113 ns
+Single image transform time: 717096570 ns
+Transform RandomResizedCrop: 348031603 ns
+Transform RandomHorizontalFlip: 117348 ns
+Transform ToTensor: 489943 ns
+Transform Normalize: 287646 ns
+Single image loader time: 8475712476 ns
+Single image transform time: 548326044 ns
+Transform RandomResizedCrop: 220613486 ns
+Transform RandomHorizontalFlip: 123056 ns
+Transform ToTensor: 491284 ns
+Transform Normalize: 276575 ns
+Single image loader time: 8496693254 ns
+Single image transform time: 420020715 ns
+Transform RandomResizedCrop: 258967780 ns
+Transform RandomHorizontalFlip: 122843 ns
+Transform ToTensor: 497877 ns
+Transform Normalize: 246289 ns
+Single image loader time: 8470835593 ns
+Single image transform time: 442977233 ns
+Transform RandomResizedCrop: 279759118 ns
+Transform RandomHorizontalFlip: 207901 ns
+Transform ToTensor: 484124 ns
+Transform Normalize: 294951 ns
+Single image loader time: 8433646134 ns
+Single image transform time: 468655309 ns
+Transform RandomResizedCrop: 524512565 ns
+Transform RandomHorizontalFlip: 199615 ns
+Transform ToTensor: 490257 ns
+Transform Normalize: 277523 ns
+Single image loader time: 8461140144 ns
+Single image transform time: 766616615 ns
+Transform RandomResizedCrop: 425604234 ns
+Transform RandomHorizontalFlip: 128788 ns
+Transform ToTensor: 493141 ns
+Transform Normalize: 278927 ns
+Single image loader time: 8502179509 ns
+Single image transform time: 624555681 ns
+Transform RandomResizedCrop: 524124789 ns
+Transform RandomHorizontalFlip: 122316 ns
+Transform ToTensor: 502252 ns
+Transform Normalize: 280955 ns
+Single image loader time: 8502828043 ns
+Single image transform time: 710822458 ns
+Transform RandomResizedCrop: 523887522 ns
+Transform RandomHorizontalFlip: 207856 ns
+Transform ToTensor: 485195 ns
+Transform Normalize: 255392 ns
+Single image loader time: 8485897685 ns
+Single image transform time: 715516362 ns
+Transform RandomResizedCrop: 261464826 ns
+Transform RandomHorizontalFlip: 117866 ns
+Transform ToTensor: 517362 ns
+Transform Normalize: 280960 ns
+Single image loader time: 8449556476 ns
+Single image transform time: 462724844 ns
+Transform RandomResizedCrop: 228756669 ns
+Transform RandomHorizontalFlip: 128119 ns
+Transform ToTensor: 499622 ns
+Transform Normalize: 276752 ns
+Single image loader time: 8508926511 ns
+Single image transform time: 429251512 ns
+Transform RandomResizedCrop: 524482287 ns
+Transform RandomHorizontalFlip: 187059 ns
+Transform ToTensor: 463361 ns
+Transform Normalize: 288079 ns
+Single image loader time: 8481213329 ns
+Single image transform time: 709352949 ns
+Transform RandomResizedCrop: 248514342 ns
+Transform RandomHorizontalFlip: 136064 ns
+Transform ToTensor: 527801 ns
+Transform Normalize: 299074 ns
+Single image loader time: 8465016137 ns
+Single image transform time: 439445938 ns
+Transform RandomResizedCrop: 342474945 ns
+Transform RandomHorizontalFlip: 134934 ns
+Transform ToTensor: 522034 ns
+Transform Normalize: 289284 ns
+Single image loader time: 8458536399 ns
+Single image transform time: 543494336 ns
+Transform RandomResizedCrop: 524323282 ns
+Transform RandomHorizontalFlip: 128776 ns
+Transform ToTensor: 501736 ns
+Transform Normalize: 282363 ns
+Single image loader time: 8508515354 ns
+Single image transform time: 725188966 ns
+Transform RandomResizedCrop: 418428769 ns
+Transform RandomHorizontalFlip: 188569 ns
+Transform ToTensor: 476011 ns
+Transform Normalize: 277592 ns
+Single image loader time: 8485095337 ns
+Single image transform time: 603727796 ns
+Transform RandomResizedCrop: 311219240 ns
+Transform RandomHorizontalFlip: 210684 ns
+Transform ToTensor: 487545 ns
+Transform Normalize: 298424 ns
+Single image loader time: 8475932708 ns
+Single image transform time: 503592685 ns
+Transform RandomResizedCrop: 524170335 ns
+Transform RandomHorizontalFlip: 196325 ns
+Transform ToTensor: 480144 ns
+Transform Normalize: 278173 ns
+Single image loader time: 8452622349 ns
+Single image transform time: 766396528 ns
+Transform RandomResizedCrop: 524117063 ns
+Transform RandomHorizontalFlip: 124498 ns
+Transform ToTensor: 493663 ns
+Transform Normalize: 279813 ns
+Single image loader time: 8503688466 ns
+Single image transform time: 724835926 ns
+Transform RandomResizedCrop: 524409793 ns
+Transform RandomHorizontalFlip: 121531 ns
+Transform ToTensor: 494812 ns
+Transform Normalize: 233918 ns
+Single image loader time: 8500771990 ns
+Single image transform time: 712784613 ns
+Transform RandomResizedCrop: 448668668 ns
+Transform RandomHorizontalFlip: 142617 ns
+Transform ToTensor: 532584 ns
+Transform Normalize: 257537 ns
+Single image loader time: 8495148024 ns
+Single image transform time: 641813162 ns
+Transform RandomResizedCrop: 524164031 ns
+Transform RandomHorizontalFlip: 199007 ns
+Transform ToTensor: 478574 ns
+Transform Normalize: 297162 ns
+Single image loader time: 8456784891 ns
+Single image transform time: 724155149 ns
+Transform RandomResizedCrop: 524065063 ns
+Transform RandomHorizontalFlip: 202098 ns
+Transform ToTensor: 487484 ns
+Transform Normalize: 234223 ns
+Single image loader time: 8515337126 ns
+Single image transform time: 722946938 ns
+Transform RandomResizedCrop: 295979570 ns
+Transform RandomHorizontalFlip: 121736 ns
+Transform ToTensor: 503964 ns
+Transform Normalize: 277288 ns
+Single image loader time: 8511695409 ns
+Single image transform time: 482180518 ns
+Transform RandomResizedCrop: 316038118 ns
+Transform RandomHorizontalFlip: 140249 ns
+Transform ToTensor: 516425 ns
+Transform Normalize: 314762 ns
+Single image loader time: 8520186829 ns
+Single image transform time: 507583012 ns
+Transform RandomResizedCrop: 524195694 ns
+Transform RandomHorizontalFlip: 122305 ns
+Transform ToTensor: 495596 ns
+Transform Normalize: 279482 ns
+Single image loader time: 8476015251 ns
+Single image transform time: 721552684 ns
+Transform RandomResizedCrop: 311870395 ns
+Transform RandomHorizontalFlip: 196918 ns
+Transform ToTensor: 474868 ns
+Transform Normalize: 274028 ns
+Single image loader time: 8525070804 ns
+Single image transform time: 510775607 ns
+Transform RandomResizedCrop: 256430083 ns
+Transform RandomHorizontalFlip: 194936 ns
+Transform ToTensor: 472232 ns
+Transform Normalize: 277689 ns
+Single image loader time: 8534725853 ns
+Single image transform time: 443254287 ns
+Transform RandomResizedCrop: 294430550 ns
+Transform RandomHorizontalFlip: 134350 ns
+Transform ToTensor: 520601 ns
+Transform Normalize: 266392 ns
+Single image loader time: 8542660524 ns
+Single image transform time: 484934331 ns
+Transform RandomResizedCrop: 300143195 ns
+Transform RandomHorizontalFlip: 185289 ns
+Transform ToTensor: 470697 ns
+Transform Normalize: 273284 ns
+Single image loader time: 8491038161 ns
+Single image transform time: 494922345 ns
+Transform RandomResizedCrop: 382184616 ns
+Transform RandomHorizontalFlip: 125581 ns
+Transform ToTensor: 501007 ns
+Transform Normalize: 233636 ns
+Single image loader time: 8517768802 ns
+Single image transform time: 580057664 ns
+Transform RandomResizedCrop: 273728625 ns
+Transform RandomHorizontalFlip: 121894 ns
+Transform ToTensor: 504486 ns
+Transform Normalize: 277665 ns
+Single image loader time: 8493795196 ns
+Single image transform time: 461589383 ns
+Transform RandomResizedCrop: 379819041 ns
+Transform RandomHorizontalFlip: 139932 ns
+Transform ToTensor: 513436 ns
+Transform Normalize: 298763 ns
+Single image loader time: 8495853138 ns
+Single image transform time: 571588835 ns
+Transform RandomResizedCrop: 524107203 ns
+Transform RandomHorizontalFlip: 193961 ns
+Transform ToTensor: 475450 ns
+Transform Normalize: 289449 ns
+Single image loader time: 8480244757 ns
+Single image transform time: 721509139 ns
+Transform RandomResizedCrop: 524706465 ns
+Transform RandomHorizontalFlip: 126050 ns
+Transform ToTensor: 496668 ns
+Transform Normalize: 279347 ns
+Single image loader time: 8514067339 ns
+Single image transform time: 724797734 ns
+Transform RandomResizedCrop: 350604877 ns
+Transform RandomHorizontalFlip: 116434 ns
+Transform ToTensor: 497578 ns
+Transform Normalize: 276002 ns
+Single image loader time: 8517138467 ns
+Single image transform time: 540928237 ns
+Transform RandomResizedCrop: 238743466 ns
+Transform RandomHorizontalFlip: 207822 ns
+Transform ToTensor: 486260 ns
+Transform Normalize: 308210 ns
+Single image loader time: 8505821047 ns
+Single image transform time: 430380488 ns
+Transform RandomResizedCrop: 524110933 ns
+Transform RandomHorizontalFlip: 197391 ns
+Transform ToTensor: 468062 ns
+Transform Normalize: 274466 ns
+Single image loader time: 8444099222 ns
+Single image transform time: 757064105 ns
+Transform RandomResizedCrop: 524514109 ns
+Transform RandomHorizontalFlip: 125246 ns
+Transform ToTensor: 485204 ns
+Transform Normalize: 276110 ns
+Single image loader time: 8486944213 ns
+Single image transform time: 724187640 ns
+Transform RandomResizedCrop: 392443107 ns
+Transform RandomHorizontalFlip: 121216 ns
+Transform ToTensor: 492002 ns
+Transform Normalize: 276032 ns
+Single image loader time: 8496318305 ns
+Single image transform time: 585024296 ns
+Transform RandomResizedCrop: 259425371 ns
+Transform RandomHorizontalFlip: 205415 ns
+Transform ToTensor: 494638 ns
+Transform Normalize: 294827 ns
+Single image loader time: 8514070987 ns
+Single image transform time: 453136849 ns
+Transform RandomResizedCrop: 523989447 ns
+Transform RandomHorizontalFlip: 192879 ns
+Transform ToTensor: 479472 ns
+Transform Normalize: 233772 ns
+Single image loader time: 8464342037 ns
+Single image transform time: 716735812 ns
+Transform RandomResizedCrop: 524127616 ns
+Transform RandomHorizontalFlip: 123698 ns
+Transform ToTensor: 485670 ns
+Transform Normalize: 282599 ns
+Single image loader time: 8511679512 ns
+Single image transform time: 722468371 ns
+Transform RandomResizedCrop: 330704352 ns
+Transform RandomHorizontalFlip: 196035 ns
+Transform ToTensor: 480611 ns
+Transform Normalize: 299444 ns
+Single image loader time: 8510517872 ns
+Single image transform time: 524558709 ns
+Transform RandomResizedCrop: 379999333 ns
+Transform RandomHorizontalFlip: 208524 ns
+Transform ToTensor: 490736 ns
+Transform Normalize: 296742 ns
+Single image loader time: 8519993358 ns
+Single image transform time: 574800932 ns
+Transform RandomResizedCrop: 524186320 ns
+Transform RandomHorizontalFlip: 198840 ns
+Transform ToTensor: 473623 ns
+Transform Normalize: 273979 ns
+Single image loader time: 8471900143 ns
+Single image transform time: 715944043 ns
+Transform RandomResizedCrop: 524305676 ns
+Transform RandomHorizontalFlip: 124533 ns
+Transform ToTensor: 493229 ns
+Transform Normalize: 280836 ns
+Single image loader time: 8494874109 ns
+Single image transform time: 721070967 ns
+Transform RandomResizedCrop: 427139031 ns
+Transform RandomHorizontalFlip: 192711 ns
+Transform ToTensor: 477898 ns
+Transform Normalize: 276350 ns
+Single image loader time: 8493032434 ns
+Single image transform time: 623261682 ns
+Transform RandomResizedCrop: 525149987 ns
+Transform RandomHorizontalFlip: 213177 ns
+Transform ToTensor: 499451 ns
+Transform Normalize: 256582 ns
+Single image loader time: 8500970036 ns
+Single image transform time: 720804913 ns
+Transform RandomResizedCrop: 394094305 ns
+Transform RandomHorizontalFlip: 118932 ns
+Transform ToTensor: 495154 ns
+Transform Normalize: 276870 ns
+Single image loader time: 8485000583 ns
+Single image transform time: 581290967 ns
+Transform RandomResizedCrop: 464013585 ns
+Transform RandomHorizontalFlip: 194419 ns
+Transform ToTensor: 477331 ns
+Transform Normalize: 276705 ns
+Single image loader time: 8520738617 ns
+Single image transform time: 657713163 ns
+Transform RandomResizedCrop: 374760889 ns
+Transform RandomHorizontalFlip: 187422 ns
+Transform ToTensor: 465833 ns
+Transform Normalize: 278252 ns
+Single image loader time: 8515758922 ns
+Single image transform time: 570650410 ns
+Transform RandomResizedCrop: 331059302 ns
+Transform RandomHorizontalFlip: 132308 ns
+Transform ToTensor: 521148 ns
+Transform Normalize: 308027 ns
+Single image loader time: 8507025188 ns
+Single image transform time: 525518438 ns
+Transform RandomResizedCrop: 524659945 ns
+Transform RandomHorizontalFlip: 196312 ns
+Transform ToTensor: 469844 ns
+Transform Normalize: 274801 ns
+Single image loader time: 8495839220 ns
+Single image transform time: 712260823 ns
+Transform RandomResizedCrop: 523876996 ns
+Transform RandomHorizontalFlip: 130490 ns
+Transform ToTensor: 493690 ns
+Transform Normalize: 231800 ns
+Single image loader time: 8518652432 ns
+Single image transform time: 721423757 ns
+Transform RandomResizedCrop: 523912554 ns
+Transform RandomHorizontalFlip: 204943 ns
+Transform ToTensor: 470347 ns
+Transform Normalize: 275081 ns
+Single image loader time: 8520939998 ns
+Single image transform time: 724740787 ns
+Transform RandomResizedCrop: 237253630 ns
+Transform RandomHorizontalFlip: 137492 ns
+Transform ToTensor: 524634 ns
+Transform Normalize: 301450 ns
+Single image loader time: 8534222535 ns
+Single image transform time: 433949195 ns
+Transform RandomResizedCrop: 317369333 ns
+Transform RandomHorizontalFlip: 119394 ns
+Transform ToTensor: 510678 ns
+Transform Normalize: 233719 ns
+Single image loader time: 8497621105 ns
+Single image transform time: 502330322 ns
+Transform RandomResizedCrop: 524042202 ns
+Transform RandomHorizontalFlip: 197391 ns
+Transform ToTensor: 540648 ns
+Transform Normalize: 247504 ns
+Single image loader time: 8478911901 ns
+Single image transform time: 717669667 ns
+Transform RandomResizedCrop: 524238463 ns
+Transform RandomHorizontalFlip: 198473 ns
+Transform ToTensor: 476671 ns
+Transform Normalize: 292554 ns
+Single image loader time: 8498219469 ns
+Single image transform time: 726796238 ns
+Transform RandomResizedCrop: 301020199 ns
+Transform RandomHorizontalFlip: 135842 ns
+Transform ToTensor: 522903 ns
+Transform Normalize: 299683 ns
+Single image loader time: 8521552503 ns
+Single image transform time: 499934598 ns
+Transform RandomResizedCrop: 524912489 ns
+Transform RandomHorizontalFlip: 122419 ns
+Transform ToTensor: 504103 ns
+Transform Normalize: 289382 ns
+Single image loader time: 8501112325 ns
+Single image transform time: 710412339 ns
+Transform RandomResizedCrop: 287783863 ns
+Transform RandomHorizontalFlip: 120142 ns
+Transform ToTensor: 504163 ns
+Transform Normalize: 277628 ns
+Single image loader time: 8470776166 ns
+Single image transform time: 491198242 ns
+Transform RandomResizedCrop: 290944002 ns
+Transform RandomHorizontalFlip: 194421 ns
+Transform ToTensor: 485883 ns
+Transform Normalize: 278269 ns
+Single image loader time: 8423358612 ns
+Single image transform time: 490593217 ns
+Transform RandomResizedCrop: 524063372 ns
+Transform RandomHorizontalFlip: 217308 ns
+Transform ToTensor: 499055 ns
+Transform Normalize: 253891 ns
+Single image loader time: 8484872136 ns
+Single image transform time: 724068788 ns
+Transform RandomResizedCrop: 524144452 ns
+Transform RandomHorizontalFlip: 182854 ns
+Transform ToTensor: 467291 ns
+Transform Normalize: 284235 ns
+Single image loader time: 8478254627 ns
+Single image transform time: 711198867 ns
+Transform RandomResizedCrop: 220340823 ns
+Transform RandomHorizontalFlip: 194533 ns
+Transform ToTensor: 479157 ns
+Transform Normalize: 243291 ns
+Single image loader time: 8505498517 ns
+Single image transform time: 413550366 ns
+Transform RandomResizedCrop: 524728866 ns
+Transform RandomHorizontalFlip: 200983 ns
+Transform ToTensor: 489992 ns
+Transform Normalize: 236863 ns
+Single image loader time: 8447942717 ns
+Single image transform time: 724705826 ns
+Transform RandomResizedCrop: 523913475 ns
+Transform RandomHorizontalFlip: 140487 ns
+Transform ToTensor: 523945 ns
+Transform Normalize: 254568 ns
+Single image loader time: 8497405589 ns
+Single image transform time: 723371695 ns
+Transform RandomResizedCrop: 524166196 ns
+Transform RandomHorizontalFlip: 123936 ns
+Transform ToTensor: 519481 ns
+Transform Normalize: 277049 ns
+Single image loader time: 8497737840 ns
+Single image transform time: 749575515 ns
+Transform RandomResizedCrop: 524261877 ns
+Transform RandomHorizontalFlip: 199854 ns
+Transform ToTensor: 476174 ns
+Transform Normalize: 274523 ns
+Single image loader time: 8527111560 ns
+Single image transform time: 719993921 ns
+Transform RandomResizedCrop: 524518981 ns
+Transform RandomHorizontalFlip: 124223 ns
+Transform ToTensor: 515031 ns
+Transform Normalize: 283417 ns
+Single image loader time: 8485322567 ns
+Single image transform time: 725011851 ns
+Transform RandomResizedCrop: 372324209 ns
+Transform RandomHorizontalFlip: 211442 ns
+Transform ToTensor: 500715 ns
+Transform Normalize: 259937 ns
+Single image loader time: 8521672908 ns
+Single image transform time: 612641617 ns
+Transform RandomResizedCrop: 230840827 ns
+Transform RandomHorizontalFlip: 188067 ns
+Transform ToTensor: 490699 ns
+Transform Normalize: 290565 ns
+Single image loader time: 8436580669 ns
+Single image transform time: 416491940 ns
+Transform RandomResizedCrop: 315851574 ns
+Transform RandomHorizontalFlip: 124012 ns
+Transform ToTensor: 528444 ns
+Transform Normalize: 286882 ns
+Single image loader time: 8486251926 ns
+Single image transform time: 509124850 ns
+Transform RandomResizedCrop: 524016627 ns
+Transform RandomHorizontalFlip: 200591 ns
+Transform ToTensor: 472642 ns
+Transform Normalize: 278642 ns
+Single image loader time: 8437647162 ns
+Single image transform time: 723027604 ns
+Transform RandomResizedCrop: 524560990 ns
+Transform RandomHorizontalFlip: 215930 ns
+Transform ToTensor: 487783 ns
+Transform Normalize: 299098 ns
+Single image loader time: 8509913955 ns
+Single image transform time: 723807167 ns
+Transform RandomResizedCrop: 524494484 ns
+Transform RandomHorizontalFlip: 122111 ns
+Transform ToTensor: 495057 ns
+Transform Normalize: 290690 ns
+Single image loader time: 8511941717 ns
+Single image transform time: 716150002 ns
+Transform RandomResizedCrop: 523945387 ns
+Transform RandomHorizontalFlip: 127525 ns
+Transform ToTensor: 495101 ns
+Transform Normalize: 278602 ns
+Single image loader time: 8538001337 ns
+Single image transform time: 719569841 ns
+Transform RandomResizedCrop: 523810474 ns
+Transform RandomHorizontalFlip: 193973 ns
+Transform ToTensor: 469633 ns
+Transform Normalize: 277801 ns
+Single image loader time: 8490777902 ns
+Single image transform time: 722671075 ns
+Transform RandomResizedCrop: 524881560 ns
+Transform RandomHorizontalFlip: 213893 ns
+Transform ToTensor: 484459 ns
+Transform Normalize: 298962 ns
+Single image loader time: 8536012689 ns
+Single image transform time: 723644104 ns
+Transform RandomResizedCrop: 394599927 ns
+Transform RandomHorizontalFlip: 123689 ns
+Transform ToTensor: 499579 ns
+Transform Normalize: 277740 ns
+Single image loader time: 8516075322 ns
+Single image transform time: 583060317 ns
+Transform RandomResizedCrop: 460617938 ns
+Transform RandomHorizontalFlip: 126141 ns
+Transform ToTensor: 506537 ns
+Transform Normalize: 235309 ns
+Single image loader time: 8524213189 ns
+Single image transform time: 654377568 ns
+Transform RandomResizedCrop: 252079089 ns
+Transform RandomHorizontalFlip: 205622 ns
+Transform ToTensor: 470202 ns
+Transform Normalize: 279400 ns
+Single image loader time: 8479852870 ns
+Single image transform time: 446536492 ns
+Transform RandomResizedCrop: 406092952 ns
+Transform RandomHorizontalFlip: 135506 ns
+Transform ToTensor: 507194 ns
+Transform Normalize: 301391 ns
+Single image loader time: 8490965330 ns
+Single image transform time: 601530546 ns
+Transform RandomResizedCrop: 361237593 ns
+Transform RandomHorizontalFlip: 189021 ns
+Transform ToTensor: 481010 ns
+Transform Normalize: 277778 ns
+Single image loader time: 8488064373 ns
+Single image transform time: 550972834 ns
+Transform RandomResizedCrop: 524216027 ns
+Transform RandomHorizontalFlip: 128169 ns
+Transform ToTensor: 502091 ns
+Transform Normalize: 280494 ns
+Single image loader time: 8491828697 ns
+Single image transform time: 725041410 ns
+Transform RandomResizedCrop: 524047198 ns
+Transform RandomHorizontalFlip: 198139 ns
+Transform ToTensor: 469146 ns
+Transform Normalize: 233088 ns
+Single image loader time: 8514692334 ns
+Single image transform time: 721847829 ns
+Transform RandomResizedCrop: 280219540 ns
+Transform RandomHorizontalFlip: 139953 ns
+Transform ToTensor: 537275 ns
+Transform Normalize: 320555 ns
+Single image loader time: 8524031621 ns
+Single image transform time: 477227700 ns
+Transform RandomResizedCrop: 213675340 ns
+Transform RandomHorizontalFlip: 189501 ns
+Transform ToTensor: 477084 ns
+Transform Normalize: 277755 ns
+Single image loader time: 8500898335 ns
+Single image transform time: 402173354 ns
+Transform RandomResizedCrop: 524060424 ns
+Transform RandomHorizontalFlip: 128185 ns
+Transform ToTensor: 500283 ns
+Transform Normalize: 274731 ns
+Single image loader time: 8461940002 ns
+Single image transform time: 715654257 ns
+Transform RandomResizedCrop: 321043668 ns
+Transform RandomHorizontalFlip: 118337 ns
+Transform ToTensor: 500692 ns
+Transform Normalize: 282080 ns
+Single image loader time: 8479517857 ns
+Single image transform time: 518681451 ns
+Transform RandomResizedCrop: 523887570 ns
+Transform RandomHorizontalFlip: 140452 ns
+Transform ToTensor: 531887 ns
+Transform Normalize: 308790 ns
+Single image loader time: 8485433663 ns
+Single image transform time: 720929050 ns
+Transform RandomResizedCrop: 524379050 ns
+Transform RandomHorizontalFlip: 198917 ns
+Transform ToTensor: 468170 ns
+Transform Normalize: 274914 ns
+Single image loader time: 8505689628 ns
+Single image transform time: 715531736 ns
+Transform RandomResizedCrop: 378032740 ns
+Transform RandomHorizontalFlip: 126342 ns
+Transform ToTensor: 503681 ns
+Transform Normalize: 275957 ns
+Single image loader time: 8494103437 ns
+Single image transform time: 571785393 ns
+Transform RandomResizedCrop: 523940357 ns
+Transform RandomHorizontalFlip: 195266 ns
+Transform ToTensor: 477318 ns
+Transform Normalize: 279553 ns
+Single image loader time: 8494826322 ns
+Single image transform time: 722161512 ns
+Transform RandomResizedCrop: 291761405 ns
+Transform RandomHorizontalFlip: 140037 ns
+Transform ToTensor: 522674 ns
+Transform Normalize: 298604 ns
+Single image loader time: 8503203274 ns
+Single image transform time: 489100735 ns
+Transform RandomResizedCrop: 319907725 ns
+Transform RandomHorizontalFlip: 183999 ns
+Transform ToTensor: 471346 ns
+Transform Normalize: 276361 ns
+Single image loader time: 8484079760 ns
+Single image transform time: 508996422 ns
+Transform RandomResizedCrop: 290934519 ns
+Transform RandomHorizontalFlip: 125007 ns
+Transform ToTensor: 496299 ns
+Transform Normalize: 241261 ns
+Single image loader time: 8459867677 ns
+Single image transform time: 480643114 ns
+Transform RandomResizedCrop: 263913171 ns
+Transform RandomHorizontalFlip: 184054 ns
+Transform ToTensor: 471777 ns
+Transform Normalize: 233566 ns
+Single image loader time: 8453755492 ns
+Single image transform time: 457980534 ns
+Transform RandomResizedCrop: 247395297 ns
+Transform RandomHorizontalFlip: 217246 ns
+Transform ToTensor: 492624 ns
+Transform Normalize: 300438 ns
+Single image loader time: 8472699783 ns
+Single image transform time: 443716596 ns
+Transform RandomResizedCrop: 224816160 ns
+Transform RandomHorizontalFlip: 123884 ns
+Transform ToTensor: 496421 ns
+Transform Normalize: 281218 ns
+Single image loader time: 8519070174 ns
+Single image transform time: 414146072 ns
+Transform RandomResizedCrop: 524118922 ns
+Transform RandomHorizontalFlip: 195802 ns
+Transform ToTensor: 476825 ns
+Transform Normalize: 277440 ns
+Single image loader time: 8523443440 ns
+Single image transform time: 716746557 ns
+Transform RandomResizedCrop: 523999287 ns
+Transform RandomHorizontalFlip: 197258 ns
+Transform ToTensor: 477167 ns
+Transform Normalize: 286769 ns
+Single image loader time: 8537206879 ns
+Single image transform time: 725464587 ns
+Transform RandomResizedCrop: 288353835 ns
+Transform RandomHorizontalFlip: 139631 ns
+Transform ToTensor: 529933 ns
+Transform Normalize: 301253 ns
+Single image loader time: 8532497847 ns
+Single image transform time: 529707459 ns
+Transform RandomResizedCrop: 524690985 ns
+Transform RandomHorizontalFlip: 123359 ns
+Transform ToTensor: 506418 ns
+Transform Normalize: 232645 ns
+Single image loader time: 8504668236 ns
+Single image transform time: 715264032 ns
+Transform RandomResizedCrop: 524170158 ns
+Transform RandomHorizontalFlip: 195725 ns
+Transform ToTensor: 473750 ns
+Transform Normalize: 233218 ns
+Single image loader time: 8477217504 ns
+Single image transform time: 717216739 ns
+Transform RandomResizedCrop: 524528709 ns
+Transform RandomHorizontalFlip: 149619 ns
+Transform ToTensor: 513514 ns
+Transform Normalize: 280225 ns
+Single image loader time: 8453004965 ns
+Single image transform time: 768826607 ns
+Transform RandomResizedCrop: 408656495 ns
+Transform RandomHorizontalFlip: 212731 ns
+Transform ToTensor: 495428 ns
+Transform Normalize: 258002 ns
+Single image loader time: 8512317758 ns
+Single image transform time: 607757846 ns
+Transform RandomResizedCrop: 524184235 ns
+Transform RandomHorizontalFlip: 188901 ns
+Transform ToTensor: 480057 ns
+Transform Normalize: 283665 ns
+Single image loader time: 8507446610 ns
+Single image transform time: 713519226 ns
+Transform RandomResizedCrop: 524133216 ns
+Transform RandomHorizontalFlip: 210479 ns
+Transform ToTensor: 482797 ns
+Transform Normalize: 276877 ns
+Single image loader time: 8517047041 ns
+Single image transform time: 716564388 ns
+Transform RandomResizedCrop: 524472907 ns
+Transform RandomHorizontalFlip: 207249 ns
+Transform ToTensor: 480501 ns
+Transform Normalize: 291583 ns
+Single image loader time: 8475300849 ns
+Single image transform time: 726360789 ns
+Transform RandomResizedCrop: 313203082 ns
+Transform RandomHorizontalFlip: 136952 ns
+Transform ToTensor: 530803 ns
+Transform Normalize: 301166 ns
+Single image loader time: 8557415239 ns
+Single image transform time: 510913826 ns
+Transform RandomResizedCrop: 524541496 ns
+Transform RandomHorizontalFlip: 116620 ns
+Transform ToTensor: 501211 ns
+Transform Normalize: 275515 ns
+Single image loader time: 8527072247 ns
+Single image transform time: 713012408 ns
+Transform RandomResizedCrop: 524157134 ns
+Transform RandomHorizontalFlip: 129367 ns
+Transform ToTensor: 495610 ns
+Transform Normalize: 233277 ns
+Single image loader time: 8502482019 ns
+Single image transform time: 717649346 ns
+Transform RandomResizedCrop: 213747675 ns
+Transform RandomHorizontalFlip: 121415 ns
+Transform ToTensor: 512022 ns
+Transform Normalize: 281610 ns
+Single image loader time: 8453674126 ns
+Single image transform time: 416952645 ns
+Transform RandomResizedCrop: 293408307 ns
+Transform RandomHorizontalFlip: 211396 ns
+Transform ToTensor: 485799 ns
+Transform Normalize: 296852 ns
+Single image loader time: 8520519879 ns
+Single image transform time: 493704185 ns
+Transform RandomResizedCrop: 358336137 ns
+Transform RandomHorizontalFlip: 192475 ns
+Transform ToTensor: 467179 ns
+Transform Normalize: 278298 ns
+Single image loader time: 8484985908 ns
+Single image transform time: 544905182 ns
+Transform RandomResizedCrop: 524691193 ns
+Transform RandomHorizontalFlip: 128030 ns
+Transform ToTensor: 509877 ns
+Transform Normalize: 280393 ns
+Single image loader time: 8429402103 ns
+Single image transform time: 717766883 ns
+Transform RandomResizedCrop: 314203863 ns
+Transform RandomHorizontalFlip: 196523 ns
+Transform ToTensor: 481498 ns
+Transform Normalize: 274677 ns
+Single image loader time: 8418012013 ns
+Single image transform time: 516147425 ns
+Transform RandomResizedCrop: 280271278 ns
+Transform RandomHorizontalFlip: 213217 ns
+Transform ToTensor: 488594 ns
+Transform Normalize: 301825 ns
+Single image loader time: 8472593923 ns
+Single image transform time: 481458410 ns
+Transform RandomResizedCrop: 524611093 ns
+Transform RandomHorizontalFlip: 124347 ns
+Transform ToTensor: 504487 ns
+Transform Normalize: 281467 ns
+Single image loader time: 8457884048 ns
+Single image transform time: 711521511 ns
+Transform RandomResizedCrop: 212250432 ns
+Transform RandomHorizontalFlip: 203751 ns
+Transform ToTensor: 490129 ns
+Transform Normalize: 290603 ns
+Single image loader time: 8387419367 ns
+Single image transform time: 405662842 ns
+Transform RandomResizedCrop: 261526304 ns
+Transform RandomHorizontalFlip: 193316 ns
+Transform ToTensor: 506691 ns
+Transform Normalize: 279181 ns
+Single image loader time: 8417749678 ns
+Single image transform time: 465353714 ns
+Transform RandomResizedCrop: 407658339 ns
+Transform RandomHorizontalFlip: 205584 ns
+Transform ToTensor: 489565 ns
+Transform Normalize: 296882 ns
+Single image loader time: 8471825892 ns
+Single image transform time: 609709897 ns
+Transform RandomResizedCrop: 232205969 ns
+Transform RandomHorizontalFlip: 125574 ns
+Transform ToTensor: 498313 ns
+Transform Normalize: 274129 ns
+Single image loader time: 8458323399 ns
+Single image transform time: 418124381 ns
+Transform RandomResizedCrop: 370789398 ns
+Transform RandomHorizontalFlip: 126536 ns
+Transform ToTensor: 511246 ns
+Transform Normalize: 281000 ns
+Single image loader time: 8410219567 ns
+Single image transform time: 564585618 ns
+Transform RandomResizedCrop: 524241393 ns
+Transform RandomHorizontalFlip: 205621 ns
+Transform ToTensor: 472368 ns
+Transform Normalize: 276820 ns
+Single image loader time: 8433171807 ns
+Single image transform time: 727180968 ns
+Transform RandomResizedCrop: 217497053 ns
+Transform RandomHorizontalFlip: 132590 ns
+Transform ToTensor: 517466 ns
+Transform Normalize: 296164 ns
+Single image loader time: 8484293929 ns
+Single image transform time: 418567599 ns
+Transform RandomResizedCrop: 361917851 ns
+Transform RandomHorizontalFlip: 191574 ns
+Transform ToTensor: 464727 ns
+Transform Normalize: 294903 ns
+Single image loader time: 8477788229 ns
+Single image transform time: 547981436 ns
+Transform RandomResizedCrop: 438121818 ns
+Transform RandomHorizontalFlip: 209813 ns
+Transform ToTensor: 483305 ns
+Transform Normalize: 240690 ns
+Single image loader time: 8419729137 ns
+Single image transform time: 632279215 ns
+Transform RandomResizedCrop: 524722780 ns
+Transform RandomHorizontalFlip: 125310 ns
+Transform ToTensor: 509333 ns
+Transform Normalize: 280526 ns
+Single image loader time: 8431117358 ns
+Single image transform time: 728955184 ns
+Transform RandomResizedCrop: 524043116 ns
+Transform RandomHorizontalFlip: 135721 ns
+Transform ToTensor: 515550 ns
+Transform Normalize: 305183 ns
+Single image loader time: 8491519280 ns
+Single image transform time: 722560334 ns
+Transform RandomResizedCrop: 524354062 ns
+Transform RandomHorizontalFlip: 190440 ns
+Transform ToTensor: 468037 ns
+Transform Normalize: 275568 ns
+Single image loader time: 8488169601 ns
+Single image transform time: 711362128 ns
+Transform RandomResizedCrop: 524392186 ns
+Transform RandomHorizontalFlip: 129446 ns
+Transform ToTensor: 506783 ns
+Transform Normalize: 280155 ns
+Single image loader time: 8443760832 ns
+Single image transform time: 720399772 ns
+Transform RandomResizedCrop: 350584748 ns
+Transform RandomHorizontalFlip: 121484 ns
+Transform ToTensor: 519118 ns
+Transform Normalize: 277717 ns
+Single image loader time: 8417830309 ns
+Single image transform time: 554767805 ns
+Transform RandomResizedCrop: 524835846 ns
+Transform RandomHorizontalFlip: 141966 ns
+Transform ToTensor: 509317 ns
+Transform Normalize: 300361 ns
+Single image loader time: 8497817203 ns
+Single image transform time: 725610996 ns
+Transform RandomResizedCrop: 524361946 ns
+Transform RandomHorizontalFlip: 126084 ns
+Transform ToTensor: 507985 ns
+Transform Normalize: 275737 ns
+Single image loader time: 8496191562 ns
+Single image transform time: 710987388 ns
+Transform RandomResizedCrop: 524777130 ns
+Transform RandomHorizontalFlip: 131471 ns
+Transform ToTensor: 523326 ns
+Transform Normalize: 279051 ns
+Single image loader time: 8457544814 ns
+Single image transform time: 721008206 ns
+Transform RandomResizedCrop: 524044096 ns
+Transform RandomHorizontalFlip: 194150 ns
+Transform ToTensor: 475374 ns
+Transform Normalize: 289532 ns
+Single image loader time: 8474416308 ns
+Single image transform time: 726644581 ns
+Transform RandomResizedCrop: 234244065 ns
+Transform RandomHorizontalFlip: 212985 ns
+Transform ToTensor: 486843 ns
+Transform Normalize: 300359 ns
+Single image loader time: 8527843008 ns
+Single image transform time: 436767377 ns
+Transform RandomResizedCrop: 298994869 ns
+Transform RandomHorizontalFlip: 194611 ns
+Transform ToTensor: 549209 ns
+Transform Normalize: 279597 ns
+Single image loader time: 8490898335 ns
+Single image transform time: 484580026 ns
+Transform RandomResizedCrop: 524863297 ns
+Transform RandomHorizontalFlip: 205670 ns
+Transform ToTensor: 483890 ns
+Transform Normalize: 276545 ns
+Single image loader time: 8397958690 ns
+Single image transform time: 720138073 ns
+Transform RandomResizedCrop: 312730680 ns
+Transform RandomHorizontalFlip: 120606 ns
+Transform ToTensor: 517542 ns
+Transform Normalize: 278501 ns
+Single image loader time: 8433967345 ns
+Single image transform time: 515970419 ns
+Transform RandomResizedCrop: 524203291 ns
+Transform RandomHorizontalFlip: 138972 ns
+Transform ToTensor: 518039 ns
+Transform Normalize: 255510 ns
+Single image loader time: 8484611233 ns
+Single image transform time: 725690275 ns
+Transform RandomResizedCrop: 524306079 ns
+Transform RandomHorizontalFlip: 118976 ns
+Transform ToTensor: 497535 ns
+Transform Normalize: 274008 ns
+Single image loader time: 8502322978 ns
+Single image transform time: 711438122 ns
+Transform RandomResizedCrop: 524848777 ns
+Transform RandomHorizontalFlip: 206068 ns
+Transform ToTensor: 487764 ns
+Transform Normalize: 237193 ns
+Single image loader time: 8442951995 ns
+Single image transform time: 720902246 ns
+Transform RandomResizedCrop: 225843063 ns
+Transform RandomHorizontalFlip: 125009 ns
+Transform ToTensor: 517996 ns
+Transform Normalize: 279372 ns
+Single image loader time: 8475617243 ns
+Single image transform time: 421945367 ns
+Transform RandomResizedCrop: 524137479 ns
+Transform RandomHorizontalFlip: 214054 ns
+Transform ToTensor: 485746 ns
+Transform Normalize: 304121 ns
+Single image loader time: 8506201282 ns
+Single image transform time: 720788394 ns
+Transform RandomResizedCrop: 524057962 ns
+Transform RandomHorizontalFlip: 188317 ns
+Transform ToTensor: 466244 ns
+Transform Normalize: 281874 ns
+Single image loader time: 8494319746 ns
+Single image transform time: 711416603 ns
+Transform RandomResizedCrop: 258798248 ns
+Transform RandomHorizontalFlip: 210482 ns
+Transform ToTensor: 491435 ns
+Transform Normalize: 234344 ns
+Single image loader time: 8406036284 ns
+Single image transform time: 456420294 ns
+Transform RandomResizedCrop: 235179687 ns
+Transform RandomHorizontalFlip: 186819 ns
+Transform ToTensor: 468969 ns
+Transform Normalize: 232361 ns
+Single image loader time: 8481422698 ns
+Single image transform time: 432786812 ns
+Transform RandomResizedCrop: 524040844 ns
+Transform RandomHorizontalFlip: 206563 ns
+Transform ToTensor: 483994 ns
+Transform Normalize: 301026 ns
+Single image loader time: 8453410799 ns
+Single image transform time: 718235497 ns
+Transform RandomResizedCrop: 210268482 ns
+Transform RandomHorizontalFlip: 122520 ns
+Transform ToTensor: 501632 ns
+Transform Normalize: 278713 ns
+Single image loader time: 8441565326 ns
+Single image transform time: 397910078 ns
+Transform RandomResizedCrop: 526310131 ns
+Transform RandomHorizontalFlip: 204950 ns
+Transform ToTensor: 484255 ns
+Transform Normalize: 278629 ns
+Single image loader time: 8375707937 ns
+Single image transform time: 723797030 ns
+Transform RandomResizedCrop: 524030590 ns
+Transform RandomHorizontalFlip: 190763 ns
+Transform ToTensor: 466589 ns
+Transform Normalize: 276971 ns
+Single image loader time: 8453446016 ns
+Single image transform time: 718345831 ns
+Transform RandomResizedCrop: 298621271 ns
+Transform RandomHorizontalFlip: 209605 ns
+Transform ToTensor: 496425 ns
+Transform Normalize: 297922 ns
+Single image loader time: 8449335615 ns
+Single image transform time: 532835513 ns
+Transform RandomResizedCrop: 375882106 ns
+Transform RandomHorizontalFlip: 117061 ns
+Transform ToTensor: 499548 ns
+Transform Normalize: 273977 ns
+Single image loader time: 8448784869 ns
+Single image transform time: 564319696 ns
+Transform RandomResizedCrop: 277817507 ns
+Transform RandomHorizontalFlip: 209957 ns
+Transform ToTensor: 507059 ns
+Transform Normalize: 279395 ns
+Single image loader time: 8340325082 ns
+Single image transform time: 476362939 ns
+Transform RandomResizedCrop: 235983560 ns
+Transform RandomHorizontalFlip: 116718 ns
+Transform ToTensor: 500268 ns
+Transform Normalize: 234928 ns
+Single image loader time: 8456167318 ns
+Single image transform time: 436781620 ns
+Transform RandomResizedCrop: 338425784 ns
+Transform RandomHorizontalFlip: 137863 ns
+Transform ToTensor: 531055 ns
+Transform Normalize: 301307 ns
+Single image loader time: 8456692245 ns
+Single image transform time: 532038959 ns
+Transform RandomResizedCrop: 524213902 ns
+Transform RandomHorizontalFlip: 189925 ns
+Transform ToTensor: 463947 ns
+Transform Normalize: 275373 ns
+Single image loader time: 8465187953 ns
+Single image transform time: 712825491 ns
+Transform RandomResizedCrop: 525176052 ns
+Transform RandomHorizontalFlip: 204022 ns
+Transform ToTensor: 484527 ns
+Transform Normalize: 235629 ns
+Single image loader time: 8434530595 ns
+Single image transform time: 726727471 ns
+Transform RandomResizedCrop: 460080344 ns
+Transform RandomHorizontalFlip: 121815 ns
+Transform ToTensor: 496157 ns
+Transform Normalize: 305702 ns
+Single image loader time: 8508397518 ns
+Single image transform time: 658069165 ns
+Transform RandomResizedCrop: 215198780 ns
+Transform RandomHorizontalFlip: 219853 ns
+Transform ToTensor: 488108 ns
+Transform Normalize: 257303 ns
+Single image loader time: 8517024194 ns
+Single image transform time: 409313254 ns
+Transform RandomResizedCrop: 337524933 ns
+Transform RandomHorizontalFlip: 122743 ns
+Transform ToTensor: 497234 ns
+Transform Normalize: 278410 ns
+Single image loader time: 8486721719 ns
+Single image transform time: 524038808 ns
+Transform RandomResizedCrop: 275006619 ns
+Transform RandomHorizontalFlip: 204799 ns
+Transform ToTensor: 490201 ns
+Transform Normalize: 277511 ns
+Single image loader time: 8381889448 ns
+Single image transform time: 474609662 ns
+Transform RandomResizedCrop: 295415250 ns
+Transform RandomHorizontalFlip: 181947 ns
+Transform ToTensor: 478605 ns
+Transform Normalize: 278757 ns
+Single image loader time: 8477616377 ns
+Single image transform time: 538705479 ns
+Transform RandomResizedCrop: 365179871 ns
+Transform RandomHorizontalFlip: 139464 ns
+Transform ToTensor: 534566 ns
+Transform Normalize: 256806 ns
+Single image loader time: 8474378986 ns
+Single image transform time: 602010529 ns
+Transform RandomResizedCrop: 312890854 ns
+Transform RandomHorizontalFlip: 187734 ns
+Transform ToTensor: 470776 ns
+Transform Normalize: 275181 ns
+Single image loader time: 8467805443 ns
+Single image transform time: 499810849 ns
+Transform RandomResizedCrop: 322961513 ns
+Transform RandomHorizontalFlip: 200293 ns
+Transform ToTensor: 483070 ns
+Transform Normalize: 283701 ns
+Single image loader time: 8425866569 ns
+Single image transform time: 522726710 ns
+Transform RandomResizedCrop: 523696530 ns
+Transform RandomHorizontalFlip: 193489 ns
+Transform ToTensor: 470448 ns
+Transform Normalize: 276814 ns
+Single image loader time: 8491470381 ns
+Single image transform time: 738692494 ns
+Transform RandomResizedCrop: 293370357 ns
+Transform RandomHorizontalFlip: 134175 ns
+Transform ToTensor: 528312 ns
+Transform Normalize: 308634 ns
+Single image loader time: 8498434603 ns
+Single image transform time: 490895315 ns
+Transform RandomResizedCrop: 344260430 ns
+Transform RandomHorizontalFlip: 122227 ns
+Transform ToTensor: 503933 ns
+Transform Normalize: 233198 ns
+Single image loader time: 8483647263 ns
+Single image transform time: 530668613 ns
+Transform RandomResizedCrop: 320178123 ns
+Transform RandomHorizontalFlip: 201402 ns
+Transform ToTensor: 489242 ns
+Transform Normalize: 276484 ns
+Single image loader time: 8444389597 ns
+Single image transform time: 514665173 ns
+Transform RandomResizedCrop: 246227455 ns
+Transform RandomHorizontalFlip: 198146 ns
+Transform ToTensor: 479961 ns
+Transform Normalize: 275545 ns
+Single image loader time: 8485380294 ns
+Single image transform time: 444294765 ns
+Transform RandomResizedCrop: 524328746 ns
+Transform RandomHorizontalFlip: 138835 ns
+Transform ToTensor: 537050 ns
+Transform Normalize: 303036 ns
+Single image loader time: 8485628278 ns
+Single image transform time: 721088467 ns
+Transform RandomResizedCrop: 238969229 ns
+Transform RandomHorizontalFlip: 121679 ns
+Transform ToTensor: 493645 ns
+Transform Normalize: 229915 ns
+Single image loader time: 8552366176 ns
+Single image transform time: 426972139 ns
+Transform RandomResizedCrop: 524061962 ns
+Transform RandomHorizontalFlip: 207996 ns
+Transform ToTensor: 487482 ns
+Transform Normalize: 277493 ns
+Single image loader time: 8550771585 ns
+Single image transform time: 722463575 ns
+Transform RandomResizedCrop: 523801471 ns
+Transform RandomHorizontalFlip: 121475 ns
+Transform ToTensor: 508480 ns
+Transform Normalize: 281285 ns
+Single image loader time: 8572788860 ns
+Single image transform time: 723449572 ns
+Transform RandomResizedCrop: 437748980 ns
+Transform RandomHorizontalFlip: 209743 ns
+Transform ToTensor: 489405 ns
+Transform Normalize: 257291 ns
+Single image loader time: 8505044801 ns
+Single image transform time: 635072234 ns
+Transform RandomResizedCrop: 320665061 ns
+Transform RandomHorizontalFlip: 192463 ns
+Transform ToTensor: 492081 ns
+Transform Normalize: 276124 ns
+Single image loader time: 8512681758 ns
+Single image transform time: 509328651 ns
+Transform RandomResizedCrop: 524445870 ns
+Transform RandomHorizontalFlip: 208512 ns
+Transform ToTensor: 488954 ns
+Transform Normalize: 299198 ns
+Single image loader time: 8466655746 ns
+Single image transform time: 721535947 ns
+Transform RandomResizedCrop: 524117077 ns
+Transform RandomHorizontalFlip: 125809 ns
+Transform ToTensor: 505652 ns
+Transform Normalize: 231439 ns
+Single image loader time: 8502242855 ns
+Single image transform time: 769067581 ns
+Transform RandomResizedCrop: 472683416 ns
+Transform RandomHorizontalFlip: 211112 ns
+Transform ToTensor: 486839 ns
+Transform Normalize: 257019 ns
+Single image loader time: 8498190239 ns
+Single image transform time: 672270787 ns
+Transform RandomResizedCrop: 297159019 ns
+Transform RandomHorizontalFlip: 121506 ns
+Transform ToTensor: 510767 ns
+Transform Normalize: 278199 ns
+Single image loader time: 8498092330 ns
+Single image transform time: 524555437 ns
+Transform RandomResizedCrop: 236451641 ns
+Transform RandomHorizontalFlip: 189216 ns
+Transform ToTensor: 473059 ns
+Transform Normalize: 276435 ns
+Single image loader time: 8450238752 ns
+Single image transform time: 427280926 ns
+Transform RandomResizedCrop: 524776089 ns
+Transform RandomHorizontalFlip: 125200 ns
+Transform ToTensor: 503251 ns
+Transform Normalize: 238915 ns
+Single image loader time: 8460358540 ns
+Single image transform time: 724169807 ns
+Transform RandomResizedCrop: 524207348 ns
+Transform RandomHorizontalFlip: 215848 ns
+Transform ToTensor: 487142 ns
+Transform Normalize: 300584 ns
+Single image loader time: 8493182211 ns
+Single image transform time: 724535554 ns
+Transform RandomResizedCrop: 504314529 ns
+Transform RandomHorizontalFlip: 124993 ns
+Transform ToTensor: 498963 ns
+Transform Normalize: 275881 ns
+Single image loader time: 8501347597 ns
+Single image transform time: 697329571 ns
+Transform RandomResizedCrop: 326512785 ns
+Transform RandomHorizontalFlip: 124145 ns
+Transform ToTensor: 492480 ns
+Transform Normalize: 290042 ns
+Single image loader time: 8514332565 ns
+Single image transform time: 520020135 ns
+Transform RandomResizedCrop: 524109262 ns
+Transform RandomHorizontalFlip: 122328 ns
+Transform ToTensor: 496032 ns
+Transform Normalize: 233864 ns
+Single image loader time: 8486927929 ns
+Single image transform time: 721121896 ns
+Transform RandomResizedCrop: 524173570 ns
+Transform RandomHorizontalFlip: 137207 ns
+Transform ToTensor: 522448 ns
+Transform Normalize: 301600 ns
+Single image loader time: 8519945583 ns
+Single image transform time: 722464977 ns
+Transform RandomResizedCrop: 229328747 ns
+Transform RandomHorizontalFlip: 189735 ns
+Transform ToTensor: 476639 ns
+Transform Normalize: 281900 ns
+Single image loader time: 8530993095 ns
+Single image transform time: 422417195 ns
+Transform RandomResizedCrop: 426696263 ns
+Transform RandomHorizontalFlip: 202249 ns
+Transform ToTensor: 481048 ns
+Transform Normalize: 276249 ns
+Single image loader time: 8524812355 ns
+Single image transform time: 620173625 ns
+Transform RandomResizedCrop: 524494791 ns
+Transform RandomHorizontalFlip: 122854 ns
+Transform ToTensor: 496737 ns
+Transform Normalize: 291146 ns
+Single image loader time: 8494660616 ns
+Single image transform time: 719531136 ns
+Transform RandomResizedCrop: 352898794 ns
+Transform RandomHorizontalFlip: 137670 ns
+Transform ToTensor: 522080 ns
+Transform Normalize: 297510 ns
+Single image loader time: 8530470353 ns
+Single image transform time: 550941896 ns
+Transform RandomResizedCrop: 275061101 ns
+Transform RandomHorizontalFlip: 189764 ns
+Transform ToTensor: 469746 ns
+Transform Normalize: 275745 ns
+Single image loader time: 8529854612 ns
+Single image transform time: 468912224 ns
+Transform RandomResizedCrop: 329658054 ns
+Transform RandomHorizontalFlip: 125277 ns
+Transform ToTensor: 509652 ns
+Transform Normalize: 278154 ns
+Single image loader time: 8515078021 ns
+Single image transform time: 522688984 ns
+Transform RandomResizedCrop: 524122955 ns
+Transform RandomHorizontalFlip: 202656 ns
+Transform ToTensor: 476020 ns
+Transform Normalize: 280521 ns
+Single image loader time: 8475540036 ns
+Single image transform time: 721329221 ns
+Transform RandomResizedCrop: 262917325 ns
+Transform RandomHorizontalFlip: 137107 ns
+Transform ToTensor: 516867 ns
+Transform Normalize: 310861 ns
+Single image loader time: 8508832433 ns
+Single image transform time: 463094349 ns
+Transform RandomResizedCrop: 524331571 ns
+Transform RandomHorizontalFlip: 128244 ns
+Transform ToTensor: 507264 ns
+Transform Normalize: 283478 ns
+Single image loader time: 8490550891 ns
+Single image transform time: 759235612 ns
+Transform RandomResizedCrop: 524641303 ns
+Transform RandomHorizontalFlip: 191266 ns
+Transform ToTensor: 468747 ns
+Transform Normalize: 233122 ns
+Single image loader time: 8486127882 ns
+Single image transform time: 719553956 ns
+Transform RandomResizedCrop: 245731218 ns
+Transform RandomHorizontalFlip: 194252 ns
+Transform ToTensor: 470254 ns
+Transform Normalize: 294854 ns
+Single image loader time: 8438639653 ns
+Single image transform time: 442781786 ns
+Transform RandomResizedCrop: 386511855 ns
+Transform RandomHorizontalFlip: 137628 ns
+Transform ToTensor: 521061 ns
+Transform Normalize: 267702 ns
+Single image loader time: 8481574880 ns
+Single image transform time: 586570408 ns
+Transform RandomResizedCrop: 524011747 ns
+Transform RandomHorizontalFlip: 121760 ns
+Transform ToTensor: 507083 ns
+Transform Normalize: 281676 ns
+Single image loader time: 8489074832 ns
+Single image transform time: 716748487 ns
+Transform RandomResizedCrop: 524517359 ns
+Transform RandomHorizontalFlip: 200171 ns
+Transform ToTensor: 479205 ns
+Transform Normalize: 234815 ns
+Single image loader time: 8503844389 ns
+Single image transform time: 718989520 ns
+Transform RandomResizedCrop: 262137146 ns
+Transform RandomHorizontalFlip: 193042 ns
+Transform ToTensor: 470013 ns
+Transform Normalize: 234796 ns
+Single image loader time: 8492036053 ns
+Single image transform time: 457272177 ns
+Transform RandomResizedCrop: 224456391 ns
+Transform RandomHorizontalFlip: 133060 ns
+Transform ToTensor: 525341 ns
+Transform Normalize: 297451 ns
+Single image loader time: 8525409070 ns
+Single image transform time: 421980210 ns
+Transform RandomResizedCrop: 524103090 ns
+Transform RandomHorizontalFlip: 192364 ns
+Transform ToTensor: 466801 ns
+Transform Normalize: 233287 ns
+Single image loader time: 8515247686 ns
+Single image transform time: 715430697 ns
+Transform RandomResizedCrop: 523783043 ns
+Transform RandomHorizontalFlip: 195728 ns
+Transform ToTensor: 476590 ns
+Transform Normalize: 275321 ns
+Single image loader time: 8520615007 ns
+Single image transform time: 718816039 ns
+Transform RandomResizedCrop: 217715926 ns
+Transform RandomHorizontalFlip: 121598 ns
+Transform ToTensor: 512512 ns
+Transform Normalize: 279160 ns
+Single image loader time: 8540218987 ns
+Single image transform time: 415909985 ns
+Transform RandomResizedCrop: 316476842 ns
+Transform RandomHorizontalFlip: 134938 ns
+Transform ToTensor: 531388 ns
+Transform Normalize: 299995 ns
+Single image loader time: 8526804651 ns
+Single image transform time: 555452592 ns
+Transform RandomResizedCrop: 329141594 ns
+Transform RandomHorizontalFlip: 121928 ns
+Transform ToTensor: 509205 ns
+Transform Normalize: 277434 ns
+Single image loader time: 8486110036 ns
+Single image transform time: 518199035 ns
+Transform RandomResizedCrop: 455960635 ns
+Transform RandomHorizontalFlip: 129306 ns
+Transform ToTensor: 514436 ns
+Transform Normalize: 275125 ns
+Single image loader time: 8452991245 ns
+Single image transform time: 653043263 ns
+Transform RandomResizedCrop: 524431196 ns
+Transform RandomHorizontalFlip: 122620 ns
+Transform ToTensor: 504167 ns
+Transform Normalize: 275252 ns
+Single image loader time: 8478731570 ns
+Single image transform time: 728568099 ns
+Transform RandomResizedCrop: 376330101 ns
+Transform RandomHorizontalFlip: 134014 ns
+Transform ToTensor: 529670 ns
+Transform Normalize: 297660 ns
+Single image loader time: 8500232488 ns
+Single image transform time: 577225109 ns
+Transform RandomResizedCrop: 524002828 ns
+Transform RandomHorizontalFlip: 195395 ns
+Transform ToTensor: 470047 ns
+Transform Normalize: 275192 ns
+Single image loader time: 8502491833 ns
+Single image transform time: 749893533 ns
+Transform RandomResizedCrop: 282153358 ns
+Transform RandomHorizontalFlip: 201163 ns
+Transform ToTensor: 483359 ns
+Transform Normalize: 283141 ns
+Single image loader time: 8467027718 ns
+Single image transform time: 474326845 ns
+Transform RandomResizedCrop: 524626818 ns
+Transform RandomHorizontalFlip: 199953 ns
+Transform ToTensor: 473879 ns
+Transform Normalize: 234735 ns
+Single image loader time: 8462454727 ns
+Single image transform time: 726762997 ns
+Transform RandomResizedCrop: 524271683 ns
+Transform RandomHorizontalFlip: 143630 ns
+Transform ToTensor: 518527 ns
+Transform Normalize: 255622 ns
+Single image loader time: 8495535576 ns
+Single image transform time: 725914207 ns
+Transform RandomResizedCrop: 524010039 ns
+Transform RandomHorizontalFlip: 195934 ns
+Transform ToTensor: 480916 ns
+Transform Normalize: 276598 ns
+Single image loader time: 8495949097 ns
+Single image transform time: 751588948 ns
+Transform RandomResizedCrop: 431566380 ns
+Transform RandomHorizontalFlip: 126971 ns
+Transform ToTensor: 507102 ns
+Transform Normalize: 276841 ns
+Single image loader time: 8502494273 ns
+Single image transform time: 626566020 ns
+Transform RandomResizedCrop: 349334097 ns
+Transform RandomHorizontalFlip: 190561 ns
+Transform ToTensor: 484527 ns
+Transform Normalize: 278681 ns
+Single image loader time: 8455776402 ns
+Single image transform time: 547778361 ns
+Transform RandomResizedCrop: 278818300 ns
+Transform RandomHorizontalFlip: 135324 ns
+Transform ToTensor: 531508 ns
+Transform Normalize: 301119 ns
+Single image loader time: 8492405859 ns
+Single image transform time: 477878199 ns
+Transform RandomResizedCrop: 310790324 ns
+Transform RandomHorizontalFlip: 194193 ns
+Transform ToTensor: 473936 ns
+Transform Normalize: 275417 ns
+Single image loader time: 8468911899 ns
+Single image transform time: 498679460 ns
+Transform RandomResizedCrop: 409015982 ns
+Transform RandomHorizontalFlip: 195086 ns
+Transform ToTensor: 478455 ns
+Transform Normalize: 277294 ns
+Single image loader time: 8474981429 ns
+Single image transform time: 603058601 ns
+Transform RandomResizedCrop: 524821660 ns
+Transform RandomHorizontalFlip: 201823 ns
+Transform ToTensor: 471912 ns
+Transform Normalize: 281657 ns
+Single image loader time: 8486943691 ns
+Single image transform time: 726633120 ns
+Transform RandomResizedCrop: 524110399 ns
+Transform RandomHorizontalFlip: 213276 ns
+Transform ToTensor: 486477 ns
+Transform Normalize: 260564 ns
+Single image loader time: 8507991763 ns
+Single image transform time: 725567286 ns
+Transform RandomResizedCrop: 524031843 ns
+Transform RandomHorizontalFlip: 124332 ns
+Transform ToTensor: 499177 ns
+Transform Normalize: 277836 ns
+Single image loader time: 8528423297 ns
+Single image transform time: 714011629 ns
+Transform RandomResizedCrop: 248359369 ns
+Transform RandomHorizontalFlip: 194046 ns
+Transform ToTensor: 484826 ns
+Transform Normalize: 231925 ns
+Single image loader time: 8550608132 ns
+Single image transform time: 443614654 ns
+Transform RandomResizedCrop: 523935297 ns
+Transform RandomHorizontalFlip: 119163 ns
+Transform ToTensor: 507489 ns
+Transform Normalize: 234083 ns
+Single image loader time: 8497741892 ns
+Single image transform time: 723421784 ns
+Transform RandomResizedCrop: 472647453 ns
+Transform RandomHorizontalFlip: 141024 ns
+Transform ToTensor: 530366 ns
+Transform Normalize: 307202 ns
+Single image loader time: 8555322590 ns
+Single image transform time: 672324101 ns
+Transform RandomResizedCrop: 525107395 ns
+Transform RandomHorizontalFlip: 198974 ns
+Transform ToTensor: 476943 ns
+Transform Normalize: 235249 ns
+Single image loader time: 8506720804 ns
+Single image transform time: 719701880 ns
+Transform RandomResizedCrop: 415918840 ns
+Transform RandomHorizontalFlip: 124962 ns
+Transform ToTensor: 504051 ns
+Transform Normalize: 282957 ns
+Single image loader time: 8531360965 ns
+Single image transform time: 626709251 ns
+Transform RandomResizedCrop: 524379010 ns
+Transform RandomHorizontalFlip: 198214 ns
+Transform ToTensor: 483095 ns
+Transform Normalize: 238466 ns
+Single image loader time: 8464757047 ns
+Single image transform time: 724039201 ns
+Transform RandomResizedCrop: 524805065 ns
+Transform RandomHorizontalFlip: 209109 ns
+Transform ToTensor: 481582 ns
+Transform Normalize: 252705 ns
+Single image loader time: 8500313489 ns
+Single image transform time: 724739011 ns
+Transform RandomResizedCrop: 267353875 ns
+Transform RandomHorizontalFlip: 120482 ns
+Transform ToTensor: 492724 ns
+Transform Normalize: 276521 ns
+Single image loader time: 8457037879 ns
+Single image transform time: 458326845 ns
+Transform RandomResizedCrop: 228338466 ns
+Transform RandomHorizontalFlip: 127794 ns
+Transform ToTensor: 501741 ns
+Transform Normalize: 276910 ns
+Single image loader time: 8506846542 ns
+Single image transform time: 424794645 ns
+Transform RandomResizedCrop: 524495615 ns
+Transform RandomHorizontalFlip: 192432 ns
+Transform ToTensor: 464019 ns
+Transform Normalize: 276189 ns
+Single image loader time: 8456686925 ns
+Single image transform time: 722948436 ns
+Transform RandomResizedCrop: 524081171 ns
+Transform RandomHorizontalFlip: 136107 ns
+Transform ToTensor: 510999 ns
+Transform Normalize: 299501 ns
+Single image loader time: 8497679353 ns
+Single image transform time: 724483555 ns
+Transform RandomResizedCrop: 238333263 ns
+Transform RandomHorizontalFlip: 117753 ns
+Transform ToTensor: 505149 ns
+Transform Normalize: 231493 ns
+Single image loader time: 8493157022 ns
+Single image transform time: 431737352 ns
+Transform RandomResizedCrop: 524395789 ns
+Transform RandomHorizontalFlip: 201827 ns
+Transform ToTensor: 473395 ns
+Transform Normalize: 277294 ns
+Single image loader time: 8501838108 ns
+Single image transform time: 721904866 ns
+Transform RandomResizedCrop: 523899900 ns
+Transform RandomHorizontalFlip: 126489 ns
+Transform ToTensor: 495345 ns
+Transform Normalize: 235257 ns
+Single image loader time: 8461137381 ns
+Single image transform time: 720696441 ns
+Transform RandomResizedCrop: 454360164 ns
+Transform RandomHorizontalFlip: 217109 ns
+Transform ToTensor: 485816 ns
+Transform Normalize: 297696 ns
+Single image loader time: 8500917709 ns
+Single image transform time: 654300533 ns
+Transform RandomResizedCrop: 252170087 ns
+Transform RandomHorizontalFlip: 191173 ns
+Transform ToTensor: 474732 ns
+Transform Normalize: 281280 ns
+Single image loader time: 8506866931 ns
+Single image transform time: 446627877 ns
+Transform RandomResizedCrop: 470910059 ns
+Transform RandomHorizontalFlip: 127918 ns
+Transform ToTensor: 520526 ns
+Transform Normalize: 283239 ns
+Single image loader time: 8508432754 ns
+Single image transform time: 676442282 ns
+Transform RandomResizedCrop: 385944096 ns
+Transform RandomHorizontalFlip: 191837 ns
+Transform ToTensor: 471263 ns
+Transform Normalize: 286843 ns
+Single image loader time: 8481393286 ns
+Single image transform time: 580456633 ns
+Transform RandomResizedCrop: 234764519 ns
+Transform RandomHorizontalFlip: 207388 ns
+Transform ToTensor: 487533 ns
+Transform Normalize: 297230 ns
+Single image loader time: 8502059915 ns
+Single image transform time: 474079942 ns
+Transform RandomResizedCrop: 258524918 ns
+Transform RandomHorizontalFlip: 119145 ns
+Transform ToTensor: 498693 ns
+Transform Normalize: 273773 ns
+Single image loader time: 8481248027 ns
+Single image transform time: 493696609 ns
+Transform RandomResizedCrop: 396777056 ns
+Transform RandomHorizontalFlip: 196779 ns
+Transform ToTensor: 479591 ns
+Transform Normalize: 277082 ns
+Single image loader time: 8466455058 ns
+Single image transform time: 590941894 ns
+Transform RandomResizedCrop: 524272354 ns
+Transform RandomHorizontalFlip: 197931 ns
+Transform ToTensor: 473612 ns
+Transform Normalize: 237457 ns
+Single image loader time: 8461754831 ns
+Single image transform time: 723017571 ns
+Transform RandomResizedCrop: 524030471 ns
+Transform RandomHorizontalFlip: 213300 ns
+Transform ToTensor: 489251 ns
+Transform Normalize: 296582 ns
+Single image loader time: 8506105683 ns
+Single image transform time: 724728704 ns
+Transform RandomResizedCrop: 358486586 ns
+Transform RandomHorizontalFlip: 190219 ns
+Transform ToTensor: 470442 ns
+Transform Normalize: 277957 ns
+Single image loader time: 8530327511 ns
+Single image transform time: 556150522 ns
+Transform RandomResizedCrop: 273541946 ns
+Transform RandomHorizontalFlip: 196236 ns
+Transform ToTensor: 485257 ns
+Transform Normalize: 278315 ns
+Single image loader time: 8524016079 ns
+Single image transform time: 467215941 ns
+Transform RandomResizedCrop: 326589805 ns
+Transform RandomHorizontalFlip: 120937 ns
+Transform ToTensor: 495595 ns
+Transform Normalize: 280413 ns
+Single image loader time: 8464923661 ns
+Single image transform time: 518549395 ns
+Transform RandomResizedCrop: 486766159 ns
+Transform RandomHorizontalFlip: 217170 ns
+Transform ToTensor: 490772 ns
+Transform Normalize: 262944 ns
+Single image loader time: 8485810650 ns
+Single image transform time: 684336095 ns
+Transform RandomResizedCrop: 218039187 ns
+Transform RandomHorizontalFlip: 189364 ns
+Transform ToTensor: 479857 ns
+Transform Normalize: 276878 ns
+Single image loader time: 8486649570 ns
+Single image transform time: 417130319 ns
+Transform RandomResizedCrop: 524336117 ns
+Transform RandomHorizontalFlip: 123782 ns
+Transform ToTensor: 487910 ns
+Transform Normalize: 278558 ns
+Single image loader time: 8472050148 ns
+Single image transform time: 728085229 ns
+Transform RandomResizedCrop: 280864353 ns
+Transform RandomHorizontalFlip: 190657 ns
+Transform ToTensor: 469815 ns
+Transform Normalize: 274246 ns
+Single image loader time: 8476372362 ns
+Single image transform time: 510395106 ns
+Transform RandomResizedCrop: 523969016 ns
+Transform RandomHorizontalFlip: 137328 ns
+Transform ToTensor: 526508 ns
+Transform Normalize: 258943 ns
+Single image loader time: 8465637470 ns
+Single image transform time: 724144565 ns
+Transform RandomResizedCrop: 288551560 ns
+Transform RandomHorizontalFlip: 121827 ns
+Transform ToTensor: 501542 ns
+Transform Normalize: 278891 ns
+Single image loader time: 8496413085 ns
+Single image transform time: 490344318 ns
+Transform RandomResizedCrop: 320345672 ns
+Transform RandomHorizontalFlip: 196771 ns
+Transform ToTensor: 486492 ns
+Transform Normalize: 274414 ns
+Single image loader time: 8478476916 ns
+Single image transform time: 512147136 ns
+Transform RandomResizedCrop: 219241380 ns
+Transform RandomHorizontalFlip: 121679 ns
+Transform ToTensor: 517377 ns
+Transform Normalize: 278986 ns
+Single image loader time: 8497224765 ns
+Single image transform time: 410986496 ns
+Transform RandomResizedCrop: 524748945 ns
+Transform RandomHorizontalFlip: 219753 ns
+Transform ToTensor: 503600 ns
+Transform Normalize: 300575 ns
+Single image loader time: 8423911179 ns
+Single image transform time: 722833646 ns
+Transform RandomResizedCrop: 246878807 ns
+Transform RandomHorizontalFlip: 122972 ns
+Transform ToTensor: 504527 ns
+Transform Normalize: 279903 ns
+Single image loader time: 8488463157 ns
+Single image transform time: 446715511 ns
+Transform RandomResizedCrop: 524505323 ns
+Transform RandomHorizontalFlip: 194537 ns
+Transform ToTensor: 483207 ns
+Transform Normalize: 288324 ns
+Single image loader time: 8473169746 ns
+Single image transform time: 716595622 ns
+Transform RandomResizedCrop: 297688425 ns
+Transform RandomHorizontalFlip: 194092 ns
+Transform ToTensor: 474000 ns
+Transform Normalize: 277708 ns
+Single image loader time: 8495605929 ns
+Single image transform time: 531727750 ns
+Transform RandomResizedCrop: 260943830 ns
+Transform RandomHorizontalFlip: 212023 ns
+Transform ToTensor: 492495 ns
+Transform Normalize: 302695 ns
+Single image loader time: 8396894156 ns
+Single image transform time: 459262888 ns
+Transform RandomResizedCrop: 215927456 ns
+Transform RandomHorizontalFlip: 190319 ns
+Transform ToTensor: 467304 ns
+Transform Normalize: 273677 ns
+Single image loader time: 8476082412 ns
+Single image transform time: 417372775 ns
+Transform RandomResizedCrop: 390835581 ns
+Transform RandomHorizontalFlip: 124883 ns
+Transform ToTensor: 493428 ns
+Transform Normalize: 276011 ns
+Single image loader time: 8439383683 ns
+Single image transform time: 581022408 ns
+Transform RandomResizedCrop: 290885026 ns
+Transform RandomHorizontalFlip: 120527 ns
+Transform ToTensor: 510401 ns
+Transform Normalize: 276431 ns
+Single image loader time: 8459009845 ns
+Single image transform time: 485285245 ns
+Transform RandomResizedCrop: 289921019 ns
+Transform RandomHorizontalFlip: 145415 ns
+Transform ToTensor: 535344 ns
+Transform Normalize: 299736 ns
+Single image loader time: 8410489256 ns
+Single image transform time: 489718642 ns
+Transform RandomResizedCrop: 471152320 ns
+Transform RandomHorizontalFlip: 202985 ns
+Transform ToTensor: 468090 ns
+Transform Normalize: 276464 ns
+Single image loader time: 8486063760 ns
+Single image transform time: 672571486 ns
+Transform RandomResizedCrop: 289013139 ns
+Transform RandomHorizontalFlip: 126358 ns
+Transform ToTensor: 491814 ns
+Transform Normalize: 276060 ns
+Single image loader time: 8486241822 ns
+Single image transform time: 479776076 ns
+Transform RandomResizedCrop: 524270687 ns
+Transform RandomHorizontalFlip: 188349 ns
+Transform ToTensor: 475005 ns
+Transform Normalize: 233366 ns
+Single image loader time: 8490710293 ns
+Single image transform time: 719642789 ns
+Transform RandomResizedCrop: 524510694 ns
+Transform RandomHorizontalFlip: 219526 ns
+Transform ToTensor: 496052 ns
+Transform Normalize: 302722 ns
+Single image loader time: 8450384592 ns
+Single image transform time: 726198179 ns
+Transform RandomResizedCrop: 523950327 ns
+Transform RandomHorizontalFlip: 122711 ns
+Transform ToTensor: 505104 ns
+Transform Normalize: 284325 ns
+Single image loader time: 8523184164 ns
+Single image transform time: 724867219 ns
+Transform RandomResizedCrop: 226159978 ns
+Transform RandomHorizontalFlip: 195105 ns
+Transform ToTensor: 476619 ns
+Transform Normalize: 232639 ns
+Single image loader time: 8521727134 ns
+Single image transform time: 455500652 ns
+Transform RandomResizedCrop: 524043944 ns
+Transform RandomHorizontalFlip: 121678 ns
+Transform ToTensor: 502773 ns
+Transform Normalize: 231988 ns
+Single image loader time: 8493172956 ns
+Single image transform time: 716911784 ns
+Transform RandomResizedCrop: 311309354 ns
+Transform RandomHorizontalFlip: 205608 ns
+Transform ToTensor: 527962 ns
+Transform Normalize: 299120 ns
+Single image loader time: 8437402060 ns
+Single image transform time: 510720838 ns
+Transform RandomResizedCrop: 439499499 ns
+Transform RandomHorizontalFlip: 119689 ns
+Transform ToTensor: 498202 ns
+Transform Normalize: 276321 ns
+Single image loader time: 8501172596 ns
+Single image transform time: 640993813 ns
+Transform RandomResizedCrop: 524141048 ns
+Transform RandomHorizontalFlip: 124937 ns
+Transform ToTensor: 505306 ns
+Transform Normalize: 294199 ns
+Single image loader time: 8508643931 ns
+Single image transform time: 717580261 ns
+Transform RandomResizedCrop: 341906087 ns
+Transform RandomHorizontalFlip: 120865 ns
+Transform ToTensor: 515547 ns
+Transform Normalize: 277483 ns
+Single image loader time: 8514516652 ns
+Single image transform time: 534961278 ns
+Transform RandomResizedCrop: 503428724 ns
+Transform RandomHorizontalFlip: 140313 ns
+Transform ToTensor: 519388 ns
+Transform Normalize: 256269 ns
+Single image loader time: 8508520506 ns
+Single image transform time: 703275811 ns
+Transform RandomResizedCrop: 277020664 ns
+Transform RandomHorizontalFlip: 118287 ns
+Transform ToTensor: 491378 ns
+Transform Normalize: 246357 ns
+Single image loader time: 8536390754 ns
+Single image transform time: 478688960 ns
+Transform RandomResizedCrop: 418222154 ns
+Transform RandomHorizontalFlip: 122331 ns
+Transform ToTensor: 500145 ns
+Transform Normalize: 277165 ns
+Single image loader time: 8483764395 ns
+Single image transform time: 610930740 ns
+Transform RandomResizedCrop: 353650558 ns
+Transform RandomHorizontalFlip: 124977 ns
+Transform ToTensor: 505914 ns
+Transform Normalize: 279115 ns
+Single image loader time: 8485638199 ns
+Single image transform time: 546951893 ns
+Transform RandomResizedCrop: 299811448 ns
+Transform RandomHorizontalFlip: 137562 ns
+Transform ToTensor: 516081 ns
+Transform Normalize: 254970 ns
+Single image loader time: 8463324675 ns
+Single image transform time: 497805030 ns
+Transform RandomResizedCrop: 524266435 ns
+Transform RandomHorizontalFlip: 196362 ns
+Transform ToTensor: 471481 ns
+Transform Normalize: 230806 ns
+Single image loader time: 8504607953 ns
+Single image transform time: 725062385 ns
+Transform RandomResizedCrop: 341828491 ns
+Transform RandomHorizontalFlip: 194787 ns
+Transform ToTensor: 485145 ns
+Transform Normalize: 274175 ns
+Single image loader time: 8518051901 ns
+Single image transform time: 534959078 ns
+Transform RandomResizedCrop: 308773176 ns
+Transform RandomHorizontalFlip: 192952 ns
+Transform ToTensor: 475316 ns
+Transform Normalize: 295703 ns
+Single image loader time: 8522613386 ns
+Single image transform time: 502516354 ns
+Transform RandomResizedCrop: 524227167 ns
+Transform RandomHorizontalFlip: 137616 ns
+Transform ToTensor: 514314 ns
+Transform Normalize: 254001 ns
+Single image loader time: 8501699096 ns
+Single image transform time: 722463400 ns
+Transform RandomResizedCrop: 524322756 ns
+Transform RandomHorizontalFlip: 194088 ns
+Transform ToTensor: 472686 ns
+Transform Normalize: 277633 ns
+Single image loader time: 8519491659 ns
+Single image transform time: 725382539 ns
+Transform RandomResizedCrop: 224611887 ns
+Transform RandomHorizontalFlip: 121319 ns
+Transform ToTensor: 495669 ns
+Transform Normalize: 281993 ns
+Single image loader time: 8514913773 ns
+Single image transform time: 419586046 ns
+Transform RandomResizedCrop: 524471628 ns
+Transform RandomHorizontalFlip: 126895 ns
+Transform ToTensor: 491639 ns
+Transform Normalize: 290517 ns
+Single image loader time: 8517221670 ns
+Single image transform time: 717833960 ns
+Transform RandomResizedCrop: 523903532 ns
+Transform RandomHorizontalFlip: 213751 ns
+Transform ToTensor: 485647 ns
+Transform Normalize: 298482 ns
+Single image loader time: 8492801443 ns
+Single image transform time: 761544096 ns
+Transform RandomResizedCrop: 394119627 ns
+Transform RandomHorizontalFlip: 124946 ns
+Transform ToTensor: 498435 ns
+Transform Normalize: 276357 ns
+Single image loader time: 8513643906 ns
+Single image transform time: 594423474 ns
+Transform RandomResizedCrop: 523934155 ns
+Transform RandomHorizontalFlip: 120787 ns
+Transform ToTensor: 494369 ns
+Transform Normalize: 278670 ns
+Single image loader time: 8516314001 ns
+Single image transform time: 719790711 ns
+Transform RandomResizedCrop: 524069475 ns
+Transform RandomHorizontalFlip: 121051 ns
+Transform ToTensor: 499619 ns
+Transform Normalize: 286384 ns
+Single image loader time: 8516943194 ns
+Single image transform time: 717613610 ns
+Transform RandomResizedCrop: 321481906 ns
+Transform RandomHorizontalFlip: 138206 ns
+Transform ToTensor: 524010 ns
+Transform Normalize: 298339 ns
+Single image loader time: 8508334010 ns
+Single image transform time: 516398198 ns
+Transform RandomResizedCrop: 524196014 ns
+Transform RandomHorizontalFlip: 191062 ns
+Transform ToTensor: 483307 ns
+Transform Normalize: 281916 ns
+Single image loader time: 8528468964 ns
+Single image transform time: 723221626 ns
+Transform RandomResizedCrop: 396142083 ns
+Transform RandomHorizontalFlip: 120678 ns
+Transform ToTensor: 501161 ns
+Transform Normalize: 235370 ns
+Single image loader time: 8508152032 ns
+Single image transform time: 593013044 ns
+Transform RandomResizedCrop: 524526613 ns
+Transform RandomHorizontalFlip: 201072 ns
+Transform ToTensor: 471354 ns
+Transform Normalize: 282354 ns
+Single image loader time: 8499904008 ns
+Single image transform time: 718209141 ns
+Transform RandomResizedCrop: 244881065 ns
+Transform RandomHorizontalFlip: 137817 ns
+Transform ToTensor: 521398 ns
+Transform Normalize: 301316 ns
+Single image loader time: 8512052508 ns
+Single image transform time: 442173007 ns
+Transform RandomResizedCrop: 459837880 ns
+Transform RandomHorizontalFlip: 117653 ns
+Transform ToTensor: 508424 ns
+Transform Normalize: 231094 ns
+Single image loader time: 8493843209 ns
+Single image transform time: 696650916 ns
+Transform RandomResizedCrop: 523787173 ns
+Transform RandomHorizontalFlip: 196515 ns
+Transform ToTensor: 472389 ns
+Transform Normalize: 278203 ns
+Single image loader time: 8492550820 ns
+Single image transform time: 720968783 ns
+Transform RandomResizedCrop: 280943851 ns
+Transform RandomHorizontalFlip: 116841 ns
+Transform ToTensor: 501037 ns
+Transform Normalize: 280234 ns
+Single image loader time: 8500034747 ns
+Single image transform time: 475790892 ns
+Transform RandomResizedCrop: 260917615 ns
+Transform RandomHorizontalFlip: 209811 ns
+Transform ToTensor: 490280 ns
+Transform Normalize: 256247 ns
+Single image loader time: 8511384821 ns
+Single image transform time: 459424764 ns
+Transform RandomResizedCrop: 376086278 ns
+Transform RandomHorizontalFlip: 119088 ns
+Transform ToTensor: 504230 ns
+Transform Normalize: 278095 ns
+Single image loader time: 8505306036 ns
+Single image transform time: 570235744 ns
+Transform RandomResizedCrop: 217260334 ns
+Transform RandomHorizontalFlip: 197364 ns
+Transform ToTensor: 493928 ns
+Transform Normalize: 283824 ns
+Single image loader time: 8479943343 ns
+Single image transform time: 413272694 ns
+Transform RandomResizedCrop: 524200827 ns
+Transform RandomHorizontalFlip: 201401 ns
+Transform ToTensor: 480484 ns
+Transform Normalize: 280982 ns
+Single image loader time: 8464381413 ns
+Single image transform time: 722008841 ns
+Transform RandomResizedCrop: 291351084 ns
+Transform RandomHorizontalFlip: 215695 ns
+Transform ToTensor: 508577 ns
+Transform Normalize: 305298 ns
+Single image loader time: 8500140914 ns
+Single image transform time: 492692221 ns
+Transform RandomResizedCrop: 524262172 ns
+Transform RandomHorizontalFlip: 120861 ns
+Transform ToTensor: 494833 ns
+Transform Normalize: 234365 ns
+Single image loader time: 8496648784 ns
+Single image transform time: 720703867 ns
+Transform RandomResizedCrop: 265504438 ns
+Transform RandomHorizontalFlip: 119615 ns
+Transform ToTensor: 488305 ns
+Transform Normalize: 278798 ns
+Single image loader time: 8511151129 ns
+Single image transform time: 464014539 ns
+Transform RandomResizedCrop: 266512173 ns
+Transform RandomHorizontalFlip: 185378 ns
+Transform ToTensor: 473367 ns
+Transform Normalize: 277881 ns
+Single image loader time: 8445431832 ns
+Single image transform time: 463079262 ns
+Transform RandomResizedCrop: 298334219 ns
+Transform RandomHorizontalFlip: 138607 ns
+Transform ToTensor: 520125 ns
+Transform Normalize: 298231 ns
+Single image loader time: 8497096065 ns
+Single image transform time: 498717872 ns
+Transform RandomResizedCrop: 233075002 ns
+Transform RandomHorizontalFlip: 129882 ns
+Transform ToTensor: 493561 ns
+Transform Normalize: 234868 ns
+Single image loader time: 8492448760 ns
+Single image transform time: 425045872 ns
+Transform RandomResizedCrop: 316313899 ns
+Transform RandomHorizontalFlip: 120033 ns
+Transform ToTensor: 488706 ns
+Transform Normalize: 285513 ns
+Single image loader time: 8513323084 ns
+Single image transform time: 514592021 ns
+Transform RandomResizedCrop: 525341757 ns
+Transform RandomHorizontalFlip: 120389 ns
+Transform ToTensor: 508605 ns
+Transform Normalize: 275649 ns
+Single image loader time: 8462570980 ns
+Single image transform time: 722974986 ns
+All transform batch time: 1151994417215 ns
+Collation time:47243758 ns
+All transform + collation batch time:1152041670028 ns
+Batch size:128
+Transform RandomResizedCrop: 382680072 ns
+Transform RandomHorizontalFlip: 208006 ns
+Transform ToTensor: 489649 ns
+Transform Normalize: 298497 ns
+Single image loader time: 8507369506 ns
+Single image transform time: 582567165 ns
+All transform batch time: 1153644303838 ns
+Collation time:47251182 ns
+All transform + collation batch time:1153691564083 ns
+Batch size:128
+Transform RandomResizedCrop: 287073821 ns
+Transform RandomHorizontalFlip: 197038 ns
+Transform ToTensor: 477219 ns
+Transform Normalize: 281220 ns
+Single image loader time: 8555929522 ns
+Single image transform time: 479654207 ns
+All transform batch time: 1156235337748 ns
+Collation time:47364539 ns
+All transform + collation batch time:1156282712951 ns
+Batch size:128
+Transform RandomResizedCrop: 525859215 ns
+Transform RandomHorizontalFlip: 125251 ns
+Transform ToTensor: 506209 ns
+Transform Normalize: 235150 ns
+Single image loader time: 8560307053 ns
+Single image transform time: 770850899 ns
+All transform batch time: 1158456083549 ns
+Collation time:46268577 ns
+All transform + collation batch time:1158502362750 ns
+Batch size:128
+Transform RandomResizedCrop: 527858036 ns
+Transform RandomHorizontalFlip: 203919 ns
+Transform ToTensor: 478271 ns
+Transform Normalize: 237884 ns
+Single image loader time: 8855435803 ns
+Single image transform time: 718359063 ns
+Transform RandomResizedCrop: 249419266 ns
+Transform RandomHorizontalFlip: 227422 ns
+Transform ToTensor: 516507 ns
+Transform Normalize: 261075 ns
+Single image loader time: 8969992707 ns
+Single image transform time: 443400955 ns
+E2E batch time: 1164.458066701889 s
+E2E batch time: 1164.499716758728 s
+E2E batch time: 1164.5533611774445 s
+Transform RandomResizedCrop: 524408188 ns
+Transform RandomHorizontalFlip: 200551 ns
+Transform ToTensor: 464252 ns
+Transform Normalize: 232781 ns
+Single image loader time: 9222646940 ns
+Single image transform time: 704146591 ns
+Transform RandomResizedCrop: 283594800 ns
+Transform RandomHorizontalFlip: 128140 ns
+Transform ToTensor: 497906 ns
+Transform Normalize: 236079 ns
+Single image loader time: 9102869886 ns
+Single image transform time: 468369296 ns
+Transform RandomResizedCrop: 237280050 ns
+Transform RandomHorizontalFlip: 205710 ns
+Transform ToTensor: 481296 ns
+Transform Normalize: 240880 ns
+Single image loader time: 8724041499 ns
+Single image transform time: 422345211 ns
+Transform RandomResizedCrop: 524418028 ns
+Transform RandomHorizontalFlip: 138870 ns
+Transform ToTensor: 515794 ns
+Transform Normalize: 259742 ns
+Single image loader time: 8681528352 ns
+Single image transform time: 714231824 ns
+Transform RandomResizedCrop: 289114608 ns
+Transform RandomHorizontalFlip: 125712 ns
+Transform ToTensor: 503791 ns
+Transform Normalize: 282511 ns
+Single image loader time: 8463208286 ns
+Single image transform time: 475627450 ns
+Transform RandomResizedCrop: 524297158 ns
+Transform RandomHorizontalFlip: 126123 ns
+Transform ToTensor: 506737 ns
+Transform Normalize: 238003 ns
+Single image loader time: 8451532630 ns
+Single image transform time: 715775321 ns
+Transform RandomResizedCrop: 524800785 ns
+Transform RandomHorizontalFlip: 201074 ns
+Transform ToTensor: 473264 ns
+Transform Normalize: 293469 ns
+Single image loader time: 8413441102 ns
+Single image transform time: 717980117 ns
+Transform RandomResizedCrop: 233805584 ns
+Transform RandomHorizontalFlip: 140395 ns
+Transform ToTensor: 525306 ns
+Transform Normalize: 306528 ns
+Single image loader time: 8489690879 ns
+Single image transform time: 428852363 ns
+Transform RandomResizedCrop: 320551072 ns
+Transform RandomHorizontalFlip: 199912 ns
+Transform ToTensor: 472114 ns
+Transform Normalize: 273937 ns
+Single image loader time: 8486810543 ns
+Single image transform time: 508353742 ns

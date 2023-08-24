@@ -1,0 +1,5 @@
+Function,CPU Time,CPU Time:Effective Time,CPU Time:Spin Time,CPU Time:Overhead Time,Module,Function (Full),Source File,Start Address
+ImagingResampleHorizontal_8bpc,0.559980,0.559980,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,ImagingResampleHorizontal_8bpc,[Unknown],0x581a0
+__memmove_avx_unaligned_erms,0.112727,0.112727,0.0,0.0,libc.so.6,__memmove_avx_unaligned_erms,memmove-vec-unaligned-erms.S,0x18b5f0
+_int_free,0.020000,0.020000,0.0,0.0,libc.so.6,_int_free,malloc.c,0x96870
+ImagingResampleVertical_8bpc,0.010000,0.010000,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,ImagingResampleVertical_8bpc,[Unknown],0x58790
