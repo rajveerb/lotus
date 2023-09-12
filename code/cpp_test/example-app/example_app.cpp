@@ -14,8 +14,8 @@ struct Options {
   size_t iterations = 10;
   size_t log_interval = 20;
   // path must end in delimiter
-  std::string datasetPath = "./dataset/";
-  std::string infoFilePath = "info.txt";
+  std::string datasetPath = "/data/mrao70/datasets/caltech-101/101_ObjectCategories/";
+  std::string infoFilePath = "/data/mrao70/datasets/info.txt";
   torch::DeviceType device = torch::kCPU;
 };
 
@@ -276,8 +276,8 @@ void test(Network& network, DataLoader& loader, size_t data_size) {
 int main() {
   torch::manual_seed(1);
 
-  if (torch::cuda::is_available())
-    options.device = torch::kCUDA;
+  //if (torch::cuda::is_available())
+  //  options.device = torch::kCUDA;
   std::cout << "Running on: "
             << (options.device == torch::kCUDA ? "CUDA" : "CPU") << std::endl;
 
