@@ -5,9 +5,11 @@ set(CMAKE_CUDA_COMPILER "/usr/local/cuda/bin/nvcc")
 # set_target_properties(example-app PROPERTIES CUDA_ARCHITECTURES "35;50;72")
 # set(CMAKE_PREFIX_PATH "libtorch/share/cmake/Torch")
 find_package(Torch REQUIRED)
+find_package(OpenCV REQUIRED COMPONENTS core imgproc imgcodecs)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
-add_executable(example-app example-app.cpp)
-target_link_libraries(example-app "${TORCH_LIBRARIES}")
+add_executable(${PROJECT_NAME} example-app.cpp)
+target_link_libraries(${PROJECT_NAME} "${OpenCV_LIBS}")
+target_link_libraries(${PROJECT_NAME}  "${TORCH_LIBRARIES}")
 set_property(TARGET example-app PROPERTY CXX_STANDARD 17)
 
 # The following code block is suggested to be used on Windows.
