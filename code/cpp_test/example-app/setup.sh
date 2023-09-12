@@ -2,5 +2,5 @@
 rm -rf ./build
 mkdir build
 cd build
-cmake -DCMAKE_PREFIX_PATH=../libtorch ..
+cmake -DCMAKE_PREFIX_PATH=/home/mayurpl/kexin_rong/github_code/ml-pipeline-benchmark/code/cpp_test/libtorch ..
 cmake --build . --config Release
