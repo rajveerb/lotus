@@ -1,78 +1,27 @@
 #include <opencv2/opencv.hpp>
 #include <stdint.h>
 #include <torch/torch.h>
+#include <filesystem>
 #include <fstream>
 #include <iostream>
 #include <string>
 #include <vector>
 
 struct Options {
-  int image_size = 224;
+  int image_size = 64;
   size_t train_batch_size = 8;
-  size_t test_batch_size = 200;
+  size_t test_batch_size = 1;
   size_t iterations = 10;
   size_t log_interval = 20;
   // path must end in delimiter
-  std::string datasetPath = "./dataset/";
+  std::string datasetPath = "./imagenet/";
   std::string infoFilePath = "info.txt";
   torch::DeviceType device = torch::kCPU;
 };
 
 static Options options;
-
-using Data = std::vector<std::pair<std::string, long>>;
-
-
-// https://stackoverflow.com/questions/63502473/different-output-from-libtorch-c-and-pytorch
-// https://discuss.pytorch.org/t/libtorch-c-equivalent-of-torch-transforms-compose-function-please-help/176605/2
-// Thanks a ton! this worked. But can you tell me why rescale the tensor by 255 before normalising it? – 
-// Arki99
-//  Aug 21, 2020 at 8:58
-// 2
-// @Arki99, this is the default for pytorchs ToTensor. when you do ToTensor() in Pytorch transformation, it just rescales the input image to the range 0-1. so in order to get the same behavior, you need to do the same in libtorch. 
-
-
-// int main()
-// {
-//     try
-//     {
-//         torch::jit::script::Module model = torch::jit::load("traced_facelearner_model_new.pt");
-//         model.to(torch::kCUDA);
-        
-//         cv::Mat visibleFrame = cv::imread("example.jpg");
-
-//         cv::resize(visibleFrame, visibleFrame, cv::Size(112, 112));
-//         at::Tensor tensor_image = torch::from_blob(visibleFrame.data, {  visibleFrame.rows, 
-//                                                     visibleFrame.cols, 3 }, at::kByte);
-        
-//         tensor_image = tensor_image.to(at::kFloat).div(255).unsqueeze(0);
-//         tensor_image = tensor_image.permute({ 0, 3, 1, 2 });
-//         ensor_image.sub_(0.5).div_(0.5);
-
-//         tensor_image = tensor_image.to(torch::kCUDA);
-//         // Execute the model and turn its output into a tensor.
-//         auto output = model.forward({tensor_image}).toTensor();
-//         output = output.cpu();
-//         std::cout << "Embds: " << output << std::endl;
-
-//         std::cout << "Done!\n";
-//     }
-//     catch (std::exception e)
-//     {
-//         std::cout << "exception" << e.what() << std::endl;
-//     }
-// }
-
-auto randomHorizontalFlip = [](torch::data::Example<> input) -> torch::data::Example<> {
-    int flipCode = rand() % 2;
-
-    if (flipCode == 1) {
-        // Apply horizontal flip to the tensor along the width dimension (axis 2)
-        input.data = torch::flip(input.data, {2});
-    }
-
-    return input;
-};
+namespace fs = std::filesystem;
+using Data = std::vector<cv::Mat>;
 
 class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
   using Example = torch::data::Example<>;
@@ -82,24 +31,19 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
  public:
   CustomDataset(const Data& data) : data(data) {}
 
-  void randomResizedCrop(cv::Mat &mat) {
-    
-
-    float minScale = 0.8;  // Minimum scaling factor
+  void randomResizedCrop(cv::Mat &mat) 
+  {
+    float minScale = 1.0;  // Minimum scaling factor
     float maxScale = 1.0;  // Maximum scaling factor
 
-    // A range of aspect ratios to randomly select from
-    float minAspectRatio = 0.75;
-    float maxAspectRatio = 1.3333;
+    float minAspectRatio = 1.0;
+    float maxAspectRatio = 1.0;
 
-    // By applying the scale factor to the width and the aspect ratio factor to the height, we effectively control both the size and aspect ratio of the cropped region, allowing us to meet both scaling and aspect ratio requirements simultaneously.
-    // // Calculate the width and height of the crop box based on the aspect ratio
     int maxCropWidth, maxCropHeight;
     try
     {
-      // Calculate the maximum possible crop dimensions based on scale and aspect ratio
-      float randomScale = minScale + static_cast<float>(rand()) / RAND_MAX * (maxScale - minScale);
-      float randomAspectRatio = minAspectRatio + static_cast<float>(rand()) / RAND_MAX * (maxAspectRatio - minAspectRatio);
+      float randomScale = 1.0;
+      float randomAspectRatio = 1.0;
 
       maxCropWidth = (int)(mat.size().width * randomScale);
       maxCropHeight = (int)(maxCropWidth / randomAspectRatio);
@@ -109,55 +53,45 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
       std::cerr << e.what() << '\n';
     }
     
-    // Generate random coordinates for the top-left corner of the crop box
-    int x = rand() % (mat.size().width);
-    int y = rand() % (mat.size().height);
+    int x = mat.size().width - maxCropWidth ? rand() % (mat.size().width - maxCropWidth) : 0;
+    int y = mat.size().height - maxCropHeight ? rand() % (mat.size().height - maxCropHeight) : 0;
 
-    // Ensure the crop box is within the image bounds
     x = std::max(0, x);
     y = std::max(0, y);
     int x2 = std::min(maxCropWidth, mat.size().width - x);
     int y2 = std::min(maxCropWidth, mat.size().height - y);
 
-    // Extract the random crop from the input image, considering scale and aspect ratio
     cv::Rect cropRect(x, y, x2, y2);
     mat = mat(cropRect);
 
-    // Resize the cropped image to the target size (e.g., 224x224)
     cv::resize(mat, mat, cv::Size(options.image_size, options.image_size));
   }
 
   void randomHorizontalFlip(cv::Mat &mat) {
-    int flipCode = rand() % 2;
+    int flipCode = 1;
 
-    // Apply horizontal flip if flipCode is 1
     if (flipCode == 1) {
         cv::flip(mat, mat, 1); // 1 indicates horizontal flip
     }
   }
 
-  // void normalize() {
-  //   std::vector<double> norm_mean = {0.485, 0.456, 0.406};
-  //   std::vector<double> norm_std = {0.229, 0.224, 0.225};
-  //   // input_tensor = torch::data::transforms::Normalize<>(norm_mean, norm_std)(input_tensor);
-  // }
+  at::Tensor normalize(at::Tensor& tdata) 
+  {
+    std::vector<double> mean = {0.485, 0.456, 0.406};
+    std::vector<double> std = {0.229, 0.224, 0.225};
+
+    tdata = torch::data::transforms::Normalize<>(mean, std)(tdata);
+    return tdata;
+  }
 
   Example get(size_t index) {
 
-    std::string path = options.datasetPath + data[index].first;
-    auto mat = cv::imread(path);
+    auto mat = data[index];
     assert(!mat.empty());
-
-    // Random Resize Crop
     randomResizedCrop(mat);
-
-    // Random Horizontal Flip
     randomHorizontalFlip(mat);
-
-    // Convert to Tensor
     std::vector<cv::Mat> channels(3);
     cv::split(mat, channels);
-
     auto R = torch::from_blob(
         channels[2].ptr(),
         {options.image_size, options.image_size},
@@ -170,15 +104,15 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
         channels[0].ptr(),
         {options.image_size, options.image_size},
         torch::kUInt8);
-
     auto tdata = torch::cat({R, G, B})
                      .view({3, options.image_size, options.image_size})
-                     .to(torch::kFloat);
+                     .to(torch::kDouble)/255.0;
     
-    // Normalise
-    tdata.sub_(0.5).div_(0.5);
-    
-    auto tlabel = torch::from_blob(&data[index].second, {1}, torch::kLong);
+
+
+    tdata = normalize(tdata);
+    long k = 0;
+    auto tlabel = torch::from_blob(&k, {1}, torch::kLong);
     return {tdata, tlabel};
   }
 
@@ -187,32 +121,28 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
   }
 };
 
-std::pair<Data, Data> readInfo() {
+Data readInfo() 
+{
   Data train, test;
 
-  std::ifstream stream(options.infoFilePath);
-  assert(stream.is_open());
+  try 
+  {
+    for (const auto& entry : fs::directory_iterator(options.datasetPath + "test/images2/")) {
+        if (entry.is_regular_file()) {
+            std::string filePath = entry.path().string();
+            cv::Mat image = cv::imread(filePath);
 
-  long label;
-  std::string path, type;
-
-  while (true) {
-    stream >> path >> label >> type;
-
-    if (type == "train")
-      train.push_back(std::make_pair(path, label));
-    else if (type == "test")
-      test.push_back(std::make_pair(path, label));
-    else
-      assert(false);
-
-    if (stream.eof())
-      break;
+            if (image.empty()) {
+                std::cerr << "Error reading image: " << filePath << std::endl;
+            } else {
+              test.push_back(image);
+            }
+        }
+    }
+  } catch (const fs::filesystem_error& ex) {
+      std::cerr << "Error: " << ex.what() << std::endl;
   }
-
-  std::random_shuffle(train.begin(), train.end());
-  std::random_shuffle(test.begin(), test.end());
-  return std::make_pair(train, test);
+  return test;
 }
 
 struct NetworkImpl : torch::nn::SequentialImpl {
@@ -319,40 +249,47 @@ int main() {
             << (options.device == torch::kCUDA ? "CUDA" : "CPU") << std::endl;
 
   auto data = readInfo();
-    auto custom_function = [](float x) -> float {
-        return x * 2;  // Double each element
-    };
 
   // auto train_set = CustomDataset(data.first).map(torch::data::transforms::Lambda<torch::data::Example<>>(randomHorizontalFlip)).map(torch::data::transforms::Stack<>());
-  auto train_set = CustomDataset(data.first).map(torch::data::transforms::Stack<>());
-  auto train_size = train_set.size().value();
-  auto train_loader =
-      torch::data::make_data_loader<torch::data::samplers::SequentialSampler>(
-          std::move(train_set), options.train_batch_size);
+  // auto train_set = CustomDataset(data.first).map(torch::data::transforms::Stack<>());
+  // // std::cout << train_set << std::endl;
+  // auto train_size = train_set.size().value();
+  // auto train_loader =
+  //     torch::data::make_data_loader<torch::data::samplers::SequentialSampler>(
+  //         std::move(train_set), 10);
+
 
   // auto data_loader = torch::data::make_data_loader(
   //     std::move(dataset),
   //     torch::data::DataLoaderOptions().batch_size(kBatchSize).workers(2));
 
-  auto test_set =
-      CustomDataset(data.second).map(torch::data::transforms::Stack<>());
+  auto test_set = CustomDataset(data).map(torch::data::transforms::Stack<>());
   auto test_size = test_set.size().value();
-  auto test_loader =
-      torch::data::make_data_loader<torch::data::samplers::SequentialSampler>(
-          std::move(test_set), options.test_batch_size);
+  auto test_loader = torch::data::make_data_loader<torch::data::samplers::SequentialSampler>(std::move(test_set), options.test_batch_size);
 
-  Network network;
-  network->to(options.device);
-
-  torch::optim::SGD optimizer(
-      network->parameters(), torch::optim::SGDOptions(0.001).momentum(0.5));
-
-  for (size_t i = 0; i < options.iterations; ++i) {
-    train(network, *train_loader, optimizer, i + 1, train_size);
-    std::cout << std::endl;
-    test(network, *test_loader, test_size);
-    std::cout << std::endl;
+  std::ofstream outputFile("output.txt");
+    
+  for (auto& batch : *test_loader) 
+  {
+    auto data = batch.data.to(options.device);
+    outputFile << data << std::endl;
+    break;
   }
+  
+  // return 0;
+
+  // Network network;
+  // network->to(options.device);
+
+  // torch::optim::SGD optimizer(
+  //     network->parameters(), torch::optim::SGDOptions(0.001).momentum(0.5));
+
+  // for (size_t i = 0; i < options.iterations; ++i) {
+  //   train(network, *train_loader, optimizer, i + 1, train_size);
+  //   std::cout << std::endl;
+  //   test(network, *test_loader, test_size);
+  //   std::cout << std::endl;
+  // }
 
   return 0;
 }
