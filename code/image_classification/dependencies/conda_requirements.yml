@@ -1,4 +1,4 @@
-name: da
+name: torch2
 channels:
   - pytorch
   - nvidia
