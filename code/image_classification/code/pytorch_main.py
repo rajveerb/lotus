@@ -62,6 +62,13 @@ parser.add_argument(
     help="number of data loading workers (default: 4)",
 )
 parser.add_argument(
+    "--gpus",
+    default=4,
+    type=int,
+    metavar="N",
+    help="number of gpus (default: 4)",
+)
+parser.add_argument(
     "--train-loop",
     default=0,
     type=int,
@@ -183,6 +190,9 @@ best_acc1 = 0
 
 def main():
     args = parser.parse_args()
+
+    if args.gpus:
+        os.environ["CUDA_VISIBLE_DEVICES"] = ",".join(str(i) for i in range(args.gpus))
 
     if args.seed is not None:
         random.seed(args.seed)
