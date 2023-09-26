@@ -1,0 +1,145 @@
+Setting memory allocator to glibc
+=> creating model 'resnet18'
+STAGE:2023-09-24 17:57:53 119710:119710 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 17:59:34 119710:119710 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 17:59:34 119710:119710 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+STAGE:2023-09-24 17:59:58 119710:119710 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 17:59:58 119710:119710 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 17:59:58 119710:119710 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][ 1/64]	Time 121.596 (121.596)	Data 111.358 (111.358)	Loss 6.5724e+00 (6.5724e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+Setting memory allocator to glibc
+=> creating model 'resnet18'
+STAGE:2023-09-24 18:16:55 120017:120017 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 18:33:35 120017:120017 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 18:33:35 120017:120017 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+STAGE:2023-09-24 18:33:58 120017:120017 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 18:33:58 120017:120017 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 18:33:58 120017:120017 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][ 1/64]	Time 1003.373 (1003.373)	Data 993.037 (993.037)	Loss 6.2695e+00 (6.2695e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+Setting memory allocator to glibc
+=> creating model 'resnet18'
+STAGE:2023-09-24 18:58:24 121219:121219 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 19:22:16 121219:121219 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 19:22:16 121219:121219 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+STAGE:2023-09-24 19:22:40 121219:121219 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 19:22:40 121219:121219 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 19:22:40 121219:121219 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][ 1/64]	Time 1451.714 (1451.714)	Data 1441.747 (1441.747)	Loss 6.0418e+00 (6.0418e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+Setting memory allocator to tcmalloc
+=> creating model 'resnet18'
+STAGE:2023-09-24 19:24:26 122277:122277 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 19:25:44 122277:122277 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 19:25:44 122277:122277 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+STAGE:2023-09-24 19:26:07 122277:122277 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 19:26:07 122277:122277 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 19:26:07 122277:122277 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][ 1/64]	Time 96.883 (96.883)	Data 86.849 (86.849)	Loss 7.7625e+00 (7.7625e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+Setting memory allocator to tcmalloc
+=> creating model 'resnet18'
+STAGE:2023-09-24 19:39:47 122594:122594 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 19:53:16 122594:122594 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 19:53:16 122594:122594 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+STAGE:2023-09-24 19:53:42 122594:122594 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 19:53:42 122594:122594 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 19:53:42 122594:122594 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][ 1/64]	Time 810.092 (810.092)	Data 800.029 (800.029)	Loss 6.8013e+00 (6.8013e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+Setting memory allocator to tcmalloc
+=> creating model 'resnet18'
+STAGE:2023-09-24 20:14:43 123390:123390 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 20:35:35 123390:123390 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 20:35:35 123390:123390 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+STAGE:2023-09-24 20:35:59 123390:123390 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 20:35:59 123390:123390 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 20:35:59 123390:123390 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][ 1/64]	Time 1252.186 (1252.186)	Data 1242.363 (1242.363)	Loss 7.1747e+00 (7.1747e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+Setting memory allocator to jemalloc
+=> creating model 'resnet18'
+STAGE:2023-09-24 20:38:18 124246:124246 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 20:40:04 124246:124246 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 20:40:04 124246:124246 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+STAGE:2023-09-24 20:40:28 124246:124246 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 20:40:28 124246:124246 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 20:40:28 124246:124246 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][ 1/64]	Time 129.225 (129.225)	Data 118.830 (118.830)	Loss 7.1276e+00 (7.1276e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+Setting memory allocator to jemalloc
+=> creating model 'resnet18'
+STAGE:2023-09-24 20:57:54 124533:124533 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 21:14:39 124533:124533 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 21:14:39 124533:124533 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+STAGE:2023-09-24 21:15:03 124533:124533 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 21:15:03 124533:124533 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 21:15:03 124533:124533 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][ 1/64]	Time 1036.836 (1036.836)	Data 1026.431 (1026.431)	Loss 7.4779e+00 (7.4779e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+Setting memory allocator to jemalloc
+=> creating model 'resnet18'
+STAGE:2023-09-24 21:40:38 125143:125143 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 22:05:38 125143:125143 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 22:05:38 125143:125143 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+STAGE:2023-09-24 22:06:01 125143:125143 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 22:06:01 125143:125143 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 22:06:01 125143:125143 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][ 1/64]	Time 1526.469 (1526.469)	Data 1516.194 (1516.194)	Loss 7.3203e+00 (7.3203e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+=> creating model 'resnet18'
+STAGE:2023-09-25 01:41:46 131844:131844 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-25 01:43:30 131844:131844 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-25 01:43:30 131844:131844 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+STAGE:2023-09-25 01:43:54 131844:131844 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-25 01:43:54 131844:131844 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-25 01:43:54 131844:131844 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][ 1/64]	Time 122.408 (122.408)	Data 112.227 (112.227)	Loss 7.4717e+00 (7.4717e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+=> creating model 'resnet18'
+STAGE:2023-09-25 02:03:17 132832:132832 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-25 02:22:27 132832:132832 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-25 02:22:27 132832:132832 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+STAGE:2023-09-25 02:22:51 132832:132832 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-25 02:22:51 132832:132832 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-25 02:22:51 132832:132832 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][ 1/64]	Time 1154.804 (1154.804)	Data 1144.634 (1144.634)	Loss 6.9595e+00 (6.9595e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+=> creating model 'resnet18'
+STAGE:2023-09-25 02:47:55 135385:135385 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-25 03:12:43 135385:135385 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-25 03:12:43 135385:135385 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+STAGE:2023-09-25 03:13:18 135385:135385 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-25 03:13:18 135385:135385 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-25 03:13:18 135385:135385 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][ 1/64]	Time 1494.368 (1494.368)	Data 1484.304 (1484.304)	Loss 6.7318e+00 (6.7318e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+=> creating model 'resnet18'
+STAGE:2023-09-25 03:15:28 136368:136368 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-25 03:17:08 136368:136368 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-25 03:17:08 136368:136368 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+STAGE:2023-09-25 03:17:32 136368:136368 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-25 03:17:32 136368:136368 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-25 03:17:32 136368:136368 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][ 1/64]	Time 121.301 (121.301)	Data 110.992 (110.992)	Loss 6.3110e+00 (6.3110e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+=> creating model 'resnet18'
+STAGE:2023-09-25 03:37:04 136719:136719 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-25 03:56:15 136719:136719 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-25 03:56:15 136719:136719 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+STAGE:2023-09-25 03:56:39 136719:136719 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-25 03:56:39 136719:136719 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-25 03:56:39 136719:136719 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][ 1/64]	Time 1163.374 (1163.374)	Data 1153.270 (1153.270)	Loss 6.7908e+00 (6.7908e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+=> creating model 'resnet18'
+STAGE:2023-09-25 04:21:51 137255:137255 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-25 04:46:36 137255:137255 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-25 04:46:36 137255:137255 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+STAGE:2023-09-25 04:47:12 137255:137255 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-25 04:47:12 137255:137255 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-25 04:47:12 137255:137255 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][ 1/64]	Time 1502.886 (1502.886)	Data 1492.791 (1492.791)	Loss 6.9190e+00 (6.9190e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+=> creating model 'resnet18'
+STAGE:2023-09-24 22:23:16 126843:126843 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 22:39:44 126843:126843 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 22:39:44 126843:126843 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+STAGE:2023-09-24 22:40:08 126843:126843 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 22:40:08 126843:126843 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 22:40:08 126843:126843 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][ 1/32]	Time 1022.426 (1022.426)	Data 1012.295 (1012.295)	Loss 6.2264e+00 (6.2264e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+=> creating model 'resnet18'
+STAGE:2023-09-24 23:14:38 127711:127711 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 23:47:54 127711:127711 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 23:47:54 127711:127711 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+STAGE:2023-09-24 23:48:18 127711:127711 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-09-24 23:48:18 127711:127711 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-09-24 23:48:18 127711:127711 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][ 1/32]	Time 2060.817 (2060.817)	Data 2050.789 (2050.789)	Loss 6.8713e+00 (6.8713e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
