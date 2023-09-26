@@ -86,7 +86,12 @@ for json_file in json_files:
     df = pd.concat([df,pd.DataFrame([[json_file,parsed_data['data_wait_time'],parsed_data['forward_and_backward_pass_time'],parsed_data['move_data_to_device_time']]],columns=['json_file','data_wait_time','forward_and_backward_pass_time','move_data_to_device_time'])],ignore_index=True)
 
 # sort by json_file name such that a number in the string is used for sorting
-df['json_file'] = natsort.natsorted(df['json_file'], alg=natsort.ns.IGNORECASE)
+# df['json_file'] = natsort.natsorted(df['json_file'], alg=natsort.ns.IGNORECASE)
+# need to sort the rows based on json_file column but using natsort ignores the case and sorts the rows
+df = df.sort_values(by='json_file', key=lambda x: natsort.natsort_key(x.str.lower()), ignore_index=True)
+
+# sort by json_file name such that a number in the string is used for sorting
+df = df.sort_values(by='json_file', key=lambda x: natsort.natsort_key(x.str.lower()), ignore_index=True)
 df.to_csv(args.output_csv_file,index=False)
 
 # plot a stacked bar chart
