@@ -1,6 +1,7 @@
 from PIL import Image
 import time
 import argparse
+import subprocess
 
 Image.MAX_IMAGE_PIXELS = 1000000000
 
@@ -31,7 +32,12 @@ for i in files:
     decode_file_times = []
     copy_times = []
     e2e_times = []
-    for j in range(10):
+    for j in range(3):
+        # evict cache of files
+        status = subprocess.run(['vmtouch', '-e', i]).returncode
+        if status != 0:
+            print('Error evicting cache for file: ', i)
+            exit(1)
         start_e2e = time.time()
         
         start = start_e2e
