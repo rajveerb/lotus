@@ -95,13 +95,13 @@ df = df.sort_values(by='json_file', key=lambda x: natsort.natsort_key(x.str.lowe
 df.to_csv(args.output_csv_file,index=False)
 
 # plot a stacked bar chart
-plt.figure(figsize=(20,10))
+plt.figure(figsize=(15,10))
 # log scale
 plt.yscale('log')
-# make label vertical
-plt.xticks(rotation=90)
 plt.bar(df['json_file'],df['data_wait_time'],label='data_wait_time')
 plt.bar(df['json_file'],df['forward_and_backward_pass_time'],bottom=df['data_wait_time'],label='forward_and_backward_pass_time')
 plt.bar(df['json_file'],df['move_data_to_device_time'],bottom=df['data_wait_time']+df['forward_and_backward_pass_time'],label='move_data_to_device_time')
+plt.xticks(rotation=75, ha='center')
+plt.tight_layout()
 plt.legend()
 plt.savefig(args.output_plot_file)
