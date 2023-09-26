@@ -1,0 +1,6 @@
+# !/bin/bash
+
+# This script is used to run the pytorch_profiler_json_data.py script
+
+python pytorch_profiler_json_parser.py --profiler_data_dir pytorch_profiles_imagenet_dataset --output_csv_file csv_pytorch_profiles_imagenet_dataset.csv --output_plot_file plot_pytorch_profiles_imagenet_dataset
+python pytorch_profiler_json_parser.py --profiler_data_dir pytorch_profiles_synthetic_dataset --output_csv_file csv_pytorch_profiles_synthetic_dataset.csv --output_plot_file plot_pytorch_profiles_synthetic_dataset
