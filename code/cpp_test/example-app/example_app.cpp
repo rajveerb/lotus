@@ -276,8 +276,8 @@ void test(Network& network, DataLoader& loader, size_t data_size) {
 int main() {
   torch::manual_seed(1);
 
-  //if (torch::cuda::is_available())
-  //  options.device = torch::kCUDA;
+  if (torch::cuda::is_available())
+   options.device = torch::kCUDA;
   std::cout << "Running on: "
             << (options.device == torch::kCUDA ? "CUDA" : "CPU") << std::endl;
 
