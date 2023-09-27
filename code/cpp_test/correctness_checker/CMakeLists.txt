@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.18 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 project(correctness_checker)
 
 set(CMAKE_CUDA_COMPILER "/usr/local/cuda/bin/nvcc")

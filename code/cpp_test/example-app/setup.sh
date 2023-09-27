@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 # Set up libtorch
-./setup_libtorch.sh
+../setup_libtorch.sh
 
 # Set up opencv
-./setup_opencv.sh
+../setup_opencv.sh
 
 rm -rf ./build
 mkdir build
