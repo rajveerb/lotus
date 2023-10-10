@@ -169,7 +169,7 @@ std::pair<Data, Data> readInfo()
 
 // TORCH_MODULE(Network);
 template <typename DataLoader>
-void train(DataLoader& loader, torch::jit::script::Module& model, size_t epoch, size_t data_size) 
+void train(DataLoader& loader, torch::jit::script::Module& model, torch::optim::Optimizer& optimizer, size_t epoch, size_t data_size) 
 {
 	size_t index = 0;
 	model.train();
@@ -188,9 +188,9 @@ void train(DataLoader& loader, torch::jit::script::Module& model, size_t epoch, 
 		assert(!std::isnan(loss.template item<float>()));
 		auto acc = output.argmax(1).eq(targets).sum();
 
-		// optimizer.zero_grad();
+		optimizer.zero_grad();
 		loss.backward();
-		// optimizer.step();
+		optimizer.step();
 
 		Loss += loss.template item<float>();
 		Acc += acc.template item<float>();
@@ -273,11 +273,24 @@ int main(int argc, const char* argv[])
 
 	model.to(options.device);
 
-	// torch::optim::SGD optimizer(model.parameters(), torch::optim::SGDOptions(0.001).momentum(0.5));
+	std::cout << "Model Parameters: " << model.parameters().size() << std::endl;
+
+	torch::jit::parameter_list parameters = model.parameters();
+
+	std::vector<torch::Tensor> tensor_vector;
+
+	for (const torch::jit::IValue& param : parameters) {
+		if (param.isTensor()) {
+			torch::Tensor tensor = param.toTensor();
+			tensor_vector.push_back(tensor);
+		}
+	}
+
+	torch::optim::SGD optimizer(tensor_vector, torch::optim::SGDOptions(0.001).momentum(0.5));
 
 	for (size_t i = 0; i < options.iterations; ++i) {
-		// train(model, *train_loader, optimizer, i + 1, train_size);
-		train(*train_loader, model, i + 1, train_size);
+		train(*train_loader, model, optimizer, i + 1, train_size);
+		// train(*train_loader, model, i + 1, train_size);
 		std::cout << std::endl;
 		test(*test_loader, model, test_size);
 		std::cout << std::endl;
