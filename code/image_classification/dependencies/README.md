@@ -27,3 +27,9 @@
 2. Export your active environment to a new file:
     
     `conda env export > conda_requirements.env`
+
+# ITT API note
+
+Only works for Intel CPU chips.
+
+To run VTune ITT API's python binding, the user has to build and install based on the instruction over [here](https://github.com/NERSC/itt-python). Assuming, the user has already downloaded [Intel VTune](https://www.intel.com/content/www/us/en/docs/vtune-profiler/installation-guide/2023-0/overview.html).
