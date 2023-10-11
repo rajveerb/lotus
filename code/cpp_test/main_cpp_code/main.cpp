@@ -8,22 +8,23 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
+#include <dirent.h>
 struct Options 
 {
 	int image_size = 224;
 	size_t train_batch_size = 8;
 	size_t test_batch_size = 200;
+	size_t num_workers = 4;
 	size_t iterations = 10;
 	size_t log_interval = 20;
 	// path must end in delimiter
-	std::string datasetPath = "./imagenet/";
-	std::string infoFilePath = "info.txt";
+	std::string datasetPath = "/data/imagenet/";
 	torch::DeviceType device = torch::kCPU;
 };
 static Options options;
 namespace fs = std::filesystem;
-using Data = std::vector<cv::Mat>;
+using Data = std::vector<std::pair<cv::Mat, std::string>>;
+// using Data = std::vector<cv::Mat>;
 
 class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 	using Example = torch::data::Example<>;
@@ -102,7 +103,7 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 
 	Example get(size_t index) 
 	{
-		auto mat = data[index];
+		auto mat = data[index].first;
 		assert(!mat.empty());
 		randomResizedCrop(mat);
 		randomHorizontalFlip(mat);
@@ -142,25 +143,98 @@ std::pair<Data, Data> readInfo()
 {
 	// HAVE TO FINISH THIS
 	Data train, test;
+	std::string trainDir = options.datasetPath + "train";
+    std::string valDir = options.datasetPath + "val";
 
-	try 
-	{
-		for (const auto& entry : fs::directory_iterator(options.datasetPath + "test/images/")) {
-			if (entry.is_regular_file()) {
-				std::string filePath = entry.path().string();
-				cv::Mat image = cv::imread(filePath);
+    for (const auto& entry : fs::directory_iterator(trainDir)) {
+        if (fs::is_directory(entry)) {
+            std::string className = entry.path().filename();
+            for (const auto& imageEntry : fs::directory_iterator(entry)) {
+                if (fs::is_regular_file(imageEntry) && imageEntry.path().extension() == ".JPEG") {
+                    cv::Mat image = cv::imread(imageEntry.path().string(), cv::IMREAD_COLOR);
+                    if (!image.empty()) {
+						train.push_back(std::make_pair(image, className));
+                    } else {
+                        std::cerr << "Error loading image: " << imageEntry.path().string() << std::endl;
+                    }
+                }
+            }
+        }
+    }
 
-				if (image.empty()) {
-					std::cerr << "Error reading image: " << filePath << std::endl;
-				} else {
-				test.push_back(image);
-				train.push_back(image);
-				}
-			}
-		}
-	} catch (const fs::filesystem_error& ex) {
-		std::cerr << "Error: " << ex.what() << std::endl;
-	}
+    // DIR* dir = opendir(trainDir.c_str());
+    // struct dirent* entry;
+	// if(dir != NULL)
+    // while ((entry = readdir(dir)) != nullptr) {
+    //     if (entry->d_type == DT_DIR && strcmp(entry->d_name, ".") != 0 && strcmp(entry->d_name, "..") != 0) {
+    //         std::string className = entry->d_name;
+    //         std::string classPath = trainDir + "/" + className;
+
+    //         DIR* classDir = opendir(classPath.c_str());
+    //         struct dirent* imageEntry;
+
+    //         while ((imageEntry = readdir(classDir)) != nullptr) {
+    //             if (imageEntry->d_type == DT_REG && strcmp(imageEntry->d_name, ".") != 0 && strcmp(imageEntry->d_name, "..") != 0) {
+    //                 std::string imagePath = classPath + "/" + imageEntry->d_name;
+    //                 cv::Mat image = cv::imread(imagePath, cv::IMREAD_COLOR);
+    //                 if (!image.empty()) {
+	// 					train.push_back(std::make_pair(image, className));
+    //                 }
+    //             }
+    //         }
+
+    //         closedir(classDir);
+    //     }
+    // }
+
+	// if(dir != NULL)
+    // closedir(dir);
+
+
+    for (const auto& entry : fs::directory_iterator(valDir)) {
+        if (fs::is_directory(entry)) {
+            std::string className = entry.path().filename();
+            for (const auto& imageEntry : fs::directory_iterator(entry)) {
+                if (fs::is_regular_file(imageEntry) && imageEntry.path().extension() == ".JPEG") {
+                    cv::Mat image = cv::imread(imageEntry.path().string(), cv::IMREAD_COLOR);
+                    if (!image.empty()) {
+						test.push_back(std::make_pair(image, className));
+                    } else {
+                        std::cerr << "Error loading image: " << imageEntry.path().string() << std::endl;
+                    }
+                }
+            }
+        }
+    }
+
+    // dir = opendir(valDir.c_str());
+
+	// if(dir != NULL)
+    // while ((entry = readdir(dir)) != nullptr) {
+    //     if (entry->d_type == DT_DIR && strcmp(entry->d_name, ".") != 0 && strcmp(entry->d_name, "..") != 0) {
+    //         std::string className = entry->d_name;
+    //         std::string classPath = valDir + "/" + className;
+
+    //         DIR* classDir = opendir(classPath.c_str());
+    //         struct dirent* imageEntry;
+
+    //         while ((imageEntry = readdir(classDir)) != nullptr) {
+    //             if (imageEntry->d_type == DT_REG && strcmp(imageEntry->d_name, ".") != 0 && strcmp(imageEntry->d_name, "..") != 0) {
+    //                 std::string imagePath = classPath + "/" + imageEntry->d_name;
+    //                 cv::Mat image = cv::imread(imagePath, cv::IMREAD_COLOR);
+    //                 if (!image.empty()) {
+	// 					test.push_back(std::make_pair(image, className));
+    //                 }
+    //             }
+    //         }
+
+    //         closedir(classDir);
+    //     }
+    // }
+
+	// if(dir != NULL)
+    // closedir(dir);
+
 	return std::make_pair(train, test);
 }
 
@@ -265,11 +339,11 @@ int main(int argc, const char* argv[])
 
 	auto train_set = CustomDataset(data.first).map(torch::data::transforms::Stack<>());
 	auto train_size = train_set.size().value();
-	auto train_loader = torch::data::make_data_loader<torch::data::samplers::SequentialSampler>(std::move(train_set), 10);
+	auto train_loader = torch::data::make_data_loader<torch::data::samplers::SequentialSampler>(std::move(train_set), torch::data::DataLoaderOptions().batch_size(options.train_batch_size).workers(options.num_workers));
 
 	auto test_set = CustomDataset(data.second).map(torch::data::transforms::Stack<>());
 	auto test_size = test_set.size().value();
-	auto test_loader = torch::data::make_data_loader<torch::data::samplers::SequentialSampler>(std::move(test_set), options.test_batch_size);
+	auto test_loader = torch::data::make_data_loader<torch::data::samplers::SequentialSampler>(std::move(test_set), torch::data::DataLoaderOptions().batch_size(options.test_batch_size).workers(options.num_workers));
 
 	model.to(options.device);
 
@@ -290,7 +364,6 @@ int main(int argc, const char* argv[])
 
 	for (size_t i = 0; i < options.iterations; ++i) {
 		train(*train_loader, model, optimizer, i + 1, train_size);
-		// train(*train_loader, model, i + 1, train_size);
 		std::cout << std::endl;
 		test(*test_loader, model, test_size);
 		std::cout << std::endl;
