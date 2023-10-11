@@ -12,8 +12,8 @@
 struct Options 
 {
 	int image_size = 224;
-	size_t train_batch_size = 8;
-	size_t test_batch_size = 200;
+	size_t train_batch_size = 256;
+	size_t test_batch_size = 256;
 	size_t num_workers = 4;
 	size_t iterations = 10;
 	size_t log_interval = 20;
