@@ -482,17 +482,13 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
         steps = 0
         train_p = profile(
             activities=[ProfilerActivity.CPU,ProfilerActivity.CUDA],
-            # with_stack=True,
-            schedule=torch.profiler.schedule(wait=1, warmup=1, active=5),
+            with_stack=True,
+            schedule=torch.profiler.schedule(wait=0, warmup=0, active=9),
             on_trace_ready=torch.profiler.tensorboard_trace_handler(
-                f"{args.profile_log_prefix}_pytorch_profiler_train"
+                f"{args.profile_log_prefix}"
             ),
         )
         train_p.start()
-    
-    if args.log_train_file:
-        log = ""
-        start_e2e_time = time.time()
 
     for i, (images, target) in enumerate(train_loader):
 
@@ -528,13 +524,6 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
         batch_time.update(time.time() - end)
         end = time.time()
 
-        if args.log_train_file:
-            end_e2e_time = time.time()
-            log += f"E2E batch time: {end_e2e_time - start_e2e_time} s\n"
-            open(args.log_train_file, "a+").write(log)
-            log = ""
-
-
         if i % args.print_freq == 0:
             progress.display(i + 1)
 
@@ -567,9 +556,6 @@ def validate(val_loader, model, criterion, args):
                     ),
                 )
                 val_p.start()
-            if args.log_val_file:
-                log = ""
-                start_e2e_time = time.time()
 
             for i, (images, target) in enumerate(loader):
 
@@ -600,13 +586,6 @@ def validate(val_loader, model, criterion, args):
                 # measure elapsed time
                 batch_time.update(time.time() - end)
                 end = time.time()
-
-                if args.log_val_file:
-                    end_e2e_time = time.time()
-                    log += f"E2E batch time: {end_e2e_time - start_e2e_time} s\n"
-                    open(args.log_val_file, "a+").write(log)
-                    log = ""
-
 
                 if i % args.print_freq == 0:
                     progress.display(i + 1)
