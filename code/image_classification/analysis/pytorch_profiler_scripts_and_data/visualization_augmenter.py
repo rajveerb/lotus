@@ -7,11 +7,12 @@ import argparse
 
 # add argument to pass pytorch_profiler_data_file
 parser = argparse.ArgumentParser()
-parser.add_argument('--pytorch_profiler_data_file', type=str,
-                    default='pytorch_profile_log_default_fetch/kepler2_2126935.1696353112530.pt.trace.json', help='pytorch_profiler_data_file')
+parser.add_argument('--pytorch_profiler_data_dir', type=str,
+                    default='pytorch_profiles_imagenet_dataset', help='Root directory which stores pytorch profiler data along with custom_log for different configs')
 # custom log
-parser.add_argument('--custom_log', type=str, default='',
-                    help='custom_log, requirement is the file should end with pid_<pidnumber>, for example, abcdef_pid_1234')
+parser.add_argument('--custom_log_prefix', type=str, default='custom_log',
+                    help='custom_log, requirement is the file should begin with the prefix passed as an argument\
+                          and end with pid_<pidnumber> without any extension such as .json, for example, custom_log_abcdef_pid_1234')
 
 parser.add_argument('--compact', action='store_true', help='compact option will not include fine grained breakdown of batch preprocessing ops such as \
                     loader time,\
@@ -84,10 +85,15 @@ def save_augmented_profiler_data(pytorch_profiler_data_file,compact,result):
 
 args = parser.parse_args()
 
-result = []
-for f in os.listdir("."):
-    if f.startswith(args.custom_log):
-        pid = f.split("_")[-1]
-        result += update_pytorch_profile_data(f, pid, args.compact)
-
-save_augmented_profiler_data(args.pytorch_profiler_data_file,args.compact,result)
+# recursively search for pytorch profiler data files
+for root, dirs, files in os.walk(args.pytorch_profiler_data_dir):
+    result = []
+    result_pytorch_profiler_data_file = None
+    for file in files:
+        if file.startswith(args.custom_log_prefix):
+            pid = file.split("_")[-1]
+            result += update_pytorch_profile_data(os.path.join(root, file), pid, args.compact)
+        elif file.endswith(".json"):
+            result_pytorch_profiler_data_file = os.path.join(root, file) 
+    if result_pytorch_profiler_data_file:
+        save_augmented_profiler_data(result_pytorch_profiler_data_file,args.compact,result)
