@@ -1,0 +1,12 @@
+docker_py==1.10.6
+itt==2.83.5
+matplotlib==3.6.3
+matplotlib==3.7.1
+natsort==8.4.0
+numpy==1.23.2
+pandas==1.4.4
+pandas==1.5.1
+Pillow==9.0.1
+Pillow==10.1.0
+torch==2.1.0
+torchvision==0.16.0
