@@ -78,8 +78,8 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
     }
     
     // Generate random coordinates for the top-left corner of the crop box
-    int x = mat.size().width - maxCropWidth ? rand() % (mat.size().width - maxCropWidth) : 0;
-    int y = mat.size().height - maxCropHeight ? rand() % (mat.size().height - maxCropHeight) : 0;
+    int x = (mat.size().width - maxCropWidth) > 0 ? rand() % (mat.size().width - maxCropWidth) : 0;
+    int y = (mat.size().height - maxCropHeight) > 0 ? rand() % (mat.size().height - maxCropHeight) : 0;
 
     // Ensure the crop box is within the image bounds
     x = std::max(0, x);

@@ -66,8 +66,8 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 		}
 		
 		// Generate random coordinates for the top-left corner of the crop box
-		int x = mat.size().width - maxCropWidth ? rand() % (mat.size().width - maxCropWidth) : 0;
-		int y = mat.size().height - maxCropHeight ? rand() % (mat.size().height - maxCropHeight) : 0;
+		int x = (mat.size().width - maxCropWidth) > 0 ? rand() % (mat.size().width - maxCropWidth) : 0;
+		int y = (mat.size().height - maxCropHeight) > 0 ? rand() % (mat.size().height - maxCropHeight) : 0;
 
 		// Ensure the crop box is within the image bounds
 		x = std::max(0, x);
@@ -105,6 +105,7 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 	{
 		auto mat = data[index].first;
 		assert(!mat.empty());
+		// std::cout<<mat<<std::endl;
 		randomResizedCrop(mat);
 		randomHorizontalFlip(mat);
 		std::vector<cv::Mat> channels(3);
@@ -128,6 +129,7 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 
 
 		tdata = normalize(tdata);
+		// FIX THIS
 		long k = 0;
 		auto tlabel = torch::from_blob(&k, {1}, torch::kLong);
 		return {tdata, tlabel};
@@ -145,7 +147,7 @@ std::pair<Data, Data> readInfo()
 	Data train, test;
 	std::string trainDir = options.datasetPath + "train";
     std::string valDir = options.datasetPath + "val";
-
+	int i = 0;
     for (const auto& entry : fs::directory_iterator(trainDir)) {
         if (fs::is_directory(entry)) {
             std::string className = entry.path().filename();
@@ -154,6 +156,8 @@ std::pair<Data, Data> readInfo()
                     cv::Mat image = cv::imread(imageEntry.path().string(), cv::IMREAD_COLOR);
                     if (!image.empty()) {
 						train.push_back(std::make_pair(image, className));
+						++i;
+						if(i > 500) break;
                     } else {
                         std::cerr << "Error loading image: " << imageEntry.path().string() << std::endl;
                     }
@@ -190,6 +194,7 @@ std::pair<Data, Data> readInfo()
 	// if(dir != NULL)
     // closedir(dir);
 
+	i = 0;
 
     for (const auto& entry : fs::directory_iterator(valDir)) {
         if (fs::is_directory(entry)) {
@@ -199,6 +204,8 @@ std::pair<Data, Data> readInfo()
                     cv::Mat image = cv::imread(imageEntry.path().string(), cv::IMREAD_COLOR);
                     if (!image.empty()) {
 						test.push_back(std::make_pair(image, className));
+						++i;
+						if(i > 500) break;
                     } else {
                         std::cerr << "Error loading image: " << imageEntry.path().string() << std::endl;
                     }
@@ -339,11 +346,11 @@ int main(int argc, const char* argv[])
 
 	auto train_set = CustomDataset(data.first).map(torch::data::transforms::Stack<>());
 	auto train_size = train_set.size().value();
-	auto train_loader = torch::data::make_data_loader<torch::data::samplers::SequentialSampler>(std::move(train_set), torch::data::DataLoaderOptions().batch_size(options.train_batch_size).workers(options.num_workers));
+	auto train_loader = torch::data::make_data_loader<torch::data::samplers::SequentialSampler>(std::move(train_set), torch::data::DataLoaderOptions().batch_size(options.train_batch_size));//.workers(options.num_workers));
 
 	auto test_set = CustomDataset(data.second).map(torch::data::transforms::Stack<>());
 	auto test_size = test_set.size().value();
-	auto test_loader = torch::data::make_data_loader<torch::data::samplers::SequentialSampler>(std::move(test_set), torch::data::DataLoaderOptions().batch_size(options.test_batch_size).workers(options.num_workers));
+	auto test_loader = torch::data::make_data_loader<torch::data::samplers::SequentialSampler>(std::move(test_set), torch::data::DataLoaderOptions().batch_size(options.test_batch_size));//.workers(options.num_workers));
 
 	model.to(options.device);
 
