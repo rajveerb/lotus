@@ -1,3 +1,17 @@
+## Compress PyTorch profiler files in this directory
+
+To compress:
+
+```bash
+make compress
+```
+
+To decompress:
+
+```bash
+make decompress
+```
+
 ## Generate the PyTorch profiler data
 
 
