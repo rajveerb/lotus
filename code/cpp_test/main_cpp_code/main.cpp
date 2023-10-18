@@ -247,7 +247,11 @@ void train(DataLoader& loader, torch::jit::script::Module& model, torch::optim::
 
 		auto output = model.forward(temp_op).toTensor();
 		auto loss = torch::nll_loss(output, targets);
-		assert(!std::isnan(loss.template item<float>()));
+		if (std::isnan(loss.template item<float>()))
+		{
+			std::cout << data << std::endl;
+			assert(!std::isnan(loss.template item<float>()));
+		}
 		auto acc = output.argmax(1).eq(targets).sum();
 
 		optimizer.zero_grad();
