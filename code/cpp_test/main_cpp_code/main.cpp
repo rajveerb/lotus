@@ -9,6 +9,7 @@
 #include <string>
 #include <vector>
 #include <dirent.h>
+#include <map>
 struct Options 
 {
 	int image_size = 224;
@@ -23,7 +24,9 @@ struct Options
 };
 static Options options;
 namespace fs = std::filesystem;
-using Data = std::vector<std::pair<cv::Mat, std::string>>;
+using Data = std::vector<std::pair<std::string, long>>;
+typedef std::vector<std::string> StringList;
+typedef std::map<std::string, int> StringToIntMap;
 // using Data = std::vector<cv::Mat>;
 
 class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
@@ -32,7 +35,8 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 	Data data;
 
 	public:
-	CustomDataset(const Data& data) : data(data) {}
+	CustomDataset(const Data& data) : data(data) 
+	{}
 
 	void randomResizedCrop(cv::Mat &mat) 
 	{
@@ -83,7 +87,8 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 		cv::resize(mat, mat, cv::Size(options.image_size, options.image_size));
 	}
 
-	void randomHorizontalFlip(cv::Mat &mat) {
+	void randomHorizontalFlip(cv::Mat &mat) 
+	{
 		int flipCode = rand() % 2;
 
 		// Apply horizontal flip if flipCode is 1
@@ -103,9 +108,9 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 
 	Example get(size_t index) 
 	{
-		auto mat = data[index].first;
+		std::string path = data[index].first;
+		auto mat = cv::imread(path);
 		assert(!mat.empty());
-		// std::cout<<mat<<std::endl;
 		randomResizedCrop(mat);
 		randomHorizontalFlip(mat);
 		std::vector<cv::Mat> channels(3);
@@ -125,13 +130,8 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 		auto tdata = torch::cat({R, G, B})
 						.view({3, options.image_size, options.image_size})
 						.to(torch::kFloat)/255.0;
-		
-
-
 		tdata = normalize(tdata);
-		// FIX THIS
-		long k = 0;
-		auto tlabel = torch::from_blob(&k, {1}, torch::kLong);
+		auto tlabel = torch::from_blob(&data[index].second, {1}, torch::kLong);
 		return {tdata, tlabel};
 	}
 
@@ -143,106 +143,86 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 
 std::pair<Data, Data> readInfo() 
 {
-	// HAVE TO FINISH THIS
-	Data train, test;
+	Data train, val;
 	std::string trainDir = options.datasetPath + "train";
     std::string valDir = options.datasetPath + "val";
-	int i = 0;
-    for (const auto& entry : fs::directory_iterator(trainDir)) {
-        if (fs::is_directory(entry)) {
+	
+	// Generate labels for train data
+	StringList trainClasses;
+    StringToIntMap trainClassToIdx;
+    for (const auto& entry : fs::directory_iterator(trainDir)) 
+	{
+        if (entry.is_directory()) 
+		{
+            trainClasses.push_back(entry.path().filename());
+        }
+    }
+    std::sort(trainClasses.begin(), trainClasses.end());
+    if (trainClasses.empty()) 
+	{
+        throw std::runtime_error("Couldn't find any class folder in " + trainDir);
+    }
+    long index = 0;
+    for (const std::string& cls : trainClasses) 
+	{
+        trainClassToIdx[cls] = index;
+        index++;
+    }
+
+	// Load train data
+    for (const auto& entry : fs::directory_iterator(trainDir))
+	{
+        if (fs::is_directory(entry))
+		{
             std::string className = entry.path().filename();
-            for (const auto& imageEntry : fs::directory_iterator(entry)) {
-                if (fs::is_regular_file(imageEntry) && imageEntry.path().extension() == ".JPEG") {
-                    cv::Mat image = cv::imread(imageEntry.path().string(), cv::IMREAD_COLOR);
-                    if (!image.empty()) {
-						train.push_back(std::make_pair(image, className));
-						++i;
-						if(i > 500) break;
-                    } else {
-                        std::cerr << "Error loading image: " << imageEntry.path().string() << std::endl;
-                    }
+            for (const auto& imageEntry : fs::directory_iterator(entry)) 
+			{
+                if (fs::is_regular_file(imageEntry) && imageEntry.path().extension() == ".JPEG") 
+				{
+					train.push_back(std::make_pair(imageEntry.path().string(), trainClassToIdx[className]));
                 }
             }
         }
     }
 
-    // DIR* dir = opendir(trainDir.c_str());
-    // struct dirent* entry;
-	// if(dir != NULL)
-    // while ((entry = readdir(dir)) != nullptr) {
-    //     if (entry->d_type == DT_DIR && strcmp(entry->d_name, ".") != 0 && strcmp(entry->d_name, "..") != 0) {
-    //         std::string className = entry->d_name;
-    //         std::string classPath = trainDir + "/" + className;
+	// Generate labels for val data
+	StringList valClasses;
+    StringToIntMap valClassToIdx;
+    for (const auto& entry : fs::directory_iterator(valDir)) 
+	{
+        if (entry.is_directory() && entry.path().filename() != "ILSVRC2012_img_val") 
+		{
+            valClasses.push_back(entry.path().filename());
+        }
+    }
+    std::sort(valClasses.begin(), valClasses.end());
+    if (valClasses.empty()) 
+	{
+        throw std::runtime_error("Couldn't find any class folder in " + valDir);
+    }
+    index = 0;
+    for (const std::string& cls : valClasses) 
+	{
+        valClassToIdx[cls] = index;
+        index++;
+    }
 
-    //         DIR* classDir = opendir(classPath.c_str());
-    //         struct dirent* imageEntry;
-
-    //         while ((imageEntry = readdir(classDir)) != nullptr) {
-    //             if (imageEntry->d_type == DT_REG && strcmp(imageEntry->d_name, ".") != 0 && strcmp(imageEntry->d_name, "..") != 0) {
-    //                 std::string imagePath = classPath + "/" + imageEntry->d_name;
-    //                 cv::Mat image = cv::imread(imagePath, cv::IMREAD_COLOR);
-    //                 if (!image.empty()) {
-	// 					train.push_back(std::make_pair(image, className));
-    //                 }
-    //             }
-    //         }
-
-    //         closedir(classDir);
-    //     }
-    // }
-
-	// if(dir != NULL)
-    // closedir(dir);
-
-	i = 0;
-
-    for (const auto& entry : fs::directory_iterator(valDir)) {
-        if (fs::is_directory(entry)) {
+	// load val data
+    for (const auto& entry : fs::directory_iterator(valDir)) 
+	{
+        if (fs::is_directory(entry) && entry.path().filename() != "ILSVRC2012_img_val") 
+		{
             std::string className = entry.path().filename();
-            for (const auto& imageEntry : fs::directory_iterator(entry)) {
-                if (fs::is_regular_file(imageEntry) && imageEntry.path().extension() == ".JPEG") {
-                    cv::Mat image = cv::imread(imageEntry.path().string(), cv::IMREAD_COLOR);
-                    if (!image.empty()) {
-						test.push_back(std::make_pair(image, className));
-						++i;
-						if(i > 500) break;
-                    } else {
-                        std::cerr << "Error loading image: " << imageEntry.path().string() << std::endl;
-                    }
+            for (const auto& imageEntry : fs::directory_iterator(entry)) 
+			{
+                if (fs::is_regular_file(imageEntry) && imageEntry.path().extension() == ".JPEG") 
+				{
+					val.push_back(std::make_pair(imageEntry.path().string(), valClassToIdx[className]));
                 }
             }
         }
     }
-
-    // dir = opendir(valDir.c_str());
-
-	// if(dir != NULL)
-    // while ((entry = readdir(dir)) != nullptr) {
-    //     if (entry->d_type == DT_DIR && strcmp(entry->d_name, ".") != 0 && strcmp(entry->d_name, "..") != 0) {
-    //         std::string className = entry->d_name;
-    //         std::string classPath = valDir + "/" + className;
-
-    //         DIR* classDir = opendir(classPath.c_str());
-    //         struct dirent* imageEntry;
-
-    //         while ((imageEntry = readdir(classDir)) != nullptr) {
-    //             if (imageEntry->d_type == DT_REG && strcmp(imageEntry->d_name, ".") != 0 && strcmp(imageEntry->d_name, "..") != 0) {
-    //                 std::string imagePath = classPath + "/" + imageEntry->d_name;
-    //                 cv::Mat image = cv::imread(imagePath, cv::IMREAD_COLOR);
-    //                 if (!image.empty()) {
-	// 					test.push_back(std::make_pair(image, className));
-    //                 }
-    //             }
-    //         }
-
-    //         closedir(classDir);
-    //     }
-    // }
-
-	// if(dir != NULL)
-    // closedir(dir);
-
-	return std::make_pair(train, test);
+	return std::make_pair(train, val);
 }
 
 
@@ -256,7 +236,8 @@ void train(DataLoader& loader, torch::jit::script::Module& model, torch::optim::
 	model.train();
 	float Loss = 0, Acc = 0;
 
-	for (auto& batch : loader) {
+	for (auto& batch : loader) 
+	{
 		auto data = batch.data.to(options.device);
 		auto targets = batch.target.to(options.device).view({-1});
 
@@ -322,7 +303,7 @@ int main(int argc, const char* argv[])
 {
 	if (argc != 2) 
 	{
-		std::cerr << "usage: example-app <path-to-exported-script-module>\n";
+		std::cerr << "usage: main <path-to-exported-script-module>\n";
 		return -1;
 	}
   
@@ -341,6 +322,7 @@ int main(int argc, const char* argv[])
   	std::cout << "ok\n";
 	if (torch::cuda::is_available())
 		options.device = torch::kCUDA;
+  	std::cout << "Running on: " << (options.device == torch::kCUDA ? "CUDA" : "CPU") << std::endl;
 	
 	auto data = readInfo();
 
@@ -360,8 +342,10 @@ int main(int argc, const char* argv[])
 
 	std::vector<torch::Tensor> tensor_vector;
 
-	for (const torch::jit::IValue& param : parameters) {
-		if (param.isTensor()) {
+	for (const torch::jit::IValue& param : parameters) 
+	{
+		if (param.isTensor()) 
+		{
 			torch::Tensor tensor = param.toTensor();
 			tensor_vector.push_back(tensor);
 		}
@@ -369,7 +353,8 @@ int main(int argc, const char* argv[])
 
 	torch::optim::SGD optimizer(tensor_vector, torch::optim::SGDOptions(0.001).momentum(0.5));
 
-	for (size_t i = 0; i < options.iterations; ++i) {
+	for (size_t i = 0; i < options.iterations; ++i) 
+	{
 		train(*train_loader, model, optimizer, i + 1, train_size);
 		std::cout << std::endl;
 		test(*test_loader, model, test_size);
