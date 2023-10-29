@@ -249,7 +249,7 @@ void train(DataLoader& loader, torch::jit::script::Module& model, torch::optim::
 		auto loss = torch::nll_loss(output, targets);
 		if (std::isnan(loss.template item<float>()))
 		{
-			std::cout << data << std::endl;
+			// std::cout << data << std::endl;
 			assert(!std::isnan(loss.template item<float>()));
 		}
 		auto acc = output.argmax(1).eq(targets).sum();

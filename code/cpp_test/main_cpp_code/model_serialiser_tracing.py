@@ -3,15 +3,28 @@ import torch.nn as nn
 import torchvision
 
 # An instance of your model.
+# model = torchvision.models.resnet18()
+
+# checkpoint = torch.load("/data/mrao70/models/checkpoint.pth.tar")
+# state_dict = checkpoint["state_dict"]
+# state_dict = {key.replace('module.', ''): value for key, value in state_dict.items()}
+
+# model.load_state_dict(state_dict)
+
+# model = model.module if isinstance(model, nn.DataParallel) else model
+
+checkpoint = torch.load(args.resume)
 model = torchvision.models.resnet18()
-
-checkpoint = torch.load("/data/mrao70/models/checkpoint.pth.tar")
-state_dict = checkpoint["state_dict"]
-state_dict = {key.replace('module.', ''): value for key, value in state_dict.items()}
-
-model.load_state_dict(state_dict)
-
-model = model.module if isinstance(model, nn.DataParallel) else model
+optimizer = torch.optim.SGD(
+        model.parameters(),
+        args.lr,
+        momentum=args.momentum,
+        weight_decay=args.weight_decay,
+    )
+scheduler = StepLR(optimizer, step_size=30, gamma=0.1)
+model.load_state_dict(checkpoint["state_dict"])
+optimizer.load_state_dict(checkpoint["optimizer"])
+scheduler.load_state_dict(checkpoint["scheduler"])
 
 model.eval()
 
