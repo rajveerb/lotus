@@ -516,7 +516,7 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
         top5.update(acc5[0], images.size(0))
 
         # compute gradient and do SGD step
-        with record_function("model_backward_pass"):
+        losses.update(loss_cpu, images.size(0))
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
@@ -593,7 +593,13 @@ def validate(val_loader, model, criterion, args):
 
                 # measure accuracy and record loss
                 acc1, acc5 = accuracy(output, target, topk=(1, 5))
-                losses.update(loss.item(), images.size(0))
+                            
+                with record_function("move_loss_tensor_to_cpu"):
+                    cpu_device = torch.device("cpu")
+                    with torch.no_grad():
+                        loss_cpu = loss.to(cpu_device,non_blocking=True,copy=True)
+
+                losses.update(loss_cpu, images.size(0))
                 top1.update(acc1[0], images.size(0))
                 top5.update(acc5[0], images.size(0))
 
