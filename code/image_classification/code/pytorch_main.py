@@ -516,7 +516,7 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
 
         # measure accuracy and record loss
         acc1, acc5 = accuracy(output, target, topk=(1, 5))
-        losses.update(loss_cpu, images.size(0))
+        losses.update(loss.item(), images.size(0))
         top1.update(acc1[0], images.size(0))
         top5.update(acc5[0], images.size(0))
 
@@ -592,6 +592,12 @@ def validate(val_loader, model, criterion, args):
                 with record_function("model_inference"):
                     output = model(images)
                     loss = criterion(output, target)
+
+                            
+                with record_function("move_loss_tensor_to_cpu"):
+                    cpu_device = torch.device("cpu")
+                    with torch.no_grad():
+                        loss_cpu = loss.to(cpu_device,non_blocking=True,copy=True)
 
                 if args.profile:
                     val_p.step()
