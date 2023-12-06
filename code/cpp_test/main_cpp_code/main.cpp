@@ -97,13 +97,12 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 			cv::flip(mat, mat, 1); // 1 indicates horizontal flip
 	}
 
-	at::Tensor normalize(at::Tensor& tdata) 
+	void normalize(at::Tensor& tdata) 
 	{
 		std::vector<double> mean = {0.485, 0.456, 0.406};
 		std::vector<double> std = {0.229, 0.224, 0.225};
 
 		tdata = torch::data::transforms::Normalize<>(mean, std)(tdata);
-		return tdata;
 	}
 
 
@@ -130,8 +129,8 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 			torch::kUInt8);
 		auto tdata = torch::cat({R, G, B})
 						.view({3, options.image_size, options.image_size})
-						.to(torch::kFloat)/255.0;
-		tdata = normalize(tdata);
+						.to(torch::kFloat).div_(255);
+		normalize(tdata);
 		auto tlabel = torch::from_blob(&data[index].second, {1}, torch::kLong);
 		return {tdata, tlabel};
 	}
