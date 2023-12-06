@@ -373,7 +373,7 @@ int main(int argc, const char* argv[])
 	auto test_size = test_set.size().value();
 	auto test_loader = torch::data::make_data_loader<torch::data::samplers::SequentialSampler>(std::move(test_set), torch::data::DataLoaderOptions().batch_size(options.test_batch_size));//.workers(options.num_workers));
 
-	model.to(options.device);
+	model->to(options.device);
 
 	// lr = 0.1 weightDecay = 0.0001 momentum = 0.9
 	torch::optim::SGD optimizer(model->parameters(), torch::optim::SGDOptions(0.01).weight_decay(0.0001).momentum(0.9));
