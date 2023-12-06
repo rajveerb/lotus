@@ -10,6 +10,7 @@
 #include <vector>
 #include <dirent.h>
 #include <map>
+#include "resnet.h"
 struct Options 
 {
 	int image_size = 224;
@@ -229,11 +230,74 @@ std::pair<Data, Data> readInfo()
 
 
 // TORCH_MODULE(Network);
-template <typename DataLoader>
-void train(DataLoader& loader, torch::jit::script::Module& model, torch::optim::Optimizer& optimizer, size_t epoch, size_t data_size) 
+template <typename DataLoader, typename Model>
+// std::shared_ptr<Model>
+// train_model(std::shared_ptr<Model> model, DataLoader& train_data_loader,
+// 			DataLoader& test_data_loader, torch::Device device,
+// 			float learning_rate, int64_t num_epochs) 
+// {
+// 	model->to(device);
+
+// 	torch::optim::SGD optimizer(model->parameters(),
+// 								torch::optim::SGDOptions(learning_rate));
+
+// 	for (int64_t epoch = 1; epoch <= num_epochs; ++epoch) 
+// 	{
+// 		std::cout << "Epoch: " << epoch << std::endl;
+
+// 		model->train();
+// 		size_t batch_index = 0;
+// 		for (auto& batch : *train_data_loader) 
+// 		{
+// 			auto data = batch.data.to(device), targets = batch.target.to(device);
+
+// 			optimizer.zero_grad();
+// 			auto output = model->forward(data);
+// 			auto loss = torch::nll_loss(output, targets);
+// 			AT_ASSERT(!std::isnan(loss.template item<float>()));
+// 			loss.backward();
+// 			optimizer.step();
+
+// 			if (batch_index++ % 10 == 0) 
+// 			{
+// 				std::cout << "Train Loss: " << loss.template item<float>()
+// 						  << std::endl;
+// 			}
+// 		}
+
+// 		model->eval();
+// 		torch::NoGradGuard no_grad;
+// 		size_t num_correct = 0;
+// 		float test_loss = 0;
+// 		for (const auto& batch : *test_data_loader) 
+// 		{
+// 			auto data = batch.data.to(device), targets = batch.target.to(device);
+
+// 			auto output = model->forward(data);
+// 			test_loss += torch::nll_loss(
+// 							 output,
+// 							 targets,
+// 							 /*weight=*/{},
+// 							 torch::Reduction::Sum)
+// 							 .template item<float>();
+// 			auto pred = output.argmax(1);
+// 			num_correct += pred.eq(targets).sum().template item<int64_t>();
+// 		}
+
+// 		test_loss /= test_data_loader->size().value();
+// 		std::cout << "Test Loss: " << test_loss
+// 				  << ", Accuracy: " << static_cast<float>(num_correct)
+// 						 / test_data_loader->size().value()
+// 				  << std::endl;
+// 	}
+
+// 	return model;
+// }
+// void train(DataLoader& loader, torch::jit::script::Module& model, torch::optim::Optimizer& optimizer, size_t epoch, size_t data_size) 
+void train(DataLoader& loader, std::shared_ptr<Model> model, torch::optim::SGD& optimizer, size_t epoch, size_t data_size)
 {
 	size_t index = 0;
-	model.train();
+	model->train();
 	float Loss = 0, Acc = 0;
 
 	for (auto& batch : loader) 
@@ -241,19 +305,11 @@ void train(DataLoader& loader, torch::jit::script::Module& model, torch::optim::
 		auto data = batch.data.to(options.device);
 		auto targets = batch.target.to(options.device).view({-1});
 
-		std::vector<c10::IValue>temp_op;
-
-		temp_op.push_back(data);
-
-		auto output = model.forward(temp_op).toTensor();
-		auto loss = torch::nll_loss(output, targets);
-		if (std::isnan(loss.template item<float>()))
-		{
-			// std::cout << data << std::endl;
-			assert(!std::isnan(loss.template item<float>()));
-		}
+		auto output = model->forward(data);
+		auto loss = torch::cross_entropy_loss(output, targets);
+		assert(!std::isnan(loss.template item<float>()));
 		auto acc = output.argmax(1).eq(targets).sum();
-
+		
 		optimizer.zero_grad();
 		loss.backward();
 		optimizer.step();
@@ -272,11 +328,11 @@ void train(DataLoader& loader, torch::jit::script::Module& model, torch::optim::
 	}
 }
 
-template <typename DataLoader>
-void test(DataLoader& loader, torch::jit::script::Module& model, size_t data_size) 
+template <typename DataLoader, typename Model>
+void test(DataLoader& loader, std::shared_ptr<Model> model, size_t data_size) 
 {
 	size_t index = 0;
-	model.eval();
+	model->eval();
 	torch::NoGradGuard no_grad;
 	float Loss = 0, Acc = 0;
 
@@ -285,12 +341,8 @@ void test(DataLoader& loader, torch::jit::script::Module& model, size_t data_siz
 		auto data = batch.data.to(options.device);
 		auto targets = batch.target.to(options.device).view({-1});
 
-		std::vector<c10::IValue>temp_op;
-
-		temp_op.push_back(data);
-
-		auto output = model.forward(temp_op).toTensor();
-		auto loss = torch::nll_loss(output, targets);
+		auto output = model->forward(data);
+		auto loss = torch::cross_entropy_loss(output, targets);
 		assert(!std::isnan(loss.template item<float>()));
 		auto acc = output.argmax(1).eq(targets).sum();
 
@@ -305,25 +357,9 @@ void test(DataLoader& loader, torch::jit::script::Module& model, size_t data_siz
 
 int main(int argc, const char* argv[]) 
 {
-	if (argc != 2) 
-	{
-		std::cerr << "usage: main <path-to-exported-script-module>\n";
-		return -1;
-	}
-  
-	torch::jit::script::Module model;
-	try 
-	{
-		// Deserialize the ScriptModule from a file using torch::jit::load().
-		model = torch::jit::load(argv[1]);
-	}
-	catch (const c10::Error& e) 
-	{
-		std::cerr << "error loading the model\n";
-		return -1;
-	}
 
-  	std::cout << "ok\n";
+	std::shared_ptr<ResNet<BasicBlock>> model = resnet18(/*num_classes = */ 1000);
+
 	if (torch::cuda::is_available())
 		options.device = torch::kCUDA;
   	std::cout << "Running on: " << (options.device == torch::kCUDA ? "CUDA" : "CPU") << std::endl;
@@ -340,23 +376,9 @@ int main(int argc, const char* argv[])
 
 	model.to(options.device);
 
-	std::cout << "Model Parameters: " << model.parameters().size() << std::endl;
-
-	torch::jit::parameter_list parameters = model.parameters();
-
-	std::vector<torch::Tensor> tensor_vector;
-
-	for (const torch::jit::IValue& param : parameters) 
-	{
-		if (param.isTensor()) 
-		{
-			torch::Tensor tensor = param.toTensor();
-			tensor_vector.push_back(tensor);
-		}
-	}
-
-	torch::optim::SGD optimizer(tensor_vector, torch::optim::SGDOptions(0.001).momentum(0.5));
-
+	// lr = 0.1 weightDecay = 0.0001 momentum = 0.9
+	torch::optim::SGD optimizer(model->parameters(), torch::optim::SGDOptions(0.01).weight_decay(0.0001).momentum(0.9));
+	
 	for (size_t i = 0; i < options.iterations; ++i) 
 	{
 		train(*train_loader, model, optimizer, i + 1, train_size);
