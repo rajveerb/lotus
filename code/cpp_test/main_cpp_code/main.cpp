@@ -111,8 +111,8 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 		std::string path = data[index].first;
 		auto mat = cv::imread(path);
 		assert(!mat.empty());
-		// randomResizedCrop(mat);
-		// randomHorizontalFlip(mat);
+		randomResizedCrop(mat);
+		randomHorizontalFlip(mat);
 		// std::vector<cv::Mat> channels(3);
 		// cv::split(mat, channels);
 		// auto R = torch::from_blob(
@@ -130,8 +130,7 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 		// auto tdata = torch::cat({R, G, B})
 		// 				.view({3, options.image_size, options.image_size})
 		// 				.to(torch::kFloat).div_(255);
-		cv::resize(mat, mat, cv::Size(options.image_size, options.image_size), 0, 0, 1);
-		auto tdata = torch::from_blob(mat.data, {options.image_size, options.image_size, 3}, at::kByte).permute({2, 0, 1}).to(torch::kFloat);
+		auto tdata = torch::from_blob(mat.data, {options.image_size, options.image_size, 3}, at::kByte).permute({2, 0, 1}).to(torch::kFloat).div_(255);
 		// auto tdata = torch::from_blob(mat.data, {options.image_size, options.image_size, 3}, torch::kUInt8).permute({2, 0, 1}).to(torch::kFloat).div_(255);
 		auto tlabel = torch::from_blob(&data[index].second, {1}, torch::kLong);
 		return {tdata, tlabel};
@@ -300,7 +299,6 @@ void train(DataLoader& loader, std::shared_ptr<Model> model, torch::optim::SGD& 
 	size_t index = 0;
 	model->train();
 	float Loss = 0, Acc = 0;
-
 	for (auto& batch : loader) 
 	{
 		auto data = batch.data.to(options.device);
@@ -372,13 +370,13 @@ int main(int argc, const char* argv[])
 	.map(torch::data::transforms::Normalize<>({0.485, 0.456, 0.406}, {0.229, 0.224, 0.225}))
 	.map(torch::data::transforms::Stack<>());
 	auto train_size = train_set.size().value();
-	auto train_loader = torch::data::make_data_loader<torch::data::samplers::SequentialSampler>(std::move(train_set), torch::data::DataLoaderOptions().batch_size(options.train_batch_size));//.workers(options.num_workers));
+	auto train_loader = torch::data::make_data_loader(std::move(train_set), torch::data::DataLoaderOptions().batch_size(options.train_batch_size));//.workers(options.num_workers));
 
 	auto test_set = CustomDataset(data.second)
 	.map(torch::data::transforms::Normalize<>({0.485, 0.456, 0.406}, {0.229, 0.224, 0.225}))
 	.map(torch::data::transforms::Stack<>());
 	auto test_size = test_set.size().value();
-	auto test_loader = torch::data::make_data_loader<torch::data::samplers::SequentialSampler>(std::move(test_set), torch::data::DataLoaderOptions().batch_size(options.test_batch_size));//.workers(options.num_workers));
+	auto test_loader = torch::data::make_data_loader(std::move(test_set), torch::data::DataLoaderOptions().batch_size(options.test_batch_size));//.workers(options.num_workers));
 
 	model->to(options.device);
 
