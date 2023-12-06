@@ -85,7 +85,7 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 		mat = mat(cropRect);
 
 		// Resize the cropped image to the target size (e.g., 224x224)
-		cv::resize(mat, mat, cv::Size(options.image_size, options.image_size));
+		cv::resize(mat, mat, cv::Size(options.image_size, options.image_size), 0, 0, 1);
 	}
 
 	void randomHorizontalFlip(cv::Mat &mat) 
@@ -113,23 +113,25 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 		assert(!mat.empty());
 		randomResizedCrop(mat);
 		randomHorizontalFlip(mat);
-		std::vector<cv::Mat> channels(3);
-		cv::split(mat, channels);
-		auto R = torch::from_blob(
-			channels[2].ptr(),
-			{options.image_size, options.image_size},
-			torch::kUInt8);
-		auto G = torch::from_blob(
-			channels[1].ptr(),
-			{options.image_size, options.image_size},
-			torch::kUInt8);
-		auto B = torch::from_blob(
-			channels[0].ptr(),
-			{options.image_size, options.image_size},
-			torch::kUInt8);
-		auto tdata = torch::cat({R, G, B})
-						.view({3, options.image_size, options.image_size})
-						.to(torch::kFloat).div_(255);
+		// std::vector<cv::Mat> channels(3);
+		// cv::split(mat, channels);
+		// auto R = torch::from_blob(
+		// 	channels[2].ptr(),
+		// 	{options.image_size, options.image_size},
+		// 	torch::kUInt8);
+		// auto G = torch::from_blob(
+		// 	channels[1].ptr(),
+		// 	{options.image_size, options.image_size},
+		// 	torch::kUInt8);
+		// auto B = torch::from_blob(
+		// 	channels[0].ptr(),
+		// 	{options.image_size, options.image_size},
+		// 	torch::kUInt8);
+		// auto tdata = torch::cat({R, G, B})
+		// 				.view({3, options.image_size, options.image_size})
+		// 				.to(torch::kFloat).div_(255);
+		auto tdata = torch::from_blob(mat.data, {options.image_size, options.image_size, 3}, torch::kUInt8).permute({2, 0, 1}).to(torch::kFloat);
+		// auto tdata = torch::from_blob(mat.data, {options.image_size, options.image_size, 3}, torch::kUInt8).permute({2, 0, 1}).to(torch::kFloat).div_(255);
 		normalize(tdata);
 		auto tlabel = torch::from_blob(&data[index].second, {1}, torch::kLong);
 		return {tdata, tlabel};
