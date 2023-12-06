@@ -307,7 +307,7 @@ void train(DataLoader& loader, std::shared_ptr<Model> model, torch::optim::SGD& 
 		auto targets = batch.target.to(options.device).view({-1});
 
 		auto output = model->forward(data);
-		auto loss = torch::cross_entropy_loss(output, targets);
+		auto loss = torch::cross_entropy_loss().to(options.device)(output, targets);
 		assert(!std::isnan(loss.template item<float>()));
 		auto acc = output.argmax(1).eq(targets).sum();
 		
@@ -343,7 +343,7 @@ void test(DataLoader& loader, std::shared_ptr<Model> model, size_t data_size)
 		auto targets = batch.target.to(options.device).view({-1});
 
 		auto output = model->forward(data);
-		auto loss = torch::cross_entropy_loss(output, targets);
+		auto loss = torch::cross_entropy_loss().to(options.device)(output, targets);
 		assert(!std::isnan(loss.template item<float>()));
 		auto acc = output.argmax(1).eq(targets).sum();
 
