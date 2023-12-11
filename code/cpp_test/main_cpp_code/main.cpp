@@ -11,9 +11,9 @@
 #include <dirent.h>
 #include <map>
 #include "resnet.h"
-#include <tuple.h>
 
-#define LOG__(x) std::cout << x << std::endl
+#define DEBUG 0
+#define LOG__(x) std::cout << std::fixed << std::setprecision(15) << x << std::endl << std::flush;
 
 struct Options 
 {
@@ -105,22 +105,35 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 
 		int height = mat.size().height;
 		int width = mat.size().width;
-		double area = height * width;
+		#if DEBUG
+		LOG__("height: " << height << " width: " << width);
+		#endif
+		float area = height * width;
 		for(int attempt = 0; attempt<10; ++attempt)
 		{
 			float targetArea = area * (minScale + static_cast<float>(rand()) / RAND_MAX * (maxScale - minScale));
+			#if DEBUG
+			LOG__("targetArea: " << targetArea);
+			#endif
 			float aspectRatio = minAspectRatio + static_cast<float>(rand()) / RAND_MAX * (maxAspectRatio - minAspectRatio);
+			#if DEBUG
+			LOG__("aspectRatio: " << aspectRatio);
+			#endif
 
 			int cropWidth = (int)(sqrt(targetArea * aspectRatio));
 			int cropHeight = (int)(sqrt(targetArea / aspectRatio));
+			#if DEBUG
+			LOG__("cropWidth: " << cropWidth << " cropHeight: " << cropHeight);
+			#endif
 
 			if(0 < cropWidth && 0 < cropHeight && cropHeight <= height && cropWidth <= width)
 			{
-				// int x = rand() % (width - cropWidth);
-				int x = rand() % (height - cropHeight);
-				// int y = rand() % (height - cropHeight);
-				int y = rand() % (width - cropWidth);
-				cv::Rect cropRect(x, y, cropHeight, cropWidth);
+				int x = rand() % (width - cropWidth + 1);
+				int y = rand() % (height - cropHeight + 1);
+				#if DEBUG
+				LOG__("x: " << x << " y: " << y << " cropWidth: " << cropWidth << " cropHeight: " << cropHeight);
+				#endif
+				cv::Rect cropRect(x, y, cropWidth, cropHeight);
 				mat = mat(cropRect);
 				cv::resize(mat, mat, cv::Size(options.image_size, options.image_size), 0, 0, 1);
 				return;
@@ -144,9 +157,12 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 			w = width;
 			h = height;
 		} 
-		int x = (height - h) / 2;
-		int y = (width - w) / 2;
-		cv::Rect cropRect(x, y, h, w);
+		int x = (width - w) / 2;
+		int y = (height - h) / 2;
+		#if DEBUG
+		LOG__("x: " << x << " y: " << y << " w: " << w << " h: " << h);
+		#endif
+		cv::Rect cropRect(x, y, w, h);
 		mat = mat(cropRect);
 		cv::resize(mat, mat, cv::Size(options.image_size, options.image_size), 0, 0, 1);
 		return;
@@ -197,7 +213,7 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 		if (count++ % 256 == 0)
 		{
 			LOG__("Time taken by randomResizedCrop: " << elapsed.first.count() << " seconds and randomHorizontalFlip: " << elapsed.second.count() << " seconds for " << count << " images");
-			LOG__("Average time taken by randomResizedCrop: " << elapsed.first.count() / count << " seconds and randomHorizontalFlip: " << elapsed.second.count() / count << " seconds given " << count << " images");
+			LOG__("Average time taken by randomResizedCrop: " << elapsed.first.count() / count << " seconds and randomHorizontalFlip: " << elapsed.second.count() / count << " seconds per image given " << count << " images");
 		}
 
 		// std::vector<cv::Mat> channels(3);
@@ -403,8 +419,12 @@ void train(DataLoader& loader, std::shared_ptr<Model> model, torch::optim::SGD& 
 		auto acc = output.argmax(1).eq(targets).sum();
 		
 		optimizer.zero_grad();
+		start = std::chrono::high_resolution_clock::now();
 		loss.backward();
 		optimizer.step();
+		end = std::chrono::high_resolution_clock::now();
+		elapsed = end - start;
+		LOG__("Time taken by backward pass: " << elapsed.count() << " seconds for batch with size: " << data.size(0));
 
 		Loss += loss.template item<float>();
 		Acc += acc.template item<float>();
