@@ -402,8 +402,13 @@ void train(DataLoader& loader, std::shared_ptr<Model> model, torch::optim::SGD& 
 	size_t index = 0;
 	model->train();
 	float Loss = 0, Acc = 0;
+	// cumulative_forward_time = 0;
+	std::chrono::duration<double> cumulative_forward_time;
+	std::chrono::duration<double> cumulative_backward_time;
+	int cur_itr = 0;
 	for (auto& batch : loader) 
 	{
+		cur_itr++;
 		auto data = batch.data.to(options.device);
 		auto targets = batch.target.to(options.device).view({-1});
 
@@ -412,7 +417,9 @@ void train(DataLoader& loader, std::shared_ptr<Model> model, torch::optim::SGD& 
 		auto output = model->forward(data);
 		auto end = std::chrono::high_resolution_clock::now();
 		std::chrono::duration<double> elapsed = end - start;
-		LOG__("Time taken by forward pass: " << elapsed.count() << " seconds for batch with size: " << data.size(0));
+		cumulative_forward_time += elapsed;
+		// LOG__("Time taken by forward pass: " << elapsed.count() << " seconds for batch with size: " << data.size(0));
+		
 
 		auto loss = torch::cross_entropy_loss(output, targets).to(options.device);
 		assert(!std::isnan(loss.template item<float>()));
@@ -424,7 +431,13 @@ void train(DataLoader& loader, std::shared_ptr<Model> model, torch::optim::SGD& 
 		optimizer.step();
 		end = std::chrono::high_resolution_clock::now();
 		elapsed = end - start;
-		LOG__("Time taken by backward pass: " << elapsed.count() << " seconds for batch with size: " << data.size(0));
+		cumulative_backward_time += elapsed;
+		// LOG__("Time taken by backward pass: " << elapsed.count() << " seconds for batch with size: " << data.size(0));
+
+		if(cur_itr % 10 == 0)
+		{
+			LOG__("Time taken by forward pass: " << cumulative_forward_time.count() << " seconds and backward pass: " << cumulative_backward_time.count() << " seconds for " << cur_itr << " iterations");
+		}
 
 		Loss += loss.template item<float>();
 		Acc += acc.template item<float>();

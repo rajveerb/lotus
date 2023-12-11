@@ -1,56 +1,100 @@
 Running on: CUDA
-Time taken by randomResizedCrop: 0.000249517 seconds and randomHorizontalFlip: 2.6599e-05 seconds for 1 images
-Average time taken by randomResizedCrop: 0.000249517 seconds and randomHorizontalFlip: 2.6599e-05 seconds given 1 images
-Time taken by forward pass: 1.20291 seconds for batch with size: 256
-Train Epoch: 1 512/1281167	Loss: 0.0138954	Acc: 0
-Time taken by randomResizedCrop: 0.0411102 seconds and randomHorizontalFlip: 0.000748177 seconds for 257 images
-Average time taken by randomResizedCrop: 0.000159962 seconds and randomHorizontalFlip: 2.91119e-06 seconds given 257 images
-Time taken by forward pass: 0.00334534 seconds for batch with size: 256
-Time taken by randomResizedCrop: 0.0800516 seconds and randomHorizontalFlip: 0.00149715 seconds for 513 images
-Average time taken by randomResizedCrop: 0.000156046 seconds and randomHorizontalFlip: 2.91842e-06 seconds given 513 images
-Time taken by forward pass: 0.00369862 seconds for batch with size: 256
-Time taken by randomResizedCrop: 0.121736 seconds and randomHorizontalFlip: 0.00219077 seconds for 769 images
-Average time taken by randomResizedCrop: 0.000158304 seconds and randomHorizontalFlip: 2.84885e-06 seconds given 769 images
-Time taken by forward pass: 0.00299184 seconds for batch with size: 256
-Time taken by randomResizedCrop: 0.167463 seconds and randomHorizontalFlip: 0.00297889 seconds for 1025 images
-Average time taken by randomResizedCrop: 0.000163379 seconds and randomHorizontalFlip: 2.90623e-06 seconds given 1025 images
-Time taken by forward pass: 0.00340686 seconds for batch with size: 256
-Time taken by randomResizedCrop: 0.217456 seconds and randomHorizontalFlip: 0.00383868 seconds for 1281 images
-Average time taken by randomResizedCrop: 0.000169755 seconds and randomHorizontalFlip: 2.99663e-06 seconds given 1281 images
-Time taken by forward pass: 0.00318013 seconds for batch with size: 256
-Time taken by randomResizedCrop: 0.25891 seconds and randomHorizontalFlip: 0.00454943 seconds for 1537 images
-Average time taken by randomResizedCrop: 0.000168452 seconds and randomHorizontalFlip: 2.95994e-06 seconds given 1537 images
-Time taken by forward pass: 0.00334683 seconds for batch with size: 256
-Time taken by randomResizedCrop: 0.300049 seconds and randomHorizontalFlip: 0.00522404 seconds for 1793 images
-Average time taken by randomResizedCrop: 0.000167345 seconds and randomHorizontalFlip: 2.91357e-06 seconds given 1793 images
-Time taken by forward pass: 0.00307829 seconds for batch with size: 256
-Time taken by randomResizedCrop: 0.341846 seconds and randomHorizontalFlip: 0.00601317 seconds for 2049 images
-Average time taken by randomResizedCrop: 0.000166836 seconds and randomHorizontalFlip: 2.93468e-06 seconds given 2049 images
-Time taken by forward pass: 0.0030668 seconds for batch with size: 256
-Time taken by randomResizedCrop: 0.382068 seconds and randomHorizontalFlip: 0.00678226 seconds for 2305 images
-Average time taken by randomResizedCrop: 0.000165756 seconds and randomHorizontalFlip: 2.94241e-06 seconds given 2305 images
-Time taken by forward pass: 0.0031596 seconds for batch with size: 256
-Time taken by randomResizedCrop: 0.421732 seconds and randomHorizontalFlip: 0.00756546 seconds for 2561 images
-Average time taken by randomResizedCrop: 0.000164675 seconds and randomHorizontalFlip: 2.9541e-06 seconds given 2561 images
-Time taken by forward pass: 0.00336956 seconds for batch with size: 256
-Time taken by randomResizedCrop: 0.456535 seconds and randomHorizontalFlip: 0.00826999 seconds for 2817 images
-Average time taken by randomResizedCrop: 0.000162064 seconds and randomHorizontalFlip: 2.93574e-06 seconds given 2817 images
-Time taken by forward pass: 0.00325577 seconds for batch with size: 256
-Time taken by randomResizedCrop: 0.508986 seconds and randomHorizontalFlip: 0.00910747 seconds for 3073 images
-Average time taken by randomResizedCrop: 0.000165632 seconds and randomHorizontalFlip: 2.96371e-06 seconds given 3073 images
-Time taken by forward pass: 0.0033847 seconds for batch with size: 256
-Time taken by randomResizedCrop: 0.564239 seconds and randomHorizontalFlip: 0.00982113 seconds for 3329 images
-Average time taken by randomResizedCrop: 0.000169492 seconds and randomHorizontalFlip: 2.95017e-06 seconds given 3329 images
-Time taken by forward pass: 0.00322713 seconds for batch with size: 256
-Time taken by randomResizedCrop: 0.622416 seconds and randomHorizontalFlip: 0.0105918 seconds for 3585 images
-Average time taken by randomResizedCrop: 0.000173617 seconds and randomHorizontalFlip: 2.95448e-06 seconds given 3585 images
-Time taken by forward pass: 0.00350953 seconds for batch with size: 256
-Time taken by randomResizedCrop: 0.68008 seconds and randomHorizontalFlip: 0.0113232 seconds for 3841 images
-Average time taken by randomResizedCrop: 0.000177058 seconds and randomHorizontalFlip: 2.94797e-06 seconds given 3841 images
-Time taken by forward pass: 0.00344135 seconds for batch with size: 256
-Time taken by randomResizedCrop: 0.737389 seconds and randomHorizontalFlip: 0.0120078 seconds for 4097 images
-Average time taken by randomResizedCrop: 0.000179983 seconds and randomHorizontalFlip: 2.93088e-06 seconds given 4097 images
-Time taken by forward pass: 0.00336898 seconds for batch with size: 256
-Time taken by randomResizedCrop: 0.791467 seconds and randomHorizontalFlip: 0.0127159 seconds for 4353 images
-Average time taken by randomResizedCrop: 0.000181821 seconds and randomHorizontalFlip: 2.92119e-06 seconds given 4353 images
-Time taken by forward pass: 0.00375183 seconds for batch with size: 256
+Time taken by randomResizedCrop: 0.000247696000000 seconds and randomHorizontalFlip: 0.000026820000000 seconds for 1 images
+Average time taken by randomResizedCrop: 0.000247696000000 seconds and randomHorizontalFlip: 0.000026820000000 seconds per image given 1 images
+Train Epoch: 1 512/1281167	Loss: 0.013793440535665	Acc: 0.000000000000000
+Time taken by randomResizedCrop: 0.048427469000000 seconds and randomHorizontalFlip: 0.000703362000000 seconds for 257 images
+Average time taken by randomResizedCrop: 0.000188433731518 seconds and randomHorizontalFlip: 0.000002736817121 seconds per image given 257 images
+Time taken by randomResizedCrop: 0.097853343000000 seconds and randomHorizontalFlip: 0.001580140000000 seconds for 513 images
+Average time taken by randomResizedCrop: 0.000190747257310 seconds and randomHorizontalFlip: 0.000003080194932 seconds per image given 513 images
+Time taken by randomResizedCrop: 0.146797923000000 seconds and randomHorizontalFlip: 0.002384050000000 seconds for 769 images
+Average time taken by randomResizedCrop: 0.000190894568270 seconds and randomHorizontalFlip: 0.000003100195059 seconds per image given 769 images
+Time taken by randomResizedCrop: 0.196282444000000 seconds and randomHorizontalFlip: 0.003250518000000 seconds for 1025 images
+Average time taken by randomResizedCrop: 0.000191495067317 seconds and randomHorizontalFlip: 0.000003171237073 seconds per image given 1025 images
+Time taken by randomResizedCrop: 0.245270926000000 seconds and randomHorizontalFlip: 0.004016997000000 seconds for 1281 images
+Average time taken by randomResizedCrop: 0.000191468326308 seconds and randomHorizontalFlip: 0.000003135829040 seconds per image given 1281 images
+Time taken by randomResizedCrop: 0.295200896000000 seconds and randomHorizontalFlip: 0.004834834000000 seconds for 1537 images
+Average time taken by randomResizedCrop: 0.000192063042290 seconds and randomHorizontalFlip: 0.000003145630449 seconds per image given 1537 images
+Time taken by randomResizedCrop: 0.343694501999999 seconds and randomHorizontalFlip: 0.005485810000000 seconds for 1793 images
+Average time taken by randomResizedCrop: 0.000191686838818 seconds and randomHorizontalFlip: 0.000003059570552 seconds per image given 1793 images
+Time taken by randomResizedCrop: 0.393312003000000 seconds and randomHorizontalFlip: 0.006317192000000 seconds for 2049 images
+Average time taken by randomResizedCrop: 0.000191953149341 seconds and randomHorizontalFlip: 0.000003083061005 seconds per image given 2049 images
+Time taken by randomResizedCrop: 0.442572003999999 seconds and randomHorizontalFlip: 0.007069737000000 seconds for 2305 images
+Average time taken by randomResizedCrop: 0.000192005207809 seconds and randomHorizontalFlip: 0.000003067131020 seconds per image given 2305 images
+Time taken by forward pass: 1.228292659000000 seconds and backward pass: 0.198284974000000 seconds for 10 iterations
+Time taken by randomResizedCrop: 0.490943329999999 seconds and randomHorizontalFlip: 0.007846904000000 seconds for 2561 images
+Average time taken by randomResizedCrop: 0.000191699855525 seconds and randomHorizontalFlip: 0.000003064000000 seconds per image given 2561 images
+Time taken by randomResizedCrop: 0.537733919999999 seconds and randomHorizontalFlip: 0.008642941000000 seconds for 2817 images
+Average time taken by randomResizedCrop: 0.000190888860490 seconds and randomHorizontalFlip: 0.000003068136670 seconds per image given 2817 images
+Time taken by randomResizedCrop: 0.586953734999999 seconds and randomHorizontalFlip: 0.009460878000000 seconds for 3073 images
+Average time taken by randomResizedCrop: 0.000191003493329 seconds and randomHorizontalFlip: 0.000003078710706 seconds per image given 3073 images
+Time taken by randomResizedCrop: 0.636254673999999 seconds and randomHorizontalFlip: 0.010262866000000 seconds for 3329 images
+Average time taken by randomResizedCrop: 0.000191124864524 seconds and randomHorizontalFlip: 0.000003082867528 seconds per image given 3329 images
+Time taken by randomResizedCrop: 0.687229534999999 seconds and randomHorizontalFlip: 0.011102738000000 seconds for 3585 images
+Average time taken by randomResizedCrop: 0.000191695825662 seconds and randomHorizontalFlip: 0.000003096998047 seconds per image given 3585 images
+Time taken by randomResizedCrop: 0.737020999999999 seconds and randomHorizontalFlip: 0.011923547000000 seconds for 3841 images
+Average time taken by randomResizedCrop: 0.000191882582661 seconds and randomHorizontalFlip: 0.000003104281958 seconds per image given 3841 images
+Time taken by randomResizedCrop: 0.785953680999999 seconds and randomHorizontalFlip: 0.012738536000000 seconds for 4097 images
+Average time taken by randomResizedCrop: 0.000191836387845 seconds and randomHorizontalFlip: 0.000003109235050 seconds per image given 4097 images
+Time taken by randomResizedCrop: 0.836379050000000 seconds and randomHorizontalFlip: 0.013570463000000 seconds for 4353 images
+Average time taken by randomResizedCrop: 0.000192138536641 seconds and randomHorizontalFlip: 0.000003117496669 seconds per image given 4353 images
+Time taken by randomResizedCrop: 0.886471536999999 seconds and randomHorizontalFlip: 0.014425587000000 seconds for 4609 images
+Average time taken by randomResizedCrop: 0.000192334896290 seconds and randomHorizontalFlip: 0.000003129873508 seconds per image given 4609 images
+Time taken by randomResizedCrop: 0.933581034999998 seconds and randomHorizontalFlip: 0.015124909999999 seconds for 4865 images
+Average time taken by randomResizedCrop: 0.000191897437821 seconds and randomHorizontalFlip: 0.000003108922919 seconds per image given 4865 images
+Time taken by forward pass: 1.259835592000000 seconds and backward pass: 0.266059626000000 seconds for 20 iterations
+Time taken by randomResizedCrop: 0.975953734999999 seconds and randomHorizontalFlip: 0.015864120999999 seconds for 5121 images
+Average time taken by randomResizedCrop: 0.000190578741457 seconds and randomHorizontalFlip: 0.000003097856083 seconds per image given 5121 images
+Train Epoch: 1 5632/1281167	Loss: 0.026195419952273	Acc: 0.001242897706106
+Time taken by randomResizedCrop: 1.017860183999999 seconds and randomHorizontalFlip: 0.016614220000000 seconds for 5377 images
+Average time taken by randomResizedCrop: 0.000189298899758 seconds and randomHorizontalFlip: 0.000003089867956 seconds per image given 5377 images
+Time taken by randomResizedCrop: 1.059682057999999 seconds and randomHorizontalFlip: 0.017305500000000 seconds for 5633 images
+Average time taken by randomResizedCrop: 0.000188120372448 seconds and randomHorizontalFlip: 0.000003072164033 seconds per image given 5633 images
+Time taken by randomResizedCrop: 1.102318543000000 seconds and randomHorizontalFlip: 0.017925869000000 seconds for 5889 images
+Average time taken by randomResizedCrop: 0.000187182635931 seconds and randomHorizontalFlip: 0.000003043958057 seconds per image given 5889 images
+Time taken by randomResizedCrop: 1.144918407999998 seconds and randomHorizontalFlip: 0.018641444000000 seconds for 6145 images
+Average time taken by randomResizedCrop: 0.000186317072091 seconds and randomHorizontalFlip: 0.000003033595443 seconds per image given 6145 images
+Time taken by randomResizedCrop: 1.186987099999998 seconds and randomHorizontalFlip: 0.019296873000000 seconds for 6401 images
+Average time taken by randomResizedCrop: 0.000185437759725 seconds and randomHorizontalFlip: 0.000003014665365 seconds per image given 6401 images
+Time taken by randomResizedCrop: 1.228444500999997 seconds and randomHorizontalFlip: 0.019957911000000 seconds for 6657 images
+Average time taken by randomResizedCrop: 0.000184534249812 seconds and randomHorizontalFlip: 0.000002998033799 seconds per image given 6657 images
+Time taken by randomResizedCrop: 1.270539999999997 seconds and randomHorizontalFlip: 0.020595923000000 seconds for 6913 images
+Average time taken by randomResizedCrop: 0.000183789960943 seconds and randomHorizontalFlip: 0.000002979303197 seconds per image given 6913 images
+Time taken by randomResizedCrop: 1.311155344999996 seconds and randomHorizontalFlip: 0.021294842000000 seconds for 7169 images
+Average time taken by randomResizedCrop: 0.000182892362254 seconds and randomHorizontalFlip: 0.000002970406193 seconds per image given 7169 images
+Time taken by randomResizedCrop: 1.355504752999996 seconds and randomHorizontalFlip: 0.022030834000000 seconds for 7425 images
+Average time taken by randomResizedCrop: 0.000182559562694 seconds and randomHorizontalFlip: 0.000002967115690 seconds per image given 7425 images
+Time taken by forward pass: 1.291260247000000 seconds and backward pass: 0.340834700000000 seconds for 30 iterations
+Time taken by randomResizedCrop: 1.397314782999998 seconds and randomHorizontalFlip: 0.022806891000000 seconds for 7681 images
+Average time taken by randomResizedCrop: 0.000181918341752 seconds and randomHorizontalFlip: 0.000002969260643 seconds per image given 7681 images
+Time taken by randomResizedCrop: 1.439282886999997 seconds and randomHorizontalFlip: 0.023423071000000 seconds for 7937 images
+Average time taken by randomResizedCrop: 0.000181338400781 seconds and randomHorizontalFlip: 0.000002951123976 seconds per image given 7937 images
+Time taken by randomResizedCrop: 1.480475132999996 seconds and randomHorizontalFlip: 0.024182039000000 seconds for 8193 images
+Average time taken by randomResizedCrop: 0.000180700004028 seconds and randomHorizontalFlip: 0.000002951548761 seconds per image given 8193 images
+Time taken by randomResizedCrop: 1.532153078999994 seconds and randomHorizontalFlip: 0.025018084000000 seconds for 8449 images
+Average time taken by randomResizedCrop: 0.000181341351521 seconds and randomHorizontalFlip: 0.000002961070423 seconds per image given 8449 images
+Time taken by randomResizedCrop: 1.586709705999995 seconds and randomHorizontalFlip: 0.025842241000000 seconds for 8705 images
+Average time taken by randomResizedCrop: 0.000182275669845 seconds and randomHorizontalFlip: 0.000002968666399 seconds per image given 8705 images
+Time taken by randomResizedCrop: 1.641772465999995 seconds and randomHorizontalFlip: 0.026613089000000 seconds for 8961 images
+Average time taken by randomResizedCrop: 0.000183213086263 seconds and randomHorizontalFlip: 0.000002969879366 seconds per image given 8961 images
+Time taken by randomResizedCrop: 1.693467285999995 seconds and randomHorizontalFlip: 0.027424945000000 seconds for 9217 images
+Average time taken by randomResizedCrop: 0.000183733024411 seconds and randomHorizontalFlip: 0.000002975474124 seconds per image given 9217 images
+Time taken by randomResizedCrop: 1.742008880999996 seconds and randomHorizontalFlip: 0.028221404000000 seconds for 9473 images
+Average time taken by randomResizedCrop: 0.000183891996305 seconds and randomHorizontalFlip: 0.000002979141138 seconds per image given 9473 images
+Time taken by randomResizedCrop: 1.792889803999996 seconds and randomHorizontalFlip: 0.028933742000000 seconds for 9729 images
+Average time taken by randomResizedCrop: 0.000184283051084 seconds and randomHorizontalFlip: 0.000002973968753 seconds per image given 9729 images
+Time taken by randomResizedCrop: 1.840757475999995 seconds and randomHorizontalFlip: 0.029642656000000 seconds for 9985 images
+Average time taken by randomResizedCrop: 0.000184352276014 seconds and randomHorizontalFlip: 0.000002968718678 seconds per image given 9985 images
+Time taken by forward pass: 1.323917631000000 seconds and backward pass: 0.415607353000000 seconds for 40 iterations
+Time taken by randomResizedCrop: 1.890260507999995 seconds and randomHorizontalFlip: 0.030260505000000 seconds for 10241 images
+Average time taken by randomResizedCrop: 0.000184577727566 seconds and randomHorizontalFlip: 0.000002954838883 seconds per image given 10241 images
+Train Epoch: 1 10752/1281167	Loss: 0.026653358712792	Acc: 0.001116071478464
+Time taken by randomResizedCrop: 1.938738541999996 seconds and randomHorizontalFlip: 0.030990363000000 seconds for 10497 images
+Average time taken by randomResizedCrop: 0.000184694535772 seconds and randomHorizontalFlip: 0.000002952306659 seconds per image given 10497 images
+Time taken by randomResizedCrop: 1.990008554999996 seconds and randomHorizontalFlip: 0.031687737000000 seconds for 10753 images
+Average time taken by randomResizedCrop: 0.000185065428718 seconds and randomHorizontalFlip: 0.000002946874082 seconds per image given 10753 images
+Time taken by randomResizedCrop: 2.043646654999996 seconds and randomHorizontalFlip: 0.032457979000000 seconds for 11009 images
+Average time taken by randomResizedCrop: 0.000185634177037 seconds and randomHorizontalFlip: 0.000002948313107 seconds per image given 11009 images
+Time taken by randomResizedCrop: 2.095350897999998 seconds and randomHorizontalFlip: 0.033214562000000 seconds for 11265 images
+Average time taken by randomResizedCrop: 0.000186005405948 seconds and randomHorizontalFlip: 0.000002948474212 seconds per image given 11265 images
+Time taken by randomResizedCrop: 2.134907262000000 seconds and randomHorizontalFlip: 0.033913728000000 seconds for 11521 images
+Average time taken by randomResizedCrop: 0.000185305725371 seconds and randomHorizontalFlip: 0.000002943644475 seconds per image given 11521 images
