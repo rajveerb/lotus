@@ -11,6 +11,9 @@
 #include <dirent.h>
 #include <map>
 #include "resnet.h"
+
+#define LOG__(x) std::cout << x << std::endl
+
 struct Options 
 {
 	int image_size = 224;
@@ -108,11 +111,34 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 
 	Example get(size_t index) 
 	{
+		static std::pair<std::chrono::duration<double>, std::chrono::duration<double>> elapsed;
+		static size_t count = 0;
 		std::string path = data[index].first;
 		auto mat = cv::imread(path);
 		assert(!mat.empty());
+
+		// Time a function call and execution
+		// std::chrono::high_resolution_clock represents the clock with the smallest tick period
+		auto start = std::chrono::high_resolution_clock::now();
 		randomResizedCrop(mat);
+		auto end = std::chrono::high_resolution_clock::now();
+		std::chrono::duration<double> elapsed_rrc = end - start;
+		elapsed.first += elapsed_rrc;
+		// LOG__("Time taken by randomResizedCrop: " << elapsed_rrc.count() << " seconds");
+
+		start = std::chrono::high_resolution_clock::now();
 		randomHorizontalFlip(mat);
+		end = std::chrono::high_resolution_clock::now();
+		std::chrono::duration<double> elapsed_rhf = end - start;
+		elapsed.second += elapsed_rhf;
+		// LOG__("Time taken by randomHorizontalFlip: " << elapsed_rhf.count() << " seconds");
+		
+		if (count++ % 256 == 0)
+		{
+			LOG__("Time taken by randomResizedCrop: " << elapsed.first.count() << " seconds and randomHorizontalFlip: " << elapsed.second.count() << " seconds for " << count << " images");
+			LOG__("Average time taken by randomResizedCrop: " << elapsed.first.count() / count << " seconds and randomHorizontalFlip: " << elapsed.second.count() / count << " seconds given " << count << " images");
+		}
+
 		// std::vector<cv::Mat> channels(3);
 		// cv::split(mat, channels);
 		// auto R = torch::from_blob(
@@ -304,7 +330,13 @@ void train(DataLoader& loader, std::shared_ptr<Model> model, torch::optim::SGD& 
 		auto data = batch.data.to(options.device);
 		auto targets = batch.target.to(options.device).view({-1});
 
+		// Time taken to process a batch
+		auto start = std::chrono::high_resolution_clock::now();
 		auto output = model->forward(data);
+		auto end = std::chrono::high_resolution_clock::now();
+		std::chrono::duration<double> elapsed = end - start;
+		LOG__("Time taken by forward pass: " << elapsed.count() << " seconds for batch with size: " << data.size(0));
+
 		auto loss = torch::cross_entropy_loss(output, targets).to(options.device);
 		assert(!std::isnan(loss.template item<float>()));
 		auto acc = output.argmax(1).eq(targets).sum();
