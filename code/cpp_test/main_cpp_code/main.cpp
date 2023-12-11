@@ -11,6 +11,7 @@
 #include <dirent.h>
 #include <map>
 #include "resnet.h"
+#include <tuple.h>
 
 #define LOG__(x) std::cout << x << std::endl
 
@@ -91,6 +92,66 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 		cv::resize(mat, mat, cv::Size(options.image_size, options.image_size), 0, 0, 1);
 	}
 
+	void randomResizedCropv2(cv::Mat &mat)
+	{
+		float minScale = 0.8;  // Minimum scaling factor
+		// float minScale = 1.0;  // Minimum scaling factor
+		float maxScale = 1.0;  // Maximum scaling factor
+
+		// A range of aspect ratios to randomly select from
+		float minAspectRatio = 0.75;
+		// float minAspectRatio = 1.0;
+		float maxAspectRatio = 1.3333;
+
+		int height = mat.size().height;
+		int width = mat.size().width;
+		double area = height * width;
+		for(int attempt = 0; attempt<10; ++attempt)
+		{
+			float targetArea = area * (minScale + static_cast<float>(rand()) / RAND_MAX * (maxScale - minScale));
+			float aspectRatio = minAspectRatio + static_cast<float>(rand()) / RAND_MAX * (maxAspectRatio - minAspectRatio);
+
+			int cropWidth = (int)(sqrt(targetArea * aspectRatio));
+			int cropHeight = (int)(sqrt(targetArea / aspectRatio));
+
+			if(0 < cropWidth && 0 < cropHeight && cropHeight <= height && cropWidth <= width)
+			{
+				// int x = rand() % (width - cropWidth);
+				int x = rand() % (height - cropHeight);
+				// int y = rand() % (height - cropHeight);
+				int y = rand() % (width - cropWidth);
+				cv::Rect cropRect(x, y, cropHeight, cropWidth);
+				mat = mat(cropRect);
+				cv::resize(mat, mat, cv::Size(options.image_size, options.image_size), 0, 0, 1);
+				return;
+			}
+		}
+		// Fallback to center crop
+		int h, w;
+		float in_ratio = static_cast<float>(width) / static_cast<float>(height);
+		if(in_ratio < minAspectRatio)
+		{
+			w = width;
+			h = static_cast<int>(w / minAspectRatio);
+		} 
+		else if (in_ratio > maxAspectRatio)
+		{
+			h = height;
+			w = static_cast<int>(h * maxAspectRatio);
+		}
+		else
+		{
+			w = width;
+			h = height;
+		} 
+		int x = (height - h) / 2;
+		int y = (width - w) / 2;
+		cv::Rect cropRect(x, y, h, w);
+		mat = mat(cropRect);
+		cv::resize(mat, mat, cv::Size(options.image_size, options.image_size), 0, 0, 1);
+		return;
+	}
+
 	void randomHorizontalFlip(cv::Mat &mat) 
 	{
 		int flipCode = rand() % 2;
@@ -120,7 +181,7 @@ class CustomDataset : public torch::data::datasets::Dataset<CustomDataset> {
 		// Time a function call and execution
 		// std::chrono::high_resolution_clock represents the clock with the smallest tick period
 		auto start = std::chrono::high_resolution_clock::now();
-		randomResizedCrop(mat);
+		randomResizedCropv2(mat);
 		auto end = std::chrono::high_resolution_clock::now();
 		std::chrono::duration<double> elapsed_rrc = end - start;
 		elapsed.first += elapsed_rrc;
