@@ -11,3 +11,5 @@ The config of the setup is
 The **setup.sh** file inside **main_cpp_code** runs both the libtorch and opencv setup scripts and hence you can run that directly. Running the scripts multiple times is allowed and hence will not leave the system in a broken state.
 
 I'll clean the directory in the next couple of days and add comments in appropriate locations
+
+Before running the code, update the dataset path in **main.cpp** to the appropriate location of imagenet dataset
