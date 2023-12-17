@@ -2,7 +2,7 @@
 
 <!-- Directory Structure -->
 
-The **setup_libtorch.sh** and **setup_opencv.sh** script files help setup libtorch and opencv respectively. Set **base_dir** appropriately in each of the files and also in the **setup.sh** inside **main_cpp_code**  directory
+The **setup_libtorch.sh** and **setup_opencv.sh** script files help setup libtorch and opencv respectively. Set **base_dir** appropriately in each of the files and also in the **setup.sh** inside **main_cpp_code**  directory. The script also uses commands like `whoami`. Do check if those need to be updated.
 
 The config of the setup is
 - cpp11
