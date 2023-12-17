@@ -13,3 +13,7 @@ The **setup.sh** file inside **main_cpp_code** runs both the libtorch and opencv
 I'll clean the directory in the next couple of days and add comments in appropriate locations
 
 Before running the code, update the dataset path in **main.cpp** to the appropriate location of imagenet dataset
+
+Once setup, a **build** directory is created inside **main_cpp_code** which contains the executable name ***main***. Run the executable as `./main`. 
+
+For quicker development time, once compiled using setup.sh, run `make` inside the build directory to compile the most recent version of the code. You do not need to run **setup.sh** all over again
