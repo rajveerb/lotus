@@ -13,15 +13,16 @@ Convert the python file to train the model completely in C++
 
 # Setup
 
-Run the setup_cuda.sh if cuda has not been set up yet - Yet to do
+<!-- Directory Structure -->
 
-Run the setup_libtorch.sh to setup libtorch and be able to run a simple cpp program using libtorch - Yet to do
+The __setup_libtorch.sh__and __setup_opencv.sh__ script files help setup libtorch and opencv respectively. Set **base_dir** appropriately in each of the files and also in the __setup.sh__ inside __main_cpp_code__  directory
 
-Manual Steps:
+The config of the setup is
+- cpp11
+- cude 11.8
 
-<https://pytorch.org/cppdocs/installing.html> - Follow the steps listed here to set up libtorch. Download the appropriate libtorch library for your distribution and cuda version. On Kepler2, the link used was https://download.pytorch.org/libtorch/cu101/libtorch-cxx11-abi-shared-with-deps-1.8.0%2Bcu101.zip
+The __setup.sh__ file inside __main_cpp_code__ runs both the libtorcha nd opencv setup scripts and hence you can run that directly. Running the scripts multiple times is allowed and hence will not leave the system in a broken state.
 
-<https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local> - Setup Cuda to be able to train models on GPU if needed. This selection is for WSL but choose the necessary distribution and version. - On Kepler2, it was already installed and the version was 10.1
 
 
 ### Update:
