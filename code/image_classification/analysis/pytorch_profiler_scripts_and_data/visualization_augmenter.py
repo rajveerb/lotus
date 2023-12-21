@@ -82,6 +82,10 @@ def save_augmented_profiler_data(pytorch_profiler_data_file,compact,result):
     with open(log_file_name, 'w') as outfile:
         json.dump(pytorch_profiler_data, outfile)
 
+def save_custom_log_profiler_format(custom_log_only_profiler_format_file,result):
+    # write to file
+    with open(custom_log_only_profiler_format_file, 'w') as outfile:
+        json.dump({'traceEvents': result}, outfile)
 
 args = parser.parse_args()
 
@@ -97,3 +101,6 @@ for root, dirs, files in os.walk(args.pytorch_profiler_data_dir):
             result_pytorch_profiler_data_file = os.path.join(root, file) 
     if result_pytorch_profiler_data_file:
         save_augmented_profiler_data(result_pytorch_profiler_data_file,args.compact,result)
+    else:
+        custom_log_only_profiler_format_file = os.path.join(root, "custom_log_only_profiler_format.json")
+        save_custom_log_profiler_format(custom_log_only_profiler_format_file,result)
