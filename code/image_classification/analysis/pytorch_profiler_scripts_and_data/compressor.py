@@ -34,6 +34,6 @@ def uncompress_files(root_dir):
 args = parser.parse_args()
 
 if args.decompress:
-    uncompressed_files(args.data_dir)
+    uncompress_files(args.data_dir)
 else:
     compress_files(args.data_dir)
