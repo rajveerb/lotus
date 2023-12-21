@@ -14,6 +14,7 @@ make decompress
 
 ## Generate the PyTorch profiler data
 
+#TODO need to redo below command
 
 ```python
 python <image_pipeline_code_file> <imagenet_dir> -b 128 --gpu 1 --epochs 1 --val-loop 0 --profile --profile-log-prefix <profile_log_prefix>
@@ -22,6 +23,8 @@ python <image_pipeline_code_file> <imagenet_dir> -b 128 --gpu 1 --epochs 1 --val
 
 
 ## Parse the PyTorch profiler data example:
+
+#TODO need to redo below command
 
 ```python
 python gpu_time_parser.py --profiler_file ml-pipeline-benchmark/code/image_classification/analysis/sample_pytorch_profiler_json_data/withfetcher.json
