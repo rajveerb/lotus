@@ -522,9 +522,9 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
 
         # compute gradient and do SGD step
         losses.update(loss_cpu, images.size(0))
-            optimizer.zero_grad()
-            loss.backward()
-            optimizer.step()
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
 
         if args.profile:
             train_p.step()
