@@ -29,7 +29,6 @@ def update_pytorch_profile_data(custom_log_file, pid, compact=True):
     # add column names
     df.columns = ['name', 'ts', 'dur']
 
-    res = ''
     res_list = []
     for row in df.itertuples():
         # if line starts with "S", for our added instrumentation
@@ -45,14 +44,22 @@ def update_pytorch_profile_data(custom_log_file, pid, compact=True):
         
         elif row.name.startswith("SBatchConsumed"):
             batch_id = row.name.split("_")[1]
-            synthetic_id = (int(batch_id) * -1)
+            synthetic_id = -1 + (int(batch_id) * -1)
 
             data = {"ph": "X", "cat": "user_annotation", "name": row.name, "pid": int(
                 pid), "tid": int(pid), "args": {"External id": synthetic_id, "correlation": synthetic_id}, "ts": row.ts//1000, "dur": row.dur//1000}
             res_list.append(data)
-            data = {"ph": "f","id": synthetic_id,"pid": int(pid),"tid": int(pid),"ts": row.ts//1000,"cat": "ac2g","name": "ac2g"}
+            data = {"ph": "f","id": synthetic_id,"pid": int(pid),"tid": int(pid),"ts": row.ts//1000,"cat": "ac2g","name": "ac2g", "bp": "e"}
             res_list.append(data)
-            
+        
+        elif row.name.startswith("SBatchWait"):
+            batch_id = row.name.split("_")[1]
+            synthetic_id = -1 + (int(batch_id) * -1)
+
+            data = {"ph": "X", "cat": "user_annotation", "name": row.name, "pid": int(
+                pid), "tid": int(pid), "args": {"External id": synthetic_id, "correlation": synthetic_id}, "ts": row.ts//1000, "dur": row.dur//1000}
+            res_list.append(data)
+
         if not compact:
             if not row.name.startswith("SBatch"):
                 data = {"ph": "X", "cat": "user_annotation", "name": row.name, "pid": int(
@@ -82,6 +89,10 @@ def save_augmented_profiler_data(pytorch_profiler_data_file,compact,result):
     with open(log_file_name, 'w') as outfile:
         json.dump(pytorch_profiler_data, outfile)
 
+def save_custom_log_profiler_format(custom_log_only_profiler_format_file,result):
+    # write to file
+    with open(custom_log_only_profiler_format_file, 'w') as outfile:
+        json.dump({'traceEvents': result}, outfile)
 
 args = parser.parse_args()
 
@@ -97,3 +108,6 @@ for root, dirs, files in os.walk(args.pytorch_profiler_data_dir):
             result_pytorch_profiler_data_file = os.path.join(root, file) 
     if result_pytorch_profiler_data_file:
         save_augmented_profiler_data(result_pytorch_profiler_data_file,args.compact,result)
+    else:
+        custom_log_only_profiler_format_file = "oogabooga.json"
+        save_custom_log_profiler_format(custom_log_only_profiler_format_file,result)
