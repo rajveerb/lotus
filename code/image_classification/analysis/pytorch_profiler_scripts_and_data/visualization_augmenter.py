@@ -109,5 +109,5 @@ for root, dirs, files in os.walk(args.pytorch_profiler_data_dir):
     if result_pytorch_profiler_data_file:
         save_augmented_profiler_data(result_pytorch_profiler_data_file,args.compact,result)
     else:
-        custom_log_only_profiler_format_file = "oogabooga.json"
+        custom_log_only_profiler_format_file = os.path.join(root, "custom_log_only_profiler_format.json")
         save_custom_log_profiler_format(custom_log_only_profiler_format_file,result)
