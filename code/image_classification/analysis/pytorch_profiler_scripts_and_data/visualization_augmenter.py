@@ -19,6 +19,10 @@ parser.add_argument('--compact', action='store_true', help='compact option will 
                     transformation time,\
                     collation time,\
                     individual transformation time')
+# add argument to pass custom_log json vizualization file
+parser.add_argument('--custom_log_json_viz_file', type=str,
+                    default='custom_log.json', help='[Warning] A json file will be generated which can be visualized using chrome://tracing \
+                    \nNote: The file should not contain custom_log prefix in the name or end with json')
 
 
 def update_pytorch_profile_data(custom_log_file, pid, compact=True):
@@ -96,6 +100,11 @@ def save_custom_log_profiler_format(custom_log_only_profiler_format_file,result)
 
 args = parser.parse_args()
 
+# check for custom log file viz warning
+if args.custom_log_prefix not in args.custom_log_json_viz_file or args.custom_log_json_viz_file.endswith(".json"):
+    print("[Warning] The custom_log_json_viz_file should not contain custom_log prefix in the name or end with json")
+    exit()
+
 # recursively search for pytorch profiler data files
 for root, dirs, files in os.walk(args.pytorch_profiler_data_dir):
     result = []
@@ -109,5 +118,5 @@ for root, dirs, files in os.walk(args.pytorch_profiler_data_dir):
     if result_pytorch_profiler_data_file:
         save_augmented_profiler_data(result_pytorch_profiler_data_file,args.compact,result)
     else:
-        custom_log_only_profiler_format_file = os.path.join(root, "custom_log_only_profiler_format.json")
+        custom_log_only_profiler_format_file = os.path.join(root, args.custom_log_json_viz_file)
         save_custom_log_profiler_format(custom_log_only_profiler_format_file,result)
