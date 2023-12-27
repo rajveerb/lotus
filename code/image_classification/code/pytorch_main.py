@@ -184,6 +184,8 @@ parser.add_argument(
 parser.add_argument("--dummy", action="store_true", help="use fake data to benchmark")
 parser.add_argument("--profile", action="store_true", help="use PyTorch profiler")
 parser.add_argument("--profile-log-prefix", type=str, help="set prefix for PyTorch profiler's logs, eg: /mydata/log")
+parser.add_argument("--profiler-steps", default=8, type=int, help="set number of steps to profile in PyTorch profiler, eg: 10")
+parser.add_argument("--include-profiler-stack", action="store_true", help="include stack trace in PyTorch profiler logs")
 
 best_acc1 = 0
 
@@ -482,17 +484,13 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
         steps = 0
         train_p = profile(
             activities=[ProfilerActivity.CPU,ProfilerActivity.CUDA],
-            # with_stack=True,
-            schedule=torch.profiler.schedule(wait=1, warmup=1, active=5),
+            with_stack=args.include_profiler_stack,
+            schedule=torch.profiler.schedule(wait=0, warmup=0, active=args.profiler_steps+1),
             on_trace_ready=torch.profiler.tensorboard_trace_handler(
-                f"{args.profile_log_prefix}_pytorch_profiler_train"
+                f"{args.profile_log_prefix}"
             ),
         )
         train_p.start()
-    
-    if args.log_train_file:
-        log = ""
-        start_e2e_time = time.time()
 
     for i, (images, target) in enumerate(train_loader):
 
@@ -533,13 +531,6 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
         batch_time.update(time.time() - end)
         end = time.time()
 
-        if args.log_train_file:
-            end_e2e_time = time.time()
-            log += f"E2E batch time: {end_e2e_time - start_e2e_time} s\n"
-            open(args.log_train_file, "a+").write(log)
-            log = ""
-
-
         if i % args.print_freq == 0:
             progress.display(i + 1)
 
@@ -549,7 +540,7 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
 
         if args.profile:
             steps += 1
-            if steps == 8:
+            if steps == args.profiler_steps:
                 break
 
     if args.profile:
@@ -572,9 +563,6 @@ def validate(val_loader, model, criterion, args):
                     ),
                 )
                 val_p.start()
-            if args.log_val_file:
-                log = ""
-                start_e2e_time = time.time()
 
             for i, (images, target) in enumerate(loader):
 
@@ -611,13 +599,6 @@ def validate(val_loader, model, criterion, args):
                 # measure elapsed time
                 batch_time.update(time.time() - end)
                 end = time.time()
-
-                if args.log_val_file:
-                    end_e2e_time = time.time()
-                    log += f"E2E batch time: {end_e2e_time - start_e2e_time} s\n"
-                    open(args.log_val_file, "a+").write(log)
-                    log = ""
-
 
                 if i % args.print_freq == 0:
                     progress.display(i + 1)

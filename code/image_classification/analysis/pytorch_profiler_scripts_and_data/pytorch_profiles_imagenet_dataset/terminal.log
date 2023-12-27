@@ -1,32 +1,152 @@
+/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/profiler/profiler.py:268: UserWarning: Profiler won't be using warmup, this can skew profiler results
+  warn("Profiler won't be using warmup, this can skew profiler results")
+STAGE:2023-10-15 17:33:48 92567:92567 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
 => creating model 'resnet18'
-STAGE:2023-09-24 17:25:44 117864:117864 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
-STAGE:2023-09-24 17:25:44 117864:117864 ActivityProfilerController.cpp:317] Completed Stage: Collection
-STAGE:2023-09-24 17:25:44 117864:117864 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
-STAGE:2023-09-24 17:25:52 117864:117864 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
-STAGE:2023-09-24 17:25:52 117864:117864 ActivityProfilerController.cpp:317] Completed Stage: Collection
-STAGE:2023-09-24 17:25:52 117864:117864 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
-Epoch: [0][    1/10010]	Time 14.535 (14.535)	Data  4.042 ( 4.042)	Loss 7.0742e+00 (7.0742e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+STAGE:2023-10-15 17:34:01 92567:92567 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-10-15 17:34:01 92567:92567 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][    1/10010]	Time  4.427 ( 4.427)	Data  2.328 ( 2.328)	Loss 7.0443e+00 (7.0443e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/profiler/profiler.py:268: UserWarning: Profiler won't be using warmup, this can skew profiler results
+  warn("Profiler won't be using warmup, this can skew profiler results")
+STAGE:2023-10-15 17:34:14 92753:92753 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
 => creating model 'resnet18'
-STAGE:2023-09-24 17:26:23 118140:118140 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
-STAGE:2023-09-24 17:26:24 118140:118140 ActivityProfilerController.cpp:317] Completed Stage: Collection
-STAGE:2023-09-24 17:26:24 118140:118140 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
-STAGE:2023-09-24 17:26:32 118140:118140 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
-STAGE:2023-09-24 17:26:32 118140:118140 ActivityProfilerController.cpp:317] Completed Stage: Collection
-STAGE:2023-09-24 17:26:32 118140:118140 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
-Epoch: [0][   1/5005]	Time 18.695 (18.695)	Data  7.970 ( 7.970)	Loss 7.0496e+00 (7.0496e+00)	Acc@1   0.78 (  0.78)	Acc@5   1.17 (  1.17)
+STAGE:2023-10-15 17:34:25 92753:92753 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-10-15 17:34:26 92753:92753 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][    1/10010]	Time  7.064 ( 7.064)	Data  2.148 ( 2.148)	Loss 7.0382e+00 (7.0382e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.78 (  0.78)
+/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/profiler/profiler.py:268: UserWarning: Profiler won't be using warmup, this can skew profiler results
+  warn("Profiler won't be using warmup, this can skew profiler results")
+STAGE:2023-10-15 17:34:41 92934:92934 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
 => creating model 'resnet18'
-STAGE:2023-09-24 17:27:11 118385:118385 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
-STAGE:2023-09-24 17:27:17 118385:118385 ActivityProfilerController.cpp:317] Completed Stage: Collection
-STAGE:2023-09-24 17:27:17 118385:118385 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
-STAGE:2023-09-24 17:27:32 118385:118385 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
-STAGE:2023-09-24 17:27:32 118385:118385 ActivityProfilerController.cpp:317] Completed Stage: Collection
-STAGE:2023-09-24 17:27:32 118385:118385 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
-Epoch: [0][   1/2503]	Time 26.664 (26.664)	Data 16.000 (16.000)	Loss 7.0534e+00 (7.0534e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.39 (  0.39)
+STAGE:2023-10-15 17:34:55 92934:92934 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-10-15 17:34:55 92934:92934 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][    1/10010]	Time 10.687 (10.687)	Data  2.201 ( 2.201)	Loss 6.9886e+00 (6.9886e+00)	Acc@1   0.00 (  0.00)	Acc@5   2.34 (  2.34)
+/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/profiler/profiler.py:268: UserWarning: Profiler won't be using warmup, this can skew profiler results
+  warn("Profiler won't be using warmup, this can skew profiler results")
+STAGE:2023-10-15 17:35:15 93172:93172 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
 => creating model 'resnet18'
-STAGE:2023-09-24 17:28:27 118631:118631 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
-STAGE:2023-09-24 17:28:49 118631:118631 ActivityProfilerController.cpp:317] Completed Stage: Collection
-STAGE:2023-09-24 17:28:49 118631:118631 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
-STAGE:2023-09-24 17:29:13 118631:118631 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
-STAGE:2023-09-24 17:29:13 118631:118631 ActivityProfilerController.cpp:317] Completed Stage: Collection
-STAGE:2023-09-24 17:29:13 118631:118631 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
-Epoch: [0][   1/1252]	Time 43.554 (43.554)	Data 33.356 (33.356)	Loss 7.0367e+00 (7.0367e+00)	Acc@1   0.10 (  0.10)	Acc@5   0.39 (  0.39)
+STAGE:2023-10-15 17:35:31 93172:93172 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-10-15 17:35:31 93172:93172 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][    1/10010]	Time 14.084 (14.084)	Data  2.382 ( 2.382)	Loss 7.0964e+00 (7.0964e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/profiler/profiler.py:268: UserWarning: Profiler won't be using warmup, this can skew profiler results
+  warn("Profiler won't be using warmup, this can skew profiler results")
+STAGE:2023-10-15 17:35:50 93474:93474 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+=> creating model 'resnet18'
+STAGE:2023-10-15 17:36:17 93474:93474 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-10-15 17:36:17 93474:93474 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][   1/5005]	Time  6.167 ( 6.167)	Data  3.774 ( 3.774)	Loss 6.9663e+00 (6.9663e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.39 (  0.39)
+/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/profiler/profiler.py:268: UserWarning: Profiler won't be using warmup, this can skew profiler results
+  warn("Profiler won't be using warmup, this can skew profiler results")
+STAGE:2023-10-15 17:36:30 93609:93609 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+=> creating model 'resnet18'
+STAGE:2023-10-15 17:36:48 93609:93609 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-10-15 17:36:48 93609:93609 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][   1/5005]	Time  9.264 ( 9.264)	Data  4.128 ( 4.128)	Loss 7.0251e+00 (7.0251e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.78 (  0.78)
+/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/profiler/profiler.py:268: UserWarning: Profiler won't be using warmup, this can skew profiler results
+  warn("Profiler won't be using warmup, this can skew profiler results")
+STAGE:2023-10-15 17:37:05 93804:93804 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+=> creating model 'resnet18'
+STAGE:2023-10-15 17:37:22 93804:93804 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-10-15 17:37:22 93804:93804 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][   1/5005]	Time 11.661 (11.661)	Data  4.070 ( 4.070)	Loss 6.9995e+00 (6.9995e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/profiler/profiler.py:268: UserWarning: Profiler won't be using warmup, this can skew profiler results
+  warn("Profiler won't be using warmup, this can skew profiler results")
+STAGE:2023-10-15 17:37:41 94046:94046 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+=> creating model 'resnet18'
+STAGE:2023-10-15 17:38:01 94046:94046 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-10-15 17:38:01 94046:94046 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][   1/5005]	Time 16.009 (16.009)	Data  3.596 ( 3.596)	Loss 7.0018e+00 (7.0018e+00)	Acc@1   0.39 (  0.39)	Acc@5   1.17 (  1.17)
+/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/profiler/profiler.py:268: UserWarning: Profiler won't be using warmup, this can skew profiler results
+  warn("Profiler won't be using warmup, this can skew profiler results")
+STAGE:2023-10-15 17:38:22 94353:94353 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+=> creating model 'resnet18'
+STAGE:2023-10-15 17:39:15 94353:94353 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-10-15 17:39:15 94353:94353 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][   1/2503]	Time 10.100 (10.100)	Data  7.237 ( 7.237)	Loss 7.0489e+00 (7.0489e+00)	Acc@1   0.39 (  0.39)	Acc@5   0.59 (  0.59)
+/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/profiler/profiler.py:268: UserWarning: Profiler won't be using warmup, this can skew profiler results
+  warn("Profiler won't be using warmup, this can skew profiler results")
+STAGE:2023-10-15 17:39:29 94536:94536 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+=> creating model 'resnet18'
+STAGE:2023-10-15 17:39:59 94536:94536 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-10-15 17:39:59 94536:94536 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][   1/2503]	Time 12.307 (12.307)	Data  7.063 ( 7.063)	Loss 7.0168e+00 (7.0168e+00)	Acc@1   0.20 (  0.20)	Acc@5   0.98 (  0.98)
+/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/profiler/profiler.py:268: UserWarning: Profiler won't be using warmup, this can skew profiler results
+  warn("Profiler won't be using warmup, this can skew profiler results")
+STAGE:2023-10-15 17:40:16 94749:94749 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+=> creating model 'resnet18'
+STAGE:2023-10-15 17:40:44 94749:94749 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-10-15 17:40:44 94749:94749 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][   1/2503]	Time 16.150 (16.150)	Data  7.959 ( 7.959)	Loss 7.0176e+00 (7.0176e+00)	Acc@1   0.20 (  0.20)	Acc@5   0.59 (  0.59)
+/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/profiler/profiler.py:268: UserWarning: Profiler won't be using warmup, this can skew profiler results
+  warn("Profiler won't be using warmup, this can skew profiler results")
+STAGE:2023-10-15 17:41:04 95014:95014 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+=> creating model 'resnet18'
+STAGE:2023-10-15 17:41:29 95014:95014 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-10-15 17:41:29 95014:95014 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][   1/2503]	Time 19.460 (19.460)	Data  6.885 ( 6.885)	Loss 7.0447e+00 (7.0447e+00)	Acc@1   0.20 (  0.20)	Acc@5   0.20 (  0.20)
+/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/profiler/profiler.py:268: UserWarning: Profiler won't be using warmup, this can skew profiler results
+  warn("Profiler won't be using warmup, this can skew profiler results")
+STAGE:2023-10-15 17:41:51 95323:95323 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+=> creating model 'resnet18'
+Traceback (most recent call last):
+  File "/mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/code/pytorch_main.py", line 754, in <module>
+    main()
+  File "/mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/code/pytorch_main.py", line 234, in main
+    main_worker(args.gpu, ngpus_per_node, args)
+  File "/mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/code/pytorch_main.py", line 435, in main_worker
+    train(train_loader, model, criterion, optimizer, epoch, device, args)
+  File "/mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/code/pytorch_main.py", line 505, in train
+    output = model(images)
+  File "/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/nn/parallel/data_parallel.py", line 169, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torchvision/models/resnet.py", line 285, in forward
+    return self._forward_impl(x)
+  File "/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torchvision/models/resnet.py", line 273, in _forward_impl
+    x = self.layer1(x)
+  File "/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torchvision/models/resnet.py", line 97, in forward
+    out = self.bn2(out)
+  File "/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 171, in forward
+    return F.batch_norm(
+  File "/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/nn/functional.py", line 2450, in batch_norm
+    return torch.batch_norm(
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 784.00 MiB (GPU 0; 15.78 GiB total capacity; 14.40 GiB already allocated; 203.19 MiB free; 14.42 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[W profiler_python.cpp:821] Warning: `PythonTracer::stop()` was not called. (function ~PythonTracer)
+python: tpp.c:82: __pthread_tpp_change_priority: Assertion `new_prio == -1 || (new_prio >= fifo_min_prio && new_prio <= fifo_max_prio)' failed.
+rbachkaniwala3/scripts/torch_profiler_imagenet_run.sh: line 20: 95323 Aborted                 (core dumped) TORCH_DATALOADER_PIN_CORE=0 ${python_path} ${program_path} /mydata/imagenet/ -b ${batch_size} --gpus ${num_gpu} -j ${num_gpu} --epochs ${num_epochs} --log-train-file ${result_dir}/custom_log --val-loop 0 --profile --profile-log-prefix ${result_dir}
+/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/profiler/profiler.py:268: UserWarning: Profiler won't be using warmup, this can skew profiler results
+  warn("Profiler won't be using warmup, this can skew profiler results")
+STAGE:2023-10-15 17:42:20 95441:95441 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+=> creating model 'resnet18'
+STAGE:2023-10-15 17:43:16 95441:95441 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-10-15 17:43:16 95441:95441 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][   1/1252]	Time 18.629 (18.629)	Data 13.235 (13.235)	Loss 7.0296e+00 (7.0296e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.39 (  0.39)
+/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/profiler/profiler.py:268: UserWarning: Profiler won't be using warmup, this can skew profiler results
+  warn("Profiler won't be using warmup, this can skew profiler results")
+STAGE:2023-10-15 17:43:34 95886:95886 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+=> creating model 'resnet18'
+STAGE:2023-10-15 17:44:07 95886:95886 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-10-15 17:44:07 95886:95886 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+STAGE:2023-10-15 17:44:11 95886:95886 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-10-15 17:44:16 95886:95886 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-10-15 17:44:16 95886:95886 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][   1/1252]	Time 20.290 (20.290)	Data 12.012 (12.012)	Loss 7.0663e+00 (7.0663e+00)	Acc@1   0.10 (  0.10)	Acc@5   0.68 (  0.68)
+/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/profiler/profiler.py:268: UserWarning: Profiler won't be using warmup, this can skew profiler results
+  warn("Profiler won't be using warmup, this can skew profiler results")
+STAGE:2023-10-15 17:44:30 96497:96497 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+=> creating model 'resnet18'
+STAGE:2023-10-15 17:44:59 96497:96497 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-10-15 17:44:59 96497:96497 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+STAGE:2023-10-15 17:45:04 96497:96497 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2023-10-15 17:45:09 96497:96497 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2023-10-15 17:45:09 96497:96497 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][   1/1252]	Time 26.935 (26.935)	Data 13.801 (13.801)	Loss 7.0339e+00 (7.0339e+00)	Acc@1   0.20 (  0.20)	Acc@5   0.68 (  0.68)
