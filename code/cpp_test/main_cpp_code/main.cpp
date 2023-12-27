@@ -481,7 +481,50 @@ void test(DataLoader& loader, std::shared_ptr<Model> model, size_t data_size)
 }
 
 int main(int argc, const char* argv[]) 
-{
+{	
+	// Read options from config.ini
+	std::ifstream file("config.ini");
+	std::string str;
+	std::map<std::string, std::string> config;
+	while (std::getline(file, str))
+	{
+		if(str[0] == '#')
+			continue;
+		std::istringstream is_line(str);
+		std::string key;
+		if (std::getline(is_line, key, '='))
+		{
+			std::string value;
+			if (std::getline(is_line, value))
+				config[key] = value;
+		}
+	}
+	
+	// print config
+	// for (auto const& [key, val] : config) 
+	// {
+	// 	std::cout << key << ": " << val << "t" << std::endl;
+	// }
+
+	// set options
+	options.image_size = std::stoi(config["image_size"]);
+	options.train_batch_size = std::stoi(config["train_batch_size"]);
+	options.test_batch_size = std::stoi(config["test_batch_size"]);
+	options.num_workers = std::stoi(config["num_workers"]);
+	options.iterations = std::stoi(config["iterations"]);
+	options.log_interval = std::stoi(config["log_interval"]);
+	options.datasetPath = config["datasetPath"];
+	
+	// Log everything
+	#if DEBUG
+	LOG__("image_size: " << options.image_size);
+	LOG__("train_batch_size: " << options.train_batch_size);
+	LOG__("test_batch_size: " << options.test_batch_size);
+	LOG__("num_workers: " << options.num_workers);
+	LOG__("iterations: " << options.iterations);
+	LOG__("log_interval: " << options.log_interval);
+	LOG__("datasetPath: " << options.datasetPath);
+	#endif
 
 	std::shared_ptr<ResNet<BasicBlock>> model = resnet18(/*num_classes = */ 1000);
 

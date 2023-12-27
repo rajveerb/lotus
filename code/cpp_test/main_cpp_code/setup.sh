@@ -22,11 +22,7 @@
 
 rm -rf ./build
 mkdir build
-# cp model_serialiser_tracing.py build/
-cp traced_resnet_model.pt build/
-cp -r dataset build/
-cp -r imagenet build/
-cp info.txt build/
+cp config.ini build/
 cd build
 
 username=$(whoami)
@@ -46,4 +42,4 @@ cmake -DCMAKE_PREFIX_PATH="$libtorch_install_path;$opencv_install_path" ..
 cmake --build . --config Release
 
 # python3 model_serialiser_tracing.py
-./main traced_resnet_model.pt
+./main
