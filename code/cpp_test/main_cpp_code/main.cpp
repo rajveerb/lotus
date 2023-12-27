@@ -529,7 +529,7 @@ int main(int argc, const char* argv[])
 	std::shared_ptr<ResNet<BasicBlock>> model = resnet18(/*num_classes = */ 1000);
 
 	if (torch::cuda::is_available())
-		options.device = torch::kCUDA;
+		options.device = config["device"] == "cuda" ? torch::kCUDA : torch::kCPU;
   	std::cout << "Running on: " << (options.device == torch::kCUDA ? "CUDA" : "CPU") << std::endl;
 	
 	auto data = readInfo();
