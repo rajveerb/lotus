@@ -101,7 +101,7 @@ def save_custom_log_profiler_format(custom_log_only_profiler_format_file,result)
 args = parser.parse_args()
 
 # check for custom log file viz warning
-if args.custom_log_prefix not in args.custom_log_json_viz_file or args.custom_log_json_viz_file.endswith(".json"):
+if args.custom_log_prefix in args.custom_log_json_viz_file or args.custom_log_json_viz_file.endswith(".json"):
     print("[Warning] The custom_log_json_viz_file should not contain custom_log prefix in the name or end with json")
     exit()
 
