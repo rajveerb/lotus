@@ -1,0 +1,616 @@
+/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/
+/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b256_gpu3
+Percentile: 0.9
+                              dur                                       
+                             mean      median percentile_func        std
+name                                                                    
+SCollation             112.361222  108.304769      135.894925  18.278447
+SLoader                  6.051398    4.629407        7.370976   8.553549
+SNormalize               0.246147    0.230726        0.290563   0.086895
+SRandomHorizontalFlip    0.067738    0.077098        0.100202   0.050716
+SRandomResizedCrop       1.184796    1.036449        1.576993   0.973819
+SToTensor                0.376295    0.348883        0.472388   0.123371
+STransform               2.805320    2.636985        3.314332   1.267898
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.000000
+SLoader                93.259739
+SNormalize             99.999219
+SRandomHorizontalFlip  99.999688
+SRandomResizedCrop     99.779108
+SToTensor              99.998907
+STransform             99.669442
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  89.850972
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b1024_gpu3
+Percentile: 0.9
+                              dur                                       
+                             mean      median percentile_func        std
+name                                                                    
+SCollation             451.682165  434.663221      549.510596  67.343420
+SLoader                  4.866791    4.483387        6.433505   6.111449
+SNormalize               0.228597    0.217420        0.255890   0.067622
+SRandomHorizontalFlip    0.063407    0.077087        0.092197   0.040456
+SRandomResizedCrop       1.123777    0.996280        1.466765   0.935949
+SToTensor                0.351490    0.331592        0.444113   0.096247
+STransform               2.653770    2.521282        3.057111   1.240732
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.000000
+SLoader                97.512893
+SNormalize             99.999610
+SRandomHorizontalFlip  99.999844
+SRandomResizedCrop     99.795109
+SToTensor              99.999610
+STransform             99.714713
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  95.476936
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b256_gpu4
+Percentile: 0.9
+                              dur                                      
+                             mean     median percentile_func        std
+name                                                                   
+SCollation             102.623545  99.075575      115.170572  11.358764
+SLoader                  5.581750   4.636451        6.927917   7.775562
+SNormalize               0.235351   0.225259        0.266959   0.064736
+SRandomHorizontalFlip    0.065971   0.078030        0.096644   0.044461
+SRandomResizedCrop       1.152752   1.017245        1.517798   0.941111
+SToTensor                0.357713   0.339354        0.425848   0.091788
+STransform               2.702412   2.550096        3.149130   1.315855
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.000000
+SLoader                95.100483
+SNormalize             99.999219
+SRandomHorizontalFlip  99.999610
+SRandomResizedCrop     99.791362
+SToTensor              99.998751
+STransform             99.703708
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  92.446574
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b1024_gpu2
+Percentile: 0.9
+                              dur                                       
+                             mean      median percentile_func        std
+name                                                                    
+SCollation             423.955846  410.550346      490.680135  49.999363
+SLoader                  4.990810    4.572995        6.628923   6.036428
+SNormalize               0.233639    0.225090        0.262312   0.069877
+SRandomHorizontalFlip    0.064509    0.078033        0.094911   0.051403
+SRandomResizedCrop       1.137922    1.011554        1.493088   0.975246
+SToTensor                0.353067    0.337723        0.416136   0.085898
+STransform               2.748576    2.622178        3.169071   1.216725
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.000000
+SLoader                97.388943
+SNormalize             99.999766
+SRandomHorizontalFlip  99.999922
+SRandomResizedCrop     99.802992
+SToTensor              99.999844
+STransform             99.719475
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  95.069651
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu1
+Percentile: 0.9
+                             dur                                      
+                            mean     median percentile_func        std
+name                                                                  
+SCollation             58.772813  58.979823       63.642749   4.696742
+SLoader                 7.261485   4.702579       10.151033  10.953180
+SNormalize              0.274977   0.264393        0.326208   0.071303
+SRandomHorizontalFlip   0.076127   0.079681        0.112769   0.041821
+SRandomResizedCrop      1.235777   1.071289        1.692238   1.026384
+SToTensor               0.405892   0.385797        0.489278   0.102181
+STransform              3.107712   2.916148        3.716567   1.234178
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.009990
+SLoader                89.935894
+SNormalize             99.999844
+SRandomHorizontalFlip  99.999922
+SRandomResizedCrop     99.782230
+SToTensor              99.999844
+STransform             99.658983
+
+
+
+% of each operation with duration < 100 us
+                            dur
+name                           
+SCollation              0.00000
+SLoader                 0.00000
+SNormalize              0.00000
+SRandomHorizontalFlip  76.05121
+SRandomResizedCrop      0.00000
+SToTensor               0.00000
+STransform              0.00000
+--------------------------------------------------
+
+
+/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b256_gpu2
+Percentile: 0.9
+                              dur                                       
+                             mean      median percentile_func        std
+name                                                                    
+SCollation             108.324971  108.932191      117.693425  11.254690
+SLoader                  7.143560    4.820480        9.943616  10.195530
+SNormalize               0.266466    0.257538        0.320528   0.066194
+SRandomHorizontalFlip    0.074168    0.078183        0.110728   0.040396
+SRandomResizedCrop       1.227712    1.071016        1.672434   0.983351
+SToTensor                0.401687    0.384225        0.484791   0.097818
+STransform               2.996001    2.819322        3.598379   1.197379
+
+
+
+% of each operation with duration < 10 ms
+                              dur
+name                             
+SCollation               0.000000
+SLoader                 90.028700
+SNormalize              99.999922
+SRandomHorizontalFlip  100.000000
+SRandomResizedCrop      99.789723
+SToTensor               99.999844
+STransform              99.686614
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  76.783198
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b512_gpu3
+Percentile: 0.9
+                              dur                                       
+                             mean      median percentile_func        std
+name                                                                    
+SCollation             225.769881  215.229042      277.707075  37.165279
+SLoader                  5.075090    4.507219        6.582240   6.600969
+SNormalize               0.232099    0.220704        0.262515   0.076644
+SRandomHorizontalFlip    0.064796    0.077730        0.094613   0.041988
+SRandomResizedCrop       1.139048    1.006416        1.490640   0.948334
+SToTensor                0.358087    0.336388        0.448481   0.106752
+STransform               2.692833    2.552611        3.121868   1.197230
+
+
+
+% of each operation with duration < 10 ms
+                              dur
+name                             
+SCollation               0.000000
+SLoader                 96.751868
+SNormalize              99.999454
+SRandomHorizontalFlip  100.000000
+SRandomResizedCrop      99.783557
+SToTensor               99.999219
+STransform              99.703161
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  94.060025
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu4
+Percentile: 0.9
+                             dur                                      
+                            mean     median percentile_func        std
+name                                                                  
+SCollation             52.608700  52.110109       58.347839   5.506551
+SLoader                 7.227671   4.680828       12.048218  10.716157
+SNormalize              0.253007   0.238667        0.300646   0.065313
+SRandomHorizontalFlip   0.071477   0.078892        0.105922   0.040273
+SRandomResizedCrop      1.223657   1.065805        1.682371   1.002072
+SToTensor               0.381768   0.356311        0.474753   0.099226
+STransform              2.845439   2.646263        3.493112   1.420685
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.009990
+SLoader                89.238327
+SNormalize             99.999922
+SRandomHorizontalFlip  99.999922
+SRandomResizedCrop     99.782776
+SToTensor              99.999766
+STransform             99.688955
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  85.517111
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu3
+Percentile: 0.9
+                             dur                                      
+                            mean     median percentile_func        std
+name                                                                  
+SCollation             54.440044  53.814118       61.257380   6.438496
+SLoader                 7.161714   4.697806       10.859772  10.578330
+SNormalize              0.257043   0.242385        0.307544   0.086189
+SRandomHorizontalFlip   0.071395   0.078421        0.107717   0.043302
+SRandomResizedCrop      1.221290   1.063743        1.673408   0.993146
+SToTensor               0.386558   0.359941        0.482491   0.118625
+STransform              2.901034   2.708507        3.543793   1.312282
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.009990
+SLoader                89.638353
+SNormalize             99.998049
+SRandomHorizontalFlip  99.999844
+SRandomResizedCrop     99.778561
+SToTensor              99.997502
+STransform             99.678262
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  83.890313
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b1024_gpu4
+Percentile: 0.9
+                              dur                                       
+                             mean      median percentile_func        std
+name                                                                    
+SCollation             420.662296  410.561319      465.766578  43.025702
+SLoader                  4.826419    4.478280        6.355715   5.935743
+SNormalize               0.228524    0.219945        0.256183   0.057485
+SRandomHorizontalFlip    0.063064    0.076512        0.092816   0.047896
+SRandomResizedCrop       1.123776    0.999775        1.465574   0.909712
+SToTensor                0.349583    0.334157        0.417060   0.078886
+STransform               2.634129    2.504454        3.031469   1.278791
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.000000
+SLoader                97.614441
+SNormalize             99.999688
+SRandomHorizontalFlip  99.999844
+SRandomResizedCrop     99.798153
+SToTensor              99.999532
+STransform             99.718226
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  94.829402
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b256_gpu1
+Percentile: 0.9
+                              dur                                       
+                             mean      median percentile_func        std
+name                                                                    
+SCollation             118.599292  119.648436      126.717455  11.525939
+SLoader                  8.309284    4.858665       24.201506  11.873589
+SNormalize               0.266990    0.255557        0.332855   0.073831
+SRandomHorizontalFlip    0.075394    0.078477        0.112117   0.040189
+SRandomResizedCrop       1.249873    1.078757        1.782487   0.998057
+SToTensor                0.406319    0.385026        0.503010   0.131416
+STransform               3.034681    2.821005        3.837075   1.178898
+
+
+
+% of each operation with duration < 10 ms
+                              dur
+name                             
+SCollation               0.000000
+SLoader                 86.048813
+SNormalize             100.000000
+SRandomHorizontalFlip  100.000000
+SRandomResizedCrop      99.788864
+SToTensor               99.999844
+STransform              99.687863
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  75.657116
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b512_gpu2
+Percentile: 0.9
+                              dur                                       
+                             mean      median percentile_func        std
+name                                                                    
+SCollation             209.105874  202.466623      242.001072  24.661320
+SLoader                  5.121401    4.574911        6.710284   6.479366
+SNormalize               0.238368    0.230825        0.271159   0.057412
+SRandomHorizontalFlip    0.065446    0.077594        0.096377   0.039955
+SRandomResizedCrop       1.142189    1.011811        1.500007   0.938837
+SToTensor                0.356770    0.341497        0.416808   0.086548
+STransform               2.774987    2.642169        3.206325   1.153722
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.000000
+SLoader                96.901809
+SNormalize             99.999688
+SRandomHorizontalFlip  99.999766
+SRandomResizedCrop     99.793860
+SToTensor              99.999532
+STransform             99.707610
+
+
+
+% of each operation with duration < 100 us
+                            dur
+name                           
+SCollation              0.00000
+SLoader                 0.00000
+SNormalize              0.00000
+SRandomHorizontalFlip  93.46986
+SRandomResizedCrop      0.00000
+SToTensor               0.00000
+STransform              0.00000
+--------------------------------------------------
+
+
+/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b512_gpu4
+Percentile: 0.9
+                              dur                                       
+                             mean      median percentile_func        std
+name                                                                    
+SCollation             210.180198  200.318704      247.722163  26.604767
+SLoader                  5.089393    4.473964        6.517757   6.719240
+SNormalize               0.232244    0.222611        0.261343   0.064391
+SRandomHorizontalFlip    0.064561    0.077229        0.094712   0.039491
+SRandomResizedCrop       1.136812    1.007002        1.487613   0.941508
+SToTensor                0.352505    0.334981        0.426347   0.083382
+STransform               2.665141    2.523636        3.082133   1.327569
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.000000
+SLoader                96.520906
+SNormalize             99.999298
+SRandomHorizontalFlip  99.999844
+SRandomResizedCrop     99.791987
+SToTensor              99.999532
+STransform             99.712840
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  93.735633
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b512_gpu1
+Percentile: 0.9
+                              dur                                       
+                             mean      median percentile_func        std
+name                                                                    
+SCollation             231.493456  225.361868      260.321722  21.352570
+SLoader                  5.478210    4.682865        7.008038   7.086667
+SNormalize               0.251820    0.243003        0.293796   0.059022
+SRandomHorizontalFlip    0.069223    0.078428        0.103428   0.036449
+SRandomResizedCrop       1.164204    1.028781        1.539777   0.934970
+SToTensor                0.373933    0.357309        0.450169   0.092023
+STransform               2.951489    2.815250        3.412232   1.039039
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.000000
+SLoader                95.985145
+SNormalize             99.999922
+SRandomHorizontalFlip  99.999844
+SRandomResizedCrop     99.795577
+SToTensor              99.999532
+STransform             99.691375
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  86.621182
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu2
+Percentile: 0.9
+                             dur                                      
+                            mean     median percentile_func        std
+name                                                                  
+SCollation             53.924502  53.885895       60.791508   5.796367
+SLoader                 6.934166   4.729942        8.604487  10.415580
+SNormalize              0.263240   0.251449        0.313680   0.062609
+SRandomHorizontalFlip   0.072516   0.077842        0.109215   0.037752
+SRandomResizedCrop      1.212438   1.057642        1.647235   0.989004
+SToTensor               0.393773   0.374162        0.479196   0.095215
+STransform              2.946356   2.767726        3.533064   1.264973
+
+
+
+% of each operation with duration < 10 ms
+                              dur
+name                             
+SCollation               0.009990
+SLoader                 90.951375
+SNormalize             100.000000
+SRandomHorizontalFlip  100.000000
+SRandomResizedCrop      99.785898
+SToTensor               99.999922
+STransform              99.689814
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  80.160588
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
