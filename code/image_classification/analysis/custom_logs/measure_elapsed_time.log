@@ -152,3 +152,97 @@ avg = 2666.20 ms, std = 3663.98 (137.42% of avg) ms, min = 0.00 ms, max = 10115.
 b1024_gpu4:
 avg = 1933.67 ms, std = 2867.01 (148.27% of avg) ms, min = 0.00 ms, max = 12126.60 ms
 43.05% of batches had wait time > 100 ms
+[imagenet]  plotting difference between batch consumed and end of batch preprocessing
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu1
+b128_gpu1:
+avg = 61.67 ms, std = 9.43 (15.29% of avg) ms, min = 12.94 ms, max = 659.23 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu2
+b128_gpu2:
+avg = 578.81 ms, std = 655.65 (113.28% of avg) ms, min = 38.35 ms, max = 4685.32 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu3
+b128_gpu3:
+avg = 518.50 ms, std = 601.15 (115.94% of avg) ms, min = 13.66 ms, max = 6985.92 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu4
+b128_gpu4:
+avg = 588.98 ms, std = 662.61 (112.50% of avg) ms, min = 35.59 ms, max = 10985.23 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b256_gpu1
+b256_gpu1:
+avg = 100.11 ms, std = 12.16 (12.14% of avg) ms, min = 61.85 ms, max = 327.62 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b256_gpu2
+b256_gpu2:
+avg = 1387.01 ms, std = 1415.97 (102.09% of avg) ms, min = 74.93 ms, max = 5720.09 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b256_gpu3
+b256_gpu3:
+avg = 1433.53 ms, std = 1157.04 (80.71% of avg) ms, min = 74.06 ms, max = 7410.15 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b256_gpu4
+b256_gpu4:
+avg = 1000.33 ms, std = 954.92 (95.46% of avg) ms, min = 71.53 ms, max = 10978.14 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b512_gpu1
+b512_gpu1:
+avg = 194.33 ms, std = 26.95 (13.87% of avg) ms, min = 60.42 ms, max = 512.50 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b512_gpu2
+b512_gpu2:
+avg = 1772.81 ms, std = 1885.80 (106.37% of avg) ms, min = 132.53 ms, max = 8112.43 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b512_gpu3
+b512_gpu3:
+avg = 2666.64 ms, std = 1997.80 (74.92% of avg) ms, min = 131.39 ms, max = 8501.28 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b512_gpu4
+b512_gpu4:
+avg = 1887.86 ms, std = 1853.87 (98.20% of avg) ms, min = 132.53 ms, max = 13718.68 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b1024_gpu2
+b1024_gpu2:
+avg = 3743.47 ms, std = 3998.90 (106.82% of avg) ms, min = 63.68 ms, max = 11077.53 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b1024_gpu3
+b1024_gpu3:
+avg = 4984.27 ms, std = 4018.21 (80.62% of avg) ms, min = 251.64 ms, max = 19748.42 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b1024_gpu4
+b1024_gpu4:
+avg = 2541.88 ms, std = 2947.70 (115.97% of avg) ms, min = 259.27 ms, max = 16183.70 ms
+[imagenet] plotting difference between batch consumed and end of batch wait
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu1
+b128_gpu1:
+avg = 2.44 ms, std = 1.93 (79.27% of avg) ms, min = 1.30 ms, max = 190.29 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu2
+b128_gpu2:
+avg = 761.14 ms, std = 929.03 (122.06% of avg) ms, min = 1.53 ms, max = 4932.27 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu3
+b128_gpu3:
+avg = 666.07 ms, std = 775.02 (116.36% of avg) ms, min = 1.35 ms, max = 5048.94 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu4
+b128_gpu4:
+avg = 696.19 ms, std = 752.53 (108.09% of avg) ms, min = 1.14 ms, max = 12171.32 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b256_gpu1
+b256_gpu1:
+avg = 2.59 ms, std = 1.69 (65.19% of avg) ms, min = 1.27 ms, max = 120.34 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b256_gpu2
+b256_gpu2:
+avg = 1704.50 ms, std = 1990.06 (116.75% of avg) ms, min = 1.32 ms, max = 8143.71 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b256_gpu3
+b256_gpu3:
+avg = 1625.35 ms, std = 1385.02 (85.21% of avg) ms, min = 1.20 ms, max = 6474.16 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b256_gpu4
+b256_gpu4:
+avg = 1172.94 ms, std = 1063.49 (90.67% of avg) ms, min = 1.20 ms, max = 13348.42 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b512_gpu1
+b512_gpu1:
+avg = 2.80 ms, std = 2.32 (83.05% of avg) ms, min = 1.56 ms, max = 118.05 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b512_gpu2
+b512_gpu2:
+avg = 2147.94 ms, std = 2353.62 (109.58% of avg) ms, min = 1.41 ms, max = 10627.05 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b512_gpu3
+b512_gpu3:
+avg = 2764.44 ms, std = 2150.13 (77.78% of avg) ms, min = 1.16 ms, max = 13140.92 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b512_gpu4
+b512_gpu4:
+avg = 2060.17 ms, std = 2038.96 (98.97% of avg) ms, min = 1.31 ms, max = 18289.84 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b1024_gpu2
+b1024_gpu2:
+avg = 3880.44 ms, std = 4414.68 (113.77% of avg) ms, min = 1.43 ms, max = 17424.21 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b1024_gpu3
+b1024_gpu3:
+avg = 5050.01 ms, std = 4193.86 (83.05% of avg) ms, min = 1.42 ms, max = 20241.68 ms
+/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b1024_gpu4
+b1024_gpu4:
+avg = 3301.89 ms, std = 3712.53 (112.44% of avg) ms, min = 1.36 ms, max = 24781.64 ms

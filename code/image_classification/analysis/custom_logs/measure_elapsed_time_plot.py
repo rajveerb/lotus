@@ -208,6 +208,199 @@ def plotter_preprocessing_wait_time(target_dir,sort_by='batch_id',fig_size=(50,1
     plt.savefig(fig_path)
     plt.clf()
 
+# %%
+# sort_by = 'batch_id' or 'duration'
+def plotter_diff_consumed_preprocess_end_per_batch_time(target_dir,sort_by='batch_id',fig_size=(50,12),remove_outliers=True,fig_prefix='',fig_dir=''):
+    
+    root_to_files = {}
+    for root, dirs, files in os.walk(target_dir):
+        root_to_files[root] = files
+    roots = sorted(root_to_files, key=lambda x: natsort.natsort_key(x.lower()))
+
+    prev_batch = None
+    for root in roots:
+        print(root)
+        files = root_to_files[root]
+        worker_df = pd.DataFrame()
+        main_df = pd.DataFrame()
+        final_df = pd.DataFrame()
+        
+        for file in files:
+            if "main_pid" in file:
+                main_df = pd.read_csv(os.path.join(root, file)
+                            , header=None)
+
+                # add header
+                main_df.columns = ['name','consume_ts','duration']
+
+                # names that start with 'SBatchConsumed'
+                main_df = main_df[main_df['name'].str.startswith('SBatchConsumed')]
+                # map 'SBatchConsumed_' such that 'SBatchConsumed_idx' becomes 'idx' where idx is an integer
+                main_df['batch_id'] = main_df['name'].map(lambda x: int(x.replace('SBatchConsumed_','')))
+                #  drop "duration" column
+                main_df = main_df.drop(columns=['name','duration'])
+                continue
+
+            if "worker_pid" in file:
+                df = pd.read_csv(os.path.join(root, file)
+                                , header=None)
+
+                # add header
+                df.columns = ['name','start_ts','duration']
+
+                # names that start with 'SBatchPreprocessed'
+                df = df[df['name'].str.startswith('SBatchPreprocessed')]
+                # map 'SBatchPreprocessed_' such that 'SBatchPreprocessed_idx' becomes 'idx' where idx is an integer
+                df['batch_id'] = df['name'].map(lambda x: int(x.replace('SBatchPreprocessed_','')))
+
+                df['preprocess_finish_ts'] = df['start_ts'] + df['duration']
+
+                # drop start_ts and duration columns
+                df = df.drop(columns=['name','start_ts','duration']) 
+
+                # concatentate all dataframes
+                worker_df = pd.concat([worker_df, df])
+        
+        if worker_df.empty:
+            continue
+
+        batch = root.split('/')[-1].split('b')[1].split('_')[0] # <long_dir_path> -> 128_gpu4 -> 128
+
+        label = root.split('/')[-1] # retrieves b128_gpu4 kind of label
+        print(f'{label}:')
+
+        # merge main_df and worker_df
+        final_df = pd.merge(worker_df, main_df, on='batch_id')
+        final_df['wait_time'] = final_df['consume_ts'] - final_df['preprocess_finish_ts']
+
+        # divide by 1e6 to convert to ms
+        final_df['wait_time'] = final_df['wait_time'] / 1000000
+
+        if prev_batch is None:
+            prev_batch = batch 
+        elif batch != prev_batch:
+
+            # plt.figure(figsize=fig_size)
+            plt.gcf().set_size_inches(fig_size[0], fig_size[1])
+            # label x axis
+            plt.xlabel(f'Wait time for batch ids to be consumed (sorted by {sort_by}) (batch size = {prev_batch})')
+            # label y axis
+            plt.ylabel('Wait time in ms')
+            plt.legend()
+            fig_path = os.path.join(fig_dir,f'{fig_prefix}{prev_batch}_diff_consumed_wait_end_per_batch.png')
+            plt.savefig(fig_path)
+            plt.clf()
+            prev_batch = batch            
+        
+        mean = np.mean(final_df["wait_time"])
+        std = np.std(final_df["wait_time"])
+        print (f'avg = {mean:.2f} ms, std = {std:.2f} ({100*std/mean:.2f}% of avg) ms, min = {final_df["wait_time"].min():.2f} ms, max = {final_df["wait_time"].max():.2f} ms')
+        final_df = final_df.sort_values(by=[sort_by])
+        plt.scatter(final_df['batch_id'], final_df['wait_time'], label=label)
+        # plot on log scale
+        plt.yscale('log')
+
+    # plt.figure(figsize=fig_size)
+    plt.gcf().set_size_inches(fig_size[0], fig_size[1])
+    # label x axis
+    plt.xlabel(f'Wait time for batch ids to be consumed (sorted by {sort_by})')
+    # label y axis
+    plt.ylabel('Wait time in ms')
+    plt.legend()    
+    fig_path = os.path.join(fig_dir,f'{fig_prefix}{prev_batch}_diff_consumed_wait_end_per_batch.png')
+    plt.savefig(fig_path)
+    plt.clf()
+
+# %%
+# sort_by = 'batch_id' or 'duration'
+def plotter_diff_consumed_wait_end_per_batch_time(target_dir,sort_by='batch_id',fig_size=(50,12),remove_outliers=True,fig_prefix='',fig_dir=''):
+    
+    root_to_files = {}
+    for root, dirs, files in os.walk(target_dir):
+        root_to_files[root] = files
+    roots = sorted(root_to_files, key=lambda x: natsort.natsort_key(x.lower()))
+
+    prev_batch = None
+    for root in roots:
+        print(root)
+        files = root_to_files[root]
+        main_df = pd.DataFrame()
+        
+        for file in files:
+            if "main_pid" in file:
+                main_df = pd.read_csv(os.path.join(root, file)
+                            , header=None)
+
+                # add header
+                main_df.columns = ['name','start_ts','duration']
+
+                # names that start with 'SBatchWait'
+                wait_df = main_df[main_df['name'].str.startswith('SBatchWait')].copy()
+                # map 'SBatchWait_' such that 'SBatchWait_idx' becomes 'idx' where idx is an integer
+                wait_df['batch_id'] = wait_df['name'].map(lambda x: int(x.replace('SBatchWait_','')))
+                wait_df['wait_end_ts'] = wait_df['start_ts'] + wait_df['duration']
+                #  drop columns
+                wait_df = wait_df.drop(columns=['name','start_ts','duration'])
+
+                # names that start with 'SBatchConsumed'
+                consumed_df = main_df[main_df['name'].str.startswith('SBatchConsumed')].copy()
+                # map 'SBatchConsumed_' such that 'SBatchConsumed_idx' becomes 'idx' where idx is an integer
+                consumed_df['batch_id'] = consumed_df['name'].map(lambda x: int(x.replace('SBatchConsumed_','')))
+                consumed_df['consumed_ts'] = consumed_df['start_ts']
+                #  drop columns
+                consumed_df = consumed_df.drop(columns=['name','start_ts','duration'])     
+
+                # merge wait_df and consumed_df
+                main_df = pd.merge(wait_df, consumed_df, on='batch_id')           
+        if main_df.empty:
+            continue
+
+        batch = root.split('/')[-1].split('b')[1].split('_')[0] # <long_dir_path> -> 128_gpu4 -> 128
+
+        label = root.split('/')[-1] # retrieves b128_gpu4 kind of label
+        print(f'{label}:')
+
+        # merge main_df and worker_df
+        main_df['wait_time'] = main_df['consumed_ts'] - main_df['wait_end_ts']
+
+        # divide by 1e6 to convert to ms
+        main_df['wait_time'] = main_df['wait_time'] / 1000000
+
+        if prev_batch is None:
+            prev_batch = batch 
+        elif batch != prev_batch:
+
+            # plt.figure(figsize=fig_size)
+            plt.gcf().set_size_inches(fig_size[0], fig_size[1])
+            # label x axis
+            plt.xlabel(f'Wait time for batch ids to be consumed (sorted by {sort_by}) (batch size = {prev_batch})')
+            # label y axis
+            plt.ylabel('Wait time in ms')
+            plt.legend()    
+            fig_path = os.path.join(fig_dir,f'{fig_prefix}{prev_batch}_diff_consumed_preprocess_end_per_batch.png')
+            plt.savefig(fig_path)
+            plt.clf()
+            prev_batch = batch            
+        
+        mean = np.mean(main_df["wait_time"])
+        std = np.std(main_df["wait_time"])
+        print (f'avg = {mean:.2f} ms, std = {std:.2f} ({100*std/mean:.2f}% of avg) ms, min = {main_df["wait_time"].min():.2f} ms, max = {main_df["wait_time"].max():.2f} ms')
+        main_df = main_df.sort_values(by=[sort_by])
+        plt.scatter(main_df['batch_id'], main_df['wait_time'], label=label)
+        # plot on log scale
+        plt.yscale('log')
+
+    # plt.figure(figsize=fig_size)
+    plt.gcf().set_size_inches(fig_size[0], fig_size[1])
+    # label x axis
+    plt.xlabel(f'Wait time for batch ids to be consumed (sorted by {sort_by})')
+    # label y axis
+    plt.ylabel('Wait time in ms')
+    plt.legend()    
+    fig_path = os.path.join(fig_dir,f'{fig_prefix}{prev_batch}_diff_consumed_preprocess_end_per_batch.png')
+    plt.savefig(fig_path)
+    plt.clf()
+
 # # %%
 print("preprocessing time")
 plotter_preprocessing_time(args.data_dir,sort_by=args.sort_criteria,remove_outliers=True,fig_dir=args.fig_dir)
@@ -215,3 +408,11 @@ plotter_preprocessing_time(args.data_dir,sort_by=args.sort_criteria,remove_outli
 # %%
 print("wait time")
 plotter_preprocessing_wait_time(args.data_dir,sort_by=args.sort_criteria,fig_dir=args.fig_dir)
+
+# %%
+print("[imagenet]  plotting difference between batch consumed and end of batch preprocessing")
+plotter_diff_consumed_preprocess_end_per_batch_time(args.data_dir,sort_by=args.sort_criteria,remove_outliers=True,fig_dir=args.fig_dir)
+
+# %%
+print("[imagenet] plotting difference between batch consumed and end of batch wait")
+plotter_diff_consumed_wait_end_per_batch_time(args.data_dir,sort_by=args.sort_criteria,remove_outliers=True, fig_dir=args.fig_dir)
