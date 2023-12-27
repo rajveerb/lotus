@@ -1,0 +1,165 @@
+
+-------------------
+root:  /users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b1024_gpu2
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+193
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+1059
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+15.415335463258787
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+84.58466453674122
+
+-------------------
+root:  /users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b256_gpu1
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+1
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+5004
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+0.01998001998001998
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+99.98001998001999
+
+-------------------
+root:  /users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b512_gpu1
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+0
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+2503
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+0.0
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+100.0
+
+-------------------
+root:  /users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b256_gpu3
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+1042
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+3963
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+20.81918081918082
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+79.18081918081919
+
+-------------------
+root:  /users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b1024_gpu4
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+166
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+1086
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+13.258785942492013
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+86.74121405750799
+
+-------------------
+root:  /users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b256_gpu4
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+745
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+4260
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+14.885114885114886
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+85.11488511488511
+
+-------------------
+root:  /users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu4
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+1597
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+8413
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+15.954045954045954
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+84.04595404595405
+
+-------------------
+root:  /users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b512_gpu2
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+284
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+2219
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+11.346384338793449
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+88.65361566120656
+
+-------------------
+root:  /users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b512_gpu3
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+800
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+1703
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+31.961646024770275
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+68.03835397522973
+
+-------------------
+root:  /users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b512_gpu4
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+482
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+2021
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+19.256891729924092
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+80.74310827007591
+
+-------------------
+root:  /users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b256_gpu2
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+691
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+4314
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+13.806193806193805
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+86.19380619380618
+
+-------------------
+root:  /users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b1024_gpu3
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+475
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+777
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+37.93929712460064
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+62.060702875399365
+
+-------------------
+root:  /users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu3
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+1114
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+8896
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+11.128871128871129
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+88.87112887112887
+
+-------------------
+root:  /users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu2
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+961
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+9049
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+9.600399600399601
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+90.3996003996004
+
+-------------------
+root:  /users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu1
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+1
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+10009
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+0.00999000999000999
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+99.99000999000998
