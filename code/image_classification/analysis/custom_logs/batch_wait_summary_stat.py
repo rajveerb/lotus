@@ -1,5 +1,5 @@
 # %%
-import os,pandas as pd, argparse
+import os,pandas as pd, argparse, natsort
 
 parser = argparse.ArgumentParser(description='batch_wait_summary_stat')
 parser.add_argument('--data_dir', type=str,\
@@ -10,8 +10,16 @@ args = parser.parse_args()
 def generate_batch_wait_stat(data_dir):
     root_to_result = {}
 
-    # walk through all files in the directory
+    root_to_files = {}
     for root, dirs, files in os.walk(data_dir):
+        root_to_files[root] = files
+    roots = sorted(root_to_files, key=lambda x: natsort.natsort_key(x.lower()))
+    
+    # recursively find all the log files
+    for root in roots:
+        if 'e2e' in root:
+            continue
+        files = root_to_files[root]
         merged_df = pd.DataFrame()
         combine_preprocess_df = pd.DataFrame()
         for file in files:
