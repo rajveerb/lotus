@@ -1,0 +1,204 @@
+vtune -collect memory-access -data-limit 0 -knob sampling-interval=0.01 -result-dir /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/vtune_log /proj/prismgt-PG0/anaconda3/envs/torch2/bin/python /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/code/pytorch_main.py /mydata/imagenet -b 1024 --gpus 4 -j 4 --epochs 1 --val-loop 0
+vtune: Warning: To profile kernel modules during the session, make sure they are available in the /lib/modules/kernel_version/ location.
+vtune: Peak bandwidth measurement started.
+vtune: Peak bandwidth measurement finished.
+vtune: Collection started. To stop the collection, either press CTRL-C or enter from another console window: vtune -r /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/vtune_log -command stop.
+=> creating model 'resnet18'
+Epoch: [0][   1/1252]	Time 31.606 (31.606)	Data 14.338 (14.338)	Loss 7.0237e+00 (7.0237e+00)	Acc@1   0.10 (  0.10)	Acc@5   0.88 (  0.88)
+Epoch: [0][1251/1252]	Time 16.351 ( 3.504)	Data 16.165 ( 3.225)	Loss 4.2453e+00 (5.1317e+00)	Acc@1  17.29 (  9.35)	Acc@5  38.09 ( 22.84)
+vtune: Collection stopped.
+vtune: Using result path `/mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/vtune_log'
+
+vtune: Executing actions  0 %                                                  
+vtune: Warning: The result contains a lot of raw data. Finalization may take a long time to complete.                   
+vtune: Executing actions 75 % Generating a report                              Elapsed Time: 4404.429s
+    CPU Time: 13774.178s
+    Memory Bound: 64.7% of Pipeline Slots
+     | The metric value is high. This may indicate that a significant fraction
+     | of execution pipeline slots could be stalled due to demand memory load
+     | and stores. Explore the metric breakdown by memory hierarchy, memory
+     | bandwidth information, and correlation by memory objects.
+     |
+        L1 Bound: 8.0% of Clockticks
+         | This metric shows how often machine was stalled without missing the
+         | L1 data cache. The L1 cache typically has the shortest latency.
+         | However, in certain cases like loads blocked on older stores, a load
+         | might suffer a high latency even though it is being satisfied by the
+         | L1.
+         |
+        L2 Bound: 1.9% of Clockticks
+        L3 Bound: 2.7% of Clockticks
+        DRAM Bound: 6.4% of Clockticks
+            DRAM Bandwidth Bound: 0.0% of Elapsed Time
+        Store Bound: 5.6% of Clockticks
+        NUMA: % of Remote Accesses: 23.5%
+        QPI Bandwidth Bound: 0.0% of Elapsed Time
+    Loads: 591,365,874,711
+    Stores: 414,812,550,136
+    LLC Miss Count: 15,158,401,823
+        Local DRAM Access Count: 10,618,026,942
+        Remote DRAM Access Count: 4,873,173,325
+        Remote Cache Access Count: 1,198,679,189
+    Average Latency (cycles): 7
+    Total Thread Count: 5,205
+    Paused Time: 0.504s
+
+Bandwidth Utilization
+Bandwidth Domain                  Platform Maximum  Observed Maximum  Average  % of Elapsed Time with High BW Utilization(%)
+--------------------------------  ----------------  ----------------  -------  ---------------------------------------------
+DRAM, GB/sec                      122                         48.300    4.346                                           0.0%
+DRAM Single-Package, GB/sec       61                          39.700    2.861                                           0.0%
+QPI Outgoing Single-Link, GB/sec  16                          17.900    0.732                                           0.0%
+QPI Outgoing, GB/sec              68                          38.800    1.856                                           0.0%
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/anaconda3/envs/torch2/bin/python "/mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/code/pytorch_main.py" "/mydata/imagenet" "-b" "1024" "--gpus" "4" "-j" "4" "--epochs" "1" "--val-loop" "0" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 22.4 GB 
+    Collection start time: 18:59:40 16/12/2023 UTC
+    Collection stop time: 20:13:04 16/12/2023 UTC
+    Collector Type: Driverless Perf system-wide sampling
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        Max DRAM Single-Package Bandwidth: 61.000 GB/s
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+
+vtune: Executing actions 100 % Generating a report                             
+vtune: Executing actions 100 % done
+
+# Below is with sudo i.e. sampling drivers
+vtune -collect memory-access -data-limit 0 -knob sampling-interval=0.01 -result-dir /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/vtune_log /proj/prismgt-PG0/anaconda3/envs/torch2/bin/python /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/code/pytorch_main.py /mydata/imagenet -b 1024 --gpus 4 -j 4 --epochs 1 --val-loop 0
+
+vtune: Peak bandwidth measurement started.
+vtune: Peak bandwidth measurement finished.
+vtune: Warning: To enable hardware event-based sampling, VTune Profiler has disabled the NMI watchdog timer. The watchdog timer will be re-enabled after collection completes.
+Warning: sav for event INST_RETIRED.ANY is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.THREAD is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.REF_TSC is too low, value reset to 100000
+Warning: sav for event CYCLE_ACTIVITY.STALLS_L1D_MISS is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.REF_XCLK is too low, value reset to 5000
+Warning: sav for event INST_RETIRED.ANY is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.THREAD is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.REF_TSC is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE is too low, value reset to 5000
+Warning: sav for event INST_RETIRED.ANY is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.THREAD is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.REF_TSC is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.THREAD_P is too low, value reset to 100000
+Warning: sav for event INST_RETIRED.ANY is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.THREAD is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.REF_TSC is too low, value reset to 100000
+Warning: sav for event CYCLE_ACTIVITY.STALLS_L2_MISS is too low, value reset to 100000
+Warning: sav for event CYCLE_ACTIVITY.STALLS_MEM_ANY is too low, value reset to 100000
+Warning: sav for event CYCLE_ACTIVITY.STALLS_TOTAL is too low, value reset to 100000
+Warning: sav for event INST_RETIRED.ANY is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.THREAD is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.REF_TSC is too low, value reset to 100000
+Warning: sav for event INST_RETIRED.ANY is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.THREAD is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.REF_TSC is too low, value reset to 100000
+Warning: sav for event INST_RETIRED.ANY is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.THREAD is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.REF_TSC is too low, value reset to 100000
+Warning: sav for event L1D_PEND_MISS.FB_FULL is too low, value reset to 100000
+Warning: sav for event INST_RETIRED.ANY is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.THREAD is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.REF_TSC is too low, value reset to 100000
+Warning: sav for event INST_RETIRED.ANY is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.THREAD is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.REF_TSC is too low, value reset to 100000
+Warning: sav for event INST_RETIRED.ANY is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.THREAD is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.REF_TSC is too low, value reset to 100000
+Warning: sav for event INST_RETIRED.ANY is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.THREAD is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.REF_TSC is too low, value reset to 100000
+Warning: sav for event INST_RETIRED.ANY is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.THREAD is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.REF_TSC is too low, value reset to 100000
+Warning: sav for event INST_RETIRED.ANY is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.THREAD is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.REF_TSC is too low, value reset to 100000
+Warning: sav for event INST_RETIRED.ANY is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.THREAD is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.REF_TSC is too low, value reset to 100000
+Warning: sav for event INST_RETIRED.ANY is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.THREAD is too low, value reset to 100000
+Warning: sav for event CPU_CLK_UNHALTED.REF_TSC is too low, value reset to 100000
+vtune: Collection started. To stop the collection, either press CTRL-C or enter from another console window: vtune -r /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/vtune_log -command stop.
+=> creating model 'resnet18'
+Epoch: [0][   1/1252]	Time 26.259 (26.259)	Data 16.013 (16.013)	Loss 6.9968e+00 (6.9968e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.49 (  0.49)
+Epoch: [0][1251/1252]	Time  0.319 ( 3.868)	Data  0.000 ( 3.613)	Loss 4.1670e+00 (5.1212e+00)	Acc@1  17.09 (  9.50)	Acc@5  39.16 ( 23.08)
+vtune: Collection stopped.
+vtune: Using result path `/mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/vtune_log'
+
+vtune: Executing actions  0 %                                                  
+vtune: Warning: The result contains a lot of raw data. Finalization may take a long time to complete.
+                
+vtune: Executing actions 75 % Generating a report                              Elapsed Time: 4855.391s
+    CPU Time: 0.388s
+    Memory Bound: 17.5% of Pipeline Slots
+        L1 Bound: 13.2% of Clockticks
+        L2 Bound: 0.0% of Clockticks
+        L3 Bound: 1.7% of Clockticks
+        DRAM Bound: 1.8% of Clockticks
+            DRAM Bandwidth Bound: 0.0% of Elapsed Time
+        Store Bound: 1.5% of Clockticks
+        NUMA: % of Remote Accesses: 35.7%
+        QPI Bandwidth Bound: 0.0% of Elapsed Time
+    Loads: 58,755,000
+    Stores: 20,970,000
+    LLC Miss Count: 90,000
+        Local DRAM Access Count: 15,000
+        Remote DRAM Access Count: 0
+        Remote Cache Access Count: 30,000
+    Average Latency (cycles): 6
+    Total Thread Count: 51
+    Paused Time: 0s
+
+Bandwidth Utilization
+Bandwidth Domain                  Platform Maximum  Observed Maximum  Average  % of Elapsed Time with High BW Utilization(%)
+--------------------------------  ----------------  ----------------  -------  ---------------------------------------------
+DRAM, GB/sec                      122                         35.500    2.475                                           0.0%
+DRAM Single-Package, GB/sec       61                          29.900    1.954                                           0.0%
+QPI Outgoing Single-Link, GB/sec  16                          11.300    0.557                                           0.0%
+QPI Outgoing, GB/sec              68                          29.500    1.420                                           0.0%
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/anaconda3/envs/torch2/bin/python "/mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/code/pytorch_main.py" "/mydata/imagenet" "-b" "1024" "--gpus" "4" "-j" "4" "--epochs" "1" "--val-loop" "0" 
+    User Name: root
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 1.7 GB 
+    Collection start time: 04:52:25 18/12/2023 UTC
+    Collection stop time: 06:13:20 18/12/2023 UTC
+    Collector Type: Event-based sampling driver
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        Max DRAM Single-Package Bandwidth: 61.000 GB/s
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+
+vtune: Executing actions 100 % Generating a report                             
+vtune: Executing actions 100 % done                                            
+
+
+
