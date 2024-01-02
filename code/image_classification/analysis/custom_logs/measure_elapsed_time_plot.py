@@ -39,6 +39,8 @@ def plotter_preprocessing_time(target_dir,sort_by='batch_id',fig_size=(50,12),re
 
     prev_batch = None
     for root in roots:
+        if 'e2e' in root:
+            continue
         print(root)
         files = root_to_files[root]
         plot_df = pd.DataFrame()
@@ -71,8 +73,9 @@ def plotter_preprocessing_time(target_dir,sort_by='batch_id',fig_size=(50,12),re
             # mean and std before removing outliers
             mean = np.mean(plot_df["duration"])
             std = np.std(plot_df["duration"])
+            total_preprocessing_time = np.sum(plot_df["duration"])
             print (f'Before removing outliers:')
-            print(f'avg = {mean:.2f} ms, std = {std:.2f} ({100*std/mean:.2f}% of avg) ms , min = {plot_df["duration"].min():.2f} ms, max = {plot_df["duration"].max():.2f} ms')
+            print (f'sum = {total_preprocessing_time:.2f} ms, avg = {mean:.2f} ms, std = {std:.2f} ({100*std/mean:.2f}% of avg) ms , min = {plot_df["duration"].min():.2f} ms, max = {plot_df["duration"].max():.2f} ms')
             # remove rows with duration's > mean - 2*std and < mean + 2*std
             plot_df = plot_df[plot_df['duration'] < plot_df['duration'].mean() + 2*plot_df['duration'].std()]
             plot_df = plot_df[plot_df['duration'] > plot_df['duration'].mean() - 2*plot_df['duration'].std()] 
@@ -106,7 +109,8 @@ def plotter_preprocessing_time(target_dir,sort_by='batch_id',fig_size=(50,12),re
         
         mean = np.mean(plot_df["duration"])
         std = np.std(plot_df["duration"])
-        print (f'avg = {mean:.2f} ms, std = {std:.2f} ({100*std/mean:.2f}% of avg) ms, min = {plot_df["duration"].min():.2f} ms, max = {plot_df["duration"].max():.2f} ms')
+        total_preprocessing_time = np.sum(plot_df["duration"])
+        print (f'sum = {total_preprocessing_time:.2f} ms, avg = {mean:.2f} ms, std = {std:.2f} ({100*std/mean:.2f}% of avg) ms, min = {plot_df["duration"].min():.2f} ms, max = {plot_df["duration"].max():.2f} ms')
         plot_df = plot_df.sort_values(by=[sort_by])
         plt.plot(plot_df['batch_id'], plot_df['duration'], label=label, marker='s')
         # plot on log scale
@@ -135,6 +139,8 @@ def plotter_preprocessing_wait_time(target_dir,sort_by='batch_id',fig_size=(50,1
     prev_batch = None
     
     for root in roots:
+        if 'e2e' in root:
+            continue
         print (root)
         files = root_to_files[root]
         plot_df = pd.DataFrame()
@@ -187,9 +193,10 @@ def plotter_preprocessing_wait_time(target_dir,sort_by='batch_id',fig_size=(50,1
         mean = np.mean(plot_df["duration"])
         std = np.std(plot_df["duration"])
         minimum = plot_df["duration"].min()
-        maximum = plot_df["duration"].max() 
-        print (f'avg = {mean:.2f} ms, std = {std:.2f} ({100*std/mean:.2f}% of avg) ms, min = {minimum:.2f} ms, max = {maximum:.2f} ms')
-        # print % of batches which had high wait time > 100 ms pretty print
+        maximum = plot_df["duration"].max()
+        total_wait_time = np.sum(plot_df["duration"])
+        print (f'sum = {total_wait_time:.2f} ms, avg = {mean:.2f} ms, std = {std:.2f} ({100*std/mean:.2f}% of avg) ms, min = {minimum:.2f} ms, max = {maximum:.2f} ms')
+        # print % of batches for which main process had to wait > 100 ms pretty print
         print (f'{100*len(plot_df[plot_df["duration"] > 100])/len(plot_df):.2f}% of batches had wait time > 100 ms')
         
         # sort by sort_by
@@ -219,6 +226,8 @@ def plotter_diff_consumed_preprocess_end_per_batch_time(target_dir,sort_by='batc
 
     prev_batch = None
     for root in roots:
+        if 'e2e' in root:
+            continue
         print(root)
         files = root_to_files[root]
         worker_df = pd.DataFrame()
@@ -295,6 +304,8 @@ def plotter_diff_consumed_preprocess_end_per_batch_time(target_dir,sort_by='batc
         mean = np.mean(final_df["wait_time"])
         std = np.std(final_df["wait_time"])
         print (f'avg = {mean:.2f} ms, std = {std:.2f} ({100*std/mean:.2f}% of avg) ms, min = {final_df["wait_time"].min():.2f} ms, max = {final_df["wait_time"].max():.2f} ms')
+        # print % of batches which had high wait time > 100 ms pretty print
+        print (f'{100*len(final_df[final_df["wait_time"] > 100])/len(final_df):.2f}% of batches had wait time > 100 ms')
         final_df = final_df.sort_values(by=[sort_by])
         plt.scatter(final_df['batch_id'], final_df['wait_time'], label=label)
         # plot on log scale
@@ -322,6 +333,8 @@ def plotter_diff_consumed_wait_end_per_batch_time(target_dir,sort_by='batch_id',
 
     prev_batch = None
     for root in roots:
+        if 'e2e' in root:
+            continue
         print(root)
         files = root_to_files[root]
         main_df = pd.DataFrame()
@@ -385,6 +398,8 @@ def plotter_diff_consumed_wait_end_per_batch_time(target_dir,sort_by='batch_id',
         mean = np.mean(main_df["wait_time"])
         std = np.std(main_df["wait_time"])
         print (f'avg = {mean:.2f} ms, std = {std:.2f} ({100*std/mean:.2f}% of avg) ms, min = {main_df["wait_time"].min():.2f} ms, max = {main_df["wait_time"].max():.2f} ms')
+        # print % of batches which had high wait time > 100 ms pretty print
+        print (f'{100*len(main_df[main_df["wait_time"] > 100])/len(main_df):.2f}% of batches had wait time > 100 ms')
         main_df = main_df.sort_values(by=[sort_by])
         plt.scatter(main_df['batch_id'], main_df['wait_time'], label=label)
         # plot on log scale
@@ -404,15 +419,18 @@ def plotter_diff_consumed_wait_end_per_batch_time(target_dir,sort_by='batch_id',
 # # %%
 print("preprocessing time")
 plotter_preprocessing_time(args.data_dir,sort_by=args.sort_criteria,remove_outliers=True,fig_dir=args.fig_dir)
-
+print("----------------------------------------------\n")
 # %%
 print("wait time")
 plotter_preprocessing_wait_time(args.data_dir,sort_by=args.sort_criteria,fig_dir=args.fig_dir)
+print("----------------------------------------------\n")
 
 # %%
 print("[imagenet]  plotting difference between batch consumed and end of batch preprocessing")
 plotter_diff_consumed_preprocess_end_per_batch_time(args.data_dir,sort_by=args.sort_criteria,remove_outliers=True,fig_dir=args.fig_dir)
+print("----------------------------------------------\n")
 
 # %%
 print("[imagenet] plotting difference between batch consumed and end of batch wait")
 plotter_diff_consumed_wait_end_per_batch_time(args.data_dir,sort_by=args.sort_criteria,remove_outliers=True, fig_dir=args.fig_dir)
+print("----------------------------------------------\n")
