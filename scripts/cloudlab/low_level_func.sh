@@ -1,11 +1,11 @@
 # !/bin/bash
 
-program_path_prefix="/proj/prismgt-PG0/rbachkaniwala3/code/low_level_func"
+program_path_prefix="/mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/low_level_func"
 python_path="/proj/prismgt-PG0/anaconda3/envs/torch2/bin/python"
-programs=("convertRGB.py" "Normalize.py" "RandomHorizontalFlip.py" "RandomResizedCrop.py" "ToTensor.py")
+programs=("convertRGB.py" "Normalize.py" "RandomHorizontalFlip.py" "RandomResizedCrop.py" "ToTensor.py" "Collation.py")
 vtune_record="vtune -collect hotspots -start-paused"
 vtune_report="vtune -report hotspots"
-csv_dir="/proj/prismgt-PG0/rbachkaniwala3/code/low_level_func/logs"
+csv_dir="/mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/low_level_func/logs"
 
 # check if all the above directories exist
 if [ ! -d "$program_path_prefix" ]; then
@@ -28,7 +28,7 @@ do
 done
 
 
-vtune_result_dir="/root/low_level_func"
+vtune_result_dir="/mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/low_level_func"
 
 # Running multiple times and taking "AND" operation of the reported function
 total_runs=20
@@ -51,7 +51,6 @@ do
         rm -rf $vtune_result_dir
     done
 done
-chmod 777 -R $csv_dir
 echo "Done running all programs"
 
 # vtune -collect hotspots -start-paused -result-dir ~/collation_tester_v2 -- /proj/prismgt-PG0/anaconda3/envs/torch2/bin/python rbachkaniwala3/code/collation_tester.py
