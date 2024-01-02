@@ -7,10 +7,10 @@ import matplotlib.pyplot as plt
 import os,natsort
 import argparse
 
-plt.rc('axes', labelsize=45)    # fontsize of the x and y labels
-plt.rc('xtick', labelsize=35)    # fontsize of the tick labels
-plt.rc('ytick', labelsize=35)    # fontsize of the tick labels
-plt.rc('legend', fontsize=30)    # legend fontsize
+plt.rc('axes', labelsize=55)    # fontsize of the x and y labels
+plt.rc('xtick', labelsize=45)    # fontsize of the tick labels
+plt.rc('ytick', labelsize=45)    # fontsize of the tick labels
+plt.rc('legend', fontsize=45)    # legend fontsize
 
 # take below arguments using argparse
 # add argument to pass pytorch_profiler_data_file
@@ -30,7 +30,7 @@ args = parser.parse_args()
 
 # %%
 # sort_by = 'batch_id' or 'duration'
-def plotter_preprocessing_time(target_dir,sort_by='batch_id',fig_size=(50,12),remove_outliers=True,fig_prefix='',fig_dir=''):
+def plotter_preprocessing_time(target_dir,sort_by='batch_id',fig_size=(50,15),remove_outliers=True,fig_prefix='',fig_dir=''):
     
     root_to_files = {}
     for root, dirs, files in os.walk(target_dir):
@@ -101,7 +101,8 @@ def plotter_preprocessing_time(target_dir,sort_by='batch_id',fig_size=(50,12),re
             plt.xlabel(f'Batch ids preprocessed (sorted by {sort_by}) (batch size = {prev_batch})')
             # label y axis
             plt.ylabel('Preprocessing time in ms')
-            plt.legend()
+            # add legend to bottom right and increase size of legend markers
+            plt.legend(loc='lower right',markerscale=4)
             fig_path = os.path.join(fig_dir, f'{fig_prefix}{prev_batch}_batch_preprocessing_time.png') 
             plt.savefig(fig_path)
             plt.clf()
@@ -122,14 +123,15 @@ def plotter_preprocessing_time(target_dir,sort_by='batch_id',fig_size=(50,12),re
     plt.xlabel(f'Batch ids preprocessed (sorted by {sort_by})')
     # label y axis
     plt.ylabel('Preprocessing time in ms')
-    plt.legend()    
+    # add legend to bottom right and increase size of legend markers
+    plt.legend(loc='lower right',markerscale=4)
     fig_path = os.path.join(fig_dir, f'{fig_prefix}{prev_batch}_batch_preprocessing_time.png') 
     plt.savefig(fig_path)
     plt.clf()
 
 # %%
 # sort_by = 'name' or 'duration'
-def plotter_preprocessing_wait_time(target_dir,sort_by='batch_id',fig_size=(50,12),fig_prefix='',fig_dir=''):
+def plotter_preprocessing_wait_time(target_dir,sort_by='batch_id',fig_size=(50,15),fig_prefix='',fig_dir=''):
     plt.figure(figsize=fig_size)
     root_to_files = {}
     for root, dirs, files in os.walk(target_dir):
@@ -184,7 +186,8 @@ def plotter_preprocessing_wait_time(target_dir,sort_by='batch_id',fig_size=(50,1
             plt.xlabel(f'Batch ids preprocessed (sorted by {sort_by}) (batch size = {prev_batch})')
             # label y axis
             plt.ylabel('Wait time in ms')
-            plt.legend()
+            # add legend to bottom right and increase size of legend markers
+            plt.legend(loc='lower right',markerscale=4)
             fig_path = os.path.join(fig_dir,f'{fig_prefix}{prev_batch}_batch_preprocessing_wait_time.png')
             plt.savefig(fig_path)
             plt.clf()
@@ -210,14 +213,15 @@ def plotter_preprocessing_wait_time(target_dir,sort_by='batch_id',fig_size=(50,1
     plt.xlabel(f'Wait time for batch ids preprocessed (sorted by {sort_by})')
     # label y axis
     plt.ylabel('Wait time in ms')
-    plt.legend()
+    # add legend to bottom right and increase size of legend markers
+    plt.legend(loc='lower right',markerscale=4)
     fig_path = os.path.join(fig_dir,f'{fig_prefix}{prev_batch}_batch_preprocessing_wait_time.png')
     plt.savefig(fig_path)
     plt.clf()
 
 # %%
 # sort_by = 'batch_id' or 'duration'
-def plotter_diff_consumed_preprocess_end_per_batch_time(target_dir,sort_by='batch_id',fig_size=(50,12),remove_outliers=True,fig_prefix='',fig_dir=''):
+def plotter_diff_consumed_preprocess_end_per_batch_time(target_dir,sort_by='batch_id',fig_size=(50,15),remove_outliers=True,fig_prefix='',fig_dir=''):
     
     root_to_files = {}
     for root, dirs, files in os.walk(target_dir):
@@ -295,7 +299,8 @@ def plotter_diff_consumed_preprocess_end_per_batch_time(target_dir,sort_by='batc
             plt.xlabel(f'Wait time for batch ids to be consumed (sorted by {sort_by}) (batch size = {prev_batch})')
             # label y axis
             plt.ylabel('Wait time in ms')
-            plt.legend()
+            # add legend to bottom right and increase size of legend markers
+            plt.legend(loc='lower right',markerscale=4)
             fig_path = os.path.join(fig_dir,f'{fig_prefix}{prev_batch}_diff_consumed_wait_end_per_batch.png')
             plt.savefig(fig_path)
             plt.clf()
@@ -317,14 +322,15 @@ def plotter_diff_consumed_preprocess_end_per_batch_time(target_dir,sort_by='batc
     plt.xlabel(f'Wait time for batch ids to be consumed (sorted by {sort_by})')
     # label y axis
     plt.ylabel('Wait time in ms')
-    plt.legend()    
+    # add legend to bottom right and increase size of legend markers
+    plt.legend(loc='lower right',markerscale=4)
     fig_path = os.path.join(fig_dir,f'{fig_prefix}{prev_batch}_diff_consumed_wait_end_per_batch.png')
     plt.savefig(fig_path)
     plt.clf()
 
 # %%
 # sort_by = 'batch_id' or 'duration'
-def plotter_diff_consumed_wait_end_per_batch_time(target_dir,sort_by='batch_id',fig_size=(50,12),remove_outliers=True,fig_prefix='',fig_dir=''):
+def plotter_diff_consumed_wait_end_per_batch_time(target_dir,sort_by='batch_id',fig_size=(50,15),remove_outliers=True,fig_prefix='',fig_dir=''):
     
     root_to_files = {}
     for root, dirs, files in os.walk(target_dir):
@@ -389,7 +395,8 @@ def plotter_diff_consumed_wait_end_per_batch_time(target_dir,sort_by='batch_id',
             plt.xlabel(f'Wait time for batch ids to be consumed (sorted by {sort_by}) (batch size = {prev_batch})')
             # label y axis
             plt.ylabel('Wait time in ms')
-            plt.legend()    
+            # add legend to bottom right and increase size of legend markers
+            plt.legend(loc='lower right',markerscale=4)
             fig_path = os.path.join(fig_dir,f'{fig_prefix}{prev_batch}_diff_consumed_preprocess_end_per_batch.png')
             plt.savefig(fig_path)
             plt.clf()
@@ -411,7 +418,8 @@ def plotter_diff_consumed_wait_end_per_batch_time(target_dir,sort_by='batch_id',
     plt.xlabel(f'Wait time for batch ids to be consumed (sorted by {sort_by})')
     # label y axis
     plt.ylabel('Wait time in ms')
-    plt.legend()    
+    # add legend to bottom right and increase size of legend markers
+    plt.legend(loc='lower right',markerscale=4)
     fig_path = os.path.join(fig_dir,f'{fig_prefix}{prev_batch}_diff_consumed_preprocess_end_per_batch.png')
     plt.savefig(fig_path)
     plt.clf()
