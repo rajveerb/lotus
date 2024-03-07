@@ -2,7 +2,7 @@
 
 program_path_prefix="/mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/low_level_func"
 python_path="/proj/prismgt-PG0/anaconda3/envs/torch2/bin/python"
-programs=("convertRGB.py" "Normalize.py" "RandomHorizontalFlip.py" "RandomResizedCrop.py" "ToTensor.py" "Collation.py")
+programs=("Loader.py" "Normalize.py" "RandomHorizontalFlip.py" "RandomResizedCrop.py" "ToTensor.py" "Collation.py")
 vtune_record="vtune -collect hotspots -start-paused"
 vtune_report="vtune -report hotspots"
 csv_dir="/mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/low_level_func/logs"
@@ -52,7 +52,3 @@ do
     done
 done
 echo "Done running all programs"
-
-# vtune -collect hotspots -start-paused -result-dir ~/collation_tester_v2 -- /proj/prismgt-PG0/anaconda3/envs/torch2/bin/python rbachkaniwala3/code/collation_tester.py
-# chmod 777 -R /proj/prismgt-PG0/rbachkaniwala3/code/low_level_func/
-# vtune -report hotspots -result-dir /root/collation_tester_v2/ -format csv -csv-delimiter comma -report-output ./low_level_func_v2.csv
