@@ -12,3 +12,8 @@ sudo apt install -y intel-oneapi-vtune
 sudo sed -i 's/kernel.yama.ptrace_scope = 1/kernel.yama.ptrace_scope = 0/' /etc/sysctl.d/10-ptrace.conf
 sudo sysctl -w kernel.kptr_restrict=0
 sudo sysctl -w kernel.perf_event_paranoid=0
+sudo sysctl -w kernel.yama.ptrace_scope=0 
+echo "Run below command"
+echo "Enable vtune using below command:"
+echo 'source /opt/intel/oneapi/setvars.sh'
+echo 'sudo usermod -aG vtune $USER && newgrp vtune'
