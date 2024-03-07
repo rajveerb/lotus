@@ -1,0 +1,595 @@
+['b128_gpu1.csv', 'b128_gpu2.csv', 'b128_gpu3.csv', 'b128_gpu4.csv', 'b256_gpu1.csv', 'b256_gpu2.csv', 'b256_gpu3.csv', 'b256_gpu4.csv', 'b512_gpu1.csv', 'b512_gpu2.csv', 'b512_gpu3.csv', 'b512_gpu4.csv', 'b1024_gpu2.csv', 'b1024_gpu3.csv', 'b1024_gpu4.csv']
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b128_gpu1.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [8] Function:  __memmove_avx_unaligned_erms
+Index: [7] Function:  jpeg_idct_16x16
+Index: [168] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [57] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [12] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [31] Function:  __memset_avx2_unaligned_erms
+Index: [13] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b128_gpu2.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [8] Function:  __memmove_avx_unaligned_erms
+Index: [7] Function:  jpeg_idct_16x16
+Index: [170] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [46] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [10] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [27] Function:  __memset_avx2_unaligned_erms
+Index: [12] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b128_gpu3.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [8] Function:  __memmove_avx_unaligned_erms
+Index: [7] Function:  jpeg_idct_16x16
+Index: [189] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [46] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [10] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [27] Function:  __memset_avx2_unaligned_erms
+Index: [11] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b128_gpu4.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [7] Function:  __memmove_avx_unaligned_erms
+Index: [8] Function:  jpeg_idct_16x16
+Index: [161] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [39] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [10] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [26] Function:  __memset_avx2_unaligned_erms
+Index: [11] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b256_gpu1.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [9] Function:  __memmove_avx_unaligned_erms
+Index: [7] Function:  jpeg_idct_16x16
+Index: [167] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [60] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [11] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [29] Function:  __memset_avx2_unaligned_erms
+Index: [13] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b256_gpu2.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [8] Function:  __memmove_avx_unaligned_erms
+Index: [6] Function:  jpeg_idct_16x16
+Index: [160] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [46] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [11] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [26] Function:  __memset_avx2_unaligned_erms
+Index: [12] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b256_gpu3.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [6] Function:  __memmove_avx_unaligned_erms
+Index: [8] Function:  jpeg_idct_16x16
+Index: [156] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [49] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [11] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [26] Function:  __memset_avx2_unaligned_erms
+Index: [12] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b256_gpu4.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [6] Function:  __memmove_avx_unaligned_erms
+Index: [7] Function:  jpeg_idct_16x16
+Index: [156] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [49] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [10] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [26] Function:  __memset_avx2_unaligned_erms
+Index: [11] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b512_gpu1.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [8] Function:  __memmove_avx_unaligned_erms
+Index: [6] Function:  jpeg_idct_16x16
+Index: [186] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [60] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [12] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [30] Function:  __memset_avx2_unaligned_erms
+Index: [13] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b512_gpu2.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [8] Function:  __memmove_avx_unaligned_erms
+Index: [6] Function:  jpeg_idct_16x16
+Index: [174] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [53] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [11] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [26] Function:  __memset_avx2_unaligned_erms
+Index: [12] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b512_gpu3.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [6] Function:  __memmove_avx_unaligned_erms
+Index: [7] Function:  jpeg_idct_16x16
+Index: [145] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [50] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [11] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [26] Function:  __memset_avx2_unaligned_erms
+Index: [13] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b512_gpu4.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [6] Function:  __memmove_avx_unaligned_erms
+Index: [7] Function:  jpeg_idct_16x16
+Index: [136] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [51] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [12] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [26] Function:  __memset_avx2_unaligned_erms
+Index: [10] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b1024_gpu2.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [9] Function:  __memmove_avx_unaligned_erms
+Index: [8] Function:  jpeg_idct_16x16
+Index: [130] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [59] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [11] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [29] Function:  __memset_avx2_unaligned_erms
+Index: [12] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b1024_gpu3.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [6] Function:  __memmove_avx_unaligned_erms
+Index: [7] Function:  jpeg_idct_16x16
+Index: [163] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [55] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [11] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [26] Function:  __memset_avx2_unaligned_erms
+Index: [13] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b1024_gpu4.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [6] Function:  __memmove_avx_unaligned_erms
+Index: [7] Function:  jpeg_idct_16x16
+Index: [183] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [56] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [10] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [26] Function:  __memset_avx2_unaligned_erms
+Index: [12] Function:  ImagingUnpackRGB
+
+
+
+0                          decode_mcu
+1                     jpeg_idct_islow
+2      ImagingResampleHorizontal_8bpc
+3                     ycc_rgb_convert
+4        ImagingResampleVertical_8bpc
+                    ...              
+175                decompress_onepass
+176                  ImagingUnpackRGB
+177      __memset_avx2_unaligned_erms
+178                         _int_free
+179                     __libc_calloc
+Name: Source Function / Function / Call Stack, Length: 180, dtype: object
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b128_gpu1.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [8] Function:  __memmove_avx_unaligned_erms
+Index: [7] Function:  jpeg_idct_16x16
+Index: [168] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [57] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [12] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [31] Function:  __memset_avx2_unaligned_erms
+Index: [13] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b128_gpu2.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [8] Function:  __memmove_avx_unaligned_erms
+Index: [7] Function:  jpeg_idct_16x16
+Index: [170] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [46] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [10] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [27] Function:  __memset_avx2_unaligned_erms
+Index: [12] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b128_gpu3.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [8] Function:  __memmove_avx_unaligned_erms
+Index: [7] Function:  jpeg_idct_16x16
+Index: [189] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [46] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [10] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [27] Function:  __memset_avx2_unaligned_erms
+Index: [11] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b128_gpu4.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [7] Function:  __memmove_avx_unaligned_erms
+Index: [8] Function:  jpeg_idct_16x16
+Index: [161] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [39] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [10] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [26] Function:  __memset_avx2_unaligned_erms
+Index: [11] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b256_gpu1.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [9] Function:  __memmove_avx_unaligned_erms
+Index: [7] Function:  jpeg_idct_16x16
+Index: [167] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [60] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [11] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [29] Function:  __memset_avx2_unaligned_erms
+Index: [13] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b256_gpu2.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [8] Function:  __memmove_avx_unaligned_erms
+Index: [6] Function:  jpeg_idct_16x16
+Index: [160] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [46] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [11] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [26] Function:  __memset_avx2_unaligned_erms
+Index: [12] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b256_gpu3.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [6] Function:  __memmove_avx_unaligned_erms
+Index: [8] Function:  jpeg_idct_16x16
+Index: [156] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [49] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [11] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [26] Function:  __memset_avx2_unaligned_erms
+Index: [12] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b256_gpu4.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [6] Function:  __memmove_avx_unaligned_erms
+Index: [7] Function:  jpeg_idct_16x16
+Index: [156] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [49] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [10] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [26] Function:  __memset_avx2_unaligned_erms
+Index: [11] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b512_gpu1.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [8] Function:  __memmove_avx_unaligned_erms
+Index: [6] Function:  jpeg_idct_16x16
+Index: [186] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [60] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [12] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [30] Function:  __memset_avx2_unaligned_erms
+Index: [13] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b512_gpu2.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [8] Function:  __memmove_avx_unaligned_erms
+Index: [6] Function:  jpeg_idct_16x16
+Index: [174] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [53] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [11] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [26] Function:  __memset_avx2_unaligned_erms
+Index: [12] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b512_gpu3.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [6] Function:  __memmove_avx_unaligned_erms
+Index: [7] Function:  jpeg_idct_16x16
+Index: [145] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [50] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [11] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [26] Function:  __memset_avx2_unaligned_erms
+Index: [13] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b512_gpu4.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [6] Function:  __memmove_avx_unaligned_erms
+Index: [7] Function:  jpeg_idct_16x16
+Index: [136] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [51] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [12] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [26] Function:  __memset_avx2_unaligned_erms
+Index: [10] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b1024_gpu2.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [9] Function:  __memmove_avx_unaligned_erms
+Index: [8] Function:  jpeg_idct_16x16
+Index: [130] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [59] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [11] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [29] Function:  __memset_avx2_unaligned_erms
+Index: [12] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b1024_gpu3.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [6] Function:  __memmove_avx_unaligned_erms
+Index: [7] Function:  jpeg_idct_16x16
+Index: [163] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [55] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [11] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [26] Function:  __memset_avx2_unaligned_erms
+Index: [13] Function:  ImagingUnpackRGB
+
+
+
+uarch_file:  /mydata/rbachkaniwala3/code/rajveerb-ml-pipeline-benchmark/code/image_classification/analysis/hw_event_analysis/vtune_uarch_csvs/b1024_gpu4.csv
+C/C++ functions not found in dataframe:
+[]
+C/C++ functions (indices) found in dataframe:
+Index: [6] Function:  __memmove_avx_unaligned_erms
+Index: [7] Function:  jpeg_idct_16x16
+Index: [183] Function:  __libc_calloc
+Index: [0] Function:  decode_mcu
+Index: [3] Function:  ycc_rgb_convert
+Index: [56] Function:  _int_free
+Index: [4] Function:  ImagingResampleVertical_8bpc
+Index: [10] Function:  decompress_onepass
+Index: [2] Function:  ImagingResampleHorizontal_8bpc
+Index: [1] Function:  jpeg_idct_islow
+Index: [26] Function:  __memset_avx2_unaligned_erms
+Index: [12] Function:  ImagingUnpackRGB
+
+
+
+0                          decode_mcu
+1                     jpeg_idct_islow
+2      ImagingResampleHorizontal_8bpc
+3                     ycc_rgb_convert
+4        ImagingResampleVertical_8bpc
+                    ...              
+175                decompress_onepass
+176                  ImagingUnpackRGB
+177      __memset_avx2_unaligned_erms
+178                         _int_free
+179                     __libc_calloc
+Name: Source Function / Function / Call Stack, Length: 180, dtype: object

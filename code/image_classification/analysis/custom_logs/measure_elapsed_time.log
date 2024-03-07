@@ -1,99 +1,174 @@
 preprocessing time
-/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/
+/mydata/pytorch_custom_log_one_epoch_imagenet_dataset
 /mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu1
 b128_gpu1:
 Before removing outliers:
 sum = 8868777.58 ms, avg = 885.99 ms, std = 86.63 (9.78% of avg) ms , min = 97.33 ms, max = 1491.84 ms
+median = 872.61 ms, 25th percentile = 823.22 ms, 75th percentile = 929.59 ms
+75th - 25th= 106.37
+remove outliers less than q1 - iqr, where iqr = (q3 - q1) * 2
 After removing outliers:
-sum = 8391094.93 ms, avg = 875.62 ms, std = 69.48 (7.93% of avg) ms, min = 736.60 ms, max = 1059.22 ms
+sum = 8868680.24 ms, avg = 886.07 ms, std = 86.27 (9.74% of avg) ms, min = 706.53 ms, max = 1491.84 ms
+median = 872.62 ms, 25th percentile = 823.27 ms, 75th percentile = 929.60 ms
+75th - 25th = 106.32
 /mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu2
 b128_gpu2:
 Before removing outliers:
 sum = 8824206.96 ms, avg = 881.54 ms, std = 83.19 (9.44% of avg) ms , min = 95.59 ms, max = 1689.73 ms
+median = 866.42 ms, 25th percentile = 824.26 ms, 75th percentile = 921.51 ms
+75th - 25th= 97.24
+remove outliers less than q1 - iqr, where iqr = (q3 - q1) * 2
 After removing outliers:
-sum = 8299670.61 ms, avg = 871.17 ms, std = 64.71 (7.43% of avg) ms, min = 740.03 ms, max = 1047.90 ms
+sum = 8824111.38 ms, avg = 881.62 ms, std = 82.82 (9.39% of avg) ms, min = 708.78 ms, max = 1689.73 ms
+median = 866.42 ms, 25th percentile = 824.30 ms, 75th percentile = 921.51 ms
+75th - 25th = 97.21
 /mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu3
 b128_gpu3:
 Before removing outliers:
 sum = 8764229.31 ms, avg = 875.55 ms, std = 81.65 (9.33% of avg) ms , min = 99.25 ms, max = 2023.01 ms
+median = 859.80 ms, 25th percentile = 820.57 ms, 75th percentile = 913.22 ms
+75th - 25th= 92.65
+remove outliers less than q1 - iqr, where iqr = (q3 - q1) * 2
 After removing outliers:
-sum = 8246739.19 ms, avg = 864.89 ms, std = 61.71 (7.13% of avg) ms, min = 740.80 ms, max = 1038.71 ms
+sum = 8764130.06 ms, avg = 875.62 ms, std = 81.28 (9.28% of avg) ms, min = 720.27 ms, max = 2023.01 ms
+median = 859.80 ms, 25th percentile = 820.58 ms, 75th percentile = 913.23 ms
+75th - 25th = 92.65
 /mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu4
 b128_gpu4:
 Before removing outliers:
 sum = 8758786.74 ms, avg = 875.00 ms, std = 93.90 (10.73% of avg) ms , min = 107.87 ms, max = 1922.01 ms
+median = 854.44 ms, 25th percentile = 816.47 ms, 75th percentile = 909.54 ms
+75th - 25th= 93.07
+remove outliers less than q1 - iqr, where iqr = (q3 - q1) * 2
 After removing outliers:
-sum = 8335020.01 ms, avg = 863.91 ms, std = 66.42 (7.69% of avg) ms, min = 729.63 ms, max = 1062.62 ms
+sum = 8758678.87 ms, avg = 875.08 ms, std = 93.59 (10.69% of avg) ms, min = 711.44 ms, max = 1922.01 ms
+median = 854.44 ms, 25th percentile = 816.48 ms, 75th percentile = 909.54 ms
+75th - 25th = 93.07
 /mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b256_gpu1
 b256_gpu1:
 Before removing outliers:
 sum = 8795735.60 ms, avg = 1757.39 ms, std = 122.27 (6.96% of avg) ms , min = 1203.81 ms, max = 2439.21 ms
+median = 1743.90 ms, 25th percentile = 1668.66 ms, 75th percentile = 1828.35 ms
+75th - 25th= 159.69
+remove outliers less than q1 - iqr, where iqr = (q3 - q1) * 2
 After removing outliers:
-sum = 8343911.74 ms, avg = 1745.22 ms, std = 102.74 (5.89% of avg) ms, min = 1536.26 ms, max = 2001.51 ms
+sum = 8794531.79 ms, avg = 1757.50 ms, std = 122.03 (6.94% of avg) ms, min = 1500.88 ms, max = 2439.21 ms
+median = 1743.93 ms, 25th percentile = 1668.75 ms, 75th percentile = 1828.36 ms
+75th - 25th = 159.60
 /mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b256_gpu2
 b256_gpu2:
 Before removing outliers:
 sum = 8644884.00 ms, avg = 1727.25 ms, std = 121.08 (7.01% of avg) ms , min = 1063.00 ms, max = 2448.97 ms
+median = 1715.44 ms, 25th percentile = 1638.65 ms, 75th percentile = 1797.63 ms
+75th - 25th= 158.98
+remove outliers less than q1 - iqr, where iqr = (q3 - q1) * 2
 After removing outliers:
-sum = 8188526.17 ms, avg = 1714.87 ms, std = 101.99 (5.95% of avg) ms, min = 1507.52 ms, max = 1969.29 ms
+sum = 8643821.00 ms, avg = 1727.38 ms, std = 120.72 (6.99% of avg) ms, min = 1440.16 ms, max = 2448.97 ms
+median = 1715.45 ms, 25th percentile = 1638.68 ms, 75th percentile = 1797.66 ms
+75th - 25th = 158.98
 /mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b256_gpu3
 b256_gpu3:
 Before removing outliers:
 sum = 8670425.41 ms, avg = 1732.35 ms, std = 116.62 (6.73% of avg) ms , min = 1012.06 ms, max = 2370.66 ms
+median = 1718.92 ms, 25th percentile = 1649.30 ms, 75th percentile = 1796.89 ms
+75th - 25th= 147.59
+remove outliers less than q1 - iqr, where iqr = (q3 - q1) * 2
 After removing outliers:
-sum = 8219073.98 ms, avg = 1721.27 ms, std = 96.77 (5.62% of avg) ms, min = 1522.71 ms, max = 1965.18 ms
+sum = 8669413.34 ms, avg = 1732.50 ms, std = 116.19 (6.71% of avg) ms, min = 1480.68 ms, max = 2370.66 ms
+median = 1718.93 ms, 25th percentile = 1649.30 ms, 75th percentile = 1796.90 ms
+75th - 25th = 147.60
 /mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b256_gpu4
 b256_gpu4:
 Before removing outliers:
 sum = 8804585.63 ms, avg = 1759.16 ms, std = 172.53 (9.81% of avg) ms , min = 1109.75 ms, max = 3119.50 ms
+median = 1723.56 ms, 25th percentile = 1654.96 ms, 75th percentile = 1816.97 ms
+75th - 25th= 162.01
+remove outliers less than q1 - iqr, where iqr = (q3 - q1) * 2
 After removing outliers:
-sum = 8324949.39 ms, avg = 1734.73 ms, std = 113.60 (6.55% of avg) ms, min = 1505.63 ms, max = 2103.93 ms
+sum = 8803475.88 ms, avg = 1759.29 ms, std = 172.31 (9.79% of avg) ms, min = 1448.72 ms, max = 3119.50 ms
+median = 1723.59 ms, 25th percentile = 1654.96 ms, 75th percentile = 1816.97 ms
+75th - 25th = 162.01
 /mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b512_gpu1
 b512_gpu1:
 Before removing outliers:
 sum = 8682135.81 ms, avg = 3468.69 ms, std = 206.84 (5.96% of avg) ms , min = 983.87 ms, max = 4188.51 ms
+median = 3448.39 ms, 25th percentile = 3311.27 ms, 75th percentile = 3598.58 ms
+75th - 25th= 287.31
+remove outliers less than q1 - iqr, where iqr = (q3 - q1) * 2
 After removing outliers:
-sum = 8315436.84 ms, avg = 3453.25 ms, std = 179.85 (5.21% of avg) ms, min = 3081.88 ms, max = 3880.11 ms
+sum = 8681151.93 ms, avg = 3469.69 ms, std = 200.82 (5.79% of avg) ms, min = 3017.39 ms, max = 4188.51 ms
+median = 3448.65 ms, 25th percentile = 3311.47 ms, 75th percentile = 3598.61 ms
+75th - 25th = 287.14
 /mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b512_gpu2
 b512_gpu2:
 Before removing outliers:
 sum = 8662372.61 ms, avg = 3460.80 ms, std = 195.80 (5.66% of avg) ms , min = 1052.52 ms, max = 4344.97 ms
+median = 3444.49 ms, 25th percentile = 3317.43 ms, 75th percentile = 3583.20 ms
+75th - 25th= 265.77
+remove outliers less than q1 - iqr, where iqr = (q3 - q1) * 2
 After removing outliers:
-sum = 8330012.11 ms, avg = 3447.85 ms, std = 168.41 (4.88% of avg) ms, min = 3092.48 ms, max = 3852.00 ms
+sum = 8661320.09 ms, avg = 3461.76 ms, std = 189.82 (5.48% of avg) ms, min = 3003.17 ms, max = 4344.97 ms
+median = 3444.49 ms, 25th percentile = 3317.61 ms, 75th percentile = 3583.22 ms
+75th - 25th = 265.61
 /mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b512_gpu3
 b512_gpu3:
 Before removing outliers:
 sum = 8727468.16 ms, avg = 3486.80 ms, std = 196.08 (5.62% of avg) ms , min = 1157.76 ms, max = 4579.14 ms
+median = 3472.12 ms, 25th percentile = 3346.86 ms, 75th percentile = 3603.87 ms
+75th - 25th= 257.00
+remove outliers less than q1 - iqr, where iqr = (q3 - q1) * 2
 After removing outliers:
-sum = 8415696.22 ms, avg = 3474.69 ms, std = 166.80 (4.80% of avg) ms, min = 3123.99 ms, max = 3877.82 ms
+sum = 8726310.41 ms, avg = 3487.73 ms, std = 190.51 (5.46% of avg) ms, min = 3025.88 ms, max = 4579.14 ms
+median = 3472.20 ms, 25th percentile = 3347.00 ms, 75th percentile = 3603.87 ms
+75th - 25th = 256.87
 /mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b512_gpu4
 b512_gpu4:
 Before removing outliers:
 sum = 9032829.77 ms, avg = 3608.80 ms, std = 328.87 (9.11% of avg) ms , min = 1104.52 ms, max = 5264.93 ms
+median = 3528.16 ms, 25th percentile = 3394.25 ms, 75th percentile = 3725.65 ms
+75th - 25th= 331.40
+remove outliers less than q1 - iqr, where iqr = (q3 - q1) * 2
 After removing outliers:
-sum = 8396303.07 ms, avg = 3556.25 ms, std = 242.42 (6.82% of avg) ms, min = 3075.14 ms, max = 4265.68 ms
+sum = 9031725.25 ms, avg = 3609.80 ms, std = 325.10 (9.01% of avg) ms, min = 3075.14 ms, max = 5264.93 ms
+median = 3528.24 ms, 25th percentile = 3394.50 ms, 75th percentile = 3726.26 ms
+75th - 25th = 331.76
 /mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b1024_gpu2
 b1024_gpu2:
 Before removing outliers:
 sum = 8711055.15 ms, avg = 6957.71 ms, std = 375.73 (5.40% of avg) ms , min = 991.50 ms, max = 8118.07 ms
+median = 6937.45 ms, 25th percentile = 6703.82 ms, 75th percentile = 7195.99 ms
+75th - 25th= 492.17
+remove outliers less than q1 - iqr, where iqr = (q3 - q1) * 2
 After removing outliers:
-sum = 8490365.48 ms, avg = 6942.24 ms, std = 311.11 (4.48% of avg) ms, min = 6268.15 ms, max = 7677.03 ms
+sum = 8710063.65 ms, avg = 6962.48 ms, std = 335.87 (4.82% of avg) ms, min = 6268.15 ms, max = 8118.07 ms
+median = 6937.62 ms, 25th percentile = 6704.17 ms, 75th percentile = 7196.43 ms
+75th - 25th = 492.26
 /mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b1024_gpu3
 b1024_gpu3:
 Before removing outliers:
 sum = 8798942.72 ms, avg = 7027.91 ms, std = 335.75 (4.78% of avg) ms , min = 1245.66 ms, max = 8046.90 ms
+median = 7026.72 ms, 25th percentile = 6818.01 ms, 75th percentile = 7216.24 ms
+75th - 25th= 398.23
+remove outliers less than q1 - iqr, where iqr = (q3 - q1) * 2
 After removing outliers:
-sum = 8609588.17 ms, avg = 7022.50 ms, std = 273.41 (3.89% of avg) ms, min = 6380.86 ms, max = 7698.81 ms
+sum = 8797697.07 ms, avg = 7032.53 ms, std = 293.37 (4.17% of avg) ms, min = 6219.69 ms, max = 8046.90 ms
+median = 7026.81 ms, 25th percentile = 6818.24 ms, 75th percentile = 7216.24 ms
+75th - 25th = 398.00
 /mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b1024_gpu4
 b1024_gpu4:
 Before removing outliers:
 sum = 9147909.39 ms, avg = 7306.64 ms, std = 491.39 (6.73% of avg) ms , min = 1141.45 ms, max = 8940.22 ms
+median = 7239.00 ms, 25th percentile = 6966.84 ms, 75th percentile = 7606.26 ms
+75th - 25th= 639.42
+remove outliers less than q1 - iqr, where iqr = (q3 - q1) * 2
 After removing outliers:
-sum = 8772014.97 ms, avg = 7273.64 ms, std = 409.61 (5.63% of avg) ms, min = 6396.49 ms, max = 8282.87 ms
+sum = 9146767.94 ms, avg = 7311.57 ms, std = 459.62 (6.29% of avg) ms, min = 6311.83 ms, max = 8940.22 ms
+median = 7239.05 ms, 25th percentile = 6967.07 ms, 75th percentile = 7606.27 ms
+75th - 25th = 639.20
 ----------------------------------------------
 
-wait time
-/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/
+main process wait time
+/mydata/pytorch_custom_log_one_epoch_imagenet_dataset
 /mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu1
 b128_gpu1:
 sum = 8345066.48 ms, avg = 833.67 ms, std = 89.55 (10.74% of avg) ms, min = 0.02 ms, max = 1445.59 ms
@@ -157,7 +232,7 @@ sum = 1951562.77 ms, avg = 1558.76 ms, std = 2330.92 (149.54% of avg) ms, min = 
 ----------------------------------------------
 
 [imagenet]  plotting difference between batch consumed and end of batch preprocessing
-/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/
+/mydata/pytorch_custom_log_one_epoch_imagenet_dataset
 /mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu1
 b128_gpu1:
 avg = 44.27 ms, std = 12.12 (27.37% of avg) ms, min = 8.33 ms, max = 1143.22 ms
@@ -221,7 +296,7 @@ avg = 2481.41 ms, std = 2653.74 (106.94% of avg) ms, min = 245.50 ms, max = 1344
 ----------------------------------------------
 
 [imagenet] plotting difference between batch consumed and end of batch wait
-/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/
+/mydata/pytorch_custom_log_one_epoch_imagenet_dataset
 /mydata/pytorch_custom_log_one_epoch_imagenet_dataset/b128_gpu1
 b128_gpu1:
 avg = 0.46 ms, std = 1.05 (227.68% of avg) ms, min = 0.11 ms, max = 103.74 ms

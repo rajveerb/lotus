@@ -1,0 +1,160 @@
+{
+    "op_to_func": {
+        "RandomHorizontalFlip": [
+            "_PyEval_EvalFrameDefault|python3.10",
+            "c10::impl::OperatorEntry::lookup|libtorch_cpu.so",
+            "ImagingFlipLeftRight|_imaging.cpython-310-x86_64-linux-gnu.so",
+            "__libc_calloc|libc.so.6",
+            "__GI___pthread_mutex_lock|libpthread.so.0",
+            "__GI___libc_malloc|libc.so.6"
+        ],
+        "Loader": [
+            "vgetargs1_impl|python3.10",
+            "__GI___libc_malloc|libc.so.6",
+            "jpeg_idct_16x16|libjpeg.so.9",
+            "ycc_rgb_convert|libjpeg.so.9",
+            "jpeg_fill_bit_buffer|libjpeg.so.9",
+            "PyVectorcall_Function|python3.10",
+            "PyThread_get_thread_ident|python3.10",
+            "__memmove_avx_unaligned_erms|libc.so.6",
+            "__memset_avx2_unaligned_erms|libc.so.6",
+            "read|python3.10",
+            "_int_free|libc.so.6",
+            "jpeg_idct_islow|libjpeg.so.9",
+            "_Py_NewReference|python3.10",
+            "__libc_calloc|libc.so.6",
+            "decompress_onepass|libjpeg.so.9",
+            "ImagingUnpackRGB|_imaging.cpython-310-x86_64-linux-gnu.so",
+            "jpeg_read_scanlines|libjpeg.so.9",
+            "ImagingJpegDecode|_imaging.cpython-310-x86_64-linux-gnu.so",
+            "PyEval_RestoreThread|python3.10",
+            "__libc_read|libpthread.so.0",
+            "decode_mcu|libjpeg.so.9"
+        ],
+        "RandomResizedCrop": [
+            "ImagingResampleVertical_8bpc|_imaging.cpython-310-x86_64-linux-gnu.so",
+            "_PyDict_LoadGlobal|python3.10",
+            "ImagingCrop|_imaging.cpython-310-x86_64-linux-gnu.so",
+            "ImagingResampleHorizontal_8bpc|_imaging.cpython-310-x86_64-linux-gnu.so",
+            "_int_free|libc.so.6",
+            "func@0x1e7f80|libtorch_python.so",
+            "__memmove_avx_unaligned_erms|libc.so.6",
+            "decode_mcu|libjpeg.so.9"
+        ],
+        "Collation": [
+            "c10::TensorImpl::data|libtorch_cpu.so",
+            "[OpenMP dispatcher]|libgomp.so.1",
+            "OS_BARESYSCALL_DoCallAsmIntel64Linux|libc-dynamic.so",
+            "__kmp_join_barrier|libgomp.so.1",
+            "pymalloc_alloc|python3.10",
+            "__kmp_fork_barrier|libgomp.so.1",
+            "at::native::structured_cat_out_cpu::impl|libtorch_cpu.so",
+            "__GI___pthread_getspecific|libpthread.so.0",
+            "_int_free|libc.so.6",
+            "c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::native::AVX2::VectorizedLoop2d<at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#3}::operator()(void) const::{lambda()#7}::operator()(void) const::{lambda(float)#1}, at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#3}::operator()(void) const::{lambda()#7}::operator()(void) const::{lambda(at::vec::AVX2::Vectorized<float>)#2}>>|libtorch_cpu.so",
+            "__kmp_finish_implicit_task|libgomp.so.1",
+            "__tls_get_addr|ld-linux-x86-64.so.2",
+            "__kmp_GOMP_microtask_wrapper|libgomp.so.1",
+            "[Outside any known module]|[Unknown]",
+            "GOMP_parallel|libgomp.so.1"
+        ],
+        "ToTensor": [
+            "gomp_team_end|libgomp.so.1",
+            "at::native::AVX2::vectorized_loop<at::native::(anonymous namespace)::div_true_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()(void) const::{lambda()#2}::operator()(void) const::{lambda(floatfloat)#1}&, at::native::(anonymous namespace)::div_true_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()(void) const::{lambda()#2}::operator()(void) const::{lambda(at::vec::AVX2::Vectorized<float>at::vec::AVX2::Vectorized<float>)#2}&>.isra.0|libtorch_cpu.so",
+            "gomp_simple_barrier_wait|libgomp.so.1",
+            "stringlib_bytes_join|python3.10",
+            "vgetargs1_impl|python3.10",
+            "__GI_|libc.so.6",
+            "__GI___libc_malloc|libc.so.6",
+            "_Py_DECREF|python3.10",
+            "tupledealloc|python3.10",
+            "c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::native::AVX2::VectorizedLoop2d<at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#3}::operator()(void) const::{lambda()#1}::operator()(void) const::{lambda(unsigned char)#1}, at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#3}::operator()(void) const::{lambda()#1}::operator()(void) const::{lambda(at::vec::AVX2::Vectorized<unsigned char>)#2}>>|libtorch_cpu.so",
+            "__memmove_avx_unaligned_erms|libc.so.6",
+            "object_dealloc|python3.10",
+            "PyObject_GetAttr|python3.10",
+            "gomp_team_barrier_wait_end|libgomp.so.1",
+            "_PyBytes_Resize|python3.10",
+            "munmap|libc.so.6",
+            "_int_free|libc.so.6",
+            "_PyEval_EvalFrameDefault|python3.10",
+            "_Py_NewReference|python3.10",
+            "do_mkvalue|python3.10",
+            "tuple_alloc|python3.10",
+            "c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::TensorIteratorBase::loop_2d_from_1d<at::native::AVX2::copy_kernel(at::TensorIterator&, bool)::{lambda()#1}::operator()(void) const::{lambda()#7}::operator()(void) const::{lambda()#1}::operator()(void) const::{lambda()#1}::operator()(void) const::{lambda(char**long const*, long)#1}>(, signed char, at::native::AVX2::copy_kernel(at::TensorIterator&, bool)::{lambda()#1}::operator()(void) const::{lambda()#7}::operator()(void) const::{lambda()#1}::operator()(void) const::{lambda()#1}::operator()(void) const::{lambda(char**long const*, long)#1} const&)::{lambda(char**long const*, long, long)#1}>|libtorch_cpu.so",
+            "_Py_INCREF|python3.10",
+            "ImagingPackRGB|_imaging.cpython-310-x86_64-linux-gnu.so",
+            "arena_map_get|python3.10"
+        ],
+        "Normalize": [
+            "gomp_team_barrier_wait_end|libgomp.so.1",
+            "gomp_team_end|libgomp.so.1",
+            "munmap|libc.so.6",
+            "at::native::AVX2::vectorized_loop<at::native::(anonymous namespace)::div_true_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()(void) const::{lambda()#2}::operator()(void) const::{lambda(floatfloat)#1}&, at::native::(anonymous namespace)::div_true_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()(void) const::{lambda()#2}::operator()(void) const::{lambda(at::vec::AVX2::Vectorized<float>at::vec::AVX2::Vectorized<float>)#2}&>.isra.0|libtorch_cpu.so",
+            "gomp_simple_barrier_wait|libgomp.so.1",
+            "c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::native::AVX2::VectorizedLoop2d<at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#3}::operator()(void) const::{lambda()#7}::operator()(void) const::{lambda(float)#1}, at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#3}::operator()(void) const::{lambda()#7}::operator()(void) const::{lambda(at::vec::AVX2::Vectorized<float>)#2}>>|libtorch_cpu.so",
+            "c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::native::AVX2::VectorizedLoop2d<at::native::(anonymous namespace)::add_kernel(at::TensorIteratorBase&, c10::Scalar const&)::{lambda()#1}::operator()(void) const::{lambda()#7}::operator()(void) const::{lambda(floatfloat)#1}, at::native::(anonymous namespace)::add_kernel(at::TensorIteratorBase&, c10::Scalar const&)::{lambda()#1}::operator()(void) const::{lambda()#7}::operator()(void) const::{lambda(at::vec::AVX2::Vectorized<float>at::vec::AVX2::Vectorized<float>)#2}>>|libtorch_cpu.so"
+        ]
+    },
+    "common_funcs_to_op": {
+        "decode_mcu|libjpeg.so.9": [
+            "Loader",
+            "RandomResizedCrop"
+        ],
+        "_PyEval_EvalFrameDefault|python3.10": [
+            "RandomHorizontalFlip",
+            "ToTensor"
+        ],
+        "__libc_calloc|libc.so.6": [
+            "RandomHorizontalFlip",
+            "Loader"
+        ],
+        "__GI___libc_malloc|libc.so.6": [
+            "RandomHorizontalFlip",
+            "Loader",
+            "ToTensor"
+        ],
+        "vgetargs1_impl|python3.10": [
+            "Loader",
+            "ToTensor"
+        ],
+        "__memmove_avx_unaligned_erms|libc.so.6": [
+            "Loader",
+            "RandomResizedCrop",
+            "ToTensor"
+        ],
+        "_int_free|libc.so.6": [
+            "Loader",
+            "RandomResizedCrop",
+            "Collation",
+            "ToTensor"
+        ],
+        "_Py_NewReference|python3.10": [
+            "Loader",
+            "ToTensor"
+        ],
+        "c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::native::AVX2::VectorizedLoop2d<at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#3}::operator()(void) const::{lambda()#7}::operator()(void) const::{lambda(float)#1}, at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#3}::operator()(void) const::{lambda()#7}::operator()(void) const::{lambda(at::vec::AVX2::Vectorized<float>)#2}>>|libtorch_cpu.so": [
+            "Collation",
+            "Normalize"
+        ],
+        "gomp_team_end|libgomp.so.1": [
+            "ToTensor",
+            "Normalize"
+        ],
+        "at::native::AVX2::vectorized_loop<at::native::(anonymous namespace)::div_true_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()(void) const::{lambda()#2}::operator()(void) const::{lambda(floatfloat)#1}&, at::native::(anonymous namespace)::div_true_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()(void) const::{lambda()#2}::operator()(void) const::{lambda(at::vec::AVX2::Vectorized<float>at::vec::AVX2::Vectorized<float>)#2}&>.isra.0|libtorch_cpu.so": [
+            "ToTensor",
+            "Normalize"
+        ],
+        "gomp_simple_barrier_wait|libgomp.so.1": [
+            "ToTensor",
+            "Normalize"
+        ],
+        "gomp_team_barrier_wait_end|libgomp.so.1": [
+            "ToTensor",
+            "Normalize"
+        ],
+        "munmap|libc.so.6": [
+            "ToTensor",
+            "Normalize"
+        ]
+    }
+}

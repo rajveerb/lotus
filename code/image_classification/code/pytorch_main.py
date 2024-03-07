@@ -184,8 +184,10 @@ parser.add_argument(
 parser.add_argument("--dummy", action="store_true", help="use fake data to benchmark")
 parser.add_argument("--profile", action="store_true", help="use PyTorch profiler")
 parser.add_argument("--profile-log-prefix", type=str, help="set prefix for PyTorch profiler's logs, eg: /mydata/log")
+parser.add_argument("--profile-steps-all", action="store_true", help="Set steps to total number of batches in dataset.")
 parser.add_argument("--profiler-steps", default=8, type=int, help="set number of steps to profile in PyTorch profiler, eg: 10")
 parser.add_argument("--include-profiler-stack", action="store_true", help="include stack trace in PyTorch profiler logs")
+parser.add_argument("--shuffle", action="store_true", help="If passed then batches will be shuffled.")
 
 best_acc1 = 0
 
@@ -410,7 +412,7 @@ def main_worker(gpu, ngpus_per_node, args):
     train_loader = torch.utils.data.DataLoader(
         train_dataset,
         batch_size=args.batch_size,
-        shuffle=(train_sampler is None),
+        shuffle=(train_sampler is None) and args.shuffle,
         num_workers=args.workers,
         pin_memory=True,
         sampler=train_sampler,
@@ -482,10 +484,14 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
 
     if args.profile:
         steps = 0
+        if args.profile_steps_all:
+            profiler_steps = len(train_loader)
+        else:
+            profiler_steps = args.profiler_steps
         train_p = profile(
-            activities=[ProfilerActivity.CPU,ProfilerActivity.CUDA],
+            activities=[ProfilerActivity.CPU,],
             with_stack=args.include_profiler_stack,
-            schedule=torch.profiler.schedule(wait=0, warmup=0, active=args.profiler_steps+1),
+            schedule=torch.profiler.schedule(wait=0, warmup=0, active=profiler_steps+1),
             on_trace_ready=torch.profiler.tensorboard_trace_handler(
                 f"{args.profile_log_prefix}"
             ),
@@ -540,7 +546,7 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
 
         if args.profile:
             steps += 1
-            if steps == args.profiler_steps:
+            if steps == profiler_steps:
                 break
 
     if args.profile:

@@ -1,0 +1,80 @@
+/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/profiler/profiler.py:268: UserWarning: Profiler won't be using warmup, this can skew profiler results
+  warn("Profiler won't be using warmup, this can skew profiler results")
+STAGE:2024-01-23 01:43:41 174279:174279 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+=> creating model 'resnet18'
+STAGE:2024-01-23 01:49:06 174279:174279 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2024-01-23 01:49:06 174279:174279 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+Epoch: [0][ 1/51]	Time  6.685 ( 6.685)	Data  4.568 ( 4.568)	Loss 7.2811e+00 (7.2811e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+Epoch: [0][11/51]	Time  5.688 ( 4.636)	Data  5.529 ( 4.276)	Loss 8.7560e+00 (1.7541e+01)	Acc@1   0.00 ( 23.79)	Acc@5  15.62 ( 66.55)
+Epoch: [0][21/51]	Time  9.593 ( 5.696)	Data  9.435 ( 5.431)	Loss 7.2005e+00 (1.2942e+01)	Acc@1   0.00 ( 12.46)	Acc@5   0.00 ( 57.01)
+Epoch: [0][31/51]	Time  9.182 ( 6.047)	Data  9.025 ( 5.816)	Loss 6.8888e+00 (1.1032e+01)	Acc@1   0.00 (  8.44)	Acc@5   0.00 ( 38.62)
+Epoch: [0][41/51]	Time  7.962 ( 6.307)	Data  7.805 ( 6.094)	Loss 6.8278e+00 (1.0031e+01)	Acc@1   0.00 (  6.38)	Acc@5   0.00 ( 29.20)
+Epoch: [0][51/51]	Time  3.508 ( 6.369)	Data  3.371 ( 6.167)	Loss 6.8242e+00 (9.4322e+00)	Acc@1   0.00 (  5.15)	Acc@5   0.00 ( 23.58)
+/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/profiler/profiler.py:268: UserWarning: Profiler won't be using warmup, this can skew profiler results
+  warn("Profiler won't be using warmup, this can skew profiler results")
+STAGE:2024-01-23 03:00:27 175796:175796 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+=> creating model 'resnet18'
+Epoch: [0][   1/2503]	Time  6.669 ( 6.669)	Data  4.496 ( 4.496)	Loss 6.9650e+00 (6.9650e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+Epoch: [0][  11/2503]	Time  3.372 ( 3.376)	Data  3.214 ( 3.014)	Loss 1.0934e+01 (1.7578e+01)	Acc@1   0.00 ( 14.70)	Acc@5  15.62 ( 62.59)
+Epoch: [0][  21/2503]	Time  3.771 ( 3.463)	Data  3.611 ( 3.198)	Loss 7.2237e+00 (1.2952e+01)	Acc@1   0.00 (  7.70)	Acc@5   0.00 ( 50.20)
+Epoch: [0][  31/2503]	Time  3.384 ( 3.449)	Data  3.225 ( 3.218)	Loss 6.9479e+00 (1.1061e+01)	Acc@1   0.00 (  5.22)	Acc@5   0.00 ( 34.01)
+Epoch: [0][  41/2503]	Time  3.465 ( 3.458)	Data  3.306 ( 3.244)	Loss 6.8663e+00 (1.0058e+01)	Acc@1   0.00 (  3.94)	Acc@5   0.00 ( 25.71)
+Epoch: [0][  51/2503]	Time  3.477 ( 3.463)	Data  3.327 ( 3.261)	Loss 6.8299e+00 (9.4421e+00)	Acc@1   0.00 (  3.17)	Acc@5   0.00 ( 20.67)
+Epoch: [0][  61/2503]	Time  3.485 ( 3.452)	Data  3.335 ( 3.258)	Loss 6.8628e+00 (9.0309e+00)	Acc@1   0.00 (  2.65)	Acc@5   0.00 ( 17.28)
+Epoch: [0][  71/2503]	Time  3.748 ( 3.484)	Data  3.596 ( 3.296)	Loss 6.9099e+00 (8.7410e+00)	Acc@1   0.00 (  2.28)	Acc@5   0.00 ( 14.85)
+Epoch: [0][  81/2503]	Time  3.814 ( 3.490)	Data  3.661 ( 3.306)	Loss 6.9819e+00 (8.5259e+00)	Acc@1   0.00 (  2.00)	Acc@5   0.00 ( 13.02)
+Epoch: [0][  91/2503]	Time  3.684 ( 3.515)	Data  3.533 ( 3.335)	Loss 7.0321e+00 (8.3602e+00)	Acc@1   0.00 (  1.78)	Acc@5   0.00 ( 11.59)
+Epoch: [0][ 101/2503]	Time  4.064 ( 3.556)	Data  3.913 ( 3.379)	Loss 7.0540e+00 (8.2303e+00)	Acc@1   0.00 (  1.60)	Acc@5   0.00 ( 10.44)
+Epoch: [0][ 111/2503]	Time  3.605 ( 3.577)	Data  3.454 ( 3.402)	Loss 7.0932e+00 (8.1241e+00)	Acc@1   0.00 (  1.46)	Acc@5   0.00 (  9.50)
+Epoch: [0][ 121/2503]	Time  3.595 ( 3.599)	Data  3.436 ( 3.425)	Loss 7.1085e+00 (8.0386e+00)	Acc@1   0.00 (  1.34)	Acc@5   0.00 (  8.71)
+Epoch: [0][ 131/2503]	Time  3.700 ( 3.612)	Data  3.542 ( 3.439)	Loss 7.1146e+00 (7.9674e+00)	Acc@1   0.00 (  1.23)	Acc@5   0.00 (  8.05)
+Epoch: [0][ 141/2503]	Time  4.091 ( 3.661)	Data  3.921 ( 3.489)	Loss 7.1118e+00 (7.9061e+00)	Acc@1   0.00 (  1.15)	Acc@5   0.00 (  7.48)
+Epoch: [0][ 151/2503]	Time  3.641 ( 3.684)	Data  3.490 ( 3.513)	Loss 7.1350e+00 (7.8541e+00)	Acc@1   0.00 (  1.07)	Acc@5   0.00 (  6.98)
+Epoch: [0][ 161/2503]	Time  3.701 ( 3.712)	Data  3.551 ( 3.543)	Loss 7.1487e+00 (7.8093e+00)	Acc@1   0.00 (  1.00)	Acc@5   0.00 (  6.55)
+Epoch: [0][ 171/2503]	Time  4.206 ( 3.740)	Data  4.046 ( 3.571)	Loss 7.2210e+00 (7.7706e+00)	Acc@1   0.00 (  0.95)	Acc@5   0.00 (  6.17)
+Epoch: [0][ 181/2503]	Time  3.968 ( 3.768)	Data  3.808 ( 3.600)	Loss 7.1893e+00 (7.7368e+00)	Acc@1   0.00 (  0.89)	Acc@5   0.00 (  5.82)
+Epoch: [0][ 191/2503]	Time  3.800 ( 3.787)	Data  3.641 ( 3.619)	Loss 7.2503e+00 (7.7082e+00)	Acc@1   0.00 (  0.85)	Acc@5   0.00 (  5.52)
+Epoch: [0][ 201/2503]	Time  4.640 ( 3.798)	Data  4.481 ( 3.630)	Loss 7.2844e+00 (7.6832e+00)	Acc@1   0.00 (  0.80)	Acc@5   0.00 (  5.25)
+Epoch: [0][ 211/2503]	Time  4.808 ( 3.811)	Data  4.649 ( 3.643)	Loss 7.2950e+00 (7.6605e+00)	Acc@1   0.00 (  0.77)	Acc@5   0.00 (  5.00)
+Epoch: [0][ 221/2503]	Time  4.170 ( 3.832)	Data  4.012 ( 3.665)	Loss 7.3405e+00 (7.6402e+00)	Acc@1   0.00 (  0.73)	Acc@5   0.00 (  4.77)
+Epoch: [0][ 231/2503]	Time  4.207 ( 3.847)	Data  4.037 ( 3.680)	Loss 7.2467e+00 (7.6224e+00)	Acc@1   0.00 (  0.70)	Acc@5   0.00 (  4.56)
+Epoch: [0][ 241/2503]	Time  4.012 ( 3.860)	Data  3.853 ( 3.694)	Loss 7.2133e+00 (7.6059e+00)	Acc@1   0.00 (  0.67)	Acc@5   0.00 (  4.37)
+Epoch: [0][ 251/2503]	Time  4.374 ( 3.868)	Data  4.214 ( 3.702)	Loss 7.2776e+00 (7.5913e+00)	Acc@1   0.00 (  0.64)	Acc@5   0.00 (  4.20)
+Epoch: [0][ 261/2503]	Time  3.744 ( 4.794)	Data  3.583 ( 4.627)	Loss 7.2341e+00 (7.5779e+00)	Acc@1   0.00 (  0.62)	Acc@5   0.00 (  4.04)
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1141, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/queue.py", line 180, in get
+    self.not_empty.wait(remaining)
+  File "/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/threading.py", line 324, in wait
+    gotit = waiter.acquire(True, timeout)
+  File "/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 175848) is killed by signal: Killed. 
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/rbachkaniwala3/code/pytorch_main.py", line 773, in <module>
+    main()
+  File "/proj/prismgt-PG0/rbachkaniwala3/code/pytorch_main.py", line 238, in main
+    main_worker(args.gpu, ngpus_per_node, args)
+  File "/proj/prismgt-PG0/rbachkaniwala3/code/pytorch_main.py", line 439, in main_worker
+    train(train_loader, model, criterion, optimizer, epoch, device, args)
+  File "/proj/prismgt-PG0/rbachkaniwala3/code/pytorch_main.py", line 501, in train
+    for i, (images, target) in enumerate(train_loader):
+  File "/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 633, in __next__
+    data = self._next_data()
+  File "/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1352, in _next_data
+    idx, data = self._get_data()
+  File "/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1293, in _get_data
+    success, data = self._try_get_data()
+  File "/proj/prismgt-PG0/anaconda3/envs/torch2/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1154, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 175848) exited unexpectedly
+[W observer.cpp:102] Warning: Leaked callback handle: 1 (function operator())
+
+
+Jan 23 03:23:02 c4130-node kernel: [218894.886764] oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0-1,global_oom,task_memcg=/user.slice/user-20004.slice/session-760.scope,task=python,pid=175848,uid=20004
+Jan 23 03:23:02 c4130-node kernel: [218894.886775] Out of memory: Killed process 175848 (python) total-vm:181520144kB, anon-rss:126697408kB, file-rss:91928kB, shmem-rss:225568kB, UID:20004 pgtables:338576kB oom_score_adj:0
+Jan 23 03:23:06 c4130-node kernel: [218898.783446] oom_reaper: reaped process 175848 (python), now anon-rss:0kB, file-rss:90324kB, shmem-rss:225656kB

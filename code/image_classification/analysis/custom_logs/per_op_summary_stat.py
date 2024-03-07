@@ -10,7 +10,7 @@ pd.set_option('display.width', 1000)
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--data_dir", type=str,\
-                     default='/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/',\
+                     default='/mydata/profiler_benchmark/custom_log_profiles_imagenet_subset_b512_gpu1',\
                         help="path to the directory containing the log files")
 # for percentile
 parser.add_argument("--percentile", type=float, default=0.9,\
@@ -73,6 +73,6 @@ def generate_summary_stats_per_op(data_dir):
         print("% of each operation with duration < 100 us")
         print(pd.DataFrame(combine_df[combine_df["dur"] < 0.1].groupby("name").count() * 100 / combine_df.groupby("name").count()).fillna(0))
         print("--------------------------------------------------\n\n")
-
+# %%
 print("All numbers are in ms")
 generate_summary_stats_per_op(args.data_dir)

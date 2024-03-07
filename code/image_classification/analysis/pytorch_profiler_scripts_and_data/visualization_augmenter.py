@@ -107,13 +107,17 @@ if args.custom_log_prefix in args.custom_log_json_viz_file or args.custom_log_js
 
 # recursively search for pytorch profiler data files
 for root, dirs, files in os.walk(args.pytorch_profiler_data_dir):
+    print(f"root: {root}")
+    print(f"files: {files}")
     result = []
     result_pytorch_profiler_data_file = None
     for file in files:
         if file.startswith(args.custom_log_prefix):
+            print(f"custom log file: {file}")
             pid = file.split("_")[-1]
             result += update_pytorch_profile_data(os.path.join(root, file), pid, args.compact)
         elif file.endswith(".json"):
+            print(f"pytorch profiler data file: {file}")
             result_pytorch_profiler_data_file = os.path.join(root, file) 
     if result_pytorch_profiler_data_file:
         save_augmented_profiler_data(result_pytorch_profiler_data_file,args.compact,result)
