@@ -4,7 +4,7 @@ import time,itt
 # increase PIL image open size
 Image.MAX_IMAGE_PIXELS = 1000000000
 
-batch = ["/mydata/synthetic_data_10MBeach_8192files_symlink/train/class_1/symlink_1.jpg" for i in range(5)]
+batch = ["code/image_classification/P3Map/random_image10MB.jpg" for i in range(5)]
 
 for i,image_file in enumerate(batch):
     # Open the image
