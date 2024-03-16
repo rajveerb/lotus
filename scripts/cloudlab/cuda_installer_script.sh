@@ -10,7 +10,7 @@ sudo cp /var/cuda-repo-ubuntu2004-11-8-local/cuda-*-keyring.gpg /usr/share/keyri
 sudo apt-get update
 sudo apt-get -y install cuda
 # Below is for specific node
-if [ "$(uname -n)" = "c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us" ]; then
+# if [ "$(uname -n)" = "c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us" ]; then
     # Run below command due to https://groups.google.com/g/cloudlab-users/c/B6rNj7Vhltk/m/rwkHf_kwAgAJ
     sudo systemctl disable NetworkManager
     sudo systemctl unmask NetworkManager
@@ -23,7 +23,9 @@ if [ "$(uname -n)" = "c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us" ]; t
     sudo systemctl mask gdm.service
     # Below command to refresh after updates to the xorg.conf.d
     sudo systemctl restart display-manager
-fi
+# fi
 sudo apt-get update
 echo 'export PATH=/usr/local/cuda-11.8/bin${PATH:+:${PATH}}' >> ~/.bashrc
+echo 'export PATH=/usr/local/cuda-11.8/bin${PATH:+:${PATH}}' >> ~/.zshrc
 echo 'export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}' >> ~/.zshrc
