@@ -6,175 +6,174 @@
 Preprocessing in PyTorch</b></i></p>
 
 
-We introduce **P3Tracer**, a specialized profiling tool for PyTorch preprocessing pipelines. P3Tracer
-employs two novel approaches:
+We introduce **P3Tracer**, a specialized profiling tool for PyTorch preprocessing pipelines. 
+
+**P3Tracer** is a easy-to-use, low overhead, visualization-ready and  profiler specialized for the widely used PyTorch framework.
+
+## Quick links
+- [About P3Tracer](#about-p3tracer)
+- [Get P3Tracer](#how-to-get-p3tracer)
+- [Use P3Tracer](#how-to-use-p3tracer)
+    - [How to use P3Torch](#how-to-use-p3torch)
+    - [How to use P3Map](#how-to-use-p3map)
+- [Concrete examples](#concrete-examples)
+    - [Example for P3Torch](#example-for-p3torch)
+    - [Example for P3Map](#example-for-p3map)
+- [Cite P3Tracer](#citation)
+- [License](#license)
+
+
+
+## About P3Tracer
+
+P3Tracer employs two novel approaches:
 
 1. **P3Torch** - An instrumentation methodology for the PyTorch library, which enables fine-grained elapsed time profiling with minimal time and storage overheads. 
 2. **P3Map** - A mapping methodology to reconstruct a mapping between Python functions and the underlying C++ functions they call, effectively linking high-level Python functions with low-level hardware counters. 
 
 Above combination is powerful as it allows enables users to better reason about their pipeline’s performance, both at the level of preprocessing operations and their performance on hardware resource usage.
 
-## Quick Links
+## How to get P3Tracer
 
-- [Quick Links](#quick-links)
-- [Documentation](#documentation)
-- [Why EvaDB](#why-evadb)
-- [How does EvaDB work](#how-does-evadb-work)
-- [Illustrative Queries](#illustrative-queries)
-- [Illustrative Apps](#illustrative-apps)
-- [More Illustrative Queries](#more-illustrative-queries)
-- [Architecture of EvaDB](#architecture-of-evadb)
-- [Community and Support](#community-and-support)
-- [Contributing](#contributing)
-- [Star History](#star-history)
-- [License](#license)
+1. Clone this repository
+2. Get submodules:
 
-## Documentation
+    ```git
+    git submodule update --init --recursive
+    ```
+3. Create a conda environment
 
-You can find the complete documentation of EvaDB at [evadb.ai/docs](https://evadb.ai/docs/) 📚✨🚀
+    ```bash
+    conda create -n P3Tracer python=3.10
+    conda activate P3Tracer
+    ```
+4. Install Intel VTune from here.
 
-## Why EvaDB
- 
-In the world of AI, we've reached a stage where many AI tasks that were traditionally handled by AI or ML engineers can now be automated. EvaDB enables software developers with the ability to perform advanced AI tasks without needing to delve into the intricate details.
+    Note: we used `Intel(R) VTune(TM) Profiler 2024.0.1 (build 627177)`
+5. Install CUDA 11.8 from [here](https://developer.nvidia.com/cuda-11-8-0-download-archive) and CuDNN 8.7.0 from [here](https://developer.nvidia.com/rdp/cudnn-archive)
+6. Follow the **P3Torch** build instructions in `code/P3Torch/README.md`
+7. Follow the **itt-python** build instructions in `code/itt-python/README.md`
+8. That's it!
 
-EvaDB covers many AI applications, including regression, classification, image recognition, question answering, and many other generative AI applications. EvaDB targets 99% of AI problems that are often repetitive and can be automated with a simple function call in an SQL query. Until now, there is no comprehensive open-source framework for bringing AI into an existing SQL database system with a principled AI optimization framework, and that's where EvaDB comes in.
+## How to use P3Tracer
 
-Our target audience is software developers who may not necessarily have a background in AI but require AI capabilities to solve specific problems. We target programmers who write simple SQL queries inside their CRUD apps. With EvaDB, it is possible to easily add AI features to these apps by calling built-in AI functions in the queries.
+### How to use P3Torch
 
-## How does EvaDB work
 
-<details>
-<ul>
-<li>Connect EvaDB to your SQL and vector database systems with the <a href="https://evadb.readthedocs.io/en/stable/source/reference/databases/postgres.html">`CREATE DATABASE`</a> and <a href="https://evadb.readthedocs.io/en/stable/source/reference/evaql/create_index.html">`CREATE INDEX`</a> statements.</li>
-<li>Write SQL queries with AI functions to get inference results:</li>
-   <ul>
-   <li>Pick a pre-trained AI model from Hugging Face, Open AI, Ultralytics, PyTorch, and built-in AI frameworks for generative AI, NLP, and vision applications;</li>  
-   <li>or pick from a variety of state-of-the-art ML engines for classic ML use-cases (classification, regression, etc.);</li>
-   <li>or bring your custom model built with any AI/ML framework using `CREATE FUNCTION`.</li>
-   </ul>
-</ul> 
-  
-Follow the [getting started](https://evadb.readthedocs.io/en/stable/source/overview/getting-started.html) guide to get on-boarded as fast as possible.
-</details>
+**P3Torch** can be enabled by simply passing a `custom_log_file` to be used by **P3Torch** using keywords `log_transform_elapsed_time` and `log_file` as shown below:
 
-## Illustrative Queries
-
-* Get insights about Github stargazers using GPT4.
-
-```sql
-SELECT name, country, email, programming_languages, social_media, GPT4(prompt,topics_of_interest)
-FROM gpt4all_StargazerInsights;
-
---- Prompt to GPT-4
-You are given 10 rows of input, each row is separated by two new line characters.
-Categorize the topics listed in each row into one or more of the following 3 technical areas - Machine Learning, Databases, and Web development. If the topics listed are not related to any of these 3 areas, output a single N/A. Do not miss any input row. Do not add any additional text or numbers to your output.
-The output rows must be separated by two new line characters. Each input row must generate exactly one output row. For example, the input row [Recommendation systems, Deep neural networks, Postgres] must generate only the output row [Machine Learning, Databases].
-The input row [enterpreneurship, startups, venture capital] must generate the output row N/A.
+```python
+import torchvision.transforms as transforms
+import torchvision.datasets as datasets
+custom_log_file = <To use our instrumentation>
+train_dataset = datasets.ImageFolder(
+    traindir,
+    transforms.Compose([
+        transforms.RandomResizedCrop(224),
+        transforms.RandomHorizontalFlip(),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                std=[0.229, 0.224, 0.225])
+    ], log_transform_elapsed_time=custom_log_file), 
+    log_file=custom_log_file
+)
+train_loader = torch.utils.data.DataLoader(
+    train_dataset,
+    batch_size=args.batch_size,
+    shuffle=(train_sampler is None) and args.shuffle,
+    num_workers=args.workers,
+    pin_memory=True,
+    sampler=train_sampler,
+)
 ```
 
-* Build a vector index on the feature embeddings returned by the SIFT Feature Extractor on a collection of Reddit images. Return the top-5 similar images for a given image.
+But, what if you have a custom dataset?
 
-```sql
-CREATE INDEX reddit_sift_image_index
-    ON reddit_dataset (SiftFeatureExtractor(data))
-    USING FAISS
+We do support **P3Torch** for custom datasets as well check below instance:
 
-SELECT name FROM reddit_dataset ORDER BY
-    Similarity(
-        SiftFeatureExtractor(Open('reddit-images/g1074_d4mxztt.jpg')),
-        SiftFeatureExtractor(data)
-    )
-    LIMIT 5
+
+```python
+log_file = <To use our instrumentation>
+transforms = transforms.Compose([
+  op1(), op2(), op3(), op4()], 
+  log_transform_elapsed_time=log_file)
+class CustomDataset:
+  def __init__(self, log_file = None, transforms):
+    ...
+    self.log_file = log_file # If None, then no logging
+    self.transforms = transforms # A Compose object
+    ...
+  def __getitem__(self, index):
+    ...
+    data,label = self.transforms(index) # Calls Compose's __call__()
+    ...
+    return data, label
+dataset = CustomDataset(log_file = log_file, transforms = transforms)
 ```
 
-## Illustrative Apps
+You simply need to add `self.log_file` and `self.transforms` variable in `__init__` function of your custom dataset object as shown above. 
+Moreover, you need to structure the code such that you use torchvision's `Compose` class' object to perform preprocessing operations as shown in `self.transforms(index)` line. That's it!
 
-Here are some illustrative AI apps built using EvaDB (each notebook can be opened on Google Colab):
+### How to use P3Map
 
- * 🔮 <a href="https://evadb.readthedocs.io/en/stable/source/usecases/sentiment-analysis.html">Sentiment Analysis using LLM within PostgreSQL</a>
- * 🔮 <a href="https://evadb.readthedocs.io/en/stable/source/usecases/question-answering.html">ChatGPT-based Video Question Answering</a>
- * 🔮 <a href="https://evadb.readthedocs.io/en/stable/source/usecases/text-summarization.html">Text Summarization on PDF Documents</a>
- * 🔮 <a href="https://evadb.readthedocs.io/en/stable/source/usecases/object-detection.html">Analysing Traffic Flow with YOLO</a>
- * 🔮 <a href="https://evadb.readthedocs.io/en/stable/source/usecases/emotion-analysis.html">Examining Emotions of Movie</a>
- * 🔮 <a href="https://evadb.readthedocs.io/en/stable/source/usecases/image-search.html">Image Similarity Search</a>
+Below is an example of how to write a program such that using **P3Map** will enable collection of mapping: 
 
-
-## More Illustrative Queries
-
-<details>
-
-* Get a transcript from a video stored in a table using a Speech Recognition model. Then, ask questions on the extracted transcript using ChatGPT.
-
-```sql
-CREATE TABLE text_summary AS
-    SELECT SpeechRecognizer(audio) FROM ukraine_video;
-SELECT ChatGPT('Is this video summary related to Ukraine russia war', text)
-    FROM text_summary;
+```python
+import torchvision.transforms as t
+from PIL import Image
+import time,itt
+# increase PIL image open size
+Image.MAX_IMAGE_PIXELS = 1000000000
+image_file = "<path to image>"
+for i in range(5):
+  # Open the image
+  image = Image.open(image_file)
+  # convert to RGB like torch's pil_loader
+  image = image.convert('RGB') # Responisble for Loader operation
+  # Define the desired crop size
+  crop_size = 224  # Define this as needed
+  time.sleep(1)  # sleep for 1 sec
+  if i == 4: # Delay collection to prevent cold start
+    itt.resume()
+  image = t.RandomResizedCrop(crop_size)(image)
+  if i == 4:
+    itt.detach()
 ```
 
-* Train a classic ML model for prediction using the <a href="https://ludwig.ai/latest/">Ludwig AI</a> engine.
+## Concrete examples
 
-```sql
-CREATE FUNCTION IF NOT EXISTS PredictHouseRent FROM
-(SELECT * FROM HomeRentals)
-TYPE Ludwig
-PREDICT 'rental_price'
-TIME_LIMIT 120;
+### Example for P3Torch
+
+An example of how to enable **P3Torch** facilitated logging for an image classification task has been described in `code/image_classification/code/pytorch_main.py`, we add the snippet below for the same:
+
+```python
+normalize = transforms.Normalize(
+    mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]
+)
+train_dataset = datasets.ImageFolder(
+    traindir,
+    transforms.Compose(
+        [
+            transforms.RandomResizedCrop(224),
+            transforms.RandomHorizontalFlip(),
+            transforms.ToTensor(),
+            normalize,
+        ],	
+        log_transform_elapsed_time=args.log_train_file,
+    ),
+    log_file=args.log_train_file,
+)
 ```
 
-</details>
+Notice that the user simply has to pass the same log file to be used by **P3Torch** using keywords `log_transform_elapsed_time` and `log_file`.
 
-## Architecture of EvaDB
+### Example for P3Map
 
-<details>	
-EvaDB's AI-centric query optimizer takes a query as input and generates a query plan. The query engine takes the query plan and hits the relevant backends to efficiently process the query:
-1. SQL Database Systems (Structured Data)
-2. AI Frameworks (Transform Unstructured Data to Structured Data; Unstructured data includes PDFs, text, images, etc. stored locally or on the cloud)
-3. Vector Database Systems (Feature Embeddings)
+We provide 6 examples of how to use **P3Map** in `code/image_classification/P3Map` directory. Please check the code for more details.
 
-<p align="center">
-  <img width="70%" alt="Architecture Diagram" src="https://raw.githubusercontent.com/georgia-tech-db/evadb/staging/docs/images/evadb/eva-arch-for-user.png">
-</p>
-</details>
+## Cite P3Tracer
 
-## Community and Support
-
-We would love to learn about your AI app. Please complete this 1-minute form: https://v0fbgcue0cm.typeform.com/to/BZHZWeZm
-
-<!--<p>
-  <a href="https://evadb.ai/community">
-      <img width="70%" src="https://raw.githubusercontent.com/georgia-tech-db/evadb/master/docs/images/evadb/evadb-slack.png" alt="EvaDB Slack Channel">
-  </a>
-</p>-->
-
-If you run into any bugs or have any comments, you can reach us on our <a href="https://evadb.ai/community">Slack Community 📟</a>  or create a [Github Issue :bug:](https://github.com/georgia-tech-db/evadb/issues). 
-
-Here is EvaDB's public [roadmap 🛤️](https://github.com/orgs/georgia-tech-db/projects/3). We prioritize features based on user feedback, so we'd love to hear from you!
-
-## Contributing
-
-We are a lean team on a mission to bring AI inside database systems! All kinds of contributions to EvaDB are appreciated 🙌 If you'd like to get involved, here's information on where we could use your help: [contribution guide](https://evadb.readthedocs.io/en/latest/source/dev-guide/contribute.html) 🤗
-
-<p align="center">
-  <a href="https://github.com/georgia-tech-db/evadb/graphs/contributors">
-    <img width="70%" src="https://contrib.rocks/image?repo=georgia-tech-db/evadb" />
-  </a>
-</p>
-
-<details>
-<b> CI Status: </b> 
-
-[![CI Status](https://circleci.com/gh/georgia-tech-db/evadb.svg?style=svg)](https://circleci.com/gh/georgia-tech-db/evadb)
-[![Documentation Status](https://readthedocs.org/projects/evadb/badge/?version=latest)](https://evadb.readthedocs.io/en/latest/index.html)
-</details>
-
-## Star History
-
-<p align="center">
-  <a href="https://star-history.com/#georgia-tech-db/evadb&Date">
-      <img width="90%" src="https://api.star-history.com/svg?repos=georgia-tech-db/evadb&type=Date" alt="EvaDB Star History Chart">
-  </a>
-</p>
+TODO
 
 ## License
 Copyright (c) [Georgia Tech Database Group](http://db.cc.gatech.edu/).
