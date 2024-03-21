@@ -6,3 +6,7 @@
 	path = code/itt-python
 	url = git@github.com:rajveerb/itt-python.git
 	branch = master
+[submodule "code/torchvision"]
+	path = code/torchvision
+	url = git@github.com:rajveerb/vision.git
+	branch = v0.15_instrumentation
