@@ -1,4 +1,4 @@
-[submodule "pytorch"]
-	path = code/P3Torch/pytorch
+[submodule "code/P3Torch"]
+	path = code/P3Torch
 	url = git@github.com:rajveerb/pytorch.git
 	branch = v2.0.0_instrumentation
