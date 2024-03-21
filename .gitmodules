@@ -2,3 +2,7 @@
 	path = code/P3Torch
 	url = git@github.com:rajveerb/pytorch.git
 	branch = v2.0.0_instrumentation
+[submodule "code/itt-python"]
+	path = code/itt-python
+	url = git@github.com:rajveerb/itt-python.git
+	branch = master
