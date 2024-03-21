@@ -8,7 +8,7 @@ Preprocessing in PyTorch</b></i></p>
 
 We introduce **P3Tracer**, a specialized profiling tool for PyTorch preprocessing pipelines. 
 
-**P3Tracer** is a easy-to-use, low overhead, and visualization-ready profiler specialized for the widely used PyTorch framework.
+**P3Tracer** is an easy-to-use, low overhead, and visualization-ready profiler specialized for the widely used PyTorch framework.
 
 ## Quick links
 - [About P3Tracer](#about-p3tracer)
