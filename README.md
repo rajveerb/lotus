@@ -13,7 +13,7 @@ We introduce **P3Tracer**, a specialized profiling tool for PyTorch preprocessin
 ## Quick links
 - [About P3Tracer](#about-p3tracer)
 - [Get P3Tracer](#how-to-get-p3tracer)
-- [Use P3Tracer](#how-to-use-p3tracer)
+- [Use P3Tracer](#use-p3tracer)
     - [How to use P3Torch](#how-to-use-p3torch)
     - [How to use P3Map](#how-to-use-p3map)
 - [Concrete examples](#concrete-examples)
@@ -57,7 +57,7 @@ Above combination is powerful as it allows enables users to better reason about 
 7. Follow the **itt-python** build instructions in `code/itt-python/README.md`
 8. That's it!
 
-## How to use P3Tracer
+## Use P3Tracer
 
 ### How to use P3Torch
 
