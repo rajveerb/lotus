@@ -19,6 +19,8 @@ We introduce **P3Tracer**, a specialized profiling tool for PyTorch preprocessin
 - [Concrete examples](#concrete-examples)
     - [Example for P3Torch](#example-for-p3torch)
     - [Example for P3Map](#example-for-p3map)
+    - [A very concrete example for P3Tracer](#example-for-p3tracer)
+- [Limitations of P3Tracer](#limitations-of-p3tracer)
 - [Cite P3Tracer](#citation)
 - [License](#license)
 
@@ -47,7 +49,7 @@ Above combination is powerful as it allows enables users to better reason about 
     conda create -n P3Tracer python=3.10
     conda activate P3Tracer
     ```
-4. Install Intel VTune from here.
+4. Install Intel VTune from [here](https://www.intel.com/content/www/us/en/docs/vtune-profiler/installation-guide/2023-1/overview.html) and activate it as Intel descsribes.
 
     Note: we used `Intel(R) VTune(TM) Profiler 2024.0.1 (build 627177)`
 5. Install CUDA 11.8 from [here](https://developer.nvidia.com/cuda-11-8-0-download-archive) and CuDNN 8.7.0 from [here](https://developer.nvidia.com/rdp/cudnn-archive)
@@ -93,6 +95,7 @@ We do support **P3Torch** for custom datasets as well check below instance:
 
 
 ```python
+import torchvision.transforms as transforms
 log_file = <To use our instrumentation>
 transforms = transforms.Compose([
   op1(), op2(), op3(), op4()], 
@@ -116,7 +119,7 @@ Moreover, you need to structure the code such that you use torchvision's `Compos
 
 ### How to use P3Map
 
-Below is an example of how to write a program such that using **P3Map** will enable collection of mapping: 
+Below is an example of how to write a python file called RandomResizedCrop.py such that using **P3Map**'s method can be applied to collect the mapping: 
 
 ```python
 import torchvision.transforms as t
@@ -139,6 +142,17 @@ for i in range(5):
   if i == 4:
     itt.detach()
 ```
+
+Now, run below commands to collect mapping:
+
+```bash
+vtune -collect hotspots -start-paused -result-dir <your_vtune_result_dir> -- python RandomResizedCrop.py
+vtune -report hotspots -result-dir <your_vtune_result_dir> -format csv -csv-delimiter comma -report-output RandomResizedCrop.csv
+```
+
+`RandomResizedCrop.csv` contains the C/C++ functions mapped to `RandomResizedCrop` operation.
+
+*Note*: For completeness, checkout our paper to navigate how to correctly use **P3Map** methodology.
 
 ## Concrete examples
 
@@ -170,6 +184,31 @@ Notice that the user simply has to pass the same log file to be used by **P3Torc
 ### Example for P3Map
 
 We provide 6 examples of how to use **P3Map** in `code/image_classification/P3Map` directory. Please check the code for more details.
+
+### Example for P3Tracer
+
+Here, we describe the effectiveness of **P3Tracer** (P3Torch + P3Map) through an example motivated by an image classification ML training task. We show this via the results described in our paper. Now, we will provide the code/scripts to replicate the results in cloudlab testbed using a c4130 node available in Wisconsin cluster.
+
+#### Steps
+
+1. Setup environment as described [here](#how-to-get-p3tracer)
+2. Get the mapping logs for the preprocessing operations:
+    ```bash
+    bash code/image_classification/P3Map/P3Map.sh
+    ```
+3. Generate JSON file with mapping info by running all cells in `code/image_classification/P3Map/logsToMapping.ipynb`
+4. You have now successfully obtained the mapping using **P3Map**!
+5. 
+
+## Limitations of P3Tracer
+
+Similar to other tools in the past which do not claim to be perfect, we follow the same tradition with **P3Tracer**:
+
+1. No current support for multi-node setting
+2. No current support for DDP setting
+3. **P3Map** is approximate
+
+We claim issues 1 and 2 as a limitation as we simply have not tested the system in those setting.
 
 ## Cite P3Tracer
 
