@@ -176,5 +176,4 @@ We provide 6 examples of how to use **P3Map** in `code/image_classification/P3Ma
 TODO
 
 ## License
-Copyright (c) [Georgia Tech Database Group](http://db.cc.gatech.edu/).
-Licensed under an [Apache License](LICENSE.txt).
+Licensed under an [MIT License](LICENSE).
