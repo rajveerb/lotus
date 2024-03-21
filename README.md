@@ -19,7 +19,7 @@ We introduce **P3Tracer**, a specialized profiling tool for PyTorch preprocessin
 - [Concrete examples](#concrete-examples)
     - [Example for P3Torch](#example-for-p3torch)
     - [Example for P3Map](#example-for-p3map)
-    - [A very concrete example for P3Tracer](#example-for-p3tracer)
+- [Replicate our P3Tracer experiments](#replicate-our-p3tracer-experiments)
 - [Limitations of P3Tracer](#limitations-of-p3tracer)
 - [Cite P3Tracer](#citation)
 - [License](#license)
@@ -185,20 +185,21 @@ Notice that the user simply has to pass the same log file to be used by **P3Torc
 
 We provide 6 examples of how to use **P3Map** in `code/image_classification/P3Map` directory. Please check the code for more details.
 
-### Example for P3Tracer
+## Replicate our P3Tracer experiments
 
 Here, we describe the effectiveness of **P3Tracer** (P3Torch + P3Map) through an example motivated by an image classification ML training task. We show this via the results described in our paper. Now, we will provide the code/scripts to replicate the results in cloudlab testbed using a c4130 node available in Wisconsin cluster.
 
-#### Steps
+### Steps
 
 1. Setup environment as described [here](#how-to-get-p3tracer)
-2. Get the mapping logs for the preprocessing operations:
+2. Follow the **torchvision** build instructions in `code/torchvision/README.md`
+3. Get the mapping logs for the preprocessing operations:
     ```bash
     bash code/image_classification/P3Map/P3Map.sh
     ```
-3. Generate JSON file with mapping info by running all cells in `code/image_classification/P3Map/logsToMapping.ipynb`
-4. You have now successfully obtained the mapping using **P3Map**!
-5. 
+4. Generate JSON file with mapping info by running all cells in `code/image_classification/P3Map/logsToMapping.ipynb`
+5. You have now successfully obtained the mapping using **P3Map**!
+6. 
 
 ## Limitations of P3Tracer
 
