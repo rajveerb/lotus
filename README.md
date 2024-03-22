@@ -213,19 +213,9 @@ We provide 6 examples of how to use **P3Map** in `code/image_classification/P3Ma
 
 ## Replicate our P3Tracer experiments
 
-Here, we describe the effectiveness of **P3Tracer** (P3Torch + P3Map) through an example motivated by an image classification ML training task. We show this via the results described in our paper. Now, we will provide the code/scripts to replicate the results in cloudlab testbed using a c4130 node available in Wisconsin cluster.
+Here, we describe how to replicate our **P3Tracer** experiments for an image classification ML training task. 
 
-### Steps
-
-1. Setup environment as described [here](#how-to-get-p3tracer)
-2. Follow the **torchvision** build instructions in `code/torchvision/README.md`
-3. Get the mapping logs for the preprocessing operations:
-    ```bash
-    bash code/image_classification/P3Map/P3Map.sh
-    ```
-4. Generate JSON file with mapping info by running all cells in `code/image_classification/P3Map/logsToMapping.ipynb`
-5. You have now successfully obtained the mapping using **P3Map**!
-6. 
+Checkout [`REPLICATE.md`](REPLICATE.md)
 
 ## Limitations of P3Tracer
 
