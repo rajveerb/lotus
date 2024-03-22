@@ -1,7 +1,4 @@
 #!/bin/bash
-# enables vtune for root
-# sudo echo "source /proj/prismgt-PG0/rbachkaniwala3/installation_binaries/vtune_installation2022/vtune/latest/env/vars.sh" >> /root/.bashrc
-# source /root/.bashrc
 wget https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
 sudo apt-key add GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
 sudo rm GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
