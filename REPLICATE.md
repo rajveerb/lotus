@@ -53,6 +53,6 @@ We provide the code/scripts to replicate P3Tracer experiment results in the clou
     ```bash
     bash code/image_classification/P3Map/P3Map.sh
     ```
-16. Generate JSON file with mapping info by running all cells in `code/image_classification/P3Map/logsToMapping.ipynb`
-17. You have successfully obtained the mapping (`code/image_classification/P3Map/mapping_funcs.json`) using **P3Map**!
+16. Generate JSON file with mapping info by running all cells in [`code/image_classification/P3Map/logsToMapping.ipynb`](code/image_classification/P3Map/logsToMapping.ipynb)
+17. You have successfully obtained the mapping ([`code/image_classification/P3Map/mapping_funcs.json`](code/image_classification/P3Map/mapping_funcs.json)) using **P3Map**!
 18. 
