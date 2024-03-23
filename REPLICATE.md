@@ -55,4 +55,7 @@ We provide the code/scripts to replicate P3Tracer experiment results in the clou
     ```
 16. Generate JSON file with mapping info by running all cells in [`code/image_classification/P3Map/logsToMapping.ipynb`](code/image_classification/P3Map/logsToMapping.ipynb)
 17. You have successfully obtained the mapping ([`code/image_classification/P3Map/mapping_funcs.json`](code/image_classification/P3Map/mapping_funcs.json)) using **P3Map**!
-18. 
+18. Download ImageNet for next set of experiments:
+    ```bash
+    bash scripts/cloudlab/download_imagenet.sh
+    ```
