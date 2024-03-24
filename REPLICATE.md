@@ -59,3 +59,15 @@ We provide the code/scripts to replicate P3Tracer experiment results in the clou
     ```bash
     bash scripts/cloudlab/download_imagenet.sh
     ```
+19. Run the experiment where batch size and number of gpus are varied and P3Torch is enabled:
+    ```bash
+    bash scripts/cloudlab/P3Torch_imagenet_vary_batch_and_gpu.sh
+    ```
+    Note: # of DataLoader workers is equal to # of gpus in this experiment.
+20.  Run the below commands for observations in `High variance in Preprocessing Time`:
+    
+    ```bash
+    python code/image_classification/analysis/P3Torch_imagenet_vary_batch_and_gpu/preprocessing_time_stats.py --remove_outliers
+    python code/image_classification/analysis/P3Torch_imagenet_vary_batch_and_gpu/iqr_and_stddev_preprocessing_time_stats.py --remove_outliers
+    python code/image_classification/analysis/P3Torch_imagenet_vary_batch_and_gpu/box_plot_preprocessing_time.py
+    ```
