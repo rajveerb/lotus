@@ -18,7 +18,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument(
     "--data_dir",
     type=str,
-    default="/mydata/pytorch_custom_log_one_epoch_imagenet_dataset/",
+    default="/mydata/P3Tracer/P3Torch_imagenet_vary_batch_and_gpu",
     help="Root directory with custom_log for different configs",
 )
 
