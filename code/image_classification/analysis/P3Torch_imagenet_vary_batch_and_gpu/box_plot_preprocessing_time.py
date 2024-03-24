@@ -16,7 +16,12 @@ parser.add_argument(
     default="/mydata/P3Tracer/p3torch_imagenet_vary_batch_and_gpu",
     help="Root directory with P3Torch_log for different configs",
 )
-
+parser.add_argument(
+    "--remove_outliers",
+    action="store_true",
+    help="Remove outliers less than q1 - iqr, where iqr = (q3 - q1) * 2.\
+                     This was done to account for the last batch which might batch_size < the selected batch_size ",
+)
 parser.add_argument(
     "--output_file",
     default="code/image_classification/analysis/P3Torch_imagenet_vary_batch_and_gpu/figures/box_plot_preprocessing_time.png",
@@ -26,7 +31,7 @@ parser.add_argument(
 args = parser.parse_args()
 
 
-def plotter_preprocessing_time(target_dir, fig_path, fig_size=(50, 25)):
+def plotter_preprocessing_time(target_dir, fig_path, remove_outliers, fig_size=(50, 25)):
 
     root_to_files = {}
     for root, dirs, files in os.walk(target_dir):
@@ -80,15 +85,17 @@ def plotter_preprocessing_time(target_dir, fig_path, fig_size=(50, 25)):
         config_df = config_df.drop(columns=["name", "batch_id", "start_ts"])
         # reset index
         config_df = config_df.reset_index(drop=True)
-        # get first quartile of config_df
-        q1 = config_df.quantile(0.25)
-        q3 = config_df.quantile(0.75)
-        iqr = (q3 - q1) * 2
+        
+        if remove_outliers:
+            # get first quartile of config_df
+            q1 = config_df.quantile(0.25)
+            q3 = config_df.quantile(0.75)
+            iqr = (q3 - q1) * 2
 
-        # remove outliers less than q1 - iqr only (these are numbers from last batch which has
-        #  elements less than batch size because elements in a dataset may not be a multiple of batch size)
+            # remove outliers less than q1 - iqr only (these are numbers from last batch which has
+            #  elements less than batch size because elements in a dataset may not be a multiple of batch size)
 
-        config_df = config_df[~(config_df < (q1 - iqr))]
+            config_df = config_df[~(config_df < (q1 - iqr))]
 
         plot_dfs.append(config_df)
 
@@ -131,4 +138,4 @@ def plotter_preprocessing_time(target_dir, fig_path, fig_size=(50, 25)):
     plt.clf()
 
 
-plotter_preprocessing_time(args.data_dir, args.output_file)
+plotter_preprocessing_time(args.data_dir, args.output_file, args.remove_outliers)
