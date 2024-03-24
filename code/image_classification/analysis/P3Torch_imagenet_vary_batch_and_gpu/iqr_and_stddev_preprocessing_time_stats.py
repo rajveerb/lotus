@@ -31,10 +31,6 @@ logging.basicConfig(
     filename=args.output_file, level=logging.INFO, filemode="w", format=""
 )
 
-
-target_dir = "/mydata/pytorch_custom_log_one_epoch_imagenet_dataset"
-
-
 def preprocessing_time_summary(
     target_dir,
     remove_outliers,
@@ -108,7 +104,7 @@ def preprocessing_time_summary(
 
 
 batch_to_summary = preprocessing_time_summary(
-    target_dir, remove_outliers=args.remove_outliers
+    args.data_dir, remove_outliers=args.remove_outliers
 )
 
 
