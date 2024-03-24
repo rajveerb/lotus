@@ -1,7 +1,0 @@
-File: /mydata/synthetic_data_10MBeach_10GBtotal_symlink/random_image10MB.jpg
-Percentage of e2e time for open: 0.010946854804008043 +/- 0.0
-Percentage of e2e time for mem_allocate: 0.0024438550392711683 +/- 0.0
-Percentage of e2e time for read_file: 0.137051121307006 +/- 0.0
-Percentage of e2e time for decode_file: 79.16474218692643 +/- 0.0
-Percentage of e2e time for copy: 19.62688931285697 +/- 0.0
-Average e2e time: 7.082739591598511 +/- 0.0
