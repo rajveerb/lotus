@@ -41,7 +41,7 @@ def preprocessing_time_summary(
         root_to_files[root] = files
     roots = sorted(root_to_files, key=lambda x: natsort.natsort_key(x.lower()))
 
-    batch_to_summary = {"std": {}, "IQR": {}}
+    batch_to_summary = {"std": {}, "IQR": {}, 'median': {}, '25th': {}, '75th': {}}
 
     for root in roots:
         if "e2e" in root:
@@ -99,6 +99,9 @@ def preprocessing_time_summary(
 
         batch_to_summary["std"][label] = std
         batch_to_summary["IQR"][label] = quartile_diff
+        batch_to_summary['median'][label] = np.median(plot_df["duration"])
+        batch_to_summary['25th'][label] = np.percentile(plot_df["duration"], 25)
+        batch_to_summary['75th'][label] = np.percentile(plot_df["duration"], 75)
 
     return batch_to_summary
 
@@ -123,3 +126,15 @@ logging.info(
 logging.info(
     f"Maximum normalized standard deviation for preprocessing time across configs:\n\t{max_std:.2f}X"
 )
+
+# print 25th and 75th percentile
+logging.info("\nPreprocessing time stats...")
+logging.info("25th percentile:")
+for k,v in batch_to_summary['25th'].items():
+    logging.info(f'\t{k}: {v}')
+logging.info("50th percentile:")
+for k,v in batch_to_summary['median'].items():
+    logging.info(f'\t{k}: {v}')
+logging.info("75th percentile:")
+for k,v in batch_to_summary['75th'].items():
+    logging.info(f'\t{k}: {v}')
