@@ -70,3 +70,7 @@ We provide the code/scripts to replicate P3Tracer experiment results in the clou
     python code/image_classification/analysis/P3Torch_imagenet_vary_batch_and_gpu/iqr_and_stddev_preprocessing_time_stats.py --remove_outliers
     python code/image_classification/analysis/P3Torch_imagenet_vary_batch_and_gpu/box_plot_preprocessing_time.py --remove_outliers
     ```
+21. Run the below commands for observations in `Significant wait time`:
+    ```bash
+    python code/image_classification/analysis/P3Torch_imagenet_vary_batch_and_gpu/delay_and_wait_time_stats_and_plot.py --sort_criteria duration
+    ```
