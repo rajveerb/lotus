@@ -1,0 +1,5 @@
+Function,CPU Time,CPU Time:Effective Time,CPU Time:Spin Time,CPU Time:Overhead Time,Module,Function (Full),Source File,Start Address
+ImagingTransformAffine,2.269968,2.269968,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,ImagingTransformAffine,[Unknown],0x41b20
+ImagingFill,0.374834,0.374834,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,ImagingFill,[Unknown],0x37a70
+_int_free,0.010000,0.010000,0.0,0.0,libc.so.6,_int_free,malloc.c,0x96840
+_Py_INCREF,0.007992,0.007992,0.0,0.0,python3.10,_Py_INCREF,object.h,0x4f19ad

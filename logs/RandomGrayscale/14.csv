@@ -1,0 +1,8 @@
+Function,CPU Time,CPU Time:Effective Time,CPU Time:Spin Time,CPU Time:Overhead Time,Module,Function (Full),Source File,Start Address
+_aligned_contig_to_strided_size1,1.269990,1.269990,0.0,0.0,_multiarray_umath.cpython-310-x86_64-linux-gnu.so,_aligned_contig_to_strided_size1,[Unknown],0x6fcd0
+__memset_avx2_erms,0.611977,0.611977,0.0,0.0,libc.so.6,__memset_avx2_erms,memset-vec-unaligned-erms.S,0x18bd60
+rgb2l,0.474536,0.474536,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,rgb2l,[Unknown],0x27d50
+ImagingUnpackRGB,0.448002,0.448002,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,ImagingUnpackRGB,[Unknown],0x678a0
+__memmove_avx_unaligned_erms,0.388005,0.388005,0.0,0.0,libc.so.6,__memmove_avx_unaligned_erms,memmove-vec-unaligned-erms.S,0x18b910
+stringlib_bytes_join,0.011997,0.011997,0.0,0.0,python3.10,stringlib_bytes_join,join.h,0x467e73
+munmap,0.010000,0.010000,0.0,0.0,libc.so.6,munmap,syscall-template.S,0x118b90

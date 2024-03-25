@@ -1,0 +1,18 @@
+Function,CPU Time,CPU Time:Effective Time,CPU Time:Spin Time,CPU Time:Overhead Time,Module,Function (Full),Source File,Start Address
+ImagingBlend,15.711876,15.711876,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,ImagingBlend,[Unknown],0x239f0
+hsv2rgb,14.685618,14.685618,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,hsv2rgb,[Unknown],0x2e190
+rgb2hsv_row,9.604015,9.604015,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,rgb2hsv_row,[Unknown],0x2e470
+__round,4.574244,4.574244,0.0,0.0,libm.so.6,__round,s_round.c,0x38dd0
+__ieee754_fmod,2.686790,2.686790,0.0,0.0,libm.so.6,__ieee754_fmod,e_fmod.c,0x29120
+l2rgb,2.107968,2.107968,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,l2rgb,[Unknown],0x2f960
+__fmod,1.756147,1.756147,0.0,0.0,libm.so.6,__fmod,w_fmod_compat.c,0xfed0
+ImagingGetHistogram,1.119985,1.119985,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,ImagingGetHistogram,[Unknown],0x44410
+rgb2l,1.096003,1.096003,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,rgb2l,[Unknown],0x27d50
+ImagingSplit,1.051990,1.051990,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,ImagingSplit,[Unknown],0x21170
+ImagingMerge,0.587991,0.587991,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,ImagingMerge,[Unknown],0x217a0
+__memset_avx2_erms,0.509401,0.509401,0.0,0.0,libc.so.6,__memset_avx2_erms,memset-vec-unaligned-erms.S,0x18bd60
+rgb2hsv,0.348020,0.348020,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,rgb2hsv,[Unknown],0x2e6f0
+__memmove_avx_unaligned_erms,0.328009,0.328009,0.0,0.0,libc.so.6,__memmove_avx_unaligned_erms,memmove-vec-unaligned-erms.S,0x18b910
+UBYTE_add_AVX2,0.072003,0.072003,0.0,0.0,_multiarray_umath.cpython-310-x86_64-linux-gnu.so,UBYTE_add_AVX2,[Unknown],0x3154a0
+_int_free,0.014940,0.014940,0.0,0.0,libc.so.6,_int_free,malloc.c,0x96840
+convert,0.012001,0.012001,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,convert,[Unknown],0x2e800

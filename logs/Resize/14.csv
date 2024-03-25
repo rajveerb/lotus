@@ -1,0 +1,4 @@
+Function,CPU Time,CPU Time:Effective Time,CPU Time:Spin Time,CPU Time:Overhead Time,Module,Function (Full),Source File,Start Address
+ImagingResampleHorizontal_8bpc,1.796420,1.796420,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,ImagingResampleHorizontal_8bpc,[Unknown],0x5e480
+_int_free,0.010000,0.010000,0.0,0.0,libc.so.6,_int_free,malloc.c,0x96840
+ImagingResampleVertical_8bpc,0.008000,0.008000,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,ImagingResampleVertical_8bpc,[Unknown],0x5ea70

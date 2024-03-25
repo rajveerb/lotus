@@ -1,0 +1,309 @@
+--2024-03-10 19:37:29--  https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
+Resolving apt.repos.intel.com (apt.repos.intel.com)... 23.215.127.19, 2600:1407:3c00:158f::a87, 2600:1407:3c00:158b::a87
+Connecting to apt.repos.intel.com (apt.repos.intel.com)|23.215.127.19|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4738 (4.6K) [application/vnd.exstream-package]
+Saving to: ‘GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB’
+
+GPG-PUB-KEY-INTEL-SW-PRODUC 100%[===========================================>]   4.63K  --.-KB/s    in 0s      
+
+2024-03-10 19:37:30 (976 MB/s) - ‘GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB’ saved [4738/4738]
+
+Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)).
+OK
+deb https://apt.repos.intel.com/oneapi all main
+Repository: 'deb https://apt.repos.intel.com/oneapi all main'
+Description:
+Archive for codename: all components: main
+More info: https://apt.repos.intel.com/oneapi
+Adding repository.
+Press [ENTER] to continue or Ctrl-c to cancel.
+Found existing deb entry in /etc/apt/sources.list.d/oneAPI.list
+Updating existing entry instead of using /etc/apt/sources.list.d/archive_uri-https_apt_repos_intel_com_oneapi-jammy.list
+Adding disabled deb-src entry to /etc/apt/sources.list.d/oneAPI.list
+Get:1 http://us.archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu jammy-backports InRelease [109 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu jammy-security InRelease [110 kB]       
+Get:5 http://repos.emulab.net/emulab/ubuntu jammy InRelease [6,173 B]
+Get:6 http://repos.emulab.net/grub-backports/ubuntu jammy InRelease [3,163 B]           
+Get:7 https://apt.repos.intel.com/oneapi all InRelease [4,455 B]                        
+Get:8 http://us.archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1,395 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu jammy/main Translation-en [510 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu jammy/main amd64 c-n-f Metadata [30.3 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [129 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu jammy/restricted Translation-en [18.6 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu jammy/restricted amd64 c-n-f Metadata [488 B]
+Get:14 http://us.archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [14.1 MB]
+Get:15 http://repos.emulab.net/emulab/ubuntu jammy/main amd64 Packages [3,401 B]        
+Get:16 http://repos.emulab.net/grub-backports/ubuntu jammy/main amd64 Packages [7,248 B]             
+Get:17 http://us.archive.ubuntu.com/ubuntu jammy/universe Translation-en [5,652 kB]                            
+Get:18 https://apt.repos.intel.com/oneapi all/main amd64 Packages [368 kB]                                     
+Get:19 https://apt.repos.intel.com/oneapi all/main all Packages [104 kB]                           
+Get:20 http://us.archive.ubuntu.com/ubuntu jammy/universe amd64 c-n-f Metadata [286 kB]            
+Get:21 http://us.archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [217 kB]
+Get:22 http://us.archive.ubuntu.com/ubuntu jammy/multiverse Translation-en [112 kB]
+Get:23 http://us.archive.ubuntu.com/ubuntu jammy/multiverse amd64 c-n-f Metadata [8,372 B]
+Get:24 http://us.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1,458 kB]
+Get:25 http://us.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [283 kB]
+Get:26 http://us.archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [16.1 kB]
+Get:27 http://us.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [1,557 kB]
+Get:28 http://us.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [259 kB]
+Get:29 http://us.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 c-n-f Metadata [520 B]
+Get:30 http://us.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1,054 kB]
+Get:31 http://us.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [238 kB]
+Get:32 http://us.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [22.1 kB]
+Get:33 http://us.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [42.1 kB]
+Get:34 http://us.archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [10.1 kB]
+Get:35 http://us.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [472 B]
+Get:36 http://us.archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [41.7 kB]
+Get:37 http://us.archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [10.5 kB]
+Get:38 http://us.archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [388 B]
+Get:39 http://us.archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:40 http://us.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [24.3 kB]
+Get:41 http://us.archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.5 kB]
+Get:42 http://us.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [644 B]
+Get:43 http://us.archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 c-n-f Metadata [116 B]
+Get:44 http://us.archive.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1,239 kB]
+Get:45 http://us.archive.ubuntu.com/ubuntu jammy-security/main Translation-en [222 kB]
+Get:46 http://us.archive.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [11.4 kB]
+Get:47 http://us.archive.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [1,523 kB]
+Get:48 http://us.archive.ubuntu.com/ubuntu jammy-security/restricted Translation-en [253 kB]
+Get:49 http://us.archive.ubuntu.com/ubuntu jammy-security/restricted amd64 c-n-f Metadata [520 B]
+Get:50 http://us.archive.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [848 kB]
+Get:51 http://us.archive.ubuntu.com/ubuntu jammy-security/universe Translation-en [162 kB]
+Get:52 http://us.archive.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [16.8 kB]
+Get:53 http://us.archive.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [37.1 kB]
+Get:54 http://us.archive.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [7,476 B]
+Get:55 http://us.archive.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [260 B]
+Fetched 32.9 MB in 4s (7,674 kB/s)               
+Reading package lists... Done
+W: https://apt.repos.intel.com/oneapi/dists/all/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+Hit:1 http://us.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 https://apt.repos.intel.com/oneapi all InRelease
+Hit:3 http://us.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:4 http://us.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:5 http://us.archive.ubuntu.com/ubuntu jammy-security InRelease
+Hit:6 http://repos.emulab.net/emulab/ubuntu jammy InRelease
+Hit:7 http://repos.emulab.net/grub-backports/ubuntu jammy InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+142 packages can be upgraded. Run 'apt list --upgradable' to see them.
+W: https://apt.repos.intel.com/oneapi/dists/all/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  intel-oneapi-common-licensing-2024.0 intel-oneapi-common-oneapi-vars-2024.0 intel-oneapi-common-vars
+The following NEW packages will be installed:
+  intel-oneapi-common-licensing-2024.0 intel-oneapi-common-oneapi-vars-2024.0 intel-oneapi-common-vars
+  intel-oneapi-vtune
+0 upgraded, 4 newly installed, 0 to remove and 142 not upgraded.
+Need to get 488 MB of archives.
+After this operation, 1,384 MB of additional disk space will be used.
+Get:1 https://apt.repos.intel.com/oneapi all/main all intel-oneapi-common-licensing-2024.0 all 2024.0.0-49406 [30.7 kB]
+Get:2 https://apt.repos.intel.com/oneapi all/main all intel-oneapi-common-oneapi-vars-2024.0 all 2024.0.0-49406 [10.4 kB]
+Get:3 https://apt.repos.intel.com/oneapi all/main all intel-oneapi-common-vars all 2024.0.0-49406 [12.2 kB]
+Get:4 https://apt.repos.intel.com/oneapi all/main amd64 intel-oneapi-vtune amd64 2024.0.1-11 [488 MB]
+Fetched 488 MB in 6s (76.8 MB/s)                                                                               
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend requires a screen at least 13 lines tall and 31 columns wide.)
+debconf: falling back to frontend: Readline
+Selecting previously unselected package intel-oneapi-common-licensing-2024.0.
+(Reading database ... 95473 files and directories currently installed.)
+Preparing to unpack .../intel-oneapi-common-licensing-2024.0_2024.0.0-49406_all.deb ...
+Unpacking intel-oneapi-common-licensing-2024.0 (2024.0.0-49406) ...
+Selecting previously unselected package intel-oneapi-common-oneapi-vars-2024.0.
+Preparing to unpack .../intel-oneapi-common-oneapi-vars-2024.0_2024.0.0-49406_all.deb ...
+Unpacking intel-oneapi-common-oneapi-vars-2024.0 (2024.0.0-49406) ...
+Selecting previously unselected package intel-oneapi-common-vars.
+Preparing to unpack .../intel-oneapi-common-vars_2024.0.0-49406_all.deb ...
+Unpacking intel-oneapi-common-vars (2024.0.0-49406) ...
+Selecting previously unselected package intel-oneapi-vtune.
+Preparing to unpack .../intel-oneapi-vtune_2024.0.1-11_amd64.deb ...
+Unpacking intel-oneapi-vtune (2024.0.1-11) ...
+Setting up intel-oneapi-common-oneapi-vars-2024.0 (2024.0.0-49406) ...
+Setting up intel-oneapi-common-licensing-2024.0 (2024.0.0-49406) ...
+Setting up intel-oneapi-common-vars (2024.0.0-49406) ...
+Setting up intel-oneapi-vtune (2024.0.1-11) ...
+C compiler version: 11.4.0
+Make version: 4.3
+Kernel version: 5.15.0-86-generic
+
+Cleaning workspaces ... 
+Done
+
+Building socperf driver ... 
+Skipping BTF generation for /opt/intel/oneapi/vtune/2024.0/sepdk/src/socperf/src/socperf3.ko due to unavailability of vmlinux
+Done
+
+Building sep driver ... 
+/opt/intel/oneapi/vtune/2024.0/sepdk/src/sys64.o: warning: objtool: SYS_Get_GDT_Base()+0x3: 'naked' return found in RETHUNK build
+/opt/intel/oneapi/vtune/2024.0/sepdk/src/sys64.o: warning: objtool: SYS_IO_Delay()+0x0: 'naked' return found in RETHUNK build
+/opt/intel/oneapi/vtune/2024.0/sepdk/src/sys64.o: warning: objtool: SYS_Get_GDT_Base()+0x3: missing int3 after ret
+/opt/intel/oneapi/vtune/2024.0/sepdk/src/sys64.o: warning: objtool: SYS_IO_Delay()+0x0: missing int3 after ret
+Skipping BTF generation for /opt/intel/oneapi/vtune/2024.0/sepdk/src/sep5.ko due to unavailability of vmlinux
+Done
+
+Building pax driver ... 
+Skipping BTF generation for /opt/intel/oneapi/vtune/2024.0/sepdk/src/pax/pax.ko due to unavailability of vmlinux
+Done
+
+Building vtsspp driver ... 
+make[1]: Entering directory '/opt/intel/oneapi/vtune/2024.0/sepdk/src/vtsspp'
+Skipping BTF generation for /opt/intel/oneapi/vtune/2024.0/sepdk/src/vtsspp/vtsspp.ko due to unavailability of vmlinux
+make[1]: Leaving directory '/opt/intel/oneapi/vtune/2024.0/sepdk/src/vtsspp'
+Done
+
+Building socwatch driver ... 
+Building drivers for Linux target
+-n switch is deprecated. Now it does not have any effect.
+/lib/modules/5.15.0-86-generic/build will be used as the kernel build directory
+Removing previously built driver and scripts from /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/drivers
+-c /bin/gcc -l -k /lib/modules/5.15.0-86-generic/build will be used to build the SoCWatch driver
+-c /bin/gcc -l -k /lib/modules/5.15.0-86-generic/build
+************ Building socwatch2_15-x32_64-5.15.0-86-genericsmp.ko driver ************
+Using C compiler = /bin/gcc
+Using kernel build dir = /lib/modules/5.15.0-86-generic/build
+No module symvers file found
+Using common inc dir = /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/../common/include
+"/lib/modules/5.15.0-86-generic/build/include/linux/cpufreq.h" exists!
+Using file name sw_driver
+Make args = KERNEL_SRC_DIR=/lib/modules/5.15.0-86-generic/build CPUFREQ_FIX_BACKPORTED=1 DO_DEBUG_BUILD=0 DO_PROFILING=0 COMMON_INC_DIR=/opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/../common/include MODULE_SYMVERS_FILE= FILE_NAME=sw_driver 
+make[1]: Entering directory '/opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver'
+make -C /lib/modules/5.15.0-86-generic/build M=/opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver clean
+make[2]: Entering directory '/usr/src/linux-headers-5.15.0-86-generic'
+make[2]: Leaving directory '/usr/src/linux-headers-5.15.0-86-generic'
+make[1]: Leaving directory '/opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver'
+Using C compiler = /bin/gcc
+Using kernel build dir = /lib/modules/5.15.0-86-generic/build
+No module symvers file found
+Using common inc dir = /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/../common/include
+"/lib/modules/5.15.0-86-generic/build/include/linux/cpufreq.h" exists!
+Using file name sw_driver
+Make args = KERNEL_SRC_DIR=/lib/modules/5.15.0-86-generic/build CPUFREQ_FIX_BACKPORTED=1 DO_DEBUG_BUILD=0 DO_PROFILING=0 COMMON_INC_DIR=/opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/../common/include MODULE_SYMVERS_FILE= FILE_NAME=sw_driver 
+make[1]: Entering directory '/opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver'
+make -C /lib/modules/5.15.0-86-generic/build M=/opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver clean
+make[2]: Entering directory '/usr/src/linux-headers-5.15.0-86-generic'
+make[2]: Leaving directory '/usr/src/linux-headers-5.15.0-86-generic'
+************************************************************
+KERNEL_SRC_DIR=/lib/modules/5.15.0-86-generic/build
+CPUFREQ_FIX_BACKPORTED=1
+MODULE_SYMVERS_FILE=
+DO_DRIVER_PROFILING=0
+INCDIR_1=/opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/../common/include
+************************************************************
+make -C /lib/modules/5.15.0-86-generic/build M=/opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver modules PWD=/opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver
+make[2]: Entering directory '/usr/src/linux-headers-5.15.0-86-generic'
+  CC [M]  /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/./src/sw_driver.o
+  CC [M]  /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/./src/sw_hardware_io.o
+  CC [M]  /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/./src/sw_output_buffer.o
+  CC [M]  /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/./src/sw_tracepoint_handlers.o
+  CC [M]  /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/./src/sw_collector.o
+  CC [M]  /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/./src/sw_mem.o
+  CC [M]  /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/./src/sw_internal.o
+  CC [M]  /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/./src/sw_file_ops.o
+  CC [M]  /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/./src/sw_ops_provider.o
+  CC [M]  /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/./src/sw_trace_notifier_provider.o
+  CC [M]  /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/./src/sw_reader.o
+  CC [M]  /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/./src/sw_telem.o
+  CC [M]  /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/./src/sw_pmt.o
+  CC [M]  /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/./src/sw_counter_list.o
+  CC [M]  /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/./src/sw_pci.o
+  LD [M]  /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/socwatch2_15.o
+  MODPOST /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/Module.symvers
+  CC [M]  /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/socwatch2_15.mod.o
+  LD [M]  /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/socwatch2_15.ko
+  BTF [M] /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/socwatch2_15.ko
+Skipping BTF generation for /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver/socwatch2_15.ko due to unavailability of vmlinux
+make[2]: Leaving directory '/usr/src/linux-headers-5.15.0-86-generic'
+make[1]: Leaving directory '/opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/socwatch_driver'
+************ Built drivers are copied to /opt/intel/oneapi/vtune/2024.0/sepdk/src/socwatch/drivers directory ************
+Done
+
+Done building the drivers
+
+
+Warning:  the following driver(s) were not found loaded in the kernel:  sep5.
+
+Warning:  no vtsspp driver was found loaded in the kernel.
+
+Warning:  no socwatch driver was found loaded in the kernel.
+
+
+Warning:  the following driver(s) were not found loaded in the kernel:  socperf3.
+
+
+The PAX service is not loaded anymore.
+Creating group vtune ... done
+PYTHON is set to python
+Detecting Secure Boot status...
+EFI variables are not supported on this system
+Secure Boot is disabled
+---------------------    Loading PAX driver    --------------------- 
+Detecting Secure Boot status...
+EFI variables are not supported on this system
+Secure Boot is disabled
+Checking for PMU arbitration service (PAX) ... not detected.
+Attempting to start PAX service ...
+Executing: insmod ./pax/pax-x32_64-5.15.0-86-genericsmp.ko
+Setting group ownership of devices to group "vtune" ... done.
+Setting file permissions on devices to "660" ... done.
+The pax driver has been successfully loaded.
+
+---------------------  Loading SOCPERF driver  --------------------- 
+Detecting Secure Boot status...
+EFI variables are not supported on this system
+Secure Boot is disabled
+Checking for socperf driver ... not detected.
+Attempting to start socperf service ...
+Executing: insmod ./socperf/src/socperf3-x32_64-5.15.0-86-genericsmp.ko
+Setting group ownership of devices to group "vtune" ... done.
+Setting file permissions on devices to "660" ... done.
+The socperf3 driver has been successfully loaded.
+
+---------------------    Loading SEP driver    --------------------- 
+Executing: insmod ./sep5-x32_64-5.15.0-86-genericsmp.ko sym_lookup_func_addr="ffffffff8859ae30"
+Setting group ownership of devices to group "vtune" ... done.
+Setting file permissions on devices to "660" ... done.
+The sep5 driver has been successfully loaded.
+
+---------------------  Loading VTSSPP driver  --------------------- 
+Checking for vtsspp driver ... not detected.
+Executing: insmod ./vtsspp/vtsspp-x32_64-5.15.0-86-genericsmp.ko gid=7255 mode=0660 ksyms="ffffffff8859ae30"
+The vtsspp driver has been successfully loaded.
+
+--------------------- Loading SOCWATCH driver --------------------- 
+Checking for socwatch driver ... not detected.
+
+Executing: insmod ./socwatch/drivers/socwatch2_15-x32_64-5.15.0-86-genericsmp.ko
+
+Setting group ownership of device file to group "vtune" ... done.
+Setting file permissions of device file to "660" ... done.
+
+The socwatch2_15-x32_64-5.15.0-86-genericsmp driver has been successfully loaded.
+
+NOTE:
+
+The driver is accessible only to users under the group 'vtune'.
+Please add the users to the group 'vtune' to use the tool.
+
+To change driver access group, reinstall the driver using -g <desired_group> option.
+
+
+NOTE:
+The driver is accessible only to users under the group vtune.
+Please add the users to the group vtune to use the tool.
+
+To change driver access group, reload the driver using -g <desired_group> option.
+
+ERROR: unable to find command "pkg-config" !
+Please add the location to the above commands to your PATH and re-run the script ... exiting.
+kernel.kptr_restrict = 0
+kernel.perf_event_paranoid = 0
+kernel.yama.ptrace_scope = 0
+Run below command
+Enable vtune using below command:
+source /opt/intel/oneapi/setvars.sh
+sudo usermod -aG vtune $USER && newgrp vtune

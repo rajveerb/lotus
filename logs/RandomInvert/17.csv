@@ -1,0 +1,4 @@
+Function,CPU Time,CPU Time:Effective Time,CPU Time:Spin Time,CPU Time:Overhead Time,Module,Function (Full),Source File,Start Address
+im_point_3x8_3x8,0.967983,0.967983,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,im_point_3x8_3x8,[Unknown],0x52850
+__libc_calloc,0.536817,0.536817,0.0,0.0,libc.so.6,__libc_calloc,malloc.c,0x9bb10
+_int_free,0.010000,0.010000,0.0,0.0,libc.so.6,_int_free,malloc.c,0x96840

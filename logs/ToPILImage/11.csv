@@ -1,0 +1,8 @@
+Function,CPU Time,CPU Time:Effective Time,CPU Time:Spin Time,CPU Time:Spin Time:Imbalance or Serial Spinning,CPU Time:Spin Time:Lock Contention,CPU Time:Spin Time:Other,CPU Time:Overhead Time,CPU Time:Overhead Time:Creation,CPU Time:Overhead Time:Scheduling,CPU Time:Overhead Time:Reduction,CPU Time:Overhead Time:Atomics,CPU Time:Overhead Time:Other,Module,Function (Full),Source File,Start Address
+PyArray_ToString,7.885672,7.885672,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,_multiarray_umath.cpython-310-x86_64-linux-gnu.so,PyArray_ToString,[Unknown],0x11eff0
+__memmove_avx_unaligned_erms,4.773638,4.773638,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc.so.6,__memmove_avx_unaligned_erms,memmove-vec-unaligned-erms.S,0x18b910
+FLOAT_multiply_FMA3__AVX2,2.914632,2.914632,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,_multiarray_umath.cpython-310-x86_64-linux-gnu.so,FLOAT_multiply_FMA3__AVX2,[Unknown],0x387170
+__memset_avx2_erms,1.211994,1.211994,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc.so.6,__memset_avx2_erms,memset-vec-unaligned-erms.S,0x18bd60
+_aligned_contig_cast_float_to_ubyte,0.779773,0.779773,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,_multiarray_umath.cpython-310-x86_64-linux-gnu.so,_aligned_contig_cast_float_to_ubyte,[Unknown],0x7e0e0
+ImagingUnpackRGB,0.668000,0.668000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,ImagingUnpackRGB,[Unknown],0x678a0
+munmap,0.020610,0.020610,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc.so.6,munmap,syscall-template.S,0x118b90

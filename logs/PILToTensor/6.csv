@@ -1,0 +1,6 @@
+Function,CPU Time,CPU Time:Effective Time,CPU Time:Spin Time,CPU Time:Overhead Time,Module,Function (Full),Source File,Start Address
+__memmove_avx_unaligned_erms,1.737974,1.737974,0.0,0.0,libc.so.6,__memmove_avx_unaligned_erms,memmove-vec-unaligned-erms.S,0x18b910
+ImagingPackRGB,0.502659,0.502659,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,ImagingPackRGB,[Unknown],0x4ba20
+PyBuffer_Release,0.011999,0.011999,0.0,0.0,python3.10,PyBuffer_Release,abstract.c,0x5681c0
+__GI___libc_malloc,0.011998,0.011998,0.0,0.0,libc.so.6,__GI___libc_malloc,malloc.c,0x9a0e0
+munmap,0.010000,0.010000,0.0,0.0,libc.so.6,munmap,syscall-template.S,0x118b90

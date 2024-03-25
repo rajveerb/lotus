@@ -1,0 +1,1382 @@
+nohup: ignoring input
+Running ./operations/LinearTransformation.py for run 1
+vtune: Warning: Pause command is not supported for managed code profiling. Runtime overhead is still possible. Data size limit may be exceeded.
+vtune: Collection paused.
+vtune: Collection paused.
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/hlanka3/P3Mappings/./operations/LinearTransformation.py", line 29, in <module>
+    transformed_tensor = linear_transformation(image_tensor)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1140, in forward
+    raise ValueError(
+ValueError: Input tensor and transformation matrix have incompatible shape.[3 x 10300 x 65500] != 3
+vtune: Collection stopped.
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-298120-c4130-node.v100ubvtune: Executing actions 12 % Loading 'systemcollector-298120-c4130-node.v100ubvtune: Executing actions 12 % Loading '298130.stat.perf' file                  vtune: Executing actions 12 % Loading '298120-298130.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 28 % Setting data model parameters                    vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 34 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Discarding redundant overtime data               vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 37 % Saving the result                                vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 23.357s
+ | Application execution time is too short. Metrics data may be unreliable.
+ | Consider reducing the sampling interval or increasing your application
+ | execution time.
+ |
+
+Top Hotspots
+Function  Module  CPU Time  % of CPU Time(%)
+--------  ------  --------  ----------------
+Effective Physical Core Utilization: 0.0% (0.000 out of 16)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.
+ |
+    Effective Logical Core Utilization: 0.0% (0.000 out of 32)
+     | The metric value is low, which may signal a poor logical CPU cores
+     | utilization. Consider improving physical core utilization as the first
+     | step and then look at opportunities to utilize logical cores, which in
+     | some cases can improve processor throughput and overall performance of
+     | multi-threaded applications.
+     |
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/bin/python "./operations/LinearTransformation.py" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 3.7 MB 
+    Collection start time: 12:23:01 25/03/2024 UTC
+    Collection stop time: 12:23:25 25/03/2024 UTC
+    Collector Type: Driverless Perf per-process counting,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions 50 % Finalizing results                               vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+Running ./operations/LinearTransformation.py for run 2
+vtune: Warning: Pause command is not supported for managed code profiling. Runtime overhead is still possible. Data size limit may be exceeded.
+vtune: Collection paused.
+vtune: Collection paused.
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/hlanka3/P3Mappings/./operations/LinearTransformation.py", line 29, in <module>
+    transformed_tensor = linear_transformation(image_tensor)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1140, in forward
+    raise ValueError(
+ValueError: Input tensor and transformation matrix have incompatible shape.[3 x 10300 x 65500] != 3
+vtune: Collection stopped.
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-298282-c4130-node.v100ubvtune: Executing actions 12 % Loading 'systemcollector-298282-c4130-node.v100ubvtune: Executing actions 12 % Loading '298292.stat.perf' file                  vtune: Executing actions 12 % Loading '298282-298292.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 28 % Setting data model parameters                    vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 34 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Discarding redundant overtime data               vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 37 % Saving the result                                vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 22.838s
+ | Application execution time is too short. Metrics data may be unreliable.
+ | Consider reducing the sampling interval or increasing your application
+ | execution time.
+ |
+
+Top Hotspots
+Function  Module  CPU Time  % of CPU Time(%)
+--------  ------  --------  ----------------
+Effective Physical Core Utilization: 0.0% (0.000 out of 16)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.
+ |
+    Effective Logical Core Utilization: 0.0% (0.000 out of 32)
+     | The metric value is low, which may signal a poor logical CPU cores
+     | utilization. Consider improving physical core utilization as the first
+     | step and then look at opportunities to utilize logical cores, which in
+     | some cases can improve processor throughput and overall performance of
+     | multi-threaded applications.
+     |
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/bin/python "./operations/LinearTransformation.py" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 3.7 MB 
+    Collection start time: 12:23:30 25/03/2024 UTC
+    Collection stop time: 12:23:52 25/03/2024 UTC
+    Collector Type: Driverless Perf per-process counting,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions 50 % Finalizing results                               vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+Running ./operations/LinearTransformation.py for run 3
+vtune: Warning: Pause command is not supported for managed code profiling. Runtime overhead is still possible. Data size limit may be exceeded.
+vtune: Collection paused.
+vtune: Collection paused.
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/hlanka3/P3Mappings/./operations/LinearTransformation.py", line 29, in <module>
+    transformed_tensor = linear_transformation(image_tensor)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1140, in forward
+    raise ValueError(
+ValueError: Input tensor and transformation matrix have incompatible shape.[3 x 10300 x 65500] != 3
+vtune: Collection stopped.
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-298377-c4130-node.v100ubvtune: Executing actions 12 % Loading 'systemcollector-298377-c4130-node.v100ubvtune: Executing actions 12 % Loading '298387.stat.perf' file                  vtune: Executing actions 12 % Loading '298377-298387.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 28 % Setting data model parameters                    vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 34 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Discarding redundant overtime data               vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 37 % Saving the result                                vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 22.762s
+ | Application execution time is too short. Metrics data may be unreliable.
+ | Consider reducing the sampling interval or increasing your application
+ | execution time.
+ |
+
+Top Hotspots
+Function  Module  CPU Time  % of CPU Time(%)
+--------  ------  --------  ----------------
+Effective Physical Core Utilization: 0.0% (0.000 out of 16)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.
+ |
+    Effective Logical Core Utilization: 0.0% (0.000 out of 32)
+     | The metric value is low, which may signal a poor logical CPU cores
+     | utilization. Consider improving physical core utilization as the first
+     | step and then look at opportunities to utilize logical cores, which in
+     | some cases can improve processor throughput and overall performance of
+     | multi-threaded applications.
+     |
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/bin/python "./operations/LinearTransformation.py" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 3.7 MB 
+    Collection start time: 12:23:57 25/03/2024 UTC
+    Collection stop time: 12:24:20 25/03/2024 UTC
+    Collector Type: Driverless Perf per-process counting,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions 50 % Finalizing results                               vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+Running ./operations/LinearTransformation.py for run 4
+vtune: Warning: Pause command is not supported for managed code profiling. Runtime overhead is still possible. Data size limit may be exceeded.
+vtune: Collection paused.
+vtune: Collection paused.
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/hlanka3/P3Mappings/./operations/LinearTransformation.py", line 29, in <module>
+    transformed_tensor = linear_transformation(image_tensor)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1140, in forward
+    raise ValueError(
+ValueError: Input tensor and transformation matrix have incompatible shape.[3 x 10300 x 65500] != 3
+vtune: Collection stopped.
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-298470-c4130-node.v100ubvtune: Executing actions 12 % Loading 'systemcollector-298470-c4130-node.v100ubvtune: Executing actions 12 % Loading '298480.stat.perf' file                  vtune: Executing actions 12 % Loading '298470-298480.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 28 % Setting data model parameters                    vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 34 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Discarding redundant overtime data               vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 37 % Saving the result                                vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 22.958s
+ | Application execution time is too short. Metrics data may be unreliable.
+ | Consider reducing the sampling interval or increasing your application
+ | execution time.
+ |
+
+Top Hotspots
+Function  Module  CPU Time  % of CPU Time(%)
+--------  ------  --------  ----------------
+Effective Physical Core Utilization: 0.0% (0.000 out of 16)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.
+ |
+    Effective Logical Core Utilization: 0.0% (0.000 out of 32)
+     | The metric value is low, which may signal a poor logical CPU cores
+     | utilization. Consider improving physical core utilization as the first
+     | step and then look at opportunities to utilize logical cores, which in
+     | some cases can improve processor throughput and overall performance of
+     | multi-threaded applications.
+     |
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/bin/python "./operations/LinearTransformation.py" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 3.7 MB 
+    Collection start time: 12:24:25 25/03/2024 UTC
+    Collection stop time: 12:24:48 25/03/2024 UTC
+    Collector Type: Driverless Perf per-process counting,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions 50 % Finalizing results                               vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+Running ./operations/LinearTransformation.py for run 5
+vtune: Warning: Pause command is not supported for managed code profiling. Runtime overhead is still possible. Data size limit may be exceeded.
+vtune: Collection paused.
+vtune: Collection paused.
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/hlanka3/P3Mappings/./operations/LinearTransformation.py", line 29, in <module>
+    transformed_tensor = linear_transformation(image_tensor)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1140, in forward
+    raise ValueError(
+ValueError: Input tensor and transformation matrix have incompatible shape.[3 x 10300 x 65500] != 3
+vtune: Collection stopped.
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-298564-c4130-node.v100ubvtune: Executing actions 12 % Loading 'systemcollector-298564-c4130-node.v100ubvtune: Executing actions 12 % Loading '298574.stat.perf' file                  vtune: Executing actions 12 % Loading '298564-298574.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 28 % Setting data model parameters                    vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 34 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Discarding redundant overtime data               vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 37 % Saving the result                                vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 22.806s
+ | Application execution time is too short. Metrics data may be unreliable.
+ | Consider reducing the sampling interval or increasing your application
+ | execution time.
+ |
+
+Top Hotspots
+Function  Module  CPU Time  % of CPU Time(%)
+--------  ------  --------  ----------------
+Effective Physical Core Utilization: 0.0% (0.000 out of 16)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.
+ |
+    Effective Logical Core Utilization: 0.0% (0.000 out of 32)
+     | The metric value is low, which may signal a poor logical CPU cores
+     | utilization. Consider improving physical core utilization as the first
+     | step and then look at opportunities to utilize logical cores, which in
+     | some cases can improve processor throughput and overall performance of
+     | multi-threaded applications.
+     |
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/bin/python "./operations/LinearTransformation.py" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 3.7 MB 
+    Collection start time: 12:24:53 25/03/2024 UTC
+    Collection stop time: 12:25:15 25/03/2024 UTC
+    Collector Type: Driverless Perf per-process counting,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions 50 % Finalizing results                               vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+Running ./operations/LinearTransformation.py for run 6
+vtune: Warning: Pause command is not supported for managed code profiling. Runtime overhead is still possible. Data size limit may be exceeded.
+vtune: Collection paused.
+vtune: Collection paused.
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/hlanka3/P3Mappings/./operations/LinearTransformation.py", line 29, in <module>
+    transformed_tensor = linear_transformation(image_tensor)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1140, in forward
+    raise ValueError(
+ValueError: Input tensor and transformation matrix have incompatible shape.[3 x 10300 x 65500] != 3
+vtune: Collection stopped.
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-298664-c4130-node.v100ubvtune: Executing actions 12 % Loading 'systemcollector-298664-c4130-node.v100ubvtune: Executing actions 12 % Loading '298674.stat.perf' file                  vtune: Executing actions 12 % Loading '298664-298674.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 28 % Setting data model parameters                    vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 34 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Discarding redundant overtime data               vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 37 % Saving the result                                vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 22.745s
+ | Application execution time is too short. Metrics data may be unreliable.
+ | Consider reducing the sampling interval or increasing your application
+ | execution time.
+ |
+
+Top Hotspots
+Function  Module  CPU Time  % of CPU Time(%)
+--------  ------  --------  ----------------
+Effective Physical Core Utilization: 0.0% (0.000 out of 16)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.
+ |
+    Effective Logical Core Utilization: 0.0% (0.000 out of 32)
+     | The metric value is low, which may signal a poor logical CPU cores
+     | utilization. Consider improving physical core utilization as the first
+     | step and then look at opportunities to utilize logical cores, which in
+     | some cases can improve processor throughput and overall performance of
+     | multi-threaded applications.
+     |
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/bin/python "./operations/LinearTransformation.py" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 3.7 MB 
+    Collection start time: 12:25:20 25/03/2024 UTC
+    Collection stop time: 12:25:43 25/03/2024 UTC
+    Collector Type: Driverless Perf per-process counting,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions 50 % Finalizing results                               vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+Running ./operations/LinearTransformation.py for run 7
+vtune: Warning: Pause command is not supported for managed code profiling. Runtime overhead is still possible. Data size limit may be exceeded.
+vtune: Collection paused.
+vtune: Collection paused.
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/hlanka3/P3Mappings/./operations/LinearTransformation.py", line 29, in <module>
+    transformed_tensor = linear_transformation(image_tensor)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1140, in forward
+    raise ValueError(
+ValueError: Input tensor and transformation matrix have incompatible shape.[3 x 10300 x 65500] != 3
+vtune: Collection stopped.
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-298758-c4130-node.v100ubvtune: Executing actions 12 % Loading 'systemcollector-298758-c4130-node.v100ubvtune: Executing actions 12 % Loading '298768.stat.perf' file                  vtune: Executing actions 12 % Loading '298758-298768.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 28 % Setting data model parameters                    vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 34 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Discarding redundant overtime data               vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 37 % Saving the result                                vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 23.375s
+ | Application execution time is too short. Metrics data may be unreliable.
+ | Consider reducing the sampling interval or increasing your application
+ | execution time.
+ |
+
+Top Hotspots
+Function  Module  CPU Time  % of CPU Time(%)
+--------  ------  --------  ----------------
+Effective Physical Core Utilization: 0.0% (0.000 out of 16)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.
+ |
+    Effective Logical Core Utilization: 0.0% (0.000 out of 32)
+     | The metric value is low, which may signal a poor logical CPU cores
+     | utilization. Consider improving physical core utilization as the first
+     | step and then look at opportunities to utilize logical cores, which in
+     | some cases can improve processor throughput and overall performance of
+     | multi-threaded applications.
+     |
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/bin/python "./operations/LinearTransformation.py" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 3.7 MB 
+    Collection start time: 12:25:48 25/03/2024 UTC
+    Collection stop time: 12:26:11 25/03/2024 UTC
+    Collector Type: Driverless Perf per-process counting,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions 50 % Finalizing results                               vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+Running ./operations/LinearTransformation.py for run 8
+vtune: Warning: Pause command is not supported for managed code profiling. Runtime overhead is still possible. Data size limit may be exceeded.
+vtune: Collection paused.
+vtune: Collection paused.
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/hlanka3/P3Mappings/./operations/LinearTransformation.py", line 29, in <module>
+    transformed_tensor = linear_transformation(image_tensor)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1140, in forward
+    raise ValueError(
+ValueError: Input tensor and transformation matrix have incompatible shape.[3 x 10300 x 65500] != 3
+vtune: Collection stopped.
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-298852-c4130-node.v100ubvtune: Executing actions 12 % Loading 'systemcollector-298852-c4130-node.v100ubvtune: Executing actions 12 % Loading '298862.stat.perf' file                  vtune: Executing actions 12 % Loading '298852-298862.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 28 % Setting data model parameters                    vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 34 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Discarding redundant overtime data               vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 37 % Saving the result                                vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 22.849s
+ | Application execution time is too short. Metrics data may be unreliable.
+ | Consider reducing the sampling interval or increasing your application
+ | execution time.
+ |
+
+Top Hotspots
+Function  Module  CPU Time  % of CPU Time(%)
+--------  ------  --------  ----------------
+Effective Physical Core Utilization: 0.0% (0.000 out of 16)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.
+ |
+    Effective Logical Core Utilization: 0.0% (0.000 out of 32)
+     | The metric value is low, which may signal a poor logical CPU cores
+     | utilization. Consider improving physical core utilization as the first
+     | step and then look at opportunities to utilize logical cores, which in
+     | some cases can improve processor throughput and overall performance of
+     | multi-threaded applications.
+     |
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/bin/python "./operations/LinearTransformation.py" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 3.7 MB 
+    Collection start time: 12:26:16 25/03/2024 UTC
+    Collection stop time: 12:26:39 25/03/2024 UTC
+    Collector Type: Driverless Perf per-process counting,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions 50 % Finalizing results                               vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+Running ./operations/LinearTransformation.py for run 9
+vtune: Warning: Pause command is not supported for managed code profiling. Runtime overhead is still possible. Data size limit may be exceeded.
+vtune: Collection paused.
+vtune: Collection paused.
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/hlanka3/P3Mappings/./operations/LinearTransformation.py", line 29, in <module>
+    transformed_tensor = linear_transformation(image_tensor)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1140, in forward
+    raise ValueError(
+ValueError: Input tensor and transformation matrix have incompatible shape.[3 x 10300 x 65500] != 3
+vtune: Collection stopped.
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-298950-c4130-node.v100ubvtune: Executing actions 12 % Loading 'systemcollector-298950-c4130-node.v100ubvtune: Executing actions 12 % Loading '298960.stat.perf' file                  vtune: Executing actions 12 % Loading '298950-298960.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 28 % Setting data model parameters                    vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 34 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Discarding redundant overtime data               vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 37 % Saving the result                                vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 22.823s
+ | Application execution time is too short. Metrics data may be unreliable.
+ | Consider reducing the sampling interval or increasing your application
+ | execution time.
+ |
+
+Top Hotspots
+Function  Module  CPU Time  % of CPU Time(%)
+--------  ------  --------  ----------------
+Effective Physical Core Utilization: 0.0% (0.000 out of 16)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.
+ |
+    Effective Logical Core Utilization: 0.0% (0.000 out of 32)
+     | The metric value is low, which may signal a poor logical CPU cores
+     | utilization. Consider improving physical core utilization as the first
+     | step and then look at opportunities to utilize logical cores, which in
+     | some cases can improve processor throughput and overall performance of
+     | multi-threaded applications.
+     |
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/bin/python "./operations/LinearTransformation.py" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 3.7 MB 
+    Collection start time: 12:26:44 25/03/2024 UTC
+    Collection stop time: 12:27:06 25/03/2024 UTC
+    Collector Type: Driverless Perf per-process counting,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions 50 % Finalizing results                               vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+Running ./operations/LinearTransformation.py for run 10
+vtune: Warning: Pause command is not supported for managed code profiling. Runtime overhead is still possible. Data size limit may be exceeded.
+vtune: Collection paused.
+vtune: Collection paused.
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/hlanka3/P3Mappings/./operations/LinearTransformation.py", line 29, in <module>
+    transformed_tensor = linear_transformation(image_tensor)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1140, in forward
+    raise ValueError(
+ValueError: Input tensor and transformation matrix have incompatible shape.[3 x 10300 x 65500] != 3
+vtune: Collection stopped.
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-299043-c4130-node.v100ubvtune: Executing actions 12 % Loading 'systemcollector-299043-c4130-node.v100ubvtune: Executing actions 12 % Loading '299053.stat.perf' file                  vtune: Executing actions 12 % Loading '299043-299053.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 28 % Setting data model parameters                    vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 34 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Discarding redundant overtime data               vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 37 % Saving the result                                vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 23.001s
+ | Application execution time is too short. Metrics data may be unreliable.
+ | Consider reducing the sampling interval or increasing your application
+ | execution time.
+ |
+
+Top Hotspots
+Function  Module  CPU Time  % of CPU Time(%)
+--------  ------  --------  ----------------
+Effective Physical Core Utilization: 0.0% (0.000 out of 16)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.
+ |
+    Effective Logical Core Utilization: 0.0% (0.000 out of 32)
+     | The metric value is low, which may signal a poor logical CPU cores
+     | utilization. Consider improving physical core utilization as the first
+     | step and then look at opportunities to utilize logical cores, which in
+     | some cases can improve processor throughput and overall performance of
+     | multi-threaded applications.
+     |
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/bin/python "./operations/LinearTransformation.py" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 3.7 MB 
+    Collection start time: 12:27:11 25/03/2024 UTC
+    Collection stop time: 12:27:34 25/03/2024 UTC
+    Collector Type: Driverless Perf per-process counting,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions 50 % Finalizing results                               vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+Running ./operations/LinearTransformation.py for run 11
+vtune: Warning: Pause command is not supported for managed code profiling. Runtime overhead is still possible. Data size limit may be exceeded.
+vtune: Collection paused.
+vtune: Collection paused.
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/hlanka3/P3Mappings/./operations/LinearTransformation.py", line 29, in <module>
+    transformed_tensor = linear_transformation(image_tensor)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1140, in forward
+    raise ValueError(
+ValueError: Input tensor and transformation matrix have incompatible shape.[3 x 10300 x 65500] != 3
+vtune: Collection stopped.
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-299136-c4130-node.v100ubvtune: Executing actions 12 % Loading 'systemcollector-299136-c4130-node.v100ubvtune: Executing actions 12 % Loading '299146.stat.perf' file                  vtune: Executing actions 12 % Loading '299136-299146.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 28 % Setting data model parameters                    vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 34 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Discarding redundant overtime data               vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 37 % Saving the result                                vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 22.775s
+ | Application execution time is too short. Metrics data may be unreliable.
+ | Consider reducing the sampling interval or increasing your application
+ | execution time.
+ |
+
+Top Hotspots
+Function  Module  CPU Time  % of CPU Time(%)
+--------  ------  --------  ----------------
+Effective Physical Core Utilization: 0.0% (0.000 out of 16)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.
+ |
+    Effective Logical Core Utilization: 0.0% (0.000 out of 32)
+     | The metric value is low, which may signal a poor logical CPU cores
+     | utilization. Consider improving physical core utilization as the first
+     | step and then look at opportunities to utilize logical cores, which in
+     | some cases can improve processor throughput and overall performance of
+     | multi-threaded applications.
+     |
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/bin/python "./operations/LinearTransformation.py" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 3.7 MB 
+    Collection start time: 12:27:39 25/03/2024 UTC
+    Collection stop time: 12:28:02 25/03/2024 UTC
+    Collector Type: Driverless Perf per-process counting,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions 50 % Finalizing results                               vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+Running ./operations/LinearTransformation.py for run 12
+vtune: Warning: Pause command is not supported for managed code profiling. Runtime overhead is still possible. Data size limit may be exceeded.
+vtune: Collection paused.
+vtune: Collection paused.
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/hlanka3/P3Mappings/./operations/LinearTransformation.py", line 29, in <module>
+    transformed_tensor = linear_transformation(image_tensor)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1140, in forward
+    raise ValueError(
+ValueError: Input tensor and transformation matrix have incompatible shape.[3 x 10300 x 65500] != 3
+vtune: Collection stopped.
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-299233-c4130-node.v100ubvtune: Executing actions 12 % Loading 'systemcollector-299233-c4130-node.v100ubvtune: Executing actions 12 % Loading '299243.stat.perf' file                  vtune: Executing actions 12 % Loading '299233-299243.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 28 % Setting data model parameters                    vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 34 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Discarding redundant overtime data               vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 37 % Saving the result                                vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 22.986s
+ | Application execution time is too short. Metrics data may be unreliable.
+ | Consider reducing the sampling interval or increasing your application
+ | execution time.
+ |
+
+Top Hotspots
+Function  Module  CPU Time  % of CPU Time(%)
+--------  ------  --------  ----------------
+Effective Physical Core Utilization: 0.0% (0.000 out of 16)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.
+ |
+    Effective Logical Core Utilization: 0.0% (0.000 out of 32)
+     | The metric value is low, which may signal a poor logical CPU cores
+     | utilization. Consider improving physical core utilization as the first
+     | step and then look at opportunities to utilize logical cores, which in
+     | some cases can improve processor throughput and overall performance of
+     | multi-threaded applications.
+     |
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/bin/python "./operations/LinearTransformation.py" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 3.7 MB 
+    Collection start time: 12:28:07 25/03/2024 UTC
+    Collection stop time: 12:28:30 25/03/2024 UTC
+    Collector Type: Driverless Perf per-process counting,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions 50 % Finalizing results                               vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+Running ./operations/LinearTransformation.py for run 13
+vtune: Warning: Pause command is not supported for managed code profiling. Runtime overhead is still possible. Data size limit may be exceeded.
+vtune: Collection paused.
+vtune: Collection paused.
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/hlanka3/P3Mappings/./operations/LinearTransformation.py", line 29, in <module>
+    transformed_tensor = linear_transformation(image_tensor)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1140, in forward
+    raise ValueError(
+ValueError: Input tensor and transformation matrix have incompatible shape.[3 x 10300 x 65500] != 3
+vtune: Collection stopped.
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-299443-c4130-node.v100ubvtune: Executing actions 12 % Loading 'systemcollector-299443-c4130-node.v100ubvtune: Executing actions 12 % Loading '299453.stat.perf' file                  vtune: Executing actions 12 % Loading '299443-299453.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 28 % Setting data model parameters                    vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 34 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Discarding redundant overtime data               vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 37 % Saving the result                                vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 23.036s
+ | Application execution time is too short. Metrics data may be unreliable.
+ | Consider reducing the sampling interval or increasing your application
+ | execution time.
+ |
+
+Top Hotspots
+Function  Module  CPU Time  % of CPU Time(%)
+--------  ------  --------  ----------------
+Effective Physical Core Utilization: 0.0% (0.000 out of 16)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.
+ |
+    Effective Logical Core Utilization: 0.0% (0.000 out of 32)
+     | The metric value is low, which may signal a poor logical CPU cores
+     | utilization. Consider improving physical core utilization as the first
+     | step and then look at opportunities to utilize logical cores, which in
+     | some cases can improve processor throughput and overall performance of
+     | multi-threaded applications.
+     |
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/bin/python "./operations/LinearTransformation.py" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 3.7 MB 
+    Collection start time: 12:28:34 25/03/2024 UTC
+    Collection stop time: 12:28:58 25/03/2024 UTC
+    Collector Type: Driverless Perf per-process counting,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions 50 % Finalizing results                               vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+Running ./operations/LinearTransformation.py for run 14
+vtune: Warning: Pause command is not supported for managed code profiling. Runtime overhead is still possible. Data size limit may be exceeded.
+vtune: Collection paused.
+vtune: Collection paused.
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/hlanka3/P3Mappings/./operations/LinearTransformation.py", line 29, in <module>
+    transformed_tensor = linear_transformation(image_tensor)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1140, in forward
+    raise ValueError(
+ValueError: Input tensor and transformation matrix have incompatible shape.[3 x 10300 x 65500] != 3
+vtune: Collection stopped.
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-299536-c4130-node.v100ubvtune: Executing actions 12 % Loading 'systemcollector-299536-c4130-node.v100ubvtune: Executing actions 12 % Loading '299546.stat.perf' file                  vtune: Executing actions 12 % Loading '299536-299546.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 28 % Setting data model parameters                    vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 34 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Discarding redundant overtime data               vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 37 % Saving the result                                vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 22.656s
+ | Application execution time is too short. Metrics data may be unreliable.
+ | Consider reducing the sampling interval or increasing your application
+ | execution time.
+ |
+
+Top Hotspots
+Function  Module  CPU Time  % of CPU Time(%)
+--------  ------  --------  ----------------
+Effective Physical Core Utilization: 0.0% (0.000 out of 16)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.
+ |
+    Effective Logical Core Utilization: 0.0% (0.000 out of 32)
+     | The metric value is low, which may signal a poor logical CPU cores
+     | utilization. Consider improving physical core utilization as the first
+     | step and then look at opportunities to utilize logical cores, which in
+     | some cases can improve processor throughput and overall performance of
+     | multi-threaded applications.
+     |
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/bin/python "./operations/LinearTransformation.py" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 3.7 MB 
+    Collection start time: 12:29:02 25/03/2024 UTC
+    Collection stop time: 12:29:25 25/03/2024 UTC
+    Collector Type: Driverless Perf per-process counting,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions 50 % Finalizing results                               vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+Running ./operations/LinearTransformation.py for run 15
+vtune: Warning: Pause command is not supported for managed code profiling. Runtime overhead is still possible. Data size limit may be exceeded.
+vtune: Collection paused.
+vtune: Collection paused.
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/hlanka3/P3Mappings/./operations/LinearTransformation.py", line 29, in <module>
+    transformed_tensor = linear_transformation(image_tensor)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1140, in forward
+    raise ValueError(
+ValueError: Input tensor and transformation matrix have incompatible shape.[3 x 10300 x 65500] != 3
+vtune: Collection stopped.
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-299630-c4130-node.v100ubvtune: Executing actions 12 % Loading 'systemcollector-299630-c4130-node.v100ubvtune: Executing actions 12 % Loading '299640.stat.perf' file                  vtune: Executing actions 12 % Loading '299630-299640.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 28 % Setting data model parameters                    vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 34 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Discarding redundant overtime data               vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 37 % Saving the result                                vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 23.090s
+ | Application execution time is too short. Metrics data may be unreliable.
+ | Consider reducing the sampling interval or increasing your application
+ | execution time.
+ |
+
+Top Hotspots
+Function  Module  CPU Time  % of CPU Time(%)
+--------  ------  --------  ----------------
+Effective Physical Core Utilization: 0.0% (0.000 out of 16)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.
+ |
+    Effective Logical Core Utilization: 0.0% (0.000 out of 32)
+     | The metric value is low, which may signal a poor logical CPU cores
+     | utilization. Consider improving physical core utilization as the first
+     | step and then look at opportunities to utilize logical cores, which in
+     | some cases can improve processor throughput and overall performance of
+     | multi-threaded applications.
+     |
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/bin/python "./operations/LinearTransformation.py" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 3.7 MB 
+    Collection start time: 12:29:30 25/03/2024 UTC
+    Collection stop time: 12:29:53 25/03/2024 UTC
+    Collector Type: Driverless Perf per-process counting,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions 50 % Finalizing results                               vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+Running ./operations/LinearTransformation.py for run 16
+vtune: Warning: Pause command is not supported for managed code profiling. Runtime overhead is still possible. Data size limit may be exceeded.
+vtune: Collection paused.
+vtune: Collection paused.
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/hlanka3/P3Mappings/./operations/LinearTransformation.py", line 29, in <module>
+    transformed_tensor = linear_transformation(image_tensor)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1140, in forward
+    raise ValueError(
+ValueError: Input tensor and transformation matrix have incompatible shape.[3 x 10300 x 65500] != 3
+vtune: Collection stopped.
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-299838-c4130-node.v100ubvtune: Executing actions 12 % Loading 'systemcollector-299838-c4130-node.v100ubvtune: Executing actions 12 % Loading '299848.stat.perf' file                  vtune: Executing actions 12 % Loading '299838-299848.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 28 % Setting data model parameters                    vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 34 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Discarding redundant overtime data               vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 37 % Saving the result                                vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 23.311s
+ | Application execution time is too short. Metrics data may be unreliable.
+ | Consider reducing the sampling interval or increasing your application
+ | execution time.
+ |
+
+Top Hotspots
+Function  Module  CPU Time  % of CPU Time(%)
+--------  ------  --------  ----------------
+Effective Physical Core Utilization: 0.0% (0.000 out of 16)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.
+ |
+    Effective Logical Core Utilization: 0.0% (0.000 out of 32)
+     | The metric value is low, which may signal a poor logical CPU cores
+     | utilization. Consider improving physical core utilization as the first
+     | step and then look at opportunities to utilize logical cores, which in
+     | some cases can improve processor throughput and overall performance of
+     | multi-threaded applications.
+     |
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/bin/python "./operations/LinearTransformation.py" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 3.7 MB 
+    Collection start time: 12:29:58 25/03/2024 UTC
+    Collection stop time: 12:30:21 25/03/2024 UTC
+    Collector Type: Driverless Perf per-process counting,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions 50 % Finalizing results                               vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+Running ./operations/LinearTransformation.py for run 17
+vtune: Warning: Pause command is not supported for managed code profiling. Runtime overhead is still possible. Data size limit may be exceeded.
+vtune: Collection paused.
+vtune: Collection paused.
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/hlanka3/P3Mappings/./operations/LinearTransformation.py", line 29, in <module>
+    transformed_tensor = linear_transformation(image_tensor)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1140, in forward
+    raise ValueError(
+ValueError: Input tensor and transformation matrix have incompatible shape.[3 x 10300 x 65500] != 3
+vtune: Collection stopped.
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-299939-c4130-node.v100ubvtune: Executing actions 12 % Loading 'systemcollector-299939-c4130-node.v100ubvtune: Executing actions 12 % Loading '299949.stat.perf' file                  vtune: Executing actions 12 % Loading '299939-299949.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 28 % Setting data model parameters                    vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 34 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Discarding redundant overtime data               vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 37 % Saving the result                                vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 23.073s
+ | Application execution time is too short. Metrics data may be unreliable.
+ | Consider reducing the sampling interval or increasing your application
+ | execution time.
+ |
+
+Top Hotspots
+Function  Module  CPU Time  % of CPU Time(%)
+--------  ------  --------  ----------------
+Effective Physical Core Utilization: 0.0% (0.000 out of 16)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.
+ |
+    Effective Logical Core Utilization: 0.0% (0.000 out of 32)
+     | The metric value is low, which may signal a poor logical CPU cores
+     | utilization. Consider improving physical core utilization as the first
+     | step and then look at opportunities to utilize logical cores, which in
+     | some cases can improve processor throughput and overall performance of
+     | multi-threaded applications.
+     |
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/bin/python "./operations/LinearTransformation.py" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 3.7 MB 
+    Collection start time: 12:30:26 25/03/2024 UTC
+    Collection stop time: 12:30:49 25/03/2024 UTC
+    Collector Type: Driverless Perf per-process counting,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions 50 % Finalizing results                               vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+Running ./operations/LinearTransformation.py for run 18
+vtune: Warning: Pause command is not supported for managed code profiling. Runtime overhead is still possible. Data size limit may be exceeded.
+vtune: Collection paused.
+vtune: Collection paused.
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/hlanka3/P3Mappings/./operations/LinearTransformation.py", line 29, in <module>
+    transformed_tensor = linear_transformation(image_tensor)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1140, in forward
+    raise ValueError(
+ValueError: Input tensor and transformation matrix have incompatible shape.[3 x 10300 x 65500] != 3
+vtune: Collection stopped.
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-300035-c4130-node.v100ubvtune: Executing actions 12 % Loading 'systemcollector-300035-c4130-node.v100ubvtune: Executing actions 12 % Loading '300045.stat.perf' file                  vtune: Executing actions 12 % Loading '300035-300045.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 28 % Setting data model parameters                    vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 34 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Discarding redundant overtime data               vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 37 % Saving the result                                vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 22.764s
+ | Application execution time is too short. Metrics data may be unreliable.
+ | Consider reducing the sampling interval or increasing your application
+ | execution time.
+ |
+
+Top Hotspots
+Function  Module  CPU Time  % of CPU Time(%)
+--------  ------  --------  ----------------
+Effective Physical Core Utilization: 0.0% (0.000 out of 16)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.
+ |
+    Effective Logical Core Utilization: 0.0% (0.000 out of 32)
+     | The metric value is low, which may signal a poor logical CPU cores
+     | utilization. Consider improving physical core utilization as the first
+     | step and then look at opportunities to utilize logical cores, which in
+     | some cases can improve processor throughput and overall performance of
+     | multi-threaded applications.
+     |
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/bin/python "./operations/LinearTransformation.py" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 3.7 MB 
+    Collection start time: 12:30:54 25/03/2024 UTC
+    Collection stop time: 12:31:17 25/03/2024 UTC
+    Collector Type: Driverless Perf per-process counting,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions 50 % Finalizing results                               vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+Running ./operations/LinearTransformation.py for run 19
+vtune: Warning: Pause command is not supported for managed code profiling. Runtime overhead is still possible. Data size limit may be exceeded.
+vtune: Collection paused.
+vtune: Collection paused.
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/hlanka3/P3Mappings/./operations/LinearTransformation.py", line 29, in <module>
+    transformed_tensor = linear_transformation(image_tensor)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1140, in forward
+    raise ValueError(
+ValueError: Input tensor and transformation matrix have incompatible shape.[3 x 10300 x 65500] != 3
+vtune: Collection stopped.
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-300146-c4130-node.v100ubvtune: Executing actions 12 % Loading 'systemcollector-300146-c4130-node.v100ubvtune: Executing actions 12 % Loading '300156.stat.perf' file                  vtune: Executing actions 12 % Loading '300146-300156.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 28 % Setting data model parameters                    vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 34 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Discarding redundant overtime data               vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 37 % Saving the result                                vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 22.978s
+ | Application execution time is too short. Metrics data may be unreliable.
+ | Consider reducing the sampling interval or increasing your application
+ | execution time.
+ |
+
+Top Hotspots
+Function  Module  CPU Time  % of CPU Time(%)
+--------  ------  --------  ----------------
+Effective Physical Core Utilization: 0.0% (0.000 out of 16)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.
+ |
+    Effective Logical Core Utilization: 0.0% (0.000 out of 32)
+     | The metric value is low, which may signal a poor logical CPU cores
+     | utilization. Consider improving physical core utilization as the first
+     | step and then look at opportunities to utilize logical cores, which in
+     | some cases can improve processor throughput and overall performance of
+     | multi-threaded applications.
+     |
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/bin/python "./operations/LinearTransformation.py" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 3.7 MB 
+    Collection start time: 12:31:22 25/03/2024 UTC
+    Collection stop time: 12:31:45 25/03/2024 UTC
+    Collector Type: Driverless Perf per-process counting,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions 50 % Finalizing results                               vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+Running ./operations/LinearTransformation.py for run 20
+vtune: Warning: Pause command is not supported for managed code profiling. Runtime overhead is still possible. Data size limit may be exceeded.
+vtune: Collection paused.
+vtune: Collection paused.
+Traceback (most recent call last):
+  File "/proj/prismgt-PG0/hlanka3/P3Mappings/./operations/LinearTransformation.py", line 29, in <module>
+    transformed_tensor = linear_transformation(image_tensor)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1140, in forward
+    raise ValueError(
+ValueError: Input tensor and transformation matrix have incompatible shape.[3 x 10300 x 65500] != 3
+vtune: Collection stopped.
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-300245-c4130-node.v100ubvtune: Executing actions 12 % Loading 'systemcollector-300245-c4130-node.v100ubvtune: Executing actions 12 % Loading '300255.stat.perf' file                  vtune: Executing actions 12 % Loading '300245-300255.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `libgomp.so.1'         vtune: Executing actions 20 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving information for `python3.10'           vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 28 % Setting data model parameters                    vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 28 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 34 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Updating precomputed scalar metrics              vtune: Executing actions 35 % Discarding redundant overtime data               vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 37 % Saving the result                                vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 22.857s
+ | Application execution time is too short. Metrics data may be unreliable.
+ | Consider reducing the sampling interval or increasing your application
+ | execution time.
+ |
+
+Top Hotspots
+Function  Module  CPU Time  % of CPU Time(%)
+--------  ------  --------  ----------------
+Effective Physical Core Utilization: 0.0% (0.000 out of 16)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.
+ |
+    Effective Logical Core Utilization: 0.0% (0.000 out of 32)
+     | The metric value is low, which may signal a poor logical CPU cores
+     | utilization. Consider improving physical core utilization as the first
+     | step and then look at opportunities to utilize logical cores, which in
+     | some cases can improve processor throughput and overall performance of
+     | multi-threaded applications.
+     |
+Collection and Platform Info
+    Application Command Line: /proj/prismgt-PG0/hlanka3/anaconda3/envs/P3Map/bin/python "./operations/LinearTransformation.py" 
+    Operating System: 5.4.0-164-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+    Computer Name: c4130-node.v100ubuntu20.prismgt-pg0.wisc.cloudlab.us
+    Result Size: 3.7 MB 
+    Collection start time: 12:31:49 25/03/2024 UTC
+    Collection stop time: 12:32:12 25/03/2024 UTC
+    Collector Type: Driverless Perf per-process counting,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) Xeon(R) Processor code named Broadwell
+        Frequency: 3.200 GHz
+        Logical CPU Count: 32
+        LLC size: 26.2 MB 
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+vtune: Using result path `/proj/prismgt-PG0/hlanka3/P3Mappings/tmp_vtune_result_dir'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions 50 % Finalizing results                               vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            
+Done running all programs

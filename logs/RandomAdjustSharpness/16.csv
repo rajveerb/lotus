@@ -1,0 +1,4 @@
+Function,CPU Time,CPU Time:Effective Time,CPU Time:Spin Time,CPU Time:Overhead Time,Module,Function (Full),Source File,Start Address
+ImagingFilter3x3,11.928697,11.928697,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,ImagingFilter3x3,[Unknown],0x38740
+ImagingBlend,6.567953,6.567953,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,ImagingBlend,[Unknown],0x239f0
+__GI___libc_malloc,0.012005,0.012005,0.0,0.0,libc.so.6,__GI___libc_malloc,malloc.c,0x9a0e0

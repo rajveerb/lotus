@@ -1,0 +1,5 @@
+Function,CPU Time,CPU Time:Effective Time,CPU Time:Spin Time,CPU Time:Overhead Time,Module,Function (Full),Source File,Start Address
+ImagingTransformAffine,2.127969,2.127969,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,ImagingTransformAffine,[Unknown],0x41b20
+ImagingFill,0.366636,0.366636,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,ImagingFill,[Unknown],0x37a70
+_PyEval_EvalFrameDefault,0.011998,0.011998,0.0,0.0,python3.10,_PyEval_EvalFrameDefault,ceval.c,0x42a490
+_int_free,0.010000,0.010000,0.0,0.0,libc.so.6,_int_free,malloc.c,0x96840
