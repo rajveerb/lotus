@@ -225,7 +225,7 @@ Similar to other tools in the past which do not claim to be perfect, we follow t
 2. No current support for DDP setting
 3. **LotusMap** is approximate, checkout our paper for additional information
 
-We claim issues 1 and 2 as a limitation as we simply have not tested the system in those setting.
+We claim issues 1 and 2 as a limitation as we simply have not tested the system in these settings yet.
 
 ## Cite Lotus
 
