@@ -1,0 +1,42 @@
+All numbers are in ms
+/mydata/rbachkaniwala3/code/rajveerb_mlperf-training/image_segmentation/pytorch/p3torch_logs/
+Percentile: 0.9
+                                        dur                                                  
+                                        sum       mean     median percentile_func         std
+name                                                                                         
+SCast                            363.379098   2.162971   0.990036        4.324640    2.398077
+SCollation                      1196.718200  14.246645  14.194294       15.812019    1.267474
+SGaussianNoise                  1085.471283   6.461139   0.001750       54.546516   18.165840
+SLoadImage                     12101.996013  72.035691  60.283233      130.943655   42.842512
+SRandBalancedCrop              15306.178628  91.108206   0.047398      298.626491  143.344331
+SRandFlip                        738.834868   4.397827   4.572726        8.845112    3.697357
+SRandomBrightnessAugmentation    132.086045   0.786226   0.004465        4.664498    2.304910
+
+
+
+% of each operation with duration < 10 ms
+                                     dur
+name                                    
+SCast                          98.214286
+SCollation                      0.000000
+SGaussianNoise                 88.690476
+SLoadImage                      0.000000
+SRandBalancedCrop              63.690476
+SRandFlip                      95.238095
+SRandomBrightnessAugmentation  98.809524
+
+
+
+% of each operation with duration < 100 us
+                                     dur
+name                                    
+SCast                           0.000000
+SCollation                      0.000000
+SGaussianNoise                 88.690476
+SLoadImage                      0.000000
+SRandBalancedCrop              61.309524
+SRandFlip                      28.571429
+SRandomBrightnessAugmentation  88.690476
+--------------------------------------------------
+
+
