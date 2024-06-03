@@ -1,5 +1,5 @@
-[submodule "code/P3Torch"]
-	path = code/P3Torch
+[submodule "code/LotusTrace"]
+	path = code/LotusTrace
 	url = git@github.com:rajveerb/pytorch.git
 	branch = v2.0.0_instrumentation
 [submodule "code/itt-python"]
