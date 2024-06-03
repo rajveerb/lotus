@@ -5,9 +5,17 @@ parser = argparse.ArgumentParser(description='batch_wait_summary_stat')
 parser.add_argument('--data_dir', type=str,\
                      default='/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/',\
                           help='directory where custom_log files are stored')
+
+# add argument for custom prefix
+parser.add_argument('--prefix', type=str,\
+                        default='custom_log',\
+                            help='prefix of the custom log files')
+
 args = parser.parse_args()
 
-def generate_batch_wait_stat(data_dir):
+def generate_batch_wait_stat(args):
+    data_dir = args.data_dir
+    prefix = args.prefix
     root_to_result = {}
 
     root_to_files = {}
@@ -24,7 +32,7 @@ def generate_batch_wait_stat(data_dir):
         combine_preprocess_df = pd.DataFrame()
         for file in files:
             # only process files end with .txt
-            if file.startswith('custom_log'):
+            if file.startswith(prefix):
                     # read as a pandas dataframe
                     df = pd.read_csv(os.path.join(root, file),header=None)
                     df.columns = ['name', 'start', 'duration']
@@ -91,6 +99,6 @@ def print_batch_wait_stat(root_to_result):
         print(len(merged_df[~conditions_met])/len(merged_df)*100)
 
 
-result = generate_batch_wait_stat(args.data_dir)
+result = generate_batch_wait_stat(args)
 
 print_batch_wait_stat(result)
