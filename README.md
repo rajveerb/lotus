@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="lotus.png" width="40%" alt="Lotus">
+    <img src="assets/lotus.png" width="40%" alt="Lotus">
 </p>
 
 <p align="center"><i><b>A profiling
