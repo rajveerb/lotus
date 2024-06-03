@@ -26,6 +26,8 @@ parser.add_argument('--sort_criteria', type=str,
 parser.add_argument('--fig_dir', type=str,
                     default='./figs',
                     help='Path to store the figures')
+
+parser.add_argument('--gpu_time', type= int, default=500, help='Time to taken to finish processing on the GPU in millisecs (includes moving the data, forward and backward pass)')
                     
 
 args = parser.parse_args()
@@ -158,7 +160,7 @@ def plotter_preprocessing_time(target_dir,sort_by='batch_id',fig_size=(50,25),re
 
 # %%
 # sort_by = 'name' or 'duration'
-def plotter_preprocessing_wait_time(target_dir,sort_by='batch_id',fig_size=(50,25),fig_prefix='',fig_dir=''):
+def plotter_preprocessing_wait_time(target_dir, gpu_time, sort_by='batch_id',fig_size=(50,25),fig_prefix='',fig_dir='', ):
     plt.figure(figsize=fig_size)
     root_to_files = {}
     for root, dirs, files in os.walk(target_dir):
@@ -243,8 +245,8 @@ def plotter_preprocessing_wait_time(target_dir,sort_by='batch_id',fig_size=(50,2
         maximum = plot_df["duration"].max()
         total_wait_time = np.sum(plot_df["duration"])
         print (f'sum = {total_wait_time:.2f} ms, avg = {mean:.2f} ms, std = {std:.2f} ({100*std/mean:.2f}% of avg) ms, min = {minimum:.2f} ms, max = {maximum:.2f} ms')
-        # print % of batches for which main process had to wait > 500 ms pretty print
-        print (f'{100*len(plot_df[plot_df["duration"] > 500])/len(plot_df):.2f}% of batches had wait time > 500 ms')
+        # print % of batches for which main process had to wait > gpu_time ms pretty print
+        print (f'{100*len(plot_df[plot_df["duration"] > gpu_time])/len(plot_df):.2f}% of batches had wait time > {gpu_time} ms')
         
         # sort by sort_by
         plot_df = plot_df.sort_values(by=[sort_by])
@@ -269,7 +271,7 @@ def plotter_preprocessing_wait_time(target_dir,sort_by='batch_id',fig_size=(50,2
 
 # %%
 # sort_by = 'batch_id' or 'duration'
-def plotter_diff_consumed_preprocess_end_per_batch_time(target_dir,sort_by='batch_id',fig_size=(50,25),remove_outliers=True,fig_prefix='',fig_dir=''):
+def plotter_batch_consumption_delay_time(target_dir,gpu_time, sort_by='batch_id',fig_size=(50,25),remove_outliers=True,fig_prefix='',fig_dir=''):
     
     if sort_by == 'duration':
         sort_by = 'wait_time'
@@ -288,8 +290,8 @@ def plotter_diff_consumed_preprocess_end_per_batch_time(target_dir,sort_by='batc
         worker_df = pd.DataFrame()
         main_df = pd.DataFrame()
         final_df = pd.DataFrame()
-        if 'b512' not in root:
-            continue
+        # if 'b512' not in root:
+        #     continue
         for file in files:
             if "main_pid" in file:
                 main_df = pd.read_csv(os.path.join(root, file)
@@ -356,9 +358,9 @@ def plotter_diff_consumed_preprocess_end_per_batch_time(target_dir,sort_by='batc
             # plt.figure(figsize=fig_size)
             plt.gcf().set_size_inches(fig_size[0], fig_size[1])
             # label x axis
-            plt.xlabel(f'Wait time for batch ids to be consumed (sorted by {sort_by}) (batch size = {prev_batch})', labelpad=40)
+            plt.xlabel(f'Batch consumption delay time for batch ids (sorted by {sort_by}) (batch size = {prev_batch})', labelpad=40)
             # label y axis
-            plt.ylabel('Wait time in ms',labelpad=40)
+            plt.ylabel('Delay time in ms',labelpad=40)
             plt.tick_params(axis='y', which='major', pad=40) 
             plt.tick_params(axis='x', which='major', pad=40) 
             # add legend to bottom right and increase size of legend markers
@@ -373,8 +375,8 @@ def plotter_diff_consumed_preprocess_end_per_batch_time(target_dir,sort_by='batc
         mean = np.mean(final_df["wait_time"])
         std = np.std(final_df["wait_time"])
         print (f'avg = {mean:.2f} ms, std = {std:.2f} ({100*std/mean:.2f}% of avg) ms, min = {final_df["wait_time"].min():.2f} ms, max = {final_df["wait_time"].max():.2f} ms')
-        # print % of batches which had high wait time > 500 ms pretty print
-        print (f'{100*len(final_df[final_df["wait_time"] > 500])/len(final_df):.2f}% of batches had wait time > 500 ms')
+        # print % of batches which had high wait time > gpu_time ms pretty print
+        print (f'{100*len(final_df[final_df["wait_time"] > gpu_time])/len(final_df):.2f}% of batches had wait time > {gpu_time} ms')
         final_df = final_df.sort_values(by=[sort_by])
         if sort_by == 'batch_id':
             plt.scatter(final_df['batch_id'], final_df['wait_time'], label=label,s=300)
@@ -386,10 +388,10 @@ def plotter_diff_consumed_preprocess_end_per_batch_time(target_dir,sort_by='batc
 
             # display grid lines and make it dashed and thick
             plt.grid(visible=True, which='major', linestyle='--', linewidth=10)
-            # add a horizontal line at y = 500 ms thick
-            plt.axhline(y=500, color='r', linestyle='-', linewidth=10)
+            # add a horizontal line at y = gpu_time ms thick
+            plt.axhline(y=gpu_time, color='r', linestyle='-', linewidth=10)
             # add a label to the hosrizontal line
-            plt.text(0, 550, ' 500 ms', fontsize=80, color='r')
+            plt.text(0, gpu_time+50, f' {gpu_time} ms', fontsize=80, color='r')
             plt.xticks((len(final_df['wait_time'])-1) * p/100., map(str, p))
         # plot on log scale
         plt.yscale('log')
@@ -397,16 +399,16 @@ def plotter_diff_consumed_preprocess_end_per_batch_time(target_dir,sort_by='batc
     # plt.figure(figsize=fig_size)
     plt.gcf().set_size_inches(fig_size[0], fig_size[1])
     # label x axis
-    plt.xlabel(f'Wait time for batch ids to be consumed (sorted by {sort_by})', labelpad=40)
+    plt.xlabel(f'Batch consumption delay time for batch ids  (sorted by {sort_by})', labelpad=40)
     # label y axis
-    plt.ylabel('Wait time in ms',labelpad=40)
+    plt.ylabel('Delay time in ms',labelpad=40)
     plt.tick_params(axis='y', which='major', pad=40) 
     plt.tick_params(axis='x', which='major', pad=40) 
     # add legend to bottom right and increase size of legend markers
     # plt.legend(loc='lower right',markerscale=4)
     # plt.legend(bbox_to_anchor=(1.05, 1), markerscale=4)
     plt.tight_layout()
-    fig_path = os.path.join(fig_dir,f'{fig_prefix}{prev_batch}_diff_consumed_preprocess_end_per_batch_{sort_by}.png')
+    fig_path = os.path.join(fig_dir,f'{fig_prefix}{prev_batch}_batch_consumption_delay_time_{sort_by}.png')
     plt.savefig(fig_path)
     plt.clf()
 
@@ -515,21 +517,21 @@ def plotter_diff_consumed_wait_end_per_batch_time(target_dir,sort_by='batch_id',
     plt.clf()
 
 # # %%
-# print("preprocessing time")
-# plotter_preprocessing_time(args.data_dir,sort_by=args.sort_criteria,remove_outliers=True,fig_dir=args.fig_dir, fig_size=figsize)
-# print("----------------------------------------------\n")
+print("preprocessing time")
+plotter_preprocessing_time(args.data_dir,sort_by=args.sort_criteria,remove_outliers=True,fig_dir=args.fig_dir, fig_size=figsize)
+print("----------------------------------------------\n")
     
-# # %%
-# print("main process wait time")
-# plotter_preprocessing_wait_time(args.data_dir,fig_dir=args.fig_dir, fig_size=figsize)
+# %%
+print("main process wait time")
+plotter_preprocessing_wait_time(args.data_dir, args.gpu_time, fig_dir=args.fig_dir, fig_size=figsize)
 print("----------------------------------------------\n")
 
 # %%
-print("[imagenet]  plotting difference between batch consumed and end of batch preprocessing")
-plotter_diff_consumed_preprocess_end_per_batch_time(args.data_dir,remove_outliers=True,fig_dir=args.fig_dir, fig_size=figsize,sort_by=args.sort_criteria)
+print("batch consumption delay time")
+plotter_batch_consumption_delay_time(args.data_dir, args.gpu_time,remove_outliers=True,fig_dir=args.fig_dir, fig_size=figsize,sort_by=args.sort_criteria)
 print("----------------------------------------------\n")
 
-# # %%
-# print("[imagenet] plotting difference between batch consumed and end of batch wait")
-# plotter_diff_consumed_wait_end_per_batch_time(args.data_dir,remove_outliers=True, fig_dir=args.fig_dir, fig_size=figsize)
-# print("----------------------------------------------\n")
+# %%
+print("[imagenet] plotting difference between batch consumed and end of batch wait")
+plotter_diff_consumed_wait_end_per_batch_time(args.data_dir,remove_outliers=True, fig_dir=args.fig_dir, fig_size=figsize)
+print("----------------------------------------------\n")
