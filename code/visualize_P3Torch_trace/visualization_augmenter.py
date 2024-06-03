@@ -5,8 +5,8 @@ import os
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--p3torch_trace_dir', type=str,
-                    default='pytorch_profiles_imagenet_dataset', help='Root directory which stores p3torch profiler data along with custom_log for different configs')
+parser.add_argument('--lotustrace_trace_dir', type=str,
+                    default='pytorch_profiles_imagenet_dataset', help='Root directory which stores lotustrace profiler data along with custom_log for different configs')
 parser.add_argument('--custom_log_prefix', type=str, default='custom_log', 
                     help='custom_log, requirement is the file should begin with the prefix passed as an argument\
                           and end with pid_<pidnumber> without any extension such as .json, for example, custom_log_abcdef_pid_1234')
@@ -17,8 +17,8 @@ parser.add_argument('--coarse', action='store_true', help='coarse option will ge
                     transformation time,\
                     collation time,\
                     individual transformation time')
-parser.add_argument('--output_p3torch_viz_file', type=str,
-                    default='viz_file.p3torch', help='[Warning] A json file will be generated which can be visualized using chrome://tracing \
+parser.add_argument('--output_lotustrace_viz_file', type=str,
+                    default='viz_file.lotustrace', help='[Warning] A json file will be generated which can be visualized using chrome://tracing \
                     \nNote: The file should not contain custom_log prefix in the name or end with json')
 
 
@@ -98,16 +98,16 @@ def save_custom_log_profiler_format(custom_log_only_profiler_format_file,result)
 args = parser.parse_args()
 
 # check for custom log file viz warning
-if args.custom_log_prefix in args.output_p3torch_viz_file or args.output_p3torch_viz_file.endswith(".json"):
-    print("[Warning] The output_p3torch_viz_file should not contain custom_log prefix in the name or end with json")
+if args.custom_log_prefix in args.output_lotustrace_viz_file or args.output_lotustrace_viz_file.endswith(".json"):
+    print("[Warning] The output_lotustrace_viz_file should not contain custom_log prefix in the name or end with json")
     exit()
 
 # recursively search for pytorch profiler data files
-for root, dirs, files in os.walk(args.p3torch_trace_dir):
+for root, dirs, files in os.walk(args.lotustrace_trace_dir):
     print(f"root: {root}")
     print(f"files: {files}")
     result = []
-    result_p3torch_data_file = None
+    result_lotustrace_data_file = None
     for file in files:
         if file.startswith(args.custom_log_prefix):
             print(f"custom log file: {file}")
@@ -115,8 +115,8 @@ for root, dirs, files in os.walk(args.p3torch_trace_dir):
             result += update_pytorch_profile_data(os.path.join(root, file), pid, args.coarse)
         elif file.endswith(".json"):
             print(f"pytorch profiler data file: {file}")
-            result_p3torch_data_file = os.path.join(root, file) 
-    if result_p3torch_data_file:
-        save_augmented_profiler_data(result_p3torch_data_file,args.coarse,result)
+            result_lotustrace_data_file = os.path.join(root, file) 
+    if result_lotustrace_data_file:
+        save_augmented_profiler_data(result_lotustrace_data_file,args.coarse,result)
     else:
-        save_custom_log_profiler_format(args.output_p3torch_viz_file,result)
+        save_custom_log_profiler_format(args.output_lotustrace_viz_file,result)

@@ -1,5 +1,5 @@
 # !/bin/bash
-train_dataset_dir="/mydata/P3Tracer/imagenet/train"
+train_dataset_dir="/mydata/Lotus/imagenet/train"
 mkdir -P $train_dataset_dir
 echo "Downloading ImageNet train dataset (please be patient, this may take a while)"
 wget --quiet https://image-net.org/data/ILSVRC/2012/ILSVRC2012_img_train.tar -P $train_dataset_dir

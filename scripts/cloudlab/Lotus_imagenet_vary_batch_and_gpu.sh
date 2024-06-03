@@ -1,11 +1,11 @@
 # !/bin/bash
 
-result_dir="/mydata/P3Tracer/p3torch_imagenet_vary_batch_and_gpu"
+result_dir="/mydata/Lotus/lotustrace_imagenet_vary_batch_and_gpu"
 e2e_log_dir="${result_dir}/e2e"
 python_path=$(which python)
 program_path="code/image_classification/code/pytorch_main.py"
 time_binary="/usr/bin/time"
-dataset_dir="/mydata/P3Tracer/imagenet"
+dataset_dir="/mydata/Lotus/imagenet"
 
 
 batch_sizes=("128" "256" "512" "1024")
@@ -41,10 +41,10 @@ do
             mkdir -p ${result_dir}
         fi
         echo "Result for run with batch size ${batch_size} and num_gpu ${num_gpu} will be stored in ${run_result_dir}" 
-        ${time_binary} --quiet --format=${time_format} -o "${e2e_log_dir}/P3Torch_log_b${batch_size}_gpu${num_gpu}.log" ${python_path} ${program_path} ${dataset_dir} -b ${batch_size} --gpus ${num_gpu} -j ${num_gpu} --epochs ${num_epochs} --log-train-file ${run_result_dir}/P3Torch_log --val-loop 0;
+        ${time_binary} --quiet --format=${time_format} -o "${e2e_log_dir}/lotustrace_log_b${batch_size}_gpu${num_gpu}.log" ${python_path} ${program_path} ${dataset_dir} -b ${batch_size} --gpus ${num_gpu} -j ${num_gpu} --epochs ${num_epochs} --log-train-file ${run_result_dir}/lotustrace_log --val-loop 0;
         echo "Finished running for batch size ${batch_size} and num_gpu ${num_gpu}"
-        echo "Check ${e2e_log_dir}/P3Torch_log_b${batch_size}_gpu${num_gpu}.log for end to end time for this run"
+        echo "Check ${e2e_log_dir}/lotustrace_log_b${batch_size}_gpu${num_gpu}.log for end to end time for this run"
     done
 done
 
-echo "Finished running all experiments for P3Torch_imagenet_vary_batch_and_gpu.sh"
+echo "Finished running all experiments for lotustrace_imagenet_vary_batch_and_gpu.sh"

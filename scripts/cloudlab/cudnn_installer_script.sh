@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt-get install -y zlib1g
-cudnn_binary_dir="/mydata/P3Tracer/installation_binaries"
+cudnn_binary_dir="/mydata/Lotus/installation_binaries"
 
 # if [ ! -f $cudnn_binary_dir/cudnn-local-repo-ubuntu2004-8.7.0.84_1.0-1_amd64.deb ]; then
 #     wget https://developer.download.nvidia.com/compute/cudnn/secure/8.7.0/local_installers/11.8/cudnn-local-repo-ubuntu2004-8.7.0.84_1.0-1_amd64.deb -P $cudnn_binary_dir

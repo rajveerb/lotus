@@ -1,42 +1,42 @@
 <p align="center">
-    <img src="lotus.png" width="40%" alt="P3Tracer">
+    <img src="lotus.png" width="40%" alt="Lotus">
 </p>
 
-<p align="center"><i><b>Fine-grained Profiling for Machine Learning Data
-Preprocessing in PyTorch</b></i></p>
+<p align="center"><i><b>A profiling
+tool for the preprocessing stage of ML pipelines</b></i></p>
 
 
-We introduce **P3Tracer**, a specialized profiling tool for PyTorch preprocessing pipelines. 
+We introduce **Lotus**, a profiling tool for ML preprocessing pipelines defined using PyTorch's DataLoader.
 
-**P3Tracer** is an easy-to-use, low overhead, and visualization-ready profiler specialized for the widely used PyTorch framework.
+**Lotus** is an easy-to-use, low overhead, and visualization-ready profiler specialized for the widely used PyTorch DataLoader preprocessing library.
 
 ## Quick links
-- [About P3Tracer](#about-p3tracer)
-- [Get P3Tracer](#how-to-get-p3tracer)
-- [Use P3Tracer](#use-p3tracer)
-    - [How to use P3Torch](#how-to-use-p3torch)
-    - [Visualize P3Torch trace](#how-to-visualize-p3torch-trace)
-    - [How to use P3Map](#how-to-use-p3map)
+- [About Lotus](#about-Lotus)
+- [Get Lotus](#how-to-get-Lotus)
+- [Use Lotus](#use-Lotus)
+    - [How to use LotusTrace](#how-to-use-LotusTrace)
+    - [Visualize LotusTrace trace](#how-to-visualize-LotusTrace-trace)
+    - [How to use LotusMap](#how-to-use-LotusMap)
 - [Concrete examples](#concrete-examples)
-    - [Example for P3Torch](#example-for-p3torch)
-    - [Example for P3Map](#example-for-p3map)
-- [Replicate our P3Tracer experiments](#replicate-our-p3tracer-experiments)
-- [Limitations of P3Tracer](#limitations-of-p3tracer)
-- [Cite P3Tracer](#citation)
+    - [Example for LotusTrace](#example-for-LotusTrace)
+    - [Example for LotusMap](#example-for-LotusMap)
+- [Replicate our Lotus experiments](#replicate-our-Lotus-experiments)
+- [Limitations of Lotus](#limitations-of-Lotus)
+- [Cite Lotus](#citation)
 - [License](#license)
 
 
 
-## About P3Tracer
+## About Lotus
 
-P3Tracer employs two novel approaches:
+Lotus employs two novel approaches:
 
-1. **P3Torch** - An instrumentation methodology for the PyTorch library, which enables fine-grained elapsed time profiling with minimal time and storage overheads. 
-2. **P3Map** - A mapping methodology to reconstruct a mapping between Python functions and the underlying C++ functions they call, effectively linking high-level Python functions with low-level hardware counters. 
+1. **LotusTrace** - An instrumentation methodology for the PyTorch library, which enables fine-grained elapsed time profiling with minimal time and storage overheads. 
+2. **LotusMap** - A mapping methodology to reconstruct a mapping between Python functions and the underlying C++ functions they call, effectively linking high-level Python functions with low-level hardware counters. 
 
 Above combination is powerful as it allows enables users to better reason about their pipeline’s performance, both at the level of preprocessing operations and their performance on hardware resource usage.
 
-## How to get P3Tracer
+## How to get Lotus
 
 1. Clone this repository
 2. Get submodules:
@@ -47,23 +47,23 @@ Above combination is powerful as it allows enables users to better reason about 
 3. Create a conda environment
 
     ```bash
-    conda create -n P3Tracer python=3.10
-    conda activate P3Tracer
+    conda create -n Lotus python=3.10
+    conda activate Lotus
     ```
 4. Install Intel VTune from [here](https://www.intel.com/content/www/us/en/docs/vtune-profiler/installation-guide/2023-1/overview.html) and activate it as Intel descsribes.
 
     Note: we used `Intel(R) VTune(TM) Profiler 2024.0.1 (build 627177)`
 5. Install CUDA 11.8 from [here](https://developer.nvidia.com/cuda-11-8-0-download-archive) and CuDNN 8.7.0 from [here](https://developer.nvidia.com/rdp/cudnn-archive)
-6. Follow the **P3Torch** build instructions in `code/P3Torch/README.md`
+6. Follow the **LotusTrace** build instructions in `code/LotusTrace/README.md`
 7. Follow the **itt-python** build instructions in `code/itt-python/README.md`
 8. That's it!
 
-## Use P3Tracer
+## Use Lotus
 
-### How to use P3Torch
+### How to use LotusTrace
 
 
-**P3Torch** can be enabled by simply passing a `custom_log_file` to be used by **P3Torch** using keywords `log_transform_elapsed_time` and `log_file` as shown below:
+**LotusTrace** can be enabled by simply passing a `custom_log_file` to be used by **LotusTrace** using keywords `log_transform_elapsed_time` and `log_file` as shown below:
 
 ```python
 import torchvision.transforms as transforms
@@ -92,7 +92,7 @@ train_loader = torch.utils.data.DataLoader(
 
 But, what if you have a custom dataset?
 
-We do support **P3Torch** for custom datasets as well check below instance:
+We do support **LotusTrace** for custom datasets as well check below instance:
 
 
 ```python
@@ -118,28 +118,28 @@ dataset = CustomDataset(log_file = log_file, transforms = transforms)
 You simply need to add `self.log_file` and `self.transforms` variable in `__init__` function of your custom dataset object as shown above. 
 Moreover, you need to structure the code such that you use torchvision's `Compose` class' object to perform preprocessing operations as shown in `self.transforms(index)` line. That's it!
 
-### How to visualize P3Torch trace
+### How to visualize LotusTrace trace
 
-The trace generated by **P3Torch** will be stored in the directory of the `log_file` as mentioned in [How to use P3Torch](#how-to-use-p3torch). To generate a visualization ready trace from **P3Torch**'s trace run the below command:
+The trace generated by **LotusTrace** will be stored in the directory of the `log_file` as mentioned in [How to use LotusTrace](#how-to-use-LotusTrace). To generate a visualization ready trace from **LotusTrace**'s trace run the below command:
 
 ```bash
-python code/visualize_P3Torch_trace/visualization_augmenter.py \
-    --p3torch_trace_dir <p3torch_trace_dir> \
+python code/visualize_LotusTrace_trace/visualization_augmenter.py \
+    --LotusTrace_trace_dir <LotusTrace_trace_dir> \
     --coarse \
-    --output_p3torch_viz_file <viz_file_path>
+    --output_LotusTrace_viz_file <viz_file_path>
 ```
 
-Note: `--coarse` option is great option for a quick high level view. Visualization trace will be stored in the same directory as `<p3torch_trace_dir>`. You can open this trace in your chrome browser with URL set to `chrome://tracing/` and simply upload the file using `Load` button.
+Note: `--coarse` option is great option for a quick high level view. Visualization trace will be stored in the same directory as `<LotusTrace_trace_dir>`. You can open this trace in your chrome browser with URL set to `chrome://tracing/` and simply upload the file using `Load` button.
 
 For more options:
 ```bash
-python code/visualize_P3Torch_trace/visualization_augmenter.py \
+python code/visualize_LotusTrace_trace/visualization_augmenter.py \
     --help 
 ```
 
-### How to use P3Map
+### How to use LotusMap
 
-Below is an example of how to write a python file called RandomResizedCrop.py such that using **P3Map**'s method can be applied to collect the mapping: 
+Below is an example of how to write a python file called RandomResizedCrop.py such that using **LotusMap**'s method can be applied to collect the mapping: 
 
 ```python
 import torchvision.transforms as t
@@ -178,13 +178,13 @@ vtune -report hotspots \
 
 `RandomResizedCrop.csv` contains the C/C++ functions mapped to `RandomResizedCrop` operation.
 
-*Note*: For completeness, checkout our paper to navigate how to correctly use **P3Map** methodology.
+*Note*: For completeness, checkout our paper to navigate how to correctly use **LotusMap** methodology.
 
 ## Concrete examples
 
-### Example for P3Torch
+### Example for LotusTrace
 
-An example of how to enable **P3Torch** facilitated logging for an image classification task has been described in `code/image_classification/code/pytorch_main.py`, we add the snippet below for the same:
+An example of how to enable **LotusTrace** facilitated logging for an image classification task has been described in `code/image_classification/code/pytorch_main.py`, we add the snippet below for the same:
 
 ```python
 normalize = transforms.Normalize(
@@ -205,29 +205,29 @@ train_dataset = datasets.ImageFolder(
 )
 ```
 
-Notice that the user simply has to pass the same log file to be used by **P3Torch** using keywords `log_transform_elapsed_time` and `log_file`.
+Notice that the user simply has to pass the same log file to be used by **LotusTrace** using keywords `log_transform_elapsed_time` and `log_file`.
 
-### Example for P3Map
+### Example for LotusMap
 
-We provide 6 examples of how to use **P3Map** in `code/image_classification/P3Map` directory. Please check the code for more details.
+We provide 6 examples of how to use **LotusMap** in `code/image_classification/LotusMap` directory. Please check the code for more details.
 
-## Replicate our P3Tracer experiments
+## Replicate our Lotus experiments
 
-Here, we describe how to replicate our **P3Tracer** experiments for an image classification ML training task. 
+Here, we describe how to replicate our **Lotus** experiments for an image classification ML training task. 
 
 Checkout [`REPLICATE.md`](REPLICATE.md)
 
-## Limitations of P3Tracer
+## Limitations of Lotus
 
-Similar to other tools in the past which do not claim to be perfect, we follow the same tradition with **P3Tracer**:
+Similar to other tools in the past which do not claim to be perfect, we follow the same tradition with **Lotus**:
 
 1. No current support for multi-node setting
 2. No current support for DDP setting
-3. **P3Map** is approximate, checkout our paper for additional information
+3. **LotusMap** is approximate, checkout our paper for additional information
 
 We claim issues 1 and 2 as a limitation as we simply have not tested the system in those setting.
 
-## Cite P3Tracer
+## Cite Lotus
 
 TODO
 
