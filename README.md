@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="P3Tracer.png" width="40%" alt="P3Tracer">
+    <img src="lotus.png" width="40%" alt="P3Tracer">
 </p>
 
 <p align="center"><i><b>Fine-grained Profiling for Machine Learning Data
