@@ -53,8 +53,8 @@ We provide the code/scripts to replicate Lotus experiment results in the cloudla
     ```bash
     bash code/image_classification/LotusMap/LotusMap.sh
     ```
-16. Generate JSON file with mapping info by running all cells in [`code/image_classification/LotusMap/logsToMapping.ipynb`](code/image_classification/LotusMap/logsToMapping.ipynb)
-17. You have successfully obtained the mapping ([`code/image_classification/LotusMap/mapping_funcs.json`](code/image_classification/LotusMap/mapping_funcs.json)) using **LotusMap**!
+16. Generate JSON file with mapping info by running all cells in [`code/image_classification/LotusMap/Intel/logsToMapping.ipynb`](code/image_classification/LotusMap/Intel/logsToMapping.ipynb)
+17. You have successfully obtained the mapping ([`code/image_classification/LotusMap/mapping_funcs.json`](code/image_classification/LotusMap/Intel/mapping_funcs.json)) using **LotusMap**!
 18. Download ImageNet for next set of experiments:
     ```bash
     bash scripts/cloudlab/download_imagenet.sh
