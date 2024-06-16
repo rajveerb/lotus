@@ -10,3 +10,6 @@
 	path = code/torchvision
 	url = git@github.com:rajveerb/vision.git
 	branch = v0.15_instrumentation
+[submodule "code/amdprofilecontrol-python"]
+	path = code/amdprofilecontrol-python
+	url = git@github.com:rajveerb/amdprofilecontrol-python.git
