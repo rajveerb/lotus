@@ -1,11 +1,11 @@
 # !/bin/bash
 
-program_path_prefix="/home/rbachkaniwala3/work/rajveerb_AMDProfileControl-python/AMD"
+program_path_prefix="/home/rbachkaniwala3/work/XXXXBR-python/AMD"
 python_path="/home/rbachkaniwala3/work/anaconda3/envs/amduprof/bin/python"
 programs=("Loader.py" "Normalize.py" "RandomHorizontalFlip.py" "RandomResizedCrop.py" "ToTensor.py" "Collation.py")
 amduprof_record="AMDuProfCLI collect --config tbp --start-paused"
 amduprof_report="AMDuProfCLI report"
-csv_dir="/home/rbachkaniwala3/work/rajveerb_AMDProfileControl-python/AMD/logs"
+csv_dir="/home/rbachkaniwala3/work/XXXXBR-python/AMD/logs"
 
 # check if all the above directories exist
 if [ ! -d "$program_path_prefix" ]; then

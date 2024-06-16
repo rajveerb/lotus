@@ -1,12 +1,12 @@
 import sys
-sys.path.append('/home/rbachkaniwala3/work/rajveerb_AMDProfileControl-python')
+sys.path.append('/home/rbachkaniwala3/work/XXXXBR-python')
 import torchvision.transforms as transforms
 from PIL import Image
 import time,amdprofilecontrol as a
 # increase PIL image open size
 Image.MAX_IMAGE_PIXELS = 1000000000
 
-batch = ["/home/rbachkaniwala3/work/rajveerb_AMDProfileControl-python/AMD/random_image10MB.jpg" for i in range(5)]
+batch = ["/home/rbachkaniwala3/work/XXXXBR-python/AMD/random_image10MB.jpg" for i in range(5)]
 
 for i,image_file in enumerate(batch):
     # Open the image
