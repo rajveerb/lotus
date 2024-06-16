@@ -13,3 +13,4 @@
 [submodule "code/amdprofilecontrol-python"]
 	path = code/amdprofilecontrol-python
 	url = git@github.com:rajveerb/amdprofilecontrol-python.git
+	branch = dump
