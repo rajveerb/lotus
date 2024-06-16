@@ -1,0 +1,137 @@
+
+"AMD uProf (Version:4.0.341.0)"
+PERFORMANCE ANALYSIS REPORT
+
+EXECUTION
+Target Path:,"/home/rbachkaniwala3/work/anaconda3/envs/amduprof/bin/python"
+Command Line Arguments:,"/home/rbachkaniwala3/work/rajveerb_AMDProfileControl-python/low_level_func/Collation.py "
+Working Directory:,"/data/home/rbachkaniwala3/work/rajveerb_AMDProfileControl-python"
+Environment Variables:
+CPU Details:,"Family(0x19), Model(0x1), Number of Cores(128)"
+Operating System:,"LinuxUbuntu 20.04.5 LTS-64 Kernel:5.4.0-137-generic"
+
+PROFILE DETAILS
+Profile Session Type:,"Time-based Sampling"
+Profile Scope:,"Single Application"
+CPU Mask:,"0-127"
+CPU Affinity Mask:,"0-127"
+Profile Start Time:,"Tue May 28 01:39:24 2024"
+Profile End Time:,"Tue May 28 01:40:02 2024"
+Profile Duration:,"0.011 seconds"
+Data Folder:,"/home/rbachkaniwala3/low_level_func/AMDuProf-python-TBP_May-28-2024_01-39-24"
+Virtual Machine:,"No"
+Call Stack Sampling:,"False"
+
+MONITORED EVENTS
+TBP Events:,Name,Interval,Description
+,"CPU_TIME","1.000 milliseconds","CPU Time is the time in which the CPU core is executing the code."
+
+"100 HOTTEST FUNCTIONS (Sort Event - CPU_TIME)"
+FUNCTION,"CPU_TIME",Module
+"libgomp-a34b3233.so.1!0x00018b10",24850.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00018c88",24731.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00018c99",5430.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00018b21",5324.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00018b13",1153.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00018c8b",1095.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00018b16",414.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00018c8e",358.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"deduce_unreachable",14.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/bin/python3.9"
+"void c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::native::AVX2::VectorizedLoop2d<at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#4}::operator()() const::{lambda()#14}::operator()() const::{lambda(float)#1}, at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#4}::operator()() const::{lambda()#4}::operator()() const::{lambda(at::vec::AVX2::Vectorized<float>)#2}> >(long, char**, long const*, long, long)",11.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so"
+"visit_reachable",10.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/bin/python3.9"
+"dict_traverse",8.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/bin/python3.9"
+"func_traverse",6.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/bin/python3.9"
+"void at::internal::invoke_parallel<at::parallel_for<at::TensorIteratorBase::for_each(c10::function_ref<void (char**, long const*, long, long)>, long)::{lambda(long, long)#1}>(long, long, long, at::TensorIteratorBase::for_each(c10::function_ref<void (char**, long const*, long, long)>, long)::{lambda(long, long)#1} const&)::{lambda(long, long)#1}>(long, long, long, at::parallel_for<at::TensorIteratorBase::for_each(c10::function_ref<void (char**, long const*, long, long)>, long)::{lambda(long, long)#1}>(long, long, long, at::TensorIteratorBase::for_each(c10::function_ref<void (char**, long const*, long, long)>, long)::{lambda(long, long)#1} const&)::{lambda(long, long)#1} const)",4.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so"
+"libgomp-a34b3233.so.1!0x00018bc0",4.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"subtype_traverse",3.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/bin/python3.9"
+"libgomp-a34b3233.so.1!0x0000f43f",3.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00016400",2.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00018b1f",2.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00018dd0",2.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"list_traverse",1.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/bin/python3.9"
+"tupletraverse",1.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/bin/python3.9"
+"libgomp-a34b3233.so.1!0x0000f3dd",1.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x0000f422",1.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x000163e0",1.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x000163e4",1.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00018b31",1.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00018c97",1.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00018c9e",1.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00018cab",1.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+
+"100 HOTTEST PROCESSES (Sort Event - CPU_TIME)"
+PROCESS,"CPU_TIME"
+"pt_main_thread (PID:1434981)",63434.0000
+
+"100 HOTTEST MODULES (Sort Event - CPU_TIME)"
+MODULE,"CPU_TIME"
+"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1",63376.0000
+"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/bin/python3.9",43.0000
+"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so",15.0000
+
+"100 HOTTEST THREADS (Sort Event - CPU_TIME)"
+THREAD,"CPU_TIME"
+"pt_main_thread [TID:1434981] (PID:1434981)",1057.0000
+"pt_mai [TID:1435237] (PID:1434981)",1041.0000
+"pt_mai [TID:1435229] (PID:1434981)",1037.0000
+"pt_mai [TID:1435193] (PID:1434981)",1028.0000
+"pt_mai [TID:1435227] (PID:1434981)",1027.0000
+"pt_mai [TID:1435200] (PID:1434981)",1026.0000
+"pt_mai [TID:1435213] (PID:1434981)",1026.0000
+"pt_mai [TID:1435228] (PID:1434981)",1023.0000
+"pt_mai [TID:1435234] (PID:1434981)",1022.0000
+"pt_mai [TID:1435212] (PID:1434981)",1021.0000
+"pt_mai [TID:1435215] (PID:1434981)",1018.0000
+"pt_mai [TID:1435224] (PID:1434981)",1018.0000
+"pt_mai [TID:1435194] (PID:1434981)",1017.0000
+"pt_mai [TID:1435247] (PID:1434981)",1017.0000
+"pt_mai [TID:1435225] (PID:1434981)",1016.0000
+"pt_mai [TID:1435219] (PID:1434981)",1015.0000
+"pt_mai [TID:1435218] (PID:1434981)",1014.0000
+"pt_mai [TID:1435241] (PID:1434981)",1014.0000
+"pt_mai [TID:1435210] (PID:1434981)",1013.0000
+"pt_mai [TID:1435254] (PID:1434981)",1013.0000
+"pt_mai [TID:1435245] (PID:1434981)",1012.0000
+"pt_mai [TID:1435246] (PID:1434981)",1012.0000
+"pt_mai [TID:1435211] (PID:1434981)",1011.0000
+"pt_mai [TID:1435216] (PID:1434981)",1011.0000
+"pt_mai [TID:1435239] (PID:1434981)",1010.0000
+"pt_mai [TID:1435195] (PID:1434981)",1008.0000
+"pt_mai [TID:1435197] (PID:1434981)",1007.0000
+"pt_mai [TID:1435199] (PID:1434981)",1006.0000
+"pt_mai [TID:1435201] (PID:1434981)",1006.0000
+"pt_mai [TID:1435242] (PID:1434981)",1005.0000
+"pt_mai [TID:1435243] (PID:1434981)",1001.0000
+"pt_mai [TID:1435226] (PID:1434981)",999.0000
+"pt_mai [TID:1435220] (PID:1434981)",994.0000
+"pt_mai [TID:1435230] (PID:1434981)",991.0000
+"pt_mai [TID:1435249] (PID:1434981)",991.0000
+"pt_mai [TID:1435252] (PID:1434981)",988.0000
+"pt_mai [TID:1435221] (PID:1434981)",987.0000
+"pt_mai [TID:1435240] (PID:1434981)",987.0000
+"pt_mai [TID:1435235] (PID:1434981)",986.0000
+"pt_mai [TID:1435238] (PID:1434981)",985.0000
+"pt_mai [TID:1435203] (PID:1434981)",984.0000
+"pt_mai [TID:1435204] (PID:1434981)",984.0000
+"pt_mai [TID:1435250] (PID:1434981)",984.0000
+"pt_mai [TID:1435253] (PID:1434981)",982.0000
+"pt_mai [TID:1435198] (PID:1434981)",980.0000
+"pt_mai [TID:1435208] (PID:1434981)",980.0000
+"pt_mai [TID:1435223] (PID:1434981)",980.0000
+"pt_mai [TID:1435207] (PID:1434981)",978.0000
+"pt_mai [TID:1435231] (PID:1434981)",973.0000
+"pt_mai [TID:1435217] (PID:1434981)",966.0000
+"pt_mai [TID:1435222] (PID:1434981)",966.0000
+"pt_mai [TID:1435192] (PID:1434981)",960.0000
+"pt_mai [TID:1435205] (PID:1434981)",960.0000
+"pt_mai [TID:1435233] (PID:1434981)",960.0000
+"pt_mai [TID:1435236] (PID:1434981)",955.0000
+"pt_mai [TID:1435244] (PID:1434981)",954.0000
+"pt_mai [TID:1435251] (PID:1434981)",953.0000
+"pt_mai [TID:1435232] (PID:1434981)",952.0000
+"pt_mai [TID:1435206] (PID:1434981)",948.0000
+"pt_mai [TID:1435214] (PID:1434981)",941.0000
+"pt_mai [TID:1435196] (PID:1434981)",928.0000
+"pt_mai [TID:1435202] (PID:1434981)",918.0000
+"pt_mai [TID:1435209] (PID:1434981)",918.0000
+"pt_mai [TID:1435248] (PID:1434981)",870.0000

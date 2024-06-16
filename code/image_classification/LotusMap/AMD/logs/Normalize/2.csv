@@ -1,0 +1,117 @@
+
+"AMD uProf (Version:4.0.341.0)"
+PERFORMANCE ANALYSIS REPORT
+
+EXECUTION
+Target Path:,"/home/rbachkaniwala3/work/anaconda3/envs/amduprof/bin/python"
+Command Line Arguments:,"/home/rbachkaniwala3/work/rajveerb_AMDProfileControl-python/low_level_func/Normalize.py "
+Working Directory:,"/data/home/rbachkaniwala3/work/rajveerb_AMDProfileControl-python"
+Environment Variables:
+CPU Details:,"Family(0x19), Model(0x1), Number of Cores(128)"
+Operating System:,"LinuxUbuntu 20.04.5 LTS-64 Kernel:5.4.0-137-generic"
+
+PROFILE DETAILS
+Profile Session Type:,"Time-based Sampling"
+Profile Scope:,"Single Application"
+CPU Mask:,"0-127"
+CPU Affinity Mask:,"0-127"
+Profile Start Time:,"Wed May 22 20:58:51 2024"
+Profile End Time:,"Wed May 22 20:59:43 2024"
+Profile Duration:,"0.008 seconds"
+Data Folder:,"/home/rbachkaniwala3/low_level_func/AMDuProf-python-TBP_May-22-2024_20-58-51"
+Virtual Machine:,"No"
+Call Stack Sampling:,"False"
+
+MONITORED EVENTS
+TBP Events:,Name,Interval,Description
+,"CPU_TIME","1.000 milliseconds","CPU Time is the time in which the CPU core is executing the code."
+
+"100 HOTTEST FUNCTIONS (Sort Event - CPU_TIME)"
+FUNCTION,"CPU_TIME",Module
+"void c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::native::AVX2::VectorizedLoop2d<at::native::(anonymous namespace)::add_kernel(at::TensorIteratorBase&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(float, float)#1}, at::native::(anonymous namespace)::add_kernel(at::TensorIteratorBase&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#1}::operator()() const::{lambda(at::vec::AVX2::Vectorized<float>, at::vec)#2}> >(long, char**, long const*, long, long)",6002.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so"
+"void c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::native::AVX2::VectorizedLoop2d<at::native::(anonymous namespace)::div_true_kernel(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float, float)#1}, at::native::(anonymous namespace)::div_true_kernel(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(at::vec::AVX2::Vectorized<float>, at::vec)#2}> >(long, char**, long const*, long, long)",5940.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so"
+"void c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::native::AVX2::VectorizedLoop2d<at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#4}::operator()() const::{lambda()#14}::operator()() const::{lambda(float)#1}, at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#4}::operator()() const::{lambda()#4}::operator()() const::{lambda(at::vec::AVX2::Vectorized<float>)#2}> >(long, char**, long const*, long, long)",1060.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so"
+"libgomp-a34b3233.so.1!0x00018c88",637.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00018b10",319.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00018c99",147.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00018b21",74.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00018c8b",24.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00018b13",15.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00018c8e",12.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+"libgomp-a34b3233.so.1!0x00018b16",6.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1"
+
+"100 HOTTEST PROCESSES (Sort Event - CPU_TIME)"
+PROCESS,"CPU_TIME"
+"pt_main_thread (PID:3159163)",14236.0000
+
+"100 HOTTEST MODULES (Sort Event - CPU_TIME)"
+MODULE,"CPU_TIME"
+"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so",13002.0000
+"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1",1234.0000
+
+"100 HOTTEST THREADS (Sort Event - CPU_TIME)"
+THREAD,"CPU_TIME"
+"pt_mai [TID:3159566] (PID:3159163)",250.0000
+"pt_mai [TID:3159577] (PID:3159163)",250.0000
+"pt_mai [TID:3159620] (PID:3159163)",250.0000
+"pt_mai [TID:3159567] (PID:3159163)",248.0000
+"pt_mai [TID:3159571] (PID:3159163)",248.0000
+"pt_mai [TID:3159579] (PID:3159163)",248.0000
+"pt_mai [TID:3159582] (PID:3159163)",248.0000
+"pt_mai [TID:3159619] (PID:3159163)",248.0000
+"pt_mai [TID:3159621] (PID:3159163)",248.0000
+"pt_mai [TID:3159565] (PID:3159163)",247.0000
+"pt_mai [TID:3159580] (PID:3159163)",247.0000
+"pt_mai [TID:3159583] (PID:3159163)",247.0000
+"pt_mai [TID:3159588] (PID:3159163)",247.0000
+"pt_mai [TID:3159606] (PID:3159163)",247.0000
+"pt_mai [TID:3159609] (PID:3159163)",247.0000
+"pt_mai [TID:3159584] (PID:3159163)",246.0000
+"pt_mai [TID:3159593] (PID:3159163)",246.0000
+"pt_mai [TID:3159596] (PID:3159163)",246.0000
+"pt_mai [TID:3159604] (PID:3159163)",246.0000
+"pt_mai [TID:3159563] (PID:3159163)",245.0000
+"pt_mai [TID:3159586] (PID:3159163)",245.0000
+"pt_mai [TID:3159605] (PID:3159163)",245.0000
+"pt_mai [TID:3159607] (PID:3159163)",245.0000
+"pt_mai [TID:3159613] (PID:3159163)",245.0000
+"pt_mai [TID:3159614] (PID:3159163)",245.0000
+"pt_mai [TID:3159560] (PID:3159163)",244.0000
+"pt_mai [TID:3159564] (PID:3159163)",244.0000
+"pt_mai [TID:3159568] (PID:3159163)",244.0000
+"pt_mai [TID:3159602] (PID:3159163)",244.0000
+"pt_mai [TID:3159603] (PID:3159163)",244.0000
+"pt_mai [TID:3159615] (PID:3159163)",244.0000
+"pt_mai [TID:3159574] (PID:3159163)",243.0000
+"pt_mai [TID:3159600] (PID:3159163)",243.0000
+"pt_mai [TID:3159581] (PID:3159163)",242.0000
+"pt_mai [TID:3159589] (PID:3159163)",242.0000
+"pt_mai [TID:3159570] (PID:3159163)",241.0000
+"pt_mai [TID:3159591] (PID:3159163)",241.0000
+"pt_mai [TID:3159592] (PID:3159163)",241.0000
+"pt_mai [TID:3159595] (PID:3159163)",241.0000
+"pt_mai [TID:3159599] (PID:3159163)",241.0000
+"pt_mai [TID:3159617] (PID:3159163)",241.0000
+"pt_main_thread [TID:3159163] (PID:3159163)",240.0000
+"pt_mai [TID:3159575] (PID:3159163)",240.0000
+"pt_mai [TID:3159576] (PID:3159163)",240.0000
+"pt_mai [TID:3159601] (PID:3159163)",240.0000
+"pt_mai [TID:3159608] (PID:3159163)",240.0000
+"pt_mai [TID:3159618] (PID:3159163)",240.0000
+"pt_mai [TID:3159561] (PID:3159163)",239.0000
+"pt_mai [TID:3159622] (PID:3159163)",238.0000
+"pt_mai [TID:3159594] (PID:3159163)",236.0000
+"pt_mai [TID:3159611] (PID:3159163)",233.0000
+"pt_mai [TID:3159569] (PID:3159163)",215.0000
+"pt_mai [TID:3159562] (PID:3159163)",213.0000
+"pt_mai [TID:3159585] (PID:3159163)",210.0000
+"pt_mai [TID:3159598] (PID:3159163)",199.0000
+"pt_mai [TID:3159572] (PID:3159163)",181.0000
+"pt_mai [TID:3159573] (PID:3159163)",178.0000
+"pt_mai [TID:3159587] (PID:3159163)",177.0000
+"pt_mai [TID:3159578] (PID:3159163)",171.0000
+"pt_mai [TID:3159590] (PID:3159163)",68.0000
+"pt_mai [TID:3159610] (PID:3159163)",55.0000
+"pt_mai [TID:3159597] (PID:3159163)",46.0000
+"pt_mai [TID:3159612] (PID:3159163)",42.0000
+"pt_mai [TID:3159616] (PID:3159163)",41.0000

@@ -1,0 +1,229 @@
+{
+    "op_to_func": {
+        "RandomResizedCrop": [
+            "precompute_coeffs|_imaging.cpython-39-x86_64-linux-gnu.so",
+            "_PyEval_EvalFrameDefault|python3.9",
+            "ImagingResampleHorizontal_8bpc|_imaging.cpython-39-x86_64-linux-gnu.so",
+            "ImagingResampleVertical_8bpc|_imaging.cpython-39-x86_64-linux-gnu.so",
+            "deduce_unreachable|python3.9",
+            "__memcpy_avx_unaligned_erms|libc-2.31.so"
+        ],
+        "Collation": [
+            "libgomp-a34b3233.so.1!0x00018c99|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x00018dd0|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x000163e4|libgomp-a34b3233.so.1",
+            "visit_reachable|python3.9",
+            "libgomp-a34b3233.so.1!0x00018b13|libgomp-a34b3233.so.1",
+            "torch::autograd::generated::details::stack_jvp(c10::ArrayRef<at::Tensor>, long)|libtorch_cpu.so",
+            "libgomp-a34b3233.so.1!0x00018cab|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x0000f45f|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x00018b26|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x0000f43f|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x0000f3dd|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x0000f467|libgomp-a34b3233.so.1",
+            "deduce_unreachable|python3.9",
+            "slot_tp_init|python3.9",
+            "libgomp-a34b3233.so.1!0x00018c88|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x00018b10|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x00018c8b|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x00016415|libgomp-a34b3233.so.1",
+            "subtype_traverse|python3.9",
+            "dict_traverse|python3.9",
+            "libgomp-a34b3233.so.1!0x00018b1f|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x00018c97|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x00016400|libgomp-a34b3233.so.1",
+            "tupletraverse|python3.9",
+            "libgomp-a34b3233.so.1!0x00018bc0|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x00018c8e|libgomp-a34b3233.so.1",
+            "list_traverse|python3.9",
+            "void c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::native::AVX2::VectorizedLoop2d<at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#4}::operator()() const::{lambda()#14}::operator()() const::{lambda(float)#1}, at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#4}::operator()() const::{lambda()#4}::operator()() const::{lambda(at::vec::AVX2::Vectorized<float>)#2}> >(long, char**, long const*, long, long)|libtorch_cpu.so",
+            "libgomp-a34b3233.so.1!0x0000f422|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x000163e0|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x00018b16|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x00018b31|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x00018b21|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x00018c9e|libgomp-a34b3233.so.1",
+            "void at::internal::invoke_parallel<at::parallel_for<at::TensorIteratorBase::for_each(c10::function_ref<void (char**, long const*, long, long)>, long)::{lambda(long, long)#1}>(long, long, long, at::TensorIteratorBase::for_each(c10::function_ref<void (char**, long const*, long, long)>, long)::{lambda(long, long)#1} const&)::{lambda(long, long)#1}>(long, long, long, at::parallel_for<at::TensorIteratorBase::for_each(c10::function_ref<void (char**, long const*, long, long)>, long)::{lambda(long, long)#1}>(long, long, long, at::TensorIteratorBase::for_each(c10::function_ref<void (char**, long const*, long, long)>, long)::{lambda(long, long)#1} const&)::{lambda(long, long)#1} const)|libtorch_cpu.so",
+            "func_traverse|python3.9"
+        ],
+        "ToTensor": [
+            "libgomp-a34b3233.so.1!0x00018c99|libgomp-a34b3233.so.1",
+            "va_build_value|python3.9",
+            "collect|python3.9",
+            "set_traverse|python3.9",
+            "visit_reachable|python3.9",
+            "libgomp-a34b3233.so.1!0x00018b13|libgomp-a34b3233.so.1",
+            "meth_traverse|python3.9",
+            "do_mktuple|python3.9",
+            "at::TensorIteratorBase::compute_mem_overlaps(at::TensorIteratorConfig const&)|libtorch_cpu.so",
+            "deduce_unreachable|python3.9",
+            "_PyObject_GetMethod|python3.9",
+            "tupledealloc|python3.9",
+            "libgomp-a34b3233.so.1!0x00018c88|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x00018b10|libgomp-a34b3233.so.1",
+            "void c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::native::AVX2::VectorizedLoop2d<at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#4}::operator()() const::{lambda()#8}::operator()() const::{lambda(unsigned char)#1}, at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#4}::operator()() const::{lambda()#4}::operator()() const::{lambda(at::vec::AVX2::Vectorized<unsigned char>)#2}> >(long, char**, long const*, long, long)|libtorch_cpu.so",
+            "libgomp-a34b3233.so.1!0x00018c8b|libgomp-a34b3233.so.1",
+            "void c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::TensorIteratorBase::loop_2d_from_1d<at::native::AVX2::copy_kernel(at::TensorIterator&, bool)::{lambda()#1}::operator()() const::{lambda()#15}::operator()() const::{lambda()#1}::operator()() const::{lambda()#9}::operator()() const::{lambda(char**, long const*, long)#1}>(at::native::AVX2::copy_kernel(at::TensorIterator&, bool)::{lambda()#1}::operator()() const::{lambda()#15}::operator()() const::{lambda()#1}::operator()() const::{lambda()#9}::operator()() const::{lambda(char**, long const*, long)#1} const&)::{lambda(char**, long const*, long, long)#1}>(long, char**, long const*, long, long)|libtorch_cpu.so",
+            "subtype_traverse|python3.9",
+            "dict_traverse|python3.9",
+            "_PyArg_ParseTuple_SizeT|python3.9",
+            "__memmove_avx_unaligned|libc-2.31.so",
+            "void c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::native::AVX2::VectorizedLoop2d<at::native::(anonymous namespace)::div_true_kernel(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float, float)#1}, at::native::(anonymous namespace)::div_true_kernel(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(at::vec::AVX2::Vectorized<float>, at::vec)#2}> >(long, char**, long const*, long, long)|libtorch_cpu.so",
+            "__tls_get_addr|ld-2.31.so",
+            "convertsimple|python3.9",
+            "libgomp-a34b3233.so.1!0x00018c8e|libgomp-a34b3233.so.1",
+            "at::TensorIteratorBase::serial_for_each(c10::function_ref<void (char**, long const*, long, long)>, at::Range) const|libtorch_cpu.so",
+            "list_traverse|python3.9",
+            "_int_malloc|libc-2.31.so",
+            "libgomp-a34b3233.so.1!0x00018b16|libgomp-a34b3233.so.1",
+            "__GI___libc_malloc|libc-2.31.so",
+            "ImagingPackRGB|_imaging.cpython-39-x86_64-linux-gnu.so",
+            "libgomp-a34b3233.so.1!0x00018b21|libgomp-a34b3233.so.1",
+            "void at::internal::invoke_parallel<at::parallel_for<at::TensorIteratorBase::for_each(c10::function_ref<void (char**, long const*, long, long)>, long)::{lambda(long, long)#1}>(long, long, long, at::TensorIteratorBase::for_each(c10::function_ref<void (char**, long const*, long, long)>, long)::{lambda(long, long)#1} const&)::{lambda(long, long)#1}>(long, long, long, at::parallel_for<at::TensorIteratorBase::for_each(c10::function_ref<void (char**, long const*, long, long)>, long)::{lambda(long, long)#1}>(long, long, long, at::TensorIteratorBase::for_each(c10::function_ref<void (char**, long const*, long, long)>, long)::{lambda(long, long)#1} const&)::{lambda(long, long)#1} const)|libtorch_cpu.so",
+            "func_traverse|python3.9",
+            "__memcpy_avx_unaligned_erms|libc-2.31.so",
+            "stringlib_bytes_join.lto_priv.0|python3.9",
+            "descr_traverse|python3.9"
+        ],
+        "RandomHorizontalFlip": [
+            "PyImport_ImportModuleLevelObject|python3.9",
+            "ImagingFlipLeftRight|_imaging.cpython-39-x86_64-linux-gnu.so",
+            "_PyObject_GenericSetAttrWithDict|python3.9",
+            "deduce_unreachable|python3.9",
+            "_PyObject_GetMethod|python3.9",
+            "_PyObject_GenericGetAttrWithDict|python3.9"
+        ],
+        "Normalize": [
+            "libgomp-a34b3233.so.1!0x00018c99|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x00018b13|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x00018c8b|libgomp-a34b3233.so.1",
+            "void c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::native::AVX2::VectorizedLoop2d<at::native::(anonymous namespace)::add_kernel(at::TensorIteratorBase&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(float, float)#1}, at::native::(anonymous namespace)::add_kernel(at::TensorIteratorBase&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#1}::operator()() const::{lambda(at::vec::AVX2::Vectorized<float>, at::vec)#2}> >(long, char**, long const*, long, long)|libtorch_cpu.so",
+            "libgomp-a34b3233.so.1!0x00018b16|libgomp-a34b3233.so.1",
+            "libgomp-a34b3233.so.1!0x00018b21|libgomp-a34b3233.so.1",
+            "c10::ProfiledCPUMemoryReporter::New(void*, unsigned long)|libc10.so",
+            "libgomp-a34b3233.so.1!0x00018c88|libgomp-a34b3233.so.1",
+            "void c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::native::AVX2::VectorizedLoop2d<at::native::(anonymous namespace)::div_true_kernel(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float, float)#1}, at::native::(anonymous namespace)::div_true_kernel(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(at::vec::AVX2::Vectorized<float>, at::vec)#2}> >(long, char**, long const*, long, long)|libtorch_cpu.so",
+            "deduce_unreachable|python3.9",
+            "libgomp-a34b3233.so.1!0x00018c8e|libgomp-a34b3233.so.1",
+            "void c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::native::AVX2::VectorizedLoop2d<at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#4}::operator()() const::{lambda()#14}::operator()() const::{lambda(float)#1}, at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#4}::operator()() const::{lambda()#4}::operator()() const::{lambda(at::vec::AVX2::Vectorized<float>)#2}> >(long, char**, long const*, long, long)|libtorch_cpu.so",
+            "libgomp-a34b3233.so.1!0x00018b10|libgomp-a34b3233.so.1"
+        ],
+        "Loader": [
+            "_copy|_imaging.cpython-39-x86_64-linux-gnu.so",
+            "jpeg_idct_islow|libjpeg.so.9.5.0",
+            "ycc_rgb_convert|libjpeg.so.9.5.0",
+            "decompress_onepass|libjpeg.so.9.5.0",
+            "sep_upsample|libjpeg.so.9.5.0",
+            "process_data_simple_main|libjpeg.so.9.5.0",
+            "deduce_unreachable|python3.9",
+            "dictiter_iternextitem|python3.9",
+            "_PyObject_GetMethod|python3.9",
+            "decode_mcu|libjpeg.so.9.5.0",
+            "__memset_avx2_unaligned_erms|libc-2.31.so",
+            "jpeg_fill_bit_buffer|libjpeg.so.9.5.0",
+            "subtype_traverse|python3.9",
+            "dict_traverse|python3.9",
+            "jpeg_idct_16x16|libjpeg.so.9.5.0",
+            "ImagingUnpackRGB|_imaging.cpython-39-x86_64-linux-gnu.so",
+            "__memset_avx2_unaligned|libc-2.31.so",
+            "func_traverse|python3.9",
+            "module_traverse|python3.9",
+            "__memcpy_avx_unaligned_erms|libc-2.31.so"
+        ]
+    },
+    "common_funcs_to_op": {
+        "deduce_unreachable|python3.9": [
+            "RandomResizedCrop",
+            "Collation",
+            "ToTensor",
+            "RandomHorizontalFlip",
+            "Normalize",
+            "Loader"
+        ],
+        "__memcpy_avx_unaligned_erms|libc-2.31.so": [
+            "RandomResizedCrop",
+            "ToTensor",
+            "Loader"
+        ],
+        "libgomp-a34b3233.so.1!0x00018c99|libgomp-a34b3233.so.1": [
+            "Collation",
+            "ToTensor",
+            "Normalize"
+        ],
+        "visit_reachable|python3.9": [
+            "Collation",
+            "ToTensor"
+        ],
+        "libgomp-a34b3233.so.1!0x00018b13|libgomp-a34b3233.so.1": [
+            "Collation",
+            "ToTensor",
+            "Normalize"
+        ],
+        "libgomp-a34b3233.so.1!0x00018c88|libgomp-a34b3233.so.1": [
+            "Collation",
+            "ToTensor",
+            "Normalize"
+        ],
+        "libgomp-a34b3233.so.1!0x00018b10|libgomp-a34b3233.so.1": [
+            "Collation",
+            "ToTensor",
+            "Normalize"
+        ],
+        "libgomp-a34b3233.so.1!0x00018c8b|libgomp-a34b3233.so.1": [
+            "Collation",
+            "ToTensor",
+            "Normalize"
+        ],
+        "subtype_traverse|python3.9": [
+            "Collation",
+            "ToTensor",
+            "Loader"
+        ],
+        "dict_traverse|python3.9": [
+            "Collation",
+            "ToTensor",
+            "Loader"
+        ],
+        "libgomp-a34b3233.so.1!0x00018c8e|libgomp-a34b3233.so.1": [
+            "Collation",
+            "ToTensor",
+            "Normalize"
+        ],
+        "list_traverse|python3.9": [
+            "Collation",
+            "ToTensor"
+        ],
+        "void c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::native::AVX2::VectorizedLoop2d<at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#4}::operator()() const::{lambda()#14}::operator()() const::{lambda(float)#1}, at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#4}::operator()() const::{lambda()#4}::operator()() const::{lambda(at::vec::AVX2::Vectorized<float>)#2}> >(long, char**, long const*, long, long)|libtorch_cpu.so": [
+            "Collation",
+            "Normalize"
+        ],
+        "libgomp-a34b3233.so.1!0x00018b16|libgomp-a34b3233.so.1": [
+            "Collation",
+            "ToTensor",
+            "Normalize"
+        ],
+        "libgomp-a34b3233.so.1!0x00018b21|libgomp-a34b3233.so.1": [
+            "Collation",
+            "ToTensor",
+            "Normalize"
+        ],
+        "void at::internal::invoke_parallel<at::parallel_for<at::TensorIteratorBase::for_each(c10::function_ref<void (char**, long const*, long, long)>, long)::{lambda(long, long)#1}>(long, long, long, at::TensorIteratorBase::for_each(c10::function_ref<void (char**, long const*, long, long)>, long)::{lambda(long, long)#1} const&)::{lambda(long, long)#1}>(long, long, long, at::parallel_for<at::TensorIteratorBase::for_each(c10::function_ref<void (char**, long const*, long, long)>, long)::{lambda(long, long)#1}>(long, long, long, at::TensorIteratorBase::for_each(c10::function_ref<void (char**, long const*, long, long)>, long)::{lambda(long, long)#1} const&)::{lambda(long, long)#1} const)|libtorch_cpu.so": [
+            "Collation",
+            "ToTensor"
+        ],
+        "func_traverse|python3.9": [
+            "Collation",
+            "ToTensor",
+            "Loader"
+        ],
+        "_PyObject_GetMethod|python3.9": [
+            "ToTensor",
+            "RandomHorizontalFlip",
+            "Loader"
+        ],
+        "void c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::native::AVX2::VectorizedLoop2d<at::native::(anonymous namespace)::div_true_kernel(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float, float)#1}, at::native::(anonymous namespace)::div_true_kernel(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(at::vec::AVX2::Vectorized<float>, at::vec)#2}> >(long, char**, long const*, long, long)|libtorch_cpu.so": [
+            "ToTensor",
+            "Normalize"
+        ]
+    }
+}

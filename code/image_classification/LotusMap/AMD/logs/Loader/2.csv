@@ -1,0 +1,59 @@
+
+"AMD uProf (Version:4.0.341.0)"
+PERFORMANCE ANALYSIS REPORT
+
+EXECUTION
+Target Path:,"/home/rbachkaniwala3/work/anaconda3/envs/amduprof/bin/python"
+Command Line Arguments:,"/home/rbachkaniwala3/work/rajveerb_AMDProfileControl-python/low_level_func/convertRGB.py "
+Working Directory:,"/data/home/rbachkaniwala3/work/rajveerb_AMDProfileControl-python"
+Environment Variables:
+CPU Details:,"Family(0x19), Model(0x1), Number of Cores(128)"
+Operating System:,"LinuxUbuntu 20.04.5 LTS-64 Kernel:5.4.0-137-generic"
+
+PROFILE DETAILS
+Profile Session Type:,"Time-based Sampling"
+Profile Scope:,"Single Application"
+CPU Mask:,"0-127"
+CPU Affinity Mask:,"0-127"
+Profile Start Time:,"Wed May 22 20:58:13 2024"
+Profile End Time:,"Wed May 22 20:58:50 2024"
+Profile Duration:,"0.009 seconds"
+Data Folder:,"/home/rbachkaniwala3/low_level_func/AMDuProf-python-TBP_May-22-2024_20-58-13"
+Virtual Machine:,"No"
+Call Stack Sampling:,"False"
+
+MONITORED EVENTS
+TBP Events:,Name,Interval,Description
+,"CPU_TIME","1.000 milliseconds","CPU Time is the time in which the CPU core is executing the code."
+
+"100 HOTTEST FUNCTIONS (Sort Event - CPU_TIME)"
+FUNCTION,"CPU_TIME",Module
+"jpeg_idct_16x16",2500.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/libjpeg.so.9.5.0"
+"ycc_rgb_convert",1434.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/libjpeg.so.9.5.0"
+"jpeg_idct_islow",467.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/libjpeg.so.9.5.0"
+"ImagingUnpackRGB",400.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/PIL/_imaging.cpython-39-x86_64-linux-gnu.so"
+"__memcpy_avx_unaligned_erms",274.0000,"/usr/lib/x86_64-linux-gnu/libc-2.31.so"
+"decode_mcu",143.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/libjpeg.so.9.5.0"
+"decompress_onepass",59.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/libjpeg.so.9.5.0"
+"jpeg_fill_bit_buffer",26.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/libjpeg.so.9.5.0"
+"__memset_avx2_unaligned_erms",16.0000,"/usr/lib/x86_64-linux-gnu/libc-2.31.so"
+"sep_upsample",2.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/libjpeg.so.9.5.0"
+"deduce_unreachable",1.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/bin/python3.9"
+"_PyObject_GetMethod",1.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/bin/python3.9"
+"dictiter_iternextitem",1.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/bin/python3.9"
+"_copy",1.0000,"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/PIL/_imaging.cpython-39-x86_64-linux-gnu.so"
+
+"100 HOTTEST PROCESSES (Sort Event - CPU_TIME)"
+PROCESS,"CPU_TIME"
+"pt_main_thread (PID:3158309)",5325.0000
+
+"100 HOTTEST MODULES (Sort Event - CPU_TIME)"
+MODULE,"CPU_TIME"
+"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/libjpeg.so.9.5.0",4631.0000
+"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/lib/python3.9/site-packages/PIL/_imaging.cpython-39-x86_64-linux-gnu.so",401.0000
+"/usr/lib/x86_64-linux-gnu/libc-2.31.so",290.0000
+"/data/home/rbachkaniwala3/work/anaconda3/envs/amduprof/bin/python3.9",3.0000
+
+"100 HOTTEST THREADS (Sort Event - CPU_TIME)"
+THREAD,"CPU_TIME"
+"pt_main_thread [TID:3158309] (PID:3158309)",5325.0000
