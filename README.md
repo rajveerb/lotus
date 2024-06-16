@@ -53,10 +53,14 @@ Above combination is powerful as it allows enables users to better reason about 
 4. Install Intel VTune from [here](https://www.intel.com/content/www/us/en/docs/vtune-profiler/installation-guide/2023-1/overview.html) and activate it as Intel descsribes.
 
     Note: we used `Intel(R) VTune(TM) Profiler 2024.0.1 (build 627177)`
-5. Install CUDA 11.8 from [here](https://developer.nvidia.com/cuda-11-8-0-download-archive) and CuDNN 8.7.0 from [here](https://developer.nvidia.com/rdp/cudnn-archive)
-6. Follow the **LotusTrace** build instructions in `code/LotusTrace/README.md`
-7. Follow the **itt-python** build instructions in `code/itt-python/README.md`
-8. That's it!
+5. Install AMD uProf from [here](https://www.amd.com/en/developer/uprof/uprof-archives.html)
+    Note: we used `AMDuProfCLI Version 4.0.341.0`
+
+6. Install CUDA 11.8 from [here](https://developer.nvidia.com/cuda-11-8-0-download-archive) and CuDNN 8.7.0 from [here](https://developer.nvidia.com/rdp/cudnn-archive)
+7. Follow the **LotusTrace** build instructions in `code/LotusTrace/README.md`
+8. Follow the **itt-python** build instructions in `code/itt-python/README.md`
+9. Follow the **amduprofile-python** build instructions in `code/amdprofilecontrol-python/README.md`
+10. That's it!
 
 ## Use Lotus
 
@@ -139,6 +143,8 @@ python code/visualize_LotusTrace_trace/visualization_augmenter.py \
 
 ### How to use LotusMap
 
+#### For Intel VTune:
+
 Below is an example of how to write a python file called RandomResizedCrop.py such that using **LotusMap**'s method can be applied to collect the mapping: 
 
 ```python
@@ -174,6 +180,47 @@ vtune -report hotspots \
     -format csv \
     -csv-delimiter comma \
     -report-output RandomResizedCrop.csv
+```
+
+`RandomResizedCrop.csv` contains the C/C++ functions mapped to `RandomResizedCrop` operation.
+
+#### For AMD uProf:
+
+Below is an example of how to write a python file called RandomResizedCrop.py such that using **LotusMap**'s method can be applied to collect the mapping: 
+
+```python
+import torchvision.transforms as t
+from PIL import Image
+import time, amdprofilecontrol as amd
+# increase PIL image open size
+Image.MAX_IMAGE_PIXELS = 1000000000
+image_file = "<path to image>"
+for i in range(5):
+  # Open the image
+  image = Image.open(image_file)
+  # convert to RGB like torch's pil_loader
+  image = image.convert('RGB') # Responisble for Loader operation
+  # Define the desired crop size
+  crop_size = 224  # Define this as needed
+  time.sleep(1)  # sleep for 1 sec
+  if i == 4: # Delay collection to prevent cold start
+    amd.resume(1)
+  image = t.RandomResizedCrop(crop_size)(image)
+  if i == 4:
+    amd.pause(1)
+```
+
+Now, run below commands to collect mapping:
+
+```bash
+AMDuProfCLI collect --config tbp --start-paused \
+ --output-dir <your_uprof_result_dir> \
+ python RandomResizedCrop.py
+
+AMDuProfCLI report \
+ --input-dir <your_uprof_generated_result_dir> \ 
+ --report-output RandomResizedCrop.csv \
+ --cutoff 100 -f csv #can be set to more than 100 
 ```
 
 `RandomResizedCrop.csv` contains the C/C++ functions mapped to `RandomResizedCrop` operation.
