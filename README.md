@@ -54,8 +54,8 @@ Above combination is powerful as it allows enables users to better reason about 
 
     Note: we used `Intel(R) VTune(TM) Profiler 2024.0.1 (build 627177)`
 5. Install AMD uProf from [here](https://www.amd.com/en/developer/uprof/uprof-archives.html)
-    Note: we used `AMDuProfCLI Version 4.0.341.0`
 
+    Note: we used `AMDuProfCLI Version 4.0.341.0`
 6. Install CUDA 11.8 from [here](https://developer.nvidia.com/cuda-11-8-0-download-archive) and CuDNN 8.7.0 from [here](https://developer.nvidia.com/rdp/cudnn-archive)
 7. Follow the **LotusTrace** build instructions in `code/LotusTrace/README.md`
 8. Follow the **itt-python** build instructions in `code/itt-python/README.md`
@@ -279,4 +279,4 @@ We claim issues 1 and 2 as a limitation as we simply have not tested the system 
 TODO
 
 ## License
-Licensed under an [MIT License](LICENSE).
+Click [here](LICENSE).
