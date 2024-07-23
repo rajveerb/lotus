@@ -5,7 +5,7 @@ import itt
 # increase PIL image open size
 Image.MAX_IMAGE_PIXELS = 1000000000
 
-batch = ["code/image_classification/P3Map/random_image10MB.jpg" for i in range(1024)]
+batch = ["code/image_classification/LotusMap/Intel/random_image10MB.jpg" for i in range(1024)]
 
 batches = []
 for i,image_file in enumerate(batch):
