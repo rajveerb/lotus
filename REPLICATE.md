@@ -43,15 +43,50 @@ We provide the code/scripts to replicate Lotus experiment results in the cloudla
 10. Install anaconda from [here](https://conda.io/projects/conda/en/latest/user-guide/install/linux.html): 
 11. Create a conda environment
     ```bash
-    conda create -n Lotus python=3.10
-    conda activate Lotus
+    conda create -n lotus python=3.10 -y
+    conda activate lotus
     ```
-12. Follow the **LotusTrace** build instructions in `code/LotusTrace/README.md`
-13. Follow the **itt-python** build instructions in `code/itt-python/README.md`
-14. Follow the **torchvision** build instructions in `code/torchvision/README.md`
+12. Install **itt-python** using build instructions below:
+    ```bash
+    pushd code/itt-python
+    export ITT_LIBRARY_DIR=/opt/intel/oneapi/vtune/latest/lib64/
+    export ITT_INCLUDE_DIR=/opt/intel/oneapi/vtune/latest/include
+    python setup.py install
+    # Check if installed
+    pip list | grep "itt"
+    popd
+    ```
+
+13. Install PyTorch (LotusTrace):
+    ```bash
+    pushd code/LotusTrace
+    conda install -y cmake ninja
+    pip install -r requirements.txt
+    conda install -y mkl mkl-include
+    git submodule sync
+    git submodule update --init --recursive --depth 1
+    # Below command can cause issues
+    export CMAKE_PREFIX_PATH=$(dirname $(dirname $(which conda)))
+    echo "CMAKE_PREFIX_PATH is set to $CMAKE_PREFIX_PATH, it should be set to dir which contains the conda installation"  
+    sudo apt install -y g++
+    REL_WITH_DEB_INFO=1 MAX_JOBS=1 python setup.py install
+    popd
+    # Sanity check
+    pip list | grep "torch" | grep "2.0.0a0"
+    ```
+14. Install torchvision:
+    ```bash
+    pushd code/torchvision
+    conda install -y -c conda-forge libjpeg-turbo
+    conda install -y pillow=10.3.0
+    python setup.py install
+    popd
+    ```
 15. Get the mapping logs for the preprocessing operations:
     ```bash
-    bash code/image_classification/LotusMap/LotusMap.sh
+    # Activate VTune
+    source /opt/intel/oneapi/setvars.sh
+    bash code/image_classification/LotusMap/Intel/LotusMap.sh
     ```
 16. Generate JSON file with mapping info by running all cells in [`code/image_classification/LotusMap/Intel/logsToMapping.ipynb`](code/image_classification/LotusMap/Intel/logsToMapping.ipynb)
 17. You have successfully obtained the mapping ([`code/image_classification/LotusMap/mapping_funcs.json`](code/image_classification/LotusMap/Intel/mapping_funcs.json)) using **LotusMap**!
