@@ -40,13 +40,25 @@ We provide the code/scripts to replicate Lotus experiment results in the cloudla
     ```git
     git submodule update --init --recursive
     ```
-10. Install anaconda from [here](https://conda.io/projects/conda/en/latest/user-guide/install/linux.html): 
-11. Create a conda environment
+10. Install anaconda from [here](https://conda.io/projects/conda/en/latest/user-guide/install/linux.html):
+    ```bash
+    curl -O https://repo.anaconda.com/archive/Anaconda3-2024.06-1-Linux-x86_64.sh
+    # Follow instructions (add Anaconda to `/mydata/iiswc24/anaconda3` when prompted)
+    bash Anaconda3-2024.06-1-Linux-x86_64.sh
+    source ~/.bashrc
+    ```
+
+11. Download and setup ImageNet dataset:
+    ```bash
+    bash scripts/cloudlab/download_imagenet.sh
+    ```
+
+12. Create a conda environment
     ```bash
     conda create -n lotus python=3.10 -y
     conda activate lotus
     ```
-12. Install **itt-python** using build instructions below:
+13. Install **itt-python** using build instructions below:
     ```bash
     pushd code/itt-python
     export ITT_LIBRARY_DIR=/opt/intel/oneapi/vtune/latest/lib64/
@@ -57,7 +69,7 @@ We provide the code/scripts to replicate Lotus experiment results in the cloudla
     popd
     ```
 
-13. Install PyTorch (LotusTrace):
+14. Install PyTorch (LotusTrace):
     ```bash
     pushd code/LotusTrace
     conda install -y cmake ninja
@@ -74,7 +86,7 @@ We provide the code/scripts to replicate Lotus experiment results in the cloudla
     # Sanity check
     pip list | grep "torch" | grep "2.0.0a0"
     ```
-14. Install torchvision:
+15. Install torchvision:
     ```bash
     pushd code/torchvision
     conda install -y -c conda-forge libjpeg-turbo
@@ -83,18 +95,21 @@ We provide the code/scripts to replicate Lotus experiment results in the cloudla
     pip list | grep "torchvision" | grep "0.15.1a0"
     popd
     ```
-15. Get the mapping logs for the preprocessing operations:
+16. Get the mapping logs for the preprocessing operations:
     ```bash
     # Activate VTune
     source /opt/intel/oneapi/setvars.sh
     bash code/image_classification/LotusMap/Intel/LotusMap.sh
     ```
-16. Generate JSON file with mapping info by running all cells in [`code/image_classification/LotusMap/Intel/logsToMapping.ipynb`](code/image_classification/LotusMap/Intel/logsToMapping.ipynb)
-17. You have successfully obtained the mapping ([`code/image_classification/LotusMap/mapping_funcs.json`](code/image_classification/LotusMap/Intel/mapping_funcs.json)) using **LotusMap**!
-18. Download ImageNet for next set of experiments:
+17. Install below packages:
     ```bash
-    bash scripts/cloudlab/download_imagenet.sh
+    conda install ipykernel pandas=2.0.3 -y
     ```
+    pip install natsort==8.4.0
+18. Generate JSON file with mapping info by running all cells in [`code/image_classification/LotusMap/Intel/logsToMapping.ipynb`](code/image_classification/LotusMap/Intel/logsToMapping.ipynb)
+
+19. You have successfully obtained the mapping ([`code/image_classification/LotusMap/Intel/mapping_funcs.json`](code/image_classification/LotusMap/Intel/mapping_funcs.json)) using **LotusMap**!
+
 19. Run the experiment where batch size and number of gpus are varied and LotusTrace is enabled:
     ```bash
     bash scripts/cloudlab/LotusTrace_imagenet_vary_batch_and_gpu.sh
