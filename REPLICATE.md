@@ -80,6 +80,7 @@ We provide the code/scripts to replicate Lotus experiment results in the cloudla
     conda install -y -c conda-forge libjpeg-turbo
     conda install -y pillow=10.3.0
     python setup.py install
+    pip list | grep "torchvision" | grep "0.15.1a0"
     popd
     ```
 15. Get the mapping logs for the preprocessing operations:
