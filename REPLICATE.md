@@ -104,24 +104,47 @@ We provide the code/scripts to replicate Lotus experiment results in the cloudla
 17. Install below packages:
     ```bash
     conda install ipykernel pandas=2.0.3 -y
+    pip install -y matplotlib==3.9.0 natsort==8.4.0
     ```
-    pip install natsort==8.4.0
 18. Generate JSON file with mapping info by running all cells in [`code/image_classification/LotusMap/Intel/logsToMapping.ipynb`](code/image_classification/LotusMap/Intel/logsToMapping.ipynb)
 
-19. You have successfully obtained the mapping ([`code/image_classification/LotusMap/Intel/mapping_funcs.json`](code/image_classification/LotusMap/Intel/mapping_funcs.json)) using **LotusMap**!
+19. You have successfully obtained the mapping ([`code/image_classification/LotusMap/Intel/mapping_funcs.json`](code/image_classification/LotusMap/Intel/mapping_funcs.json)) using **LotusMap** (Table 1)!
 
-19. Run the experiment where batch size and number of gpus are varied and LotusTrace is enabled:
+20. Run the experiment where batch size and number of gpus are varied and LotusTrace is enabled:
     ```bash
-    bash scripts/cloudlab/LotusTrace_imagenet_vary_batch_and_gpu.sh
+    bash scripts/cloudlab/LotusTrace_imagenet.sh
     ```
     Note: # of DataLoader workers is equal to # of gpus in this experiment.
-20. Run the below commands for observations in `High variance in Preprocessing Time`:
+21. Run the below commands for observations in `High variance in Preprocessing Time` (fig 4 (a) and the statistics):
     ```bash
-    python code/image_classification/analysis/LotusTrace_imagenet_vary_batch_and_gpu/preprocessing_time_stats.py --remove_outliers
-    python code/image_classification/analysis/LotusTrace_imagenet_vary_batch_and_gpu/iqr_and_stddev_preprocessing_time_stats.py --remove_outliers
-    python code/image_classification/analysis/LotusTrace_imagenet_vary_batch_and_gpu/box_plot_preprocessing_time.py --remove_outliers
+    python code/image_classification/analysis/LotusTrace_imagenet_vary_batch_and_gpu/preprocessing_time_stats.py\
+     --remove_outliers\
+     --data_dir lotustrace_result/b1024_gpu4/\
+     --output_file lotustrace_result/preprocessing_time_stats.log 
+    python code/image_classification/analysis/LotusTrace_imagenet_vary_batch_and_gpu/box_plot_preprocessing_time.py\
+     --remove_outliers\
+     --data_dir lotustrace_result/b1024_gpu4\
+     --output_file lotustrace_result/box_plot_preprocessing_time.png
     ```
-21. Run the below commands for observations in `Significant wait time`:
+22. Run the below commands for observations in `Significant wait time` (fig 4 (b), (c) and the statistics):
     ```bash
-    python code/image_classification/analysis/LotusTrace_imagenet_vary_batch_and_gpu/delay_and_wait_time_stats_and_plot.py --sort_criteria duration
+    python code/image_classification/analysis/LotusTrace_imagenet_vary_batch_and_gpu/delay_and_wait_time_stats_and_plot.py\
+     --sort_criteria duration\
+     --data_dir lotustrace_result/b512_gpu4\
+     --fig_dir lotustrace_result/figures\
+     --output_file lotustrace_result/delay_and_wait_time_stats_and_plot.log
+    ```
+23. Run the visualization script (Figure 2):
+    ```bash
+    python code/visualize_LotusTrace/visualization_augmenter.py\
+     --coarse\
+     --lotustrace_trace_dir lotustrace_result/b512_gpu4\
+     --custom_log_prefix lotustrace_log\
+     --output_lotustrace_viz_file lotustrace_result/viz_file.lotustrace
+    ```
+    Open the file in chrome trace viewer for visualization (Navigate to `chrome://tracing` URL in Google Chrome, upload the `viz_file.lotustrace` and visualize the trace)
+
+24. Run the below steps for obtaining Hardware observations (Figure 5):
+    ```bash
+    bash scripts/cloudlab/LotusTrace_imagenet_vtune.sh
     ```
