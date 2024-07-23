@@ -5,8 +5,8 @@ python_path=$(which python)
 programs=("Loader.py" "Normalize.py" "RandomHorizontalFlip.py" "RandomResizedCrop.py" "ToTensor.py" "Collation.py")
 vtune_record="vtune -collect hotspots -start-paused"
 vtune_report="vtune -report hotspots"
-vtune_result_dir="code/image_classification/P3Map/tmp_vtune_result_dir"
-csv_dir="code/image_classification/P3Map/logs"
+vtune_result_dir="code/image_classification/LotusMap/Intel/tmp_vtune_result_dir"
+csv_dir="code/image_classification/LotusMap/Intel/logs"
 
 # check if all the above directories exist
 if [ ! -d "$program_path_prefix" ]; then
