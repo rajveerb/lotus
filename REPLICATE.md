@@ -6,20 +6,19 @@ We have setup software dependencies such as CUDA, CuDNN, Intel VTune, Anaconda, 
 
 ### Installation steps
 
-1. Clone this repository!
-
-2. Get submodules:
-
+1. Clone this repository
     ```git
+    git clone --depth 1 git@github.com:rajveerb/lotus.git -b iiswc24ae
+    cd lotus
     git submodule update --init --recursive
     ```
 
-3. Create a conda environment
+2. Create a conda environment
     ```bash
     conda create -n lotus python=3.10 -y
     conda activate lotus
     ```
-4. Install **itt-python** using build instructions below:
+3. Install **itt-python** using build instructions below:
     ```bash
     pushd code/itt-python
     export ITT_LIBRARY_DIR=/opt/intel/oneapi/vtune/latest/lib64/
@@ -30,7 +29,7 @@ We have setup software dependencies such as CUDA, CuDNN, Intel VTune, Anaconda, 
     popd
     ```
 
-5. Install PyTorch (LotusTrace):
+4. Install PyTorch (LotusTrace):
     ```bash
     pushd code/LotusTrace
     conda install -y cmake ninja
@@ -47,7 +46,7 @@ We have setup software dependencies such as CUDA, CuDNN, Intel VTune, Anaconda, 
     # Sanity check
     pip list | grep "torch" | grep "2.0.0a0"
     ```
-6. Install torchvision:
+5. Install torchvision:
     ```bash
     pushd code/torchvision
     conda install -y -c conda-forge libjpeg-turbo
@@ -56,14 +55,14 @@ We have setup software dependencies such as CUDA, CuDNN, Intel VTune, Anaconda, 
     pip list | grep "torchvision" | grep "0.15.1a0"
     popd
     ```
-7. Get the mapping logs for the preprocessing operations:
+6. Get the mapping logs for the preprocessing operations:
     ```bash
     # Activate VTune
     source /opt/intel/oneapi/setvars.sh
     bash code/image_classification/LotusMap/Intel/LotusMap.sh
     ```
     
-8. Install below packages:
+7. Install below packages:
     ```bash
     conda install ipykernel pandas=2.0.3 -y
     pip install -y matplotlib==3.9.0 natsort==8.4.0 seaborn==0.13.2
