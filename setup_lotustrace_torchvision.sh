@@ -11,7 +11,7 @@ git submodule update --init --recursive --depth 1
 export CMAKE_PREFIX_PATH=$(dirname $(dirname $(which conda)))
 echo "CMAKE_PREFIX_PATH is set to $CMAKE_PREFIX_PATH, it should be set to dir which contains the conda installation"  
 sudo apt install -y g++
-REL_WITH_DEB_INFO=1 MAX_JOBS=8 python setup.py install
+REL_WITH_DEB_INFO=1 MAX_JOBS=$(nproc) CC=/usr/bin/gcc-7 CXX=/usr/bin/g++-7 python setup.py install
 popd
 # Sanity check
 pip list | grep "torch" | grep "2.0.0a0"
