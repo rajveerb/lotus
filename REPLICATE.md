@@ -113,6 +113,7 @@ We have setup software dependencies such as CUDA, CuDNN, Intel VTune, Anaconda, 
 
 8. Run the below command for Image Classification pipeline to generate hardware performance numbers for Fig 5:
     ```bash
+    source /opt/intel/oneapi/setvars.sh
     bash scripts/cloudlab/LotusTrace_imagenet_vtune.sh
     ```
 
