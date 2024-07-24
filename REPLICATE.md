@@ -1,5 +1,7 @@
 We provide the code/scripts to replicate Lotus experiment results in the cloudlab testbed using a c4130 node available in Wisconsin cluster.
 
+The following experiments are targetting an Intel Processor chip with 4x V100 GPUs. The experiments are performed on the ImageNet dataset for the Image Classification task. We focus on a single configuration for the below experiments because the same process/method can be applied to each of them. Please note that the figures generated via below experiments correspond to one configuration of the figures found in the paper.
+
 ### Steps
 
 1. Use our [`Lotus_c4130_cloudlab.profile`](Lotus_c4130_cloudlab.profile) as the geni script for cloudlab experiment profile. This profile uses a long term cloudlab dataset as a mounted remote filesystem with 916 GB storage. Mounted on `/mydata`.
@@ -110,7 +112,7 @@ We provide the code/scripts to replicate Lotus experiment results in the cloudla
 
 19. You have successfully obtained the mapping ([`code/image_classification/LotusMap/Intel/mapping_funcs.json`](code/image_classification/LotusMap/Intel/mapping_funcs.json)) using **LotusMap** (Table 1)!
 
-20. Run the experiment where batch size and number of gpus are varied and LotusTrace is enabled:
+20. Run the Image Classification pipeline experiment where batch size and number of gpus are varied and LotusTrace is enabled:
     ```bash
     bash scripts/cloudlab/LotusTrace_imagenet.sh
     ```
@@ -144,7 +146,7 @@ We provide the code/scripts to replicate Lotus experiment results in the cloudla
     ```
     Open the file in chrome trace viewer for visualization (Navigate to `chrome://tracing` URL in Google Chrome, upload the `viz_file.lotustrace` and visualize the trace)
 
-24. Run the below to generate hardware performance numbers for Fig 5:
+24. Run the below command for Image Classification pipeline to generate hardware performance numbers for Fig 5:
     ```bash
     bash scripts/cloudlab/LotusTrace_imagenet_vtune.sh
     ```
@@ -160,13 +162,13 @@ We provide the code/scripts to replicate Lotus experiment results in the cloudla
 
     - Select all cells and paste it in a CSV file called `code/image_classification/analysis/combine_lotus/lotustrace_uarch/b1024_gpu4_dataloader20.csv`
 
-25. Plot Fig 5 (a) by running `code/image_classification/analysis/combine_lotus/elapsed_time_plot.ipynb` notebook
+26. Plot Fig 5 (a) by running `code/image_classification/analysis/combine_lotus/elapsed_time_plot.ipynb` notebook
     Check out the plot at the bottom of the notebook.
 
-26. Plot Fig 5 (b) by running `code/image_classification/analysis/combine_lotus/per_python_func_plot_vary_dataloaders.ipynb` notebook
+27. Plot Fig 5 (b) by running `code/image_classification/analysis/combine_lotus/per_python_func_plot_vary_dataloaders.ipynb` notebook
     Check out the plot at the bottom of the notebook.
 
-27. Plot Fig 5 (c) by running below command:
+28. Plot Fig 5 (c) by running below command:
     ```bash
     python code/image_classification/analysis/combine_lotus/hw_event_analyzer.py\
      --mapping_file code/image_classification/LotusMap/Intel/mapping_funcs.json\
@@ -176,5 +178,7 @@ We provide the code/scripts to replicate Lotus experiment results in the cloudla
     ```
     Check out the `code/image_classification/analysis/combine_lotus/cpp_hw_events_figs` directory for the plots.
 
-28. Plot Fig 5 (e)-(h) by running `code/image_classification/analysis/combine_lotus/c_to_python_analyser.ipynb` notebook
+29. Plot Fig 5 (e)-(h) by running `code/image_classification/analysis/combine_lotus/c_to_python_analyser.ipynb` notebook
     Check out the plots in the `code/image_classification/analysis/combine_lotus/mapped_python_figs` directory.
+
+30. That completes the experiment for LotusTrace on ImageNet dataset for Image Classification task!
