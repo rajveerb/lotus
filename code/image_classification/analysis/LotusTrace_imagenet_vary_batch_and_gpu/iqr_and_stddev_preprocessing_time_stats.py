@@ -8,7 +8,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument(
     "--data_dir",
     type=str,
-    default="/mydata/P3Tracer/p3torch_imagenet_vary_batch_and_gpu",
+    default="lotustrace_result/b512_gpu4",
     help="Root directory with P3Torch_log for different configs",
 )
 
@@ -21,7 +21,7 @@ parser.add_argument(
 
 parser.add_argument(
     "--output_file",
-    default="code/image_classification/analysis/P3Torch_imagenet_vary_batch_and_gpu/log_stats/iqr_and_stddev_preprocessing_time_stats.log",
+    default="lotustrace_result/iqr_and_stddev_preprocessing_time_stats.log",
     help="Output file to save the stats",
 )
 

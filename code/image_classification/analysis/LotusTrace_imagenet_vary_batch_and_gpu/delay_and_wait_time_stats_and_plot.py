@@ -18,7 +18,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument(
     "--data_dir",
     type=str,
-    default="/mydata/P3Tracer/P3Torch_imagenet_vary_batch_and_gpu",
+    default="lotustrace_result/b512_gpu4",
     help="Root directory with custom_log for different configs",
 )
 
@@ -32,18 +32,21 @@ parser.add_argument(
 parser.add_argument(
     "--fig_dir",
     type=str,
-    default="code/image_classification/analysis/P3Torch_imagenet_vary_batch_and_gpu/figures",
+    default="lotustrace_result/figures",
     help="Path to store the figures",
 )
 
 parser.add_argument(
     "--output_file",
-    default="code/image_classification/analysis/P3Torch_imagenet_vary_batch_and_gpu/log_stats/delay_and_wait_time_stats_and_plot.log",
+    default="lotustrace_result/delay_and_wait_time_stats_and_plot.log",
     help="Output file to save the stats",
 )
 
 
 args = parser.parse_args()
+
+# make the directory if it does not exist
+os.makedirs(args.fig_dir, exist_ok=True)
 
 logging.basicConfig(
     filename=args.output_file, level=logging.INFO, filemode="w", format=""

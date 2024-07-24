@@ -1,6 +1,6 @@
 # !/bin/bash
 
-program_path_prefix="code/image_classification/P3Map"
+program_path_prefix="code/image_classification/LotusMap/Intel"
 python_path=$(which python)
 programs=("Loader.py" "Normalize.py" "RandomHorizontalFlip.py" "RandomResizedCrop.py" "ToTensor.py" "Collation.py")
 vtune_record="vtune -collect hotspots -start-paused"

@@ -6,10 +6,10 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--lotustrace_trace_dir', type=str,
-                    default='pytorch_profiles_imagenet_dataset', help='Root directory which stores lotustrace profiler data along with custom_log for different configs')
-parser.add_argument('--custom_log_prefix', type=str, default='custom_log', 
+                    default='lotustrace_result/b512_gpu4', help='Root directory which stores lotustrace profiler data along with custom_log for different configs')
+parser.add_argument('--custom_log_prefix', type=str, default='lotustrace_log', 
                     help='custom_log, requirement is the file should begin with the prefix passed as an argument\
-                          and end with pid_<pidnumber> without any extension such as .json, for example, custom_log_abcdef_pid_1234')
+                          and end with pid_<pidnumber> without any extension such as .json, for example, lotustrace_log_abcdef_pid_1234')
 
 parser.add_argument('--coarse', action='store_true', help='coarse option will generate viz trace which will not include \
                     fine grained breakdown of batch preprocessing ops such as \
@@ -18,7 +18,7 @@ parser.add_argument('--coarse', action='store_true', help='coarse option will ge
                     collation time,\
                     individual transformation time')
 parser.add_argument('--output_lotustrace_viz_file', type=str,
-                    default='viz_file.lotustrace', help='[Warning] A json file will be generated which can be visualized using chrome://tracing \
+                    default='lotustrace_result/viz_file.lotustrace', help='[Warning] A json file will be generated which can be visualized using chrome://tracing \
                     \nNote: The file should not contain custom_log prefix in the name or end with json')
 
 
@@ -110,7 +110,7 @@ for root, dirs, files in os.walk(args.lotustrace_trace_dir):
     result_lotustrace_data_file = None
     for file in files:
         if file.startswith(args.custom_log_prefix):
-            print(f"custom log file: {file}")
+            print(f"Trace log file: {file}")
             pid = file.split("_")[-1]
             result += update_pytorch_profile_data(os.path.join(root, file), pid, args.coarse)
         elif file.endswith(".json"):
