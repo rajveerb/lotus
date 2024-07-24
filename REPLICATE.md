@@ -80,8 +80,8 @@ We provide the code/scripts to replicate Lotus experiment results in the cloudla
     # Below command can cause issues
     export CMAKE_PREFIX_PATH=$(dirname $(dirname $(which conda)))
     echo "CMAKE_PREFIX_PATH is set to $CMAKE_PREFIX_PATH, it should be set to dir which contains the conda installation"  
-    sudo apt install -y g++
-    REL_WITH_DEB_INFO=1 MAX_JOBS=1 python setup.py install
+    sudo apt install -y gcc-7 g++-7
+    REL_WITH_DEB_INFO=1 MAX_JOBS=1 CC=/usr/bin/gcc-7 CXX=/usr/bin/g++-7 python setup.py install
     popd
     # Sanity check
     pip list | grep "torch" | grep "2.0.0a0"
@@ -104,7 +104,7 @@ We provide the code/scripts to replicate Lotus experiment results in the cloudla
 17. Install below packages:
     ```bash
     conda install ipykernel pandas=2.0.3 -y
-    pip install -y matplotlib==3.9.0 natsort==8.4.0
+    pip install -y matplotlib==3.9.0 natsort==8.4.0 seaborn==0.13.2
     ```
 18. Generate JSON file with mapping info by running all cells in [`code/image_classification/LotusMap/Intel/logsToMapping.ipynb`](code/image_classification/LotusMap/Intel/logsToMapping.ipynb)
 
@@ -115,18 +115,18 @@ We provide the code/scripts to replicate Lotus experiment results in the cloudla
     bash scripts/cloudlab/LotusTrace_imagenet.sh
     ```
     Note: # of DataLoader workers is equal to # of gpus in this experiment.
-21. Run the below commands for observations in `High variance in Preprocessing Time` (fig 4 (a) and the statistics):
+21. Run the below commands for observations in `High variance in Preprocessing Time` for fig 4 (a) and the statistics:
     ```bash
     python code/image_classification/analysis/LotusTrace_imagenet_vary_batch_and_gpu/preprocessing_time_stats.py\
      --remove_outliers\
-     --data_dir lotustrace_result/b1024_gpu4/\
+     --data_dir lotustrace_result/512_gpu4/\
      --output_file lotustrace_result/preprocessing_time_stats.log 
     python code/image_classification/analysis/LotusTrace_imagenet_vary_batch_and_gpu/box_plot_preprocessing_time.py\
      --remove_outliers\
-     --data_dir lotustrace_result/b1024_gpu4\
+     --data_dir lotustrace_result/512_gpu4\
      --output_file lotustrace_result/box_plot_preprocessing_time.png
     ```
-22. Run the below commands for observations in `Significant wait time` (fig 4 (b), (c) and the statistics):
+22. Run the below commands for observations in `Significant wait time` for fig 4 (b), (c) and the statistics:
     ```bash
     python code/image_classification/analysis/LotusTrace_imagenet_vary_batch_and_gpu/delay_and_wait_time_stats_and_plot.py\
      --sort_criteria duration\
@@ -134,7 +134,7 @@ We provide the code/scripts to replicate Lotus experiment results in the cloudla
      --fig_dir lotustrace_result/figures\
      --output_file lotustrace_result/delay_and_wait_time_stats_and_plot.log
     ```
-23. Run the visualization script (Figure 2):
+23. Run the visualization script for Fig 2:
     ```bash
     python code/visualize_LotusTrace/visualization_augmenter.py\
      --coarse\
@@ -144,12 +144,37 @@ We provide the code/scripts to replicate Lotus experiment results in the cloudla
     ```
     Open the file in chrome trace viewer for visualization (Navigate to `chrome://tracing` URL in Google Chrome, upload the `viz_file.lotustrace` and visualize the trace)
 
-24. Run the below to generate hardware performance numbers (Figure 5):
+24. Run the below to generate hardware performance numbers for Fig 5:
     ```bash
     bash scripts/cloudlab/LotusTrace_imagenet_vtune.sh
     ```
-25. Plot (Fig 5 (a)) by running `code/image_classification/analysis/combine_lotus/elapsed_time_plot.ipynb` notebook
 
-26. Plot (Fig 5 (b)) by running `code/image_classification/analysis/combine_lotus/per_python_func_plot_vary_dataloaders.ipynb` notebook
+25. Follow the below steps to get a CSV of hw performance numbers (has to be performed manually):
+    ```bash
+    # Below step will provide a link, open a browser window, and login to the VTune GUI (set the password to anything you like)
+    vtune-backend --web-port 8080 --data-directory ./vtune_mem_access_vary_dataloader/b1024_gpu4_dataloader20
+    ```
+    - Navigate to Microarchitecture Exploration tab
 
-27. 
+    - Perform grouping by Source Function / Function / Call Stack
+
+    - Select all cells and paste it in a CSV file called `code/image_classification/analysis/combine_lotus/lotustrace_uarch/b1024_gpu4_dataloader20.csv`
+
+25. Plot Fig 5 (a) by running `code/image_classification/analysis/combine_lotus/elapsed_time_plot.ipynb` notebook
+    Check out the plot at the bottom of the notebook.
+
+26. Plot Fig 5 (b) by running `code/image_classification/analysis/combine_lotus/per_python_func_plot_vary_dataloaders.ipynb` notebook
+    Check out the plot at the bottom of the notebook.
+
+27. Plot Fig 5 (c) by running below command:
+    ```bash
+    python code/image_classification/analysis/combine_lotus/hw_event_analyzer.py\
+     --mapping_file code/image_classification/LotusMap/Intel/mapping_funcs.json\
+     --uarch_dir code/image_classification/analysis/combine_lotus/lotustrace_uarch\
+     --combined_hw_events code/image_classification/analysis/combine_lotus/combined_lotustrace_uarch.csv\
+     --cpp_hw_events_plot_dir code/image_classification/analysis/combine_lotus/cpp_hw_events_figs
+    ```
+    Check out the `code/image_classification/analysis/combine_lotus/cpp_hw_events_figs` directory for the plots.
+
+28. Plot Fig 5 (e)-(h) by running `code/image_classification/analysis/combine_lotus/c_to_python_analyser.ipynb` notebook
+    Check out the plots in the `code/image_classification/analysis/combine_lotus/mapped_python_figs` directory.
