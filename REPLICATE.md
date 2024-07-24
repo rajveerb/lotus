@@ -144,7 +144,12 @@ We provide the code/scripts to replicate Lotus experiment results in the cloudla
     ```
     Open the file in chrome trace viewer for visualization (Navigate to `chrome://tracing` URL in Google Chrome, upload the `viz_file.lotustrace` and visualize the trace)
 
-24. Run the below steps for obtaining Hardware observations (Figure 5):
+24. Run the below to generate hardware performance numbers (Figure 5):
     ```bash
     bash scripts/cloudlab/LotusTrace_imagenet_vtune.sh
     ```
+25. Plot (Fig 5 (a)) by running `code/image_classification/analysis/combine_lotus/elapsed_time_plot.ipynb` notebook
+
+26. Plot (Fig 5 (b)) by running `code/image_classification/analysis/combine_lotus/per_python_func_plot_vary_dataloaders.ipynb` notebook
+
+27. 
