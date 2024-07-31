@@ -11,7 +11,6 @@ git submodule update --init --recursive --depth 1
 # Below command can cause issues
 export CMAKE_PREFIX_PATH=$(dirname $(dirname $(which conda)))
 echo "CMAKE_PREFIX_PATH is set to $CMAKE_PREFIX_PATH, it should be set to dir which contains the conda installation"  
-sudo apt install -y g++
 TORCH_CUDA_ARCH_LIST="8.6" REL_WITH_DEB_INFO=1 python setup.py install
 popd
 echo "Finished!"
