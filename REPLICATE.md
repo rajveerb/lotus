@@ -8,7 +8,8 @@ We have setup software dependencies such as CUDA, CuDNN, Intel VTune, Anaconda, 
 
 1. Clone this repository
     ```git
-    git clone --depth 1 git@github.com:rajveerb/lotus.git -b iiswc24ae
+    # Below command will take some time
+    git clone --recurse-submodules --depth 1 https://github.com/rajveerb/lotus.git -b iiswc24ae
     cd lotus
     git submodule update --init --recursive
     ```
@@ -31,29 +32,16 @@ We have setup software dependencies such as CUDA, CuDNN, Intel VTune, Anaconda, 
 
 4. Install PyTorch (LotusTrace):
     ```bash
-    pushd code/LotusTrace
-    conda install -y cmake ninja
-    pip install -r requirements.txt
-    conda install -y mkl mkl-include
-    git submodule sync
-    git submodule update --init --recursive --depth 1
-    # Below command can cause issues
-    export CMAKE_PREFIX_PATH=$(dirname $(dirname $(which conda)))
-    echo "CMAKE_PREFIX_PATH is set to $CMAKE_PREFIX_PATH, it should be set to dir which contains the conda installation"  
-    sudo apt install -y gcc-7 g++-7
-    REL_WITH_DEB_INFO=1 MAX_JOBS=1 CC=/usr/bin/gcc-7 CXX=/usr/bin/g++-7 python setup.py install
-    popd
+    sudo apt install -y g++
+    bash install_lotustrace.sh
     # Sanity check
     pip list | grep "torch" | grep "2.0.0a0"
     ```
 5. Install torchvision:
     ```bash
-    pushd code/torchvision
-    conda install -y -c conda-forge libjpeg-turbo
-    conda install -y pillow=10.3.0
-    python setup.py install
+    bash install_torchvision.sh
+    # Sanity check
     pip list | grep "torchvision" | grep "0.15.1a0"
-    popd
     ```
     
 6. Install below packages:
