@@ -9,7 +9,7 @@ We have setup software dependencies such as CUDA, CuDNN, Intel VTune, Anaconda, 
 1. Clone this repository
     ```git
     # Below command will take some time
-    git clone --recurse-submodules --depth 1 https://github.com/rajveerb/lotus.git -b iiswc24ae
+    git clone --depth 1 https://github.com/rajveerb/lotus.git -b iiswc24ae
     cd lotus
     git submodule update --init --recursive
     ```
