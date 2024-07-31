@@ -1,7 +1,7 @@
 [submodule "code/LotusTrace"]
 	path = code/LotusTrace
 	url = git@github.com:rajveerb/pytorch.git
-	branch = v2.0.0_instrumentation
+	branch = v2.0.1_instrumentation
 [submodule "code/itt-python"]
 	path = code/itt-python
 	url = git@github.com:rajveerb/itt-python.git
@@ -13,4 +13,4 @@
 [submodule "code/amdprofilecontrol-python"]
 	path = code/amdprofilecontrol-python
 	url = git@github.com:rajveerb/amdprofilecontrol-python.git
-	branch = dump
+	branch = main
