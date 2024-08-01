@@ -1,5 +1,11 @@
+
+# Lotus
+
 <p align="center">
     <img src="assets/lotus.png" width="40%" alt="Lotus">
+</p>
+<p align="center">
+<a href="https://www.freepik.com/free-ai-image/flower-that-is-yellow-pink_40612656.htm#fromView=search&page=1&position=33&uuid=4a4a6af9-ac36-4555-8c15-7c4261fcdee6">Image by Sketchepedia on Freepik</a>
 </p>
 
 <p align="center"><i><b>A profiling
