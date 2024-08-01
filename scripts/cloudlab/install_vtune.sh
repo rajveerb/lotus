@@ -6,6 +6,8 @@ echo "deb https://apt.repos.intel.com/oneapi all main" | sudo tee /etc/apt/sourc
 sudo add-apt-repository "deb https://apt.repos.intel.com/oneapi all main"
 sudo apt update
 sudo apt install -y --allow-downgrades intel-oneapi-vtune=2023.2.0-49484
+# Below will prevent update apt automatically 
+sudo apt-mark hold intel-oneapi-vtune
 sudo sed -i 's/kernel.yama.ptrace_scope = 1/kernel.yama.ptrace_scope = 0/' /etc/sysctl.d/10-ptrace.conf
 sudo sysctl -w kernel.kptr_restrict=0
 sudo sysctl -w kernel.perf_event_paranoid=0
