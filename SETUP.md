@@ -17,10 +17,10 @@ The following instructions are for setting up/installing software dependencies o
     ```bash
     sudo bash scripts/cloudlab/install_vtune.sh
     # Make sure to run below commands 
-    echo "source /opt/intel/oneapi/setvars.sh" > ~/.bashrc
+    echo "source /opt/intel/oneapi/setvars.sh" >> ~/.bashrc
     sudo usermod -aG vtune $USER && newgrp vtune
     ```
-    Note: we used `Intel(R) VTune(TM) Profiler 2024.0.1 (build 627177)`
+    Note: we used `Intel(R) VTune(TM) Profiler 2023.2.0 (build 626047)`
 4. Install CUDA 11.8:
     ```bash
     sudo bash scripts/cloudlab/cuda_installer_script.sh
