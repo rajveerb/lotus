@@ -1,3 +1,0 @@
-Function,CPU Time,CPU Time:Effective Time,CPU Time:Spin Time,CPU Time:Overhead Time,Module,Function (Full),Source File,Start Address
-ImagingFlipLeftRight,0.939981,0.939981,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,ImagingFlipLeftRight,[Unknown],0x3caf0
-__GI___libc_malloc,0.000948,0.000948,0.0,0.0,libc.so.6,__GI___libc_malloc,malloc.c,0x9a110
