@@ -11,6 +11,8 @@
 <p align="center"><i><b>A profiling
 tool for the preprocessing stage of ML pipelines</b></i></p>
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13245169.svg)](https://doi.org/10.5281/zenodo.13245169)
+
 
 We introduce **Lotus**, a profiling tool for ML preprocessing pipelines defined using PyTorch's DataLoader.
 
