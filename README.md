@@ -18,6 +18,7 @@ We introduce **Lotus**, a profiling tool for ML preprocessing pipelines defined 
 
 ## Quick links
 - [About Lotus](#about-Lotus)
+- [Replicate IISWC24 paper experiments](#Replicate-IISWC24-paper-experiments)
 - [Get Lotus](#how-to-get-Lotus)
 - [Use Lotus](#use-Lotus)
     - [How to use LotusTrace](#how-to-use-LotusTrace)
@@ -42,6 +43,10 @@ Lotus employs two novel approaches:
 
 Above combination is powerful as it allows enables users to better reason about their pipeline’s performance, both at the level of preprocessing operations and their performance on hardware resource usage.
 
+## Replicate IISWC24 paper experiments
+
+For replicating the key experiments in our paper presented at the 2024 IEEE International Symposium on Workload Characterization (IISWC'24), refer to the `SETUP.md` and `REPLICATE.md` files. You can also refer to the appendix of our paper.
+
 ## How to get Lotus
 
 1. Clone this repository
@@ -58,7 +63,7 @@ Above combination is powerful as it allows enables users to better reason about 
     ```
 4. Install Intel VTune from [here](https://www.intel.com/content/www/us/en/docs/vtune-profiler/installation-guide/2023-1/overview.html) and activate it as Intel descsribes.
 
-    Note: we used `Intel(R) VTune(TM) Profiler 2024.0.1 (build 627177)`
+    Note: we used `Intel(R) VTune(TM) Profiler 2023.2.0 (build 626047)`
 5. Install AMD uProf from [here](https://www.amd.com/en/developer/uprof/uprof-archives.html)
 
     Note: we used `AMDuProfCLI Version 4.0.341.0`
