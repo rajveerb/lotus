@@ -45,7 +45,7 @@ Above combination is powerful as it allows enables users to better reason about 
 
 ## Replicate IISWC24 paper experiments
 
-For replicating the key experiments in our paper presented at the 2024 IEEE International Symposium on Workload Characterization (IISWC'24), refer to the `SETUP.md` and `REPLICATE.md` files. You can also refer to the appendix of our paper.
+For replicating the key experiments in our paper presented at the [2024 IEEE International Symposium on Workload Characterization (IISWC'24)](https://iiswc.org/iiswc2024/), refer to the `SETUP.md` and `REPLICATE.md` files. You can also refer to the appendix of our paper.
 
 ## How to get Lotus
 
