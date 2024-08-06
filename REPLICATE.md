@@ -7,11 +7,12 @@ We have setup software dependencies such as CUDA, CuDNN, Intel VTune, Anaconda, 
 ### Installation steps
 
 1. Clone this repository
-    ```git
+    ```bash
+    # Clone in below work directory because some scripts have absolute paths
+    cd /mydata/iiswc24
     # Below command will take some time
-    git clone --depth 1 https://github.com/rajveerb/lotus.git -b iiswc24ae
+    git clone --depth 1 --recurse-submodules https://github.com/rajveerb/lotus.git -b iiswc24ae
     cd lotus
-    git submodule update --init --recursive
     ```
 
 2. Create a conda environment
@@ -47,15 +48,17 @@ We have setup software dependencies such as CUDA, CuDNN, Intel VTune, Anaconda, 
 6. Install below packages:
     ```bash
     conda install ipykernel pandas=2.0.3 -y
-    pip install -y matplotlib==3.9.0 natsort==8.4.0 seaborn==0.13.2
+    pip install matplotlib==3.9.0 natsort==8.4.0 seaborn==0.13.2
     ```
 
 ### Experiment steps
 
 1. Get the mapping logs for the preprocessing operations:
     ```bash
-    # Activate VTune
+    # Activate VTune, command will fail an error if it is already activated
     source /opt/intel/oneapi/setvars.sh
+    # Sanity check
+    vtune --version
     bash code/image_classification/LotusMap/Intel/LotusMap.sh
     ```
 
