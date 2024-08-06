@@ -8,7 +8,7 @@ time_binary="/usr/bin/time"
 dataset_dir="/mydata/iiswc24/imagenet"
 
 
-batch_sizes=("1024")
+batch_sizes=("512")
 num_gpus=("4")
 num_epochs=1
 time_format="wall(s),user(s),kernel(s)\n%e,%U,%S"
