@@ -4,9 +4,6 @@
 <p align="center">
     <img src="assets/lotus.png"  width="20%" height="20%" alt="Lotus">
 </p>
-<p align="center">
-<a href="https://www.freepik.com/free-ai-image/flower-that-is-yellow-pink_40612656.htm#fromView=search&page=1&position=33&uuid=4a4a6af9-ac36-4555-8c15-7c4261fcdee6">Image by Sketchepedia on Freepik</a>
-</p>
 
 <p align="center"><i><b>A profiling
 tool for the preprocessing stage of ML pipelines</b></i></p>
@@ -34,6 +31,7 @@ We introduce **Lotus**, a profiling tool for ML preprocessing pipelines defined 
 - [Replicate our Lotus experiments](#replicate-our-Lotus-experiments)
 - [Limitations of Lotus](#limitations-of-Lotus)
 - [Cite Lotus](#citation)
+- [Acknowledgment](#acknowledgment)
 - [License](#license)
 
 
@@ -292,6 +290,11 @@ We claim issues 1 and 2 as a limitation as we simply have not tested the system 
 ## Cite Lotus
 
 TODO
+
+## Acknowledgment
+
+The lotus image is from "<a href="https://www.freepik.com/free-ai-image/flower-that-is-yellow-pink_40612656.htm#fromView=search&page=1&position=33&uuid=4a4a6af9-ac36-4555-8c15-7c4261fcdee6">Image by Sketchepedia on Freepik</a>"
+
 
 ## License
 Click [here](LICENSE).
