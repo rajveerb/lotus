@@ -19,6 +19,7 @@ We introduce **Lotus**, a profiling tool for ML preprocessing pipelines defined 
 
 ## Quick links
 - [About Lotus](#about-Lotus)
+- [Cite Lotus](#citation)
 - [Replicate IISWC24 paper experiments](#Replicate-IISWC24-paper-experiments)
 - [Get Lotus](#how-to-get-Lotus)
 - [Use Lotus](#use-Lotus)
@@ -30,7 +31,6 @@ We introduce **Lotus**, a profiling tool for ML preprocessing pipelines defined 
     - [Example for LotusMap](#example-for-LotusMap)
 - [Replicate our Lotus experiments](#replicate-our-Lotus-experiments)
 - [Limitations of Lotus](#limitations-of-Lotus)
-- [Cite Lotus](#citation)
 - [Acknowledgment](#acknowledgment)
 - [License](#license)
 
@@ -44,6 +44,17 @@ Lotus employs two novel approaches:
 2. **LotusMap** - A mapping methodology to reconstruct a mapping between Python functions and the underlying C++ functions they call, effectively linking high-level Python functions with low-level hardware counters. 
 
 Above combination is powerful as it allows enables users to better reason about their pipeline’s performance, both at the level of preprocessing operations and their performance on hardware resource usage.
+
+## Cite Lotus
+
+```latex
+@INPROCEEDINGS{Lotus,
+    author={Bachkaniwala, Rajveer and Lanka, Harshith and Rong, Kexin and Gavrilovska, Ada},
+    booktitle={2024 IEEE International Symposium on Workload Characterization (IISWC)},
+    title={Lotus: Characterization of Machine Learning Preprocessing Pipelines via Framework and Hardware Profiling}, 
+    year={2024}
+}
+```
 
 ## Replicate IISWC24 paper experiments
 
@@ -286,10 +297,6 @@ Similar to other tools in the past which do not claim to be perfect, we follow t
 3. **LotusMap** is approximate, checkout our paper for additional information
 
 We claim issues 1 and 2 as a limitation as we simply have not tested the system in these settings yet.
-
-## Cite Lotus
-
-TODO
 
 ## Acknowledgment
 
