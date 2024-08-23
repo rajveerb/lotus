@@ -19,7 +19,7 @@ We introduce **Lotus**, a profiling tool for ML preprocessing pipelines defined 
 
 ## Quick links
 - [About Lotus](#about-Lotus)
-- [Cite Lotus](#citation)
+- [Cite Lotus](#cite-lotus)
 - [Replicate IISWC24 paper experiments](#Replicate-IISWC24-paper-experiments)
 - [Get Lotus](#how-to-get-Lotus)
 - [Use Lotus](#use-Lotus)
