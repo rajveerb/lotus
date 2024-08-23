@@ -16,5 +16,5 @@ preferred-citation:
     given-names: "Ada"
     orcid: "https://orcid.org/0000-0003-4199-2512"
   title: "Lotus: Characterization of Machine Learning Preprocessing Pipelines via Framework and Hardware Profiling"
-  conference: "2024 IEEE International Symposium on Workload Characterization (IISWC)"
+  booktitle: "2024 IEEE International Symposium on Workload Characterization (IISWC)"
   year: 2024
