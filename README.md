@@ -29,7 +29,6 @@ We introduce **Lotus**, a profiling tool for ML preprocessing pipelines defined 
 - [Concrete examples](#concrete-examples)
     - [Example for LotusTrace](#example-for-LotusTrace)
     - [Example for LotusMap](#example-for-LotusMap)
-- [Replicate our Lotus experiments](#replicate-our-Lotus-experiments)
 - [Limitations of Lotus](#limitations-of-Lotus)
 - [Acknowledgment](#acknowledgment)
 - [License](#license)
@@ -282,11 +281,6 @@ Notice that the user simply has to pass the same log file to be used by **LotusT
 
 We provide 6 examples of how to use **LotusMap** in `code/image_classification/LotusMap` directory. Please check the code for more details.
 
-## Replicate our Lotus experiments
-
-Here, we describe how to replicate our **Lotus** experiments for an image classification ML training task. 
-
-Checkout [`REPLICATE.md`](REPLICATE.md)
 
 ## Limitations of Lotus
 
