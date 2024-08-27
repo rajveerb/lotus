@@ -50,7 +50,7 @@ Above combination is powerful as it allows enables users to better reason about 
 @INPROCEEDINGS{Lotus,
     author={Bachkaniwala, Rajveer and Lanka, Harshith and Rong, Kexin and Gavrilovska, Ada},
     booktitle={2024 IEEE International Symposium on Workload Characterization (IISWC)},
-    title={Lotus: Characterization of Machine Learning Preprocessing Pipelines via Framework and Hardware Profiling}, 
+    title={{Lotus: Characterization of Machine Learning Preprocessing Pipelines via Framework and Hardware Profiling}}, 
     year={2024}
 }
 ```
