@@ -32,6 +32,7 @@ We introduce **Lotus**, a profiling tool for machine learning (ML) preprocessing
 - [Limitations of Lotus](#limitations-of-Lotus)
 - [Acknowledgment](#acknowledgment)
 - [License](#license)
+- [Contact](#Contact)
 
 
 
@@ -299,3 +300,9 @@ The lotus image is from "<a href="https://www.freepik.com/free-ai-image/flower-t
 
 ## License
 Click [here](LICENSE).
+
+## Contact
+Name: Rajveer Bachkaniwala
+
+Email: rr [at] gatech [dot] edu
+
