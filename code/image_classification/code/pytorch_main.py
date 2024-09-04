@@ -242,6 +242,7 @@ parser.add_argument("--profiler-steps", default=8, type=int, help="set number of
 parser.add_argument("--include-profiler-stack", action="store_true", help="include stack trace in PyTorch profiler logs")
 parser.add_argument("--shuffle", action="store_true", help="If passed then batches will be shuffled.")
 parser.add_argument("--gpu-idle-times", type=str, help="file to write idle times of GPU")
+parser.add_argument("--gpu-util-times", type=str, help="file to write util times of GPU")
 
 best_acc1 = 0
 
@@ -639,7 +640,8 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
         # print(f"Batch {i} took {start.elapsed_time(end)}ms")
         # open(args.gpu_idle_times,'w').write(f"{start_cuda.elapsed_time(end_cuda)} ms")
         # write to args.gpu_idle_time the time between end_prev and start for each i
-        open(args.gpu_idle_times,'a').write(f"{end_prev.elapsed_time(start)} ms\n")
+        open(args.gpu_idle_times, 'a').write(f"{end_prev.elapsed_time(start)} ms\n")
+        open(args.gpu_util_times, 'a').write(f"{start.elapsed_time(end)} ms\n")
 
 
 def validate(val_loader, model, criterion, args):

@@ -51,6 +51,6 @@ do
         fi
 
         # TORCH_DATALOADER_PIN_CORE=1 as env variable to pin each data loader to a specific core 
-        ${time_binary} --format=${time_format} -o "${e2e_log_dir}/custom_log_b${batch_size}_gpu${num_gpu}.log" ${python_path} ${program_path} ${dataset_dir} -b ${batch_size} --gpus ${num_gpu} -j ${num_gpu} --epochs ${num_epochs} --log-train-file ${result_dir}/custom_log --val-loop 0 --gpu-idle-times ${result_dir}/gpu_idle_times;
+        ${time_binary} --format=${time_format} -o "${e2e_log_dir}/custom_log_b${batch_size}_gpu${num_gpu}.log" ${python_path} ${program_path} ${dataset_dir} -b ${batch_size} --gpus ${num_gpu} -j ${num_gpu} --epochs ${num_epochs} --log-train-file ${result_dir}/custom_log --val-loop 0 --gpu-idle-times ${result_dir}/gpu_idle_times --gpu-util-times ${result_dir}/gpu_util_times;
     done
 done
