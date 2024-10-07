@@ -10,6 +10,8 @@ tool for the preprocessing stage of machine learning pipelines</b></i></p>
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13245169.svg)](https://doi.org/10.5281/zenodo.13245169)
 
+**IISWC 2024 Paper** [[PDF](https://www.rajveerbachkaniwala.com/papers/lotus-iiswc24.pdf)]
+
 **IISWC 2024 Artifact**: Available ✅, Reviewed ✅, Reproduced ✅
 
 
