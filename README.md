@@ -16,6 +16,7 @@ We introduce **Lotus**, a profiling tool for machine learning (ML) preprocessing
 
 ## News:
 
+- [Oct 2024] Lotus presented to **Intel Process Architecture Research (PAR)** Lab
 - [Sep 2024] Lotus accepted to [**HotInfra 2024** (co-located with SOSP'24)](https://hotinfra24.github.io/) - [[PDF]](https://www.rajveerbachkaniwala.com/papers/lotus-hotinfra24.pdf)!
 - [Aug 2024] Lotus won a 🏆 Best Paper Nomination in [**IISWC 2024**](https://iiswc.org/iiswc2024/)!
 - [Aug 2024] Lotus artifact won Available, Reviewed, and Reproduced badges according to [IEEE Badges](https://ieeexplore.ieee.org/Xplorehelp/overview-of-ieee-xplore/about-content#reproducibility-badges)!
