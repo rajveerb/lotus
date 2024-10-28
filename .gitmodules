@@ -1,0 +1,16 @@
+[submodule "code/LotusTrace"]
+	path = code/LotusTrace
+	url = https://github.com/rajveerb/pytorch.git
+	branch = v2.0.1_instrumentation
+[submodule "code/itt-python"]
+	path = code/itt-python
+	url = https://github.com/rajveerb/itt-python.git
+	branch = master
+[submodule "code/torchvision"]
+	path = code/torchvision
+	url = https://github.com/rajveerb/vision.git
+	branch = v0.15_instrumentation
+[submodule "code/amdprofilecontrol-python"]
+	path = code/amdprofilecontrol-python
+	url = https://github.com/rajveerb/amdprofilecontrol-python.git
+	branch = main

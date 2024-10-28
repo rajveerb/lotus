@@ -1,3 +1,0 @@
-Function,CPU Time,CPU Time:Effective Time,CPU Time:Spin Time,CPU Time:Overhead Time,Module,Function (Full),Source File,Start Address
-ImagingFlipLeftRight,0.537990,0.537990,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,ImagingFlipLeftRight,[Unknown],0x3caf0
-__GI___pthread_mutex_lock,0.000627,0.000627,0.0,0.0,libpthread.so.0,__GI___pthread_mutex_lock,pthread_mutex_lock.c,0xafc0

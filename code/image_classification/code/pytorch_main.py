@@ -1,7 +1,60 @@
-# https://github.com/pytorch/examples/tree/main/imagenet
+# This file includes code that is derived from the original code (found on this URL path https://github.com/pytorch/examples/blob/26de41904319c7094afc53a3ee809de47112d387/imagenet/main.py) under the BSD-3-Clause License.
+# The original license is included below:
+#
+# Original BSD-3-Clause License
+#
+# Copyright (c) 2017, Pytorch contributors
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+#
+# 1. Redistributions of source code must retain the above copyright notice,
+# this list of conditions and the following disclaimer.
+#
+# 2. Redistributions in binary form must reproduce the above copyright notice,
+# this list of conditions and the following disclaimer in the documentation
+# and/or other materials provided with the distribution.
+#
+# 3. Neither the name of the <organization> nor the names of its contributors
+# may be used to endorse or promote products derived from this software
+# without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+# DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+# SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+# OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# Your modifications below are licensed under the MIT License:
+#
+# MIT License
+#
+# Copyright (c) 2024 Rajveer Bachkaniwala
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
 
-# n_vZkluCTLx_krcYKhvUQqsuOOHUZNOTNkOjO4c2UrA,683249
-# /proj/prismgt-PG0/anaconda3/envs/torch131/lib/python3.10/site-packages/Pillow-9.5.0.dist-info/RECORD
 import argparse
 import os
 import random
@@ -184,8 +237,10 @@ parser.add_argument(
 parser.add_argument("--dummy", action="store_true", help="use fake data to benchmark")
 parser.add_argument("--profile", action="store_true", help="use PyTorch profiler")
 parser.add_argument("--profile-log-prefix", type=str, help="set prefix for PyTorch profiler's logs, eg: /mydata/log")
+parser.add_argument("--profile-steps-all", action="store_true", help="Set steps to total number of batches in dataset.")
 parser.add_argument("--profiler-steps", default=8, type=int, help="set number of steps to profile in PyTorch profiler, eg: 10")
 parser.add_argument("--include-profiler-stack", action="store_true", help="include stack trace in PyTorch profiler logs")
+parser.add_argument("--shuffle", action="store_true", help="If passed then batches will be shuffled.")
 
 best_acc1 = 0
 
@@ -410,7 +465,7 @@ def main_worker(gpu, ngpus_per_node, args):
     train_loader = torch.utils.data.DataLoader(
         train_dataset,
         batch_size=args.batch_size,
-        shuffle=(train_sampler is None),
+        shuffle=(train_sampler is None) and args.shuffle,
         num_workers=args.workers,
         pin_memory=True,
         sampler=train_sampler,
@@ -482,10 +537,14 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
 
     if args.profile:
         steps = 0
+        if args.profile_steps_all:
+            profiler_steps = len(train_loader)
+        else:
+            profiler_steps = args.profiler_steps
         train_p = profile(
-            activities=[ProfilerActivity.CPU,ProfilerActivity.CUDA],
+            activities=[ProfilerActivity.CPU,],
             with_stack=args.include_profiler_stack,
-            schedule=torch.profiler.schedule(wait=0, warmup=0, active=args.profiler_steps+1),
+            schedule=torch.profiler.schedule(wait=0, warmup=0, active=profiler_steps+1),
             on_trace_ready=torch.profiler.tensorboard_trace_handler(
                 f"{args.profile_log_prefix}"
             ),
@@ -540,7 +599,7 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
 
         if args.profile:
             steps += 1
-            if steps == args.profiler_steps:
+            if steps == profiler_steps:
                 break
 
     if args.profile:

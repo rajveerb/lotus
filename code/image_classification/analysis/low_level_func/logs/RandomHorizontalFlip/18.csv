@@ -1,3 +1,0 @@
-Function,CPU Time,CPU Time:Effective Time,CPU Time:Spin Time,CPU Time:Overhead Time,Module,Function (Full),Source File,Start Address
-ImagingFlipLeftRight,0.589980,0.589980,0.0,0.0,_imaging.cpython-310-x86_64-linux-gnu.so,ImagingFlipLeftRight,[Unknown],0x3caf0
-c10::impl::OperatorEntry::lookup,0.000756,0.000756,0.0,0.0,libtorch_cpu.so,c10::impl::OperatorEntry::lookup(c10::DispatchKeySet) const,[Unknown],0x2165780
