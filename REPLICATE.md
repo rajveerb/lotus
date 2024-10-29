@@ -65,7 +65,7 @@ We have setup software dependencies such as CUDA, CuDNN, Intel VTune, Anaconda, 
 
 2. Generate JSON file with mapping info by running all cells in [`code/image_classification/LotusMap/Intel/logsToMapping.ipynb`](code/image_classification/LotusMap/Intel/logsToMapping.ipynb)
 
-3. You have successfully obtained the mapping ([`code/image_classification/LotusMap/Intel/mapping_funcs.json`](code/image_classification/LotusMap/Intel/mapping_funcs.json)) using **LotusMap** (Table 1)!
+3. You have successfully obtained the mapping ([`mapping_funcs.json`]([code/image_classification/LotusMap/Intel/mapping_funcs.json](https://github.com/rajveerb/lotus/blob/bdf42bf1e951ca2b9d6e3665f8163bd1abe6ac4f/code/image_classification/LotusMap/Intel/mapping_funcs.json))) using **LotusMap** (Table 1)!
 
 4. Run the Image Classification pipeline experiment where batch size and number of gpus are varied and LotusTrace is enabled:
     ```bash
