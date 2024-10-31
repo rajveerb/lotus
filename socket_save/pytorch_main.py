@@ -417,9 +417,9 @@ def main_worker(gpu, ngpus_per_node, args):
             )
     else:
         # Create a socket for sending log data to the listener
-        #s = socket.socket()
-        #port = 12345
-        #s.connect(('127.0.0.1', port))
+        s = socket.socket()
+        port = 12345
+        s.connect(('127.0.0.1', port))
 
         traindir = os.path.join(args.data, "train")
         if args.val_loop:
@@ -437,11 +437,11 @@ def main_worker(gpu, ngpus_per_node, args):
                     transforms.ToTensor(),
                     normalize,
                 ],	
-                log_transform_elapsed_time=args.log_train_file,
-                #log_transform_elapsed_time=s
+                #log_transform_elapsed_time=args.log_train_file,
+                log_transform_elapsed_time=s
             ),
-            log_file=args.log_train_file,
-            #log_file=s
+            #log_file=args.log_train_file,
+            log_file=s
         )
 
         if args.val_loop:

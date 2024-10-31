@@ -1,8 +1,8 @@
 # !/bin/bash
-train_dataset_dir="/mydata/iiswc24/imagenet/train"
-mkdir -P $train_dataset_dir
+train_dataset_dir="imagenet/train"
+mkdir $train_dataset_dir
 echo "Downloading ImageNet train dataset (please be patient, this may take a while)"
-wget --quiet https://image-net.org/data/ILSVRC/2012/ILSVRC2012_img_train.tar -P $train_dataset_dir
+#wget https://image-net.org/data/ILSVRC/2012/ILSVRC2012_img_train.tar -P $train_dataset_dir
 pushd $train_dataset_dir
 echo "Extracting ImageNet train dataset"
 tar -xvf ILSVRC2012_img_train.tar && rm -f ILSVRC2012_img_train.tar

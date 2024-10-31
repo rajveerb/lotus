@@ -1,15 +1,15 @@
 # !/bin/bash
 
-result_dir="/mydata/iiswc24/lotus/lotustrace_result"
+result_dir="lotustrace_result"
 e2e_log_dir="${result_dir}/e2e"
 python_path=$(which python)
 program_path="code/image_classification/code/pytorch_main.py"
 time_binary="/usr/bin/time"
-dataset_dir="/mydata/iiswc24/imagenet"
+dataset_dir="imagenet"
 
 
-batch_sizes=("512")
-num_gpus=("4")
+batch_sizes=("64")
+num_gpus=("2")
 num_epochs=1
 time_format="wall(s),user(s),kernel(s)\n%e,%U,%S"
 

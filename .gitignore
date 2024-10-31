@@ -1,1 +1,4 @@
 .misc
+*.tar
+imagenet/
+*.pth
