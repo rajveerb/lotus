@@ -10,12 +10,17 @@ tool for the preprocessing stage of machine learning pipelines</b></i></p>
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13245169.svg)](https://doi.org/10.5281/zenodo.13245169)
 
-**IISWC 2024 Artifact**: Available ✅, Reviewed ✅, Reproduced ✅
-
-
 We introduce **Lotus**, a profiling tool for machine learning (ML) preprocessing pipelines defined using PyTorch's DataLoader.
 
 **Lotus** is an easy-to-use, low overhead, and visualization-ready profiler specialized for the widely used PyTorch DataLoader preprocessing library.
+
+## News:
+
+- [Oct 2024] Lotus presented to **Intel Processor Architecture Research (PAR)** Lab
+- [Sep 2024] Lotus accepted to [**HotInfra 2024** (co-located with SOSP'24)](https://hotinfra24.github.io/) - [[PDF]](https://www.rajveerbachkaniwala.com/papers/lotus-hotinfra24.pdf)!
+- [Aug 2024] Lotus won a 🏆 Best Paper Nomination in [**IISWC 2024**](https://iiswc.org/iiswc2024/)!
+- [Aug 2024] Lotus artifact won Available, Reviewed, and Reproduced badges according to [IEEE Badges](https://ieeexplore.ieee.org/Xplorehelp/overview-of-ieee-xplore/about-content#reproducibility-badges)!
+- [Jul 2024] Lotus accepted to [**IISWC 2024**](https://iiswc.org/iiswc2024/) - [[PDF](https://www.rajveerbachkaniwala.com/papers/lotus-iiswc24.pdf)]!
 
 ## Quick links
 - [About Lotus](#about-Lotus)
@@ -48,10 +53,17 @@ Above combination is powerful as it allows enables users to better reason about 
 ## Cite Lotus
 
 ```latex
-@INPROCEEDINGS{Lotus,
+@INPROCEEDINGS{lotus-iiswc24,
+ title={{Lotus: Characterization of Machine Learning Preprocessing Pipelines via Framework and Hardware Profiling}}, 
  author={Bachkaniwala, Rajveer and Lanka, Harshith and Rong, Kexin and Gavrilovska, Ada},
  booktitle={2024 IEEE International Symposium on Workload Characterization (IISWC)},
- title={{Lotus: Characterization of Machine Learning Preprocessing Pipelines via Framework and Hardware Profiling}}, 
+ year={2024}
+}
+
+@INPROCEEDINGS{lotus-hotinfra24,
+ title={{Lotus: Characterize Architecture Level CPU-based Preprocessing in Machine Learning Pipelines}}, 
+ author={Bachkaniwala, Rajveer and Lanka, Harshith and Rong, Kexin and Gavrilovska, Ada},
+ booktitle={The 2nd Workshop on Hot Topics in System Infrastructure (HotInfra’24), co-located with SOSP’24, November 3, 2024, Austin, TX, USA},
  year={2024}
 }
 ```
