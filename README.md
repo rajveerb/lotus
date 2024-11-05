@@ -16,11 +16,14 @@ We introduce **Lotus**, a profiling tool for machine learning (ML) preprocessing
 
 ## News:
 
+- [Nov 2024] [[Slides]](https://docs.google.com/presentation/d/1r5vtj-V_3dU6FeIXMRFEQ_K87R1RtDZDGKvUaAYLNCs/edit?usp=sharing) Talk - Leveraging Lotus to evaluate CPU SKUs for AI/ML servers @ [**HotInfra 2024** (co-located with SOSP'24)](https://hotinfra24.github.io/) 
 - [Oct 2024] Lotus presented to **Intel Processor Architecture Research (PAR)** Lab
-- [Sep 2024] Lotus accepted to [**HotInfra 2024** (co-located with SOSP'24)](https://hotinfra24.github.io/) - [[PDF]](https://www.rajveerbachkaniwala.com/papers/lotus-hotinfra24.pdf)!
+- [Sep 2024] [[PDF]](https://www.rajveerbachkaniwala.com/papers/lotus-hotinfra24.pdf) Paper - Lotus accepted to [**HotInfra 2024** (co-located with SOSP'24)](https://hotinfra24.github.io/)!
+- [Sep 2024] [[Slides]](https://docs.google.com/presentation/d/1r5vtj-V_3dU6FeIXMRFEQ_K87R1RtDZDGKvUaAYLNCs/edit?usp=sharing) Talk - Lotus: Evaluate your ML preprocessing pipelines at framework and CPU arch-level @ [**IISWC 2024**]([https://hotinfra24.github.io/](https://iiswc.org/iiswc2024/))! 
 - [Aug 2024] Lotus won a 🏆 Best Paper Nomination in [**IISWC 2024**](https://iiswc.org/iiswc2024/)!
 - [Aug 2024] Lotus artifact won Available, Reviewed, and Reproduced badges according to [IEEE Badges](https://ieeexplore.ieee.org/Xplorehelp/overview-of-ieee-xplore/about-content#reproducibility-badges)!
-- [Jul 2024] Lotus accepted to [**IISWC 2024**](https://iiswc.org/iiswc2024/) - [[PDF](https://www.rajveerbachkaniwala.com/papers/lotus-iiswc24.pdf)]!
+- [Jul 2024] [[PDF](https://www.rajveerbachkaniwala.com/papers/lotus-iiswc24.pdf)] Paper - Lotus accepted to [**IISWC 2024**](https://iiswc.org/iiswc2024/)!
+
 
 ## Quick links
 - [About Lotus](#about-Lotus)
