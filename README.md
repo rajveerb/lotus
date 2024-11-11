@@ -17,7 +17,7 @@ We introduce **Lotus**, a profiling tool for machine learning (ML) preprocessing
 ## News:
 
 - [Nov 2024] [[Slides]](https://docs.google.com/presentation/d/1r5vtj-V_3dU6FeIXMRFEQ_K87R1RtDZDGKvUaAYLNCs/edit?usp=sharing) Talk - Leveraging Lotus to evaluate CPU SKUs for AI/ML servers @ [**HotInfra 2024** (co-located with SOSP'24)](https://hotinfra24.github.io/) 
-- [Oct 2024] Lotus presented to **Intel Processor Architecture Research (PAR)** Lab
+- [Oct 2024] [[Slides]](https://docs.google.com/presentation/d/1ZeA7iXCEndIEm2rYT4UCWkNEvc0zHGVGqNcduTYaTw4/edit?usp=sharing) Talk - Lotus presented to **Intel Processor Architecture Research (PAR)** Lab
 - [Sep 2024] [[PDF]](https://www.rajveerbachkaniwala.com/papers/lotus-hotinfra24.pdf) Paper - Lotus accepted to [**HotInfra 2024** (co-located with SOSP'24)](https://hotinfra24.github.io/)!
 - [Sep 2024] [[Slides]](https://docs.google.com/presentation/d/1r5vtj-V_3dU6FeIXMRFEQ_K87R1RtDZDGKvUaAYLNCs/edit?usp=sharing) Talk - Lotus: Evaluate your ML preprocessing pipelines at framework and CPU arch-level @ [**IISWC 2024**]([https://hotinfra24.github.io/](https://iiswc.org/iiswc2024/))! 
 - [Aug 2024] Lotus won a 🏆 Best Paper Nomination in [**IISWC 2024**](https://iiswc.org/iiswc2024/)!
