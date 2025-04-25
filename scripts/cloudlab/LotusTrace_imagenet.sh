@@ -46,8 +46,8 @@ do
                 ${python_path} ${program_path} ${dataset_dir} \
                 -b ${batch_size} --gpus ${num_gpu} -j ${worker} --epochs ${num_epochs} \
                 --log-train-file ${run_result_dir}/lotustrace_log \
-                --val-loop 0 --gpu-idle-times ${result_dir}/gpu_idle_times \
-                --gpu-util-times ${result_dir}/gpu_util_times
+                --val-loop 0 --gpu-idle-times ${run_result_dir}/gpu_idle_times \
+                --gpu-util-times ${run_result_dir}/gpu_util_times
             echo "Finished running for batch size ${batch_size}, num_gpu ${num_gpu}, num_workers ${worker}"
             echo "Check ${e2e_log_dir}/lotustrace_log_b${batch_size}_gpu${num_gpu}_w${worker}.log for end to end time for this run"
         done
