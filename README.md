@@ -15,6 +15,7 @@ We introduce **Lotus**, a profiling tool for machine learning (ML) preprocessing
 **Lotus** is an easy-to-use, low overhead, and visualization-ready profiler specialized for the widely used PyTorch DataLoader preprocessing library.
 
 ## News:
+- [Apr 2025] [[Wiki]](https://deepwiki.com/rajveerb/lotus) Deep wiki page for Lotus repository powered by Devin.ai 
 - [Nov 2024] [[Slides]](https://docs.google.com/presentation/d/1r5vtj-V_3dU6FeIXMRFEQ_K87R1RtDZDGKvUaAYLNCs/edit?usp=sharing) Talk - Leveraging Lotus to evaluate CPU SKUs for AI/ML servers @ [**HotInfra 2024** (co-located with SOSP'24)](https://hotinfra24.github.io/) 
 - [Oct 2024] [[Slides]](https://docs.google.com/presentation/d/1ZeA7iXCEndIEm2rYT4UCWkNEvc0zHGVGqNcduTYaTw4/edit?usp=sharing) Talk - Lotus presented to **Intel Processor Architecture Research (PAR)** Lab
 - [Sep 2024] [[PDF]](https://www.rajveerbachkaniwala.com/papers/lotus-hotinfra24.pdf) Paper - Lotus accepted to [**HotInfra 2024** (co-located with SOSP'24)](https://hotinfra24.github.io/)!
@@ -50,6 +51,8 @@ Lotus employs two novel approaches:
 2. **LotusMap** - A mapping methodology to reconstruct a mapping between Python functions and the underlying C++ functions they call, effectively linking high-level Python functions with low-level hardware counters. 
 
 Above combination is powerful as it allows enables users to better reason about their pipeline’s performance, both at the level of preprocessing operations and their performance on hardware resource usage.
+
+To quickly navigate this repository - refer to our [Deep wiki](https://deepwiki.com/rajveerb/lotus) page created by Deviv.ai
 
 ## Cite Lotus
 
