@@ -33,16 +33,16 @@ git submodule update --init --recursive --depth 1
 ## Setup Instructions
 
 - **CloudLab Users:**
-Follow the instructions in [`setup.MD`](SETUP.MD) for environment setup.
+Follow the instructions in [`SETUP.md`](SETUP.md) for environment setup.
 - **Other Environments:**
-Manually install CUDA and cuDNN as described in [`setup.MD`](SETUP.MD).
+Manually install CUDA and cuDNN as described in [`SETUP.md`](SETUP.md).
 
 ---
 
 ## Running Experiments
 
 1. **Preparation:**
-Complete steps 4, 5, and 6 in [`replicate.MD`](REPLICATE.MD).
+Complete steps 4, 5, and 6 in [`REPLICATE.md`](REPLICATE.md).
 2. **Run Experiment:**
 Use the provided script to launch experiments with varying configurations:
 
