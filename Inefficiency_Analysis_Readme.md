@@ -68,10 +68,12 @@ bash scripts/cloudlab/LotusTrace_imagenet.sh
 
 ## Analysis Workflow
 
+Analysis Scripts are present in analysis_scripts/ directory. The analysis is performed using Jupyter notebooks. The analysis workflow is as follows:
+
 1. **Log Parsing:**
 Pass the path to your logs folder to the appropriate directory variable in the analysis Python notebooks.
 2. **Data Extraction:**
-Use the `Get_everything` function to parse all logs and generate a consolidated dataframe.
+Use the `get_everything` function to parse all logs and generate a consolidated dataframe.
 3. **Analysis:**
 Perform your analysis using the generated dataframe as needed.
 
