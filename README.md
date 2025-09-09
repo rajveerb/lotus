@@ -52,7 +52,7 @@ Lotus employs two novel approaches:
 
 Above combination is powerful as it allows enables users to better reason about their pipeline’s performance, both at the level of preprocessing operations and their performance on hardware resource usage.
 
-To quickly navigate this repository - refer to our [Deep wiki](https://deepwiki.com/rajveerb/lotus) page created by Deviv.ai
+To quickly navigate this repository - refer to our [Deep wiki](https://deepwiki.com/rajveerb/lotus) page created by Devin.ai
 
 ## Cite Lotus
 
