@@ -2,7 +2,7 @@
 # Lotus
 
 <p align="center">
-    <img src="assets/lotus.png"  width="20%" height="20%" alt="Lotus">
+    <img src="assets/lotus.png"  width="40%" height="40%" alt="Lotus">
 </p>
 
 <p align="center"><i><b>A profiling
